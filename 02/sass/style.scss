@@ -1,0 +1,220 @@
+$color-yellow: #ec9a71;
+$color-blue: #1e83d3;
+/*body {
+  background-color: #fff;
+}*/
+.warranty-wrapper {
+  //padding: 0 .2rem .3rem;
+}
+.home-list{
+  background-color: #fff;
+  ul{
+    height: 1.1rem;
+    margin: 0 auto .1rem;
+    white-space: nowrap;
+    overflow-x: auto;
+    padding: .1rem .2rem;
+    li{
+      font-size: .36rem;
+      line-height: .9rem;
+      color: #b4b4b4;
+      margin-right: .3rem;
+      display: inline-block;
+      text-align: center;
+      &.active{
+        color: $color-yellow;
+        border-bottom: 3px solid $color-yellow;
+      }
+    }
+  }
+}
+
+.home-content {
+  width: 7rem;
+  margin: 0 auto;
+}
+
+.warranty-title {
+  font-size: .36rem;
+  font-weight: bold;
+  line-height: .72rem;
+  color: $color-blue;
+  //background-color: #fff;
+}
+
+.warranty-total {
+  color: $color-yellow;
+  line-height: .6rem;
+  font-size: .3rem;
+  p {
+    float: left;
+    &:last-of-type {
+      float: right;
+    }
+  }
+}
+
+.warranty-list {
+  &>li {
+    margin-top: .2rem;
+    background-color: #fff;
+    &.list-one{
+      ul {
+        background: #fff url(../img/list1.png) center no-repeat;
+        -webkit-background-size: 100% 100%;
+        background-size: 100% 100%;
+      }
+    }
+    &.list-two{
+      ul {
+        background: #fff url(../img/list2.png) center no-repeat;
+        -webkit-background-size: 100% 100%;
+        background-size: 100% 100%;
+      }
+    }
+    &.list-three{
+      ul {
+        background: #fff url(../img/list3.png) center no-repeat;
+        -webkit-background-size: 100% 100%;
+        background-size: 100% 100%;
+      }
+    }
+    &.list-four{
+      ul {
+        background: #fff url(../img/list4.png) center no-repeat;
+        -webkit-background-size: 100% 100%;
+        background-size: 100% 100%;
+      }
+    }
+    &.list-none {
+      background-color: #fff;
+      .list-none-title {
+        text-align: center;
+        height: 1rem;
+        line-height: 1rem;
+        img {
+          width: .6rem;
+          vertical-align: middle;
+        }
+        b {
+          display: inline-block;
+          color: #666;
+          font-weight: bold;
+          font-size: .28rem;
+          margin-left: .2rem;
+          vertical-align: middle;
+        }
+      }
+      .list-none-word {
+        text-align: center;
+        height: 2.62rem;
+        color: #999;
+        font-weight: bold;
+        font-size: .4rem;
+        padding-top: .4rem;
+      }
+    }
+    div {
+      width: 7rem;
+      position: relative;
+      ul {
+        position: relative;
+        width: 7rem;
+        height: 2.82rem;
+      }
+      h4{
+        width: 1rem;
+        height: 1rem;
+        background-color: #f3f8ff;
+        text-align: center;
+        display: table;
+        border: .02rem solid #d2dff5;
+        border-radius: 50%;
+        position: absolute;
+        left: 50%;
+        top: 1.28rem;
+        margin-left: -.5rem;
+        z-index: 111;
+        span{
+          display: table-cell;
+          vertical-align: middle;
+        }
+        img{
+          height: .6rem;
+        }
+      }
+      li {
+        position: absolute;
+        width: 1.35rem;
+        text-align: center;
+        b {
+          font-size: .24rem;
+          color: $color-yellow;
+          font-weight: normal;
+          font-family: fontm;
+        }
+        &.li-item1{
+          left: .48rem;
+          top: 1.42rem;
+        }
+        &.li-item2{
+          left: 5rem;
+          top: .2rem;
+        }
+        &.li-item3{
+          left: .48rem;
+          top: .2rem;
+        }
+        &.li-item4{
+          left: 5rem;
+          top: 1.42rem;
+        }
+        h3{
+          width: .5rem;
+          height: .5rem;
+          border-radius: 50%;
+          border: .02rem solid #d2dff5;
+          margin: 0 auto;
+          background-color: #f3f8ff;
+          padding: 0;
+          line-height: 0;
+          text-align: center;
+          img{
+            height: .29rem;
+            margin-top: .1rem;
+          }
+        }
+        p{
+          text-align: center;
+          color: #8f8f8f;
+          font-size: .24rem;
+          line-height: .5rem;
+          width: 2rem;
+          position: relative;
+          left: -.35rem;
+        }
+      }
+    }
+    h6{
+      text-align: center;
+      font-weight: normal;
+      color: #8f8f8f;
+      font-size: .24rem;
+      margin: 0;
+      line-height: .75rem;
+    }
+    &>p.list-total{
+      padding: .2rem;
+      font-size: .28rem;
+      font-weight: bold;
+      span {
+        display: inline-block;
+        width: 49%;
+        color: $color-blue;
+        &:last-of-type {
+          text-align: right;
+        }
+      }
+    }
+  }
+}
