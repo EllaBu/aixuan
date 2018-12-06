@@ -1,6 +1,7 @@
-/*body {
+body {
   background-color: #fff;
-}*/
+}
+
 .home-list {
   background-color: #fff;
 }
@@ -27,10 +28,11 @@
 .home-content {
   width: 7rem;
   margin: 0 auto;
+  padding-bottom: .3rem;
 }
 
 .warranty-title {
-  font-size: .36rem;
+  font-size: .34rem;
   font-weight: bold;
   line-height: .72rem;
   color: #1e83d3;
@@ -39,7 +41,7 @@
 .warranty-total {
   color: #ec9a71;
   line-height: .6rem;
-  font-size: .3rem;
+  font-size: .28rem;
 }
 .warranty-total p {
   float: left;
@@ -51,6 +53,8 @@
 .warranty-list > li {
   margin-top: .2rem;
   background-color: #fff;
+  padding-top: .1rem;
+  box-shadow: 0 2px 8px #ddd;
 }
 .warranty-list > li.list-one ul {
   background: #fff url(../img/list1.png) center no-repeat;
@@ -94,7 +98,7 @@
 }
 .warranty-list > li.list-none .list-none-word {
   text-align: center;
-  height: 2.62rem;
+  height: 2rem;
   color: #999;
   font-weight: bold;
   font-size: .4rem;
@@ -102,6 +106,7 @@
 }
 .warranty-list > li div {
   width: 7rem;
+  height: 3.3rem;
   position: relative;
 }
 .warranty-list > li div ul {
@@ -119,16 +124,13 @@
   border-radius: 50%;
   position: absolute;
   left: 50%;
-  top: 1.28rem;
+  top: 1.16rem;
   margin-left: -.5rem;
   z-index: 111;
 }
-.warranty-list > li div h4 span {
-  display: table-cell;
-  vertical-align: middle;
-}
 .warranty-list > li div h4 img {
   height: .6rem;
+  margin-top: .2rem;
 }
 .warranty-list > li div li {
   position: absolute;
@@ -143,19 +145,19 @@
 }
 .warranty-list > li div li.li-item1 {
   left: .48rem;
-  top: 1.42rem;
+  top: 1.26rem;
 }
 .warranty-list > li div li.li-item2 {
-  left: 5rem;
-  top: .2rem;
+  right: .48rem;
+  top: .22rem;
 }
 .warranty-list > li div li.li-item3 {
   left: .48rem;
-  top: .2rem;
+  top: .24rem;
 }
 .warranty-list > li div li.li-item4 {
-  left: 5rem;
-  top: 1.42rem;
+  right: .48rem;
+  top: 1.26rem;
 }
 .warranty-list > li div li h3 {
   width: .5rem;
@@ -176,23 +178,30 @@
   text-align: center;
   color: #8f8f8f;
   font-size: .24rem;
-  line-height: .5rem;
+  line-height: .4rem;
   width: 2rem;
   position: relative;
   left: -.35rem;
 }
-.warranty-list > li h6 {
+.warranty-list > li div h6 {
+  position: absolute;
+  left: 50%;
+  top: 2.5rem;
+  transform: translateX(-50%);
   text-align: center;
   font-weight: normal;
   color: #8f8f8f;
   font-size: .24rem;
-  margin: 0;
-  line-height: .75rem;
+  border: .02rem solid #d4e0f5;
+  box-shadow: 0 0.06rem 0.2rem rgba(69, 128, 240, 0.1);
+  background-color: #f3f8ff;
+  border-radius: .06rem;
+  padding: .1rem;
 }
 .warranty-list > li > p.list-total {
   padding: .2rem;
-  font-size: .28rem;
-  font-weight: bold;
+  font-size: .26rem;
+  background-color: #fafafa;
 }
 .warranty-list > li > p.list-total span {
   display: inline-block;
@@ -201,6 +210,106 @@
 }
 .warranty-list > li > p.list-total span:last-of-type {
   text-align: right;
+}
+
+.classify-list {
+  padding: .2rem;
+  color: #999;
+}
+.classify-list .classify-title {
+  line-height: .4rem;
+  font-size: .28rem;
+}
+.classify-list .classify-title h3 {
+  float: left;
+}
+.classify-list .classify-title h3 span {
+  display: inline-block;
+  width: .5rem;
+  height: .5rem;
+  border-radius: 50%;
+  border: .02rem solid #d2dff5;
+  background-color: #f3f8ff;
+  text-align: center;
+  vertical-align: middle;
+}
+.classify-list .classify-title h3 span img {
+  height: .29rem;
+  margin-top: .1rem;
+}
+.classify-list .classify-title p {
+  float: right;
+  color: #ec9a71;
+}
+.classify-list > ul {
+  margin-top: .2rem;
+}
+.classify-list > ul > li {
+  box-shadow: 0 2px 8px #ddd;
+  margin-bottom: .3rem;
+  overflow: hidden;
+}
+.classify-list > ul > li .li-left {
+  float: left;
+  width: 30%;
+  padding: .1rem;
+}
+.classify-list > ul > li .li-left img {
+  width: 100%;
+}
+.classify-list > ul > li .li-right {
+  float: left;
+  width: 70%;
+  padding: .2rem;
+}
+.classify-list h4 {
+  font-size: .26rem;
+  margin-bottom: .1rem;
+}
+.classify-list ul.recommend-list li {
+  float: left;
+  width: 50%;
+  padding-top: .2rem;
+  height: .5rem;
+}
+.classify-list ul.recommend-list li span {
+  color: #ec9a71;
+}
+.classify-list ul.recommend-list li span b {
+  font-size: .46rem;
+}
+.classify-list ul.recommend-list li:nth-of-type(even) {
+  margin-top: .17rem;
+  padding-left: .2rem;
+}
+.classify-list .classify-total {
+  overflow: hidden;
+}
+.classify-list .classify-total p {
+  width: 70%;
+  float: right;
+  font-size: .2rem;
+  line-height: .32rem;
+}
+.classify-list .classify-total p span {
+  color: #ec9a71;
+}
+
+.classify-none {
+  text-align: center;
+  font-size: .32rem;
+  color: #999;
+  padding-top: .3rem;
+}
+.classify-none i {
+  display: inline-block;
+  width: .6rem;
+  height: .6rem;
+  border-radius: .3rem;
+  background-color: #ec9a71;
+  color: #fff;
+  line-height: .6rem;
+  margin-right: .2rem;
 }
 
 /*# sourceMappingURL=style.css.map */

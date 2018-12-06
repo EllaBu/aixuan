@@ -147,7 +147,10 @@ input, textarea {
 body {
     font-size: .24rem;
     color: #333;
-    background-color: #f1f1f1;
+    max-width: 768px;
+    margin: 0 auto;
+    -webkit-user-select:none;
+    -webkit-text-size-adjust: auto;
     padding-top: constant(safe-area-inset-top);
     padding-left: constant(safe-area-inset-left);
     padding-right: constant(safe-area-inset-right);
