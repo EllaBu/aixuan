@@ -1,0 +1,736 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no,viewport-fit=cover"/>
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="format-detection" content="telephone=no">
+    <title>Title</title>
+    <style type="text/css">
+        .s_bg1 {
+            background-color: #0083b0;
+        }
+
+        .s_bg2 {
+            background-color: #ebf4fa;
+        }
+
+        .font_color1 {
+            color: #d5ecf2;
+        }
+
+        .f_left {
+            float: left;
+        }
+
+        .d_border1 {
+            border: 1px solid #000;
+        }
+
+        .font_area0 {
+            font: normal 12px/1.5em "Microsoft YaHei";
+        }
+
+        .ul_summary{margin-left: 0px;}
+        .ul_summary li{float: left; list-style-type:none; margin-right: 20px; margin-bottom:5px; font: bold 14px "Microsoft YaHei"; width: 200px;}
+
+        .ul_summary1{margin-left: 0px;}
+        .ul_summary1 li{float: left; list-style-type:none; margin-right: 5px; margin-bottom:5px; font: bold 14px "Microsoft YaHei";}
+
+        .label1 {
+            display: inline;
+            padding: .2em .2em .2em .2em;
+            font-family: "Arial";
+            font-size: 14px;
+            font-weight: 700;
+            line-height: 1;
+            color: #fff;
+            text-align: center;
+            white-space: nowrap;
+            vertical-align: baseline;
+            border-radius: .25em;
+            background: #0084b4;
+        }
+
+        .callout_line1{float: left; height: 24px; background:url(http://127.0.0.1/image/point_3x3.png) no-repeat left;}
+
+        .line_width_200{width: 200px; }
+        .line_width_3{width: 3px; }
+
+    </style>
+</head>
+<body>
+<h2>服务调用信息</h2>
+<div>
+    <ul class="ul_summary">
+        <li>响应时间：<span class="label1" id="_response">410ms</span></li>
+        <li>持续时间：<span class="label1" id="_duration">413ms</span></li>
+        <li>Span总数：<span class="label1" id="_span">2</span></li>
+        <li>　　深度：<span class="label1" id="_depth">2</span></li>
+        <li>　服务数：<span class="label1" id="_service">2</span></li>
+        <li style="clear:both; margin: 0px;"></li>
+        <li>　涉及IP：<span class="label1" id="_ip">1</span></li>
+        <li>　节点数：<span class="label1" id="_node">1</span></li>
+        <li>　应用数：<span class="label1" id="_app">1</span></li>
+        <li>　失败数：<span class="label1" id="_error">0</span></li>
+        <li>　慢服务：<span class="label1" id="_show">0</span></li>
+    </ul>
+    <div style="clear:both;"></div>
+    <ul class="ul_summary">
+        <!-- <li>全部展开：<span><input type="checkbox"/></span></li>
+        <li>过滤内部服务：<span><input type="checkbox"/></span></li> -->
+        <li>APP汇总：<span><input type="checkbox" onclick="showSummary(this, 'app_summary')"></span></li>
+        <li>NODE汇总：<span><input type="checkbox" onclick="showSummary(this, 'node_summary')"></span></li>
+        <li>IP汇总：<span><input type="checkbox" onclick="showSummary(this, 'ip_summary')"></span></li>
+    </ul>
+    <div style="clear:both;"></div>
+
+    <div id="app_summary" style="display: none;">
+        <ul class="ul_summary1" id="app_list"><li><span class="label1">tangyuan2-demo *2</span></li></ul>
+        <div style="clear:both;"></div>
+    </div>
+    <div id="node_summary" style="display: none;">
+        <ul class="ul_summary1" id="node_list"><li><span class="label1"> *2</span></li></ul>
+        <div style="clear:both;"></div>
+    </div>
+    <div id="ip_summary" style="display: none;">
+        <ul class="ul_summary1" id="ip_list"><li><span class="label1">192.168.50.245 *2</span></li></ul>
+        <div style="clear:both;"></div>
+    </div>
+</div>
+<h2>服务调用明细</h2>
+<!-- 跟踪明细:Start -->
+<div>
+    <!-- 标题头 -->
+    <div style="font-weight: bold; margin: 1px; width: 1330px;" id="trace_header">
+        <span style="float: left; width: 200px;">services</span>
+        <span style="float: left; width: 200px;">&nbsp;</span>
+        <span style="float: left; width: 200px; position: relative; left: -14px; ">82.600ms</span>
+        <span style="float: left; width: 200px; position: relative; left: -14px; ">165.200ms</span>
+        <span style="float: left; width: 200px; position: relative; left: -14px; ">247.800ms</span>
+        <span style="float: left; width: 200px; position: relative; left: -14px; ">330.400ms</span>
+        <span style="float: left; width: 120px; position: relative; left: -14px; ">413.000ms</span>
+    </div>
+    <div style="clear:both;"></div>
+    <!-- 明细 -->
+    <div id="trace_detail">
+        <div id="S_1543914402848" style="height: 24px; margin: 1px;" onmouseover="doMouseOver(this)" onmouseout="doMouseOut(this)" class="">
+            <div class="f_left" style="width: 200px">
+                <span class="f_left" style="width: 10px; text-align: right; cursor: pointer;" onclick="doFold(this, 'S_1543914402848')">-</span>
+                <span class="f_left s_bg1 font_color1" style="width: 185px; height: 24px;">ts/m3</span>
+            </div>
+            <div class="f_left" style="width: 1103px; height: 24px;" onclick="doClick(this, 'S_1543914402848')">
+                <div>
+                    <div class="f_left" style="position: relative; left: 7px; background-color: #ebf4fa; width: 992px; height: 24px;"></div>
+                    <div class="f_left" style="position: relative; left: -985px;">410ms: </div>
+                    <div style="clear:both;"></div>
+                </div>
+                <div class="f_left" style="width: 1003px; position: relative; top: -24px;">
+                    <div class="callout_line1 line_width_200"></div>
+                    <div class="callout_line1 line_width_200"></div>
+                    <div class="callout_line1 line_width_200"></div>
+                    <div class="callout_line1 line_width_200"></div>
+                    <div class="callout_line1 line_width_200"></div>
+                    <div class="callout_line1 line_width_3"></div>
+                </div>
+            </div>
+            <div style="clear:both;"></div>
+        </div>
+        <div id="span_info_S_1543914402848" style="border: 2px solid blue; margin-left: 200px;">
+            <table>
+                <tbody>
+                <tr>
+                    <td>服务</td>
+                    <td>ts/m3</td>
+                </tr>
+                <tr>
+                    <td>请求参数</td>
+                    <td><textarea rows="10" cols="160" class="font_area0">&lt;?xml version="1.0" encoding="UTF-8"?&gt;
+&lt;X&gt;
+    &lt;I K="x" V="2222"/&gt;
+&lt;/X&gt;</textarea></td>
+                </tr>
+                <tr>
+                    <td>返回结果</td>
+                    <td><textarea rows="10" cols="160" class="font_area0">&lt;?xml version="1.0" encoding="UTF-8"?&gt;
+&lt;X&gt;
+    &lt;I K="$$CODE" V="0"/&gt;
+    &lt;I K="$$PACKAGE" V="0"/&gt;
+&lt;/X&gt;</textarea></td>
+                </tr>
+                <tr>
+                    <td>CODE</td>
+                    <td>0</td>
+                </tr>
+                <tr>
+                    <td>MESSAGE</td>
+                    <td></td>
+                </tr>
+                </tbody>
+            </table>
+        </div>
+
+        <div id="S_1543914402867" style="height: 24px; margin: 1px;" onmouseover="doMouseOver(this)" onmouseout="doMouseOut(this)" class="">
+            <div class="f_left" style="width: 200px">
+                <span class="f_left" style="width: 15px; text-align: right; cursor: pointer;" onclick="doFold(this, 'S_1543914402867')">-</span>
+                <span class="f_left s_bg1 font_color1" style="width: 180px; height: 24px;">dfx/getDutyListFromCore</span>
+            </div>
+            <div class="f_left" style="width: 1103px; height: 24px;" onclick="doClick(this, 'S_1543914402867')">
+                <div>
+                    <div class="f_left" style="position: relative; left: 58px; background-color: #ebf4fa; width: 937px; height: 24px;"></div>
+                    <div class="f_left" style="position: relative; left: -878px;">387ms: </div>
+                    <div style="clear:both;"></div>
+                </div>
+                <div class="f_left" style="width: 1003px; position: relative; top: -24px;">
+                    <div class="callout_line1 line_width_200"></div>
+                    <div class="callout_line1 line_width_200"></div>
+                    <div class="callout_line1 line_width_200"></div>
+                    <div class="callout_line1 line_width_200"></div>
+                    <div class="callout_line1 line_width_200"></div>
+                    <div class="callout_line1 line_width_3"></div>
+                </div>
+            </div>
+            <div style="clear:both;"></div>
+        </div>
+        <div id="span_info_S_1543914402867" style="border: 2px solid blue; margin-left: 200px; display: none;"></div>
+    </div>
+</div>
+<!-- 跟踪明细:End -->
+
+<div style="display: none;" id="trace_header_template"><!--
+		<span style="float: left; width: 200px;">services</span>
+		<span style="float: left; width: 200px;">&nbsp;</span>
+		<span style="float: left; width: 200px; position: relative; left: -14px; ">#{t1}ms</span>
+		<span style="float: left; width: 200px; position: relative; left: -14px; ">#{t2}ms</span>
+		<span style="float: left; width: 200px; position: relative; left: -14px; ">#{t3}ms</span>
+		<span style="float: left; width: 200px; position: relative; left: -14px; ">#{t4}ms</span>
+		<span style="float: left; width: 120px; position: relative; left: -14px; ">#{t5}ms</span>
+	--></div>
+<!--
+<div class="f_left" style="position: relative; left: @{getBLeft}px;">#{exec_time}ms: </div>
+<div class="f_left" style="background-color: @{getBg}; width: @{getAWidth}px; height: 24px; position: relative; left: @{getALeft}px;"></div>
+<div class="f_left" style="position: relative; left: @{getBLeft}px;">#{exec_time}ms: xxxxxxxxx</div>
+<div style="clear:both;"></div>
+ -->
+<div style="display: none;" id="trace_detail_template">
+    <!--
+    <div id="#{span_id}" style="height: 24px; margin: 1px;" onmouseover="doMouseOver(this)" onmouseout="doMouseOut(this)">
+        <div class="f_left" style="width: 200px">
+            <span class="f_left" style="width: @{getIconWidth}px; text-align: right; cursor: pointer;" onclick="doFold(this, '#{span_id}')">-</span>
+            <span class="f_left s_bg1 font_color1" style="width: @{getServiceNameWidth}px; height: 24px;">#{service_name}</span>
+        </div>
+        <div class="f_left" style="width: 1103px; height: 24px;" onClick="doClick(this, '#{span_id}')">
+            <div>
+                <div class="f_left" style="position: relative; left: @{getALeft}px; background-color: @{getBg}; width: @{getAWidth}px; height: 24px;"></div>
+                <div class="f_left" style="position: relative; left: @{getBLeft}px;">#{exec_time}ms: </div>
+                <div style="clear:both;"></div>
+            </div>
+            <div class="f_left" style="width: 1003px; position: relative; top: -24px;">
+                <div class="callout_line1 line_width_200"></div>
+                <div class="callout_line1 line_width_200"></div>
+                <div class="callout_line1 line_width_200"></div>
+                <div class="callout_line1 line_width_200"></div>
+                <div class="callout_line1 line_width_200"></div>
+                <div class="callout_line1 line_width_3"></div>
+            </div>
+        </div>
+        <div style="clear:both;"></div>
+    </div>
+    <div id="span_info_#{span_id}" style="border: 2px solid blue; margin-left: 200px; display: none;"></div>
+-->
+</div>
+<!--
+    B.left = -A.width + A.left
+    <div id="span_info_#{span_id}" style="border: 2px solid blue; margin-left: 200px; display: none;" onmouseleave="leaveSpanInfo('#{span_id}')"></div>
+ -->
+<div style="display: none;" id="span_info_template">
+    <!--
+    <table>
+        <tbody>
+            <tr>
+                <td>服务</td>
+                <td>#{service_name}</td>
+            </tr>
+            <tr>
+                <td>请求参数</td>
+                <td><textarea rows="10" cols="160" class="font_area0">@{getArg}</textarea></td>
+            </tr>
+            <tr>
+                <td>返回结果</td>
+                <td><textarea rows="10" cols="160" class="font_area0">@{getResult}</textarea></td>
+            </tr>
+            <tr>
+                <td>CODE</td>
+                <td>#{service_code}</td>
+            </tr>
+            <tr>
+                <td>MESSAGE</td>
+                <td>#{service_message}</td>
+            </tr>
+        </tbody>
+    </table>
+ -->
+</div>
+
+<script type="text/javascript" src="/js/jquery-1.11.1.min.js"></script>
+<script type="text/javascript" src="/js/xco-1.0.1.js"></script>
+<script type="text/javascript" src="/js/xco.jquery-1.0.1.js"></script>
+<script type="text/javascript" src="/js/xco.template-1.0.1.js"></script>
+<script type="text/javascript" src="/js/xco.validate-1.0.1.js"></script>
+<script type="text/javascript" src="/js/xco.databinding-1.0.1.js"></script>
+<script type="text/javascript" src="/js/xco.variable-1.0.1.js"></script>
+<script type="text/javascript" src="/js/vkbeautify.js"></script>
+<script type="text/javascript" src="/js/public.js"></script>
+
+<script type="text/javascript">
+
+    XCOTemplate.pretreatment(['trace_header_template', 'trace_detail_template', 'span_info_template']);
+
+    //var trace_id = "6501ed1a4349427d9baa836b05cbec52";
+    var trace_id = getURLparamEncoder('trace_id');
+    // alert(trace_id);
+
+    /**
+     {
+			data: root;
+			child: [
+				{
+					data: A,
+					child: [
+							{
+								data: A,
+
+							},
+							{},
+						]
+				},
+				{},
+			]
+		}
+     */
+    var tree = {};
+    var treeMap = [];
+    var nodeCount = 0;
+    var longestTime = 0;
+    // 当前显示明细信息
+    var currentSpanInfoId = '';
+    // 显示宽度
+    var displayWidth = 1000;
+    // 追踪信息
+    var traceInfo = {};
+
+    function getTrace() {
+        var xco = new XCO();
+        xco.setStringValue("trace_id", trace_id);
+        var options = {
+            url : "/record/getTrace.xco",
+            data : xco,
+            success : getTraceCallBack
+        };
+        $.doXcoRequest(options);
+    }
+    function getTraceCallBack(data) {
+        //var xco = new XCO();
+        var xco = data;
+        if(0 != xco.getCode() ){
+            return;//
+        }
+        var list = xco.getData();
+        if(null == list || list.length == 0){
+            return;
+        }
+
+        // 1. 生成结构树
+        createTree(list);
+        // 判读数据是否有效
+        if(0 == nodeCount){
+            return;
+        }
+        // 2. 计算最长的时间
+        calcLongestTime(tree);
+        // 3. 生成序号和ID的映射
+        // 4. 渲染标题
+        renderHeader();
+        // 5. 渲染明细
+        renderDetail();
+        // 6. 渲染信息
+        renderInfo(list);
+    }
+
+
+
+    // 1. 生成结构树
+    function createTree(list){
+        var length = list.length;
+        for(var i=0; i<length; i++){
+            var x = new XCO();
+            var parent_id = list[i].getStringValue("parent_id");
+            var span_id = list[i].getStringValue("span_id");
+            if('' == parent_id) {	// ROOR
+                tree =  {
+                    data: list[i],
+                    child: []
+                };
+                treeMap[span_id] = tree;
+                //treeMap[parent_id] = tree;
+            } else {
+                var parent = treeMap[parent_id];
+                if(undefined == parent) {
+                    continue;	// 需要忽略暂时没有父级的
+                }
+                var node = {
+                    data: list[i],
+                    child: []
+                };
+                parent.child.push(node);
+                treeMap[span_id] = node;
+            }
+            nodeCount++;
+        }
+    }
+
+    // 2. 计算最长的时间, 和绝对偏移时间
+    function calcLongestTime(_node){
+        var node = _node;
+        if(null != node){
+            var item = node.data;
+
+            var offset_time = item.getLongValue("offset_time");
+            var exec_time = item.getLongValue("exec_time");
+            // 绝对偏移时间
+            var abs_offset_time = getAbsOffsetTime(item) + offset_time;
+            var _longestTime = abs_offset_time + exec_time;
+            if(_longestTime > longestTime){
+                longestTime = _longestTime;
+            }
+            item.setLongValue("abs_offset_time", abs_offset_time);
+
+            var len = node.child.length;
+            if(len > 0){
+                for(var i=0; i<len; i++){
+                    var childNode = node.child[i];
+                    calcLongestTime(childNode);
+                }
+            }
+        }
+    }
+
+    // 计算绝对偏移时间
+    function getAbsOffsetTime(item){
+        var offset = 0;
+        var parent_id = item.getStringValue("parent_id");
+        while('' != parent_id){
+            var node = treeMap[parent_id];
+            var item = node.data;
+            var offset_time = item.getLongValue("offset_time");
+            offset += offset_time;
+            parent_id = item.getStringValue("parent_id");
+        }
+        return offset;
+    }
+
+    // 渲染标题
+    function renderHeader(){
+        var timeUnit = longestTime / 5;
+        var data = new XCO();
+        data.setStringValue("t1", (timeUnit * 1).toFixed(3));
+        data.setStringValue("t2", (timeUnit * 2).toFixed(3));
+        data.setStringValue("t3", (timeUnit * 3).toFixed(3));
+        data.setStringValue("t4", (timeUnit * 4).toFixed(3));
+        data.setStringValue("t5", (longestTime).toFixed(3));
+        var html = XCOTemplate.execute("trace_header_template", data);
+        document.getElementById("trace_header").innerHTML = html;
+    }
+
+    // 渲染明细
+    function renderDetail(){
+        var builder = new XCOStringBuilder();
+        var ext = {
+            getIconWidth: function(xco){
+                var depth = xco.getIntegerValue("depth");
+                return 10 + (depth - 1) * 5;
+            },
+            getServiceNameWidth: function(xco){
+                var depth = xco.getIntegerValue("depth");
+                var iconWidth = 10 + (depth - 1) * 5;
+                return 195 - iconWidth;
+            },
+            getAWidth: function(xco){
+                var aWidth = xco.getLongValue("exec_time");
+                //return aWidth / longestTime * displayWidth;
+                return parseInt(aWidth / longestTime * displayWidth);
+            },
+            getALeft: function(xco){
+                var aLeft = xco.getLongValue("abs_offset_time");
+                //return aLeft / longestTime * displayWidth;
+                return parseInt(aLeft / longestTime * displayWidth);
+            },
+            getBLeft: function(xco){
+                var bLeft = -xco.getLongValue("exec_time") + xco.getLongValue("abs_offset_time");
+                //return bLeft / longestTime * displayWidth;
+                return parseInt(bLeft / longestTime * displayWidth);
+            },
+            getBg : function(xco){
+                var service_code = xco.getIntegerValue("service_code");
+                if(0 == service_code){
+                    return '#ebf4fa';
+                }
+                return 'red';
+            },
+        };
+        renderDetail0(tree, builder, ext)
+        document.getElementById("trace_detail").innerHTML = builder.toString();
+    }
+
+    function renderDetail0(_node, builder, ext){
+        var node = _node;
+        if(null != node){
+            var item = node.data;
+            var html = XCOTemplate.execute("trace_detail_template", item, ext);
+            builder.append(html);
+            var len = node.child.length;
+            if(len > 0){
+                for(var i=0; i<len; i++){
+                    var childNode = node.child[i];
+                    renderDetail0(childNode, builder, ext);
+                }
+            }
+        }
+    }
+
+    /** 渲染追踪信息*/
+    function renderInfo(list){
+        traceInfo.span = 0;
+        traceInfo.service = 0;
+        traceInfo.depth = 0;
+        traceInfo.ip = 0;
+        traceInfo.node = 0;
+        traceInfo.app = 0;
+        traceInfo.error = 0;
+        traceInfo.slow = 0;
+
+        traceInfo.duration = 0;
+        traceInfo.response  = '';
+
+        //traceInfo.ipInfo = new XCO();
+        //traceInfo.appInfo = new XCO();
+        //traceInfo.nodeInfo = new XCO();
+
+        var ipMap = [];
+        var nodeMap = [];
+        var appMap = [];
+
+        var length = list.length;
+        for(var i=0; i<length; i++){
+            var xco = list[i];
+            //var xco = new XCO();
+            var _depth = xco.getIntegerValue("depth");
+            if(_depth > traceInfo.depth){
+                traceInfo.depth = _depth;
+            }
+
+            var exec_time = xco.getLongValue("exec_time");
+            if(1 == _depth){
+                traceInfo.response = exec_time + 'ms';
+            }
+
+            if(exec_time > 1000){
+                traceInfo.slow++;
+            }
+
+            var host_ip = xco.getStringValue("host_ip");
+            var app_name = xco.getStringValue("app_name");
+            var node_name = xco.getStringValue("node_name");
+
+            if(undefined == ipMap[host_ip]){
+                ipMap[host_ip] = 1;
+                traceInfo.ip++;
+            }else{
+                ipMap[host_ip] = ipMap[host_ip] + 1;
+            }
+
+            if(undefined == nodeMap[node_name]){
+                nodeMap[node_name] = 1;
+                traceInfo.node++;
+            }else{
+                nodeMap[node_name] = nodeMap[node_name] + 1;
+            }
+
+            if(undefined == appMap[app_name]){
+                appMap[app_name] = 1;
+                traceInfo.app++;
+            }else{
+                appMap[app_name] = appMap[app_name] + 1;
+            }
+
+            var service_code = xco.getIntegerValue("service_code");
+            if(0 != service_code){
+                traceInfo.error++;
+            }
+        }
+
+        traceInfo.span = nodeCount;
+        traceInfo.service = nodeCount;
+        traceInfo.duration = longestTime;
+
+        document.getElementById('_response').innerHTML = traceInfo.response;
+        document.getElementById('_duration').innerHTML = traceInfo.duration + 'ms';
+        document.getElementById('_span').innerHTML = traceInfo.span;
+        document.getElementById('_depth').innerHTML = traceInfo.depth;
+        document.getElementById('_service').innerHTML = traceInfo.service;
+
+        document.getElementById('_ip').innerHTML = traceInfo.ip;
+        document.getElementById('_node').innerHTML = traceInfo.node;
+        document.getElementById('_app').innerHTML = traceInfo.app;
+        document.getElementById('_error').innerHTML = traceInfo.error;
+        document.getElementById('_show').innerHTML = traceInfo.slow;
+
+        var ipSummary = getSummaryList(ipMap);
+        var nodeSummary = getSummaryList(nodeMap);
+        var appSummary = getSummaryList(appMap);
+
+        document.getElementById('app_list').innerHTML = appSummary;
+        document.getElementById('node_list').innerHTML = nodeSummary;
+        document.getElementById('ip_list').innerHTML = ipSummary;
+    }
+
+    function getSummaryList(map){
+        var html = '';
+        for(var key in map){
+            html += '<li><span class="label1">'+key+' *'+map[key]+'</span></li>';
+        }
+        return html;
+    }
+
+    function showSummary(o, id){
+        if(o.checked){
+            document.getElementById(id).style.display = '';
+        } else {
+            document.getElementById(id).style.display = 'none';
+        }
+    }
+
+    // 鼠标经过
+    function doMouseOver(o){
+        // o.style.backgroundColor = "#f3f3f3";
+        $(o).addClass("d_border1");
+    }
+
+    // 鼠标离开
+    function doMouseOut(o){
+        //o.style.borderStyle = "";
+        $(o).removeClass("d_border1");
+    }
+
+    // 单击
+    function doClick(o, span_id){
+        var item = treeMap[span_id].data;
+        if(currentSpanInfoId != '' && currentSpanInfoId == span_id){
+            showSpanInfo(span_id, '');
+            return;
+        }
+        if(currentSpanInfoId != '' && currentSpanInfoId != span_id){
+            showSpanInfo(currentSpanInfoId, '');
+        }
+        var ext = {
+            getArg: function(xco){
+                var val = xco.getStringValue("service_arg");
+                if(null == val || '' == val){
+                    return '暂无';
+                }
+                return vkbeautify.xml(val);
+            },
+            getResult: function(xco){
+                var val = xco.getStringValue("service_result");
+                if(null == val || '' == val){
+                    return '暂无';
+                }
+                return vkbeautify.xml(val);
+            },
+        };
+        var html = XCOTemplate.execute("span_info_template", item, ext);
+        showSpanInfo(span_id, html);
+    }
+
+    function showSpanInfo(span_id, html){
+        if('' == span_id) {
+            return;
+        }
+        var span_info = document.getElementById("span_info_" + span_id);
+        if('' == html){
+            span_info.innerHTML = '';
+            span_info.style.display = 'none';
+            currentSpanInfoId = '';
+        } else {
+            span_info.innerHTML = html;
+            span_info.style.display = '';
+            currentSpanInfoId = span_id;
+        }
+    }
+
+    function leaveSpanInfo(span_id){
+        showSpanInfo(span_id, '');
+    }
+
+    // 折叠
+    function doFold(o, span_id){
+        // 1. 判断当前显示,还是隐藏
+        var icon = o.innerHTML;
+        if('' == icon){
+            return;
+        }
+
+        showSpanInfo(currentSpanInfoId, '');
+
+        var node = treeMap[span_id];
+        if('-' == icon){
+            // 2. 处理孩子节点的显示/隐藏+文字
+            doFold0(node, false, false, true);
+            // 3. 处理自己的文字
+            o.innerHTML = '+';
+        } else if('+' == icon){
+            doFold0(node, true, false, true);
+            o.innerHTML = '-';
+        }
+    }
+
+    // 折叠: 递归
+    function doFold0(_node, display, changeIcon, ignore){
+        var node = _node;
+        if(null != node){
+            if(!ignore){
+                var item = node.data;
+                var span_id = item.getStringValue("span_id");
+                var span_div = document.getElementById(span_id);
+                if(display){
+                    span_div.style.display = '';
+                    if(changeIcon){
+                        // 还需要考虑最后一层的问题, var len = node.child.length;  TODO
+                        document.getElementById("span_info_" + span_id).innerHTML = '-';
+                    }
+                }else{
+                    span_div.style.display = 'none';
+                    if(changeIcon){
+                        document.getElementById("span_info_" + span_id).innerHTML = '+';
+                    }
+                }
+            }
+            var len = node.child.length;
+            if(len > 0){
+                for(var i=0; i<len; i++){
+                    var childNode = node.child[i];
+                    doFold0(childNode, display, changeIcon, false);
+                }
+            }
+        }
+    }
+
+    getTrace();
+</script>
+
+
+
+</body>
+</html>
