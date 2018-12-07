@@ -9,8 +9,7 @@
     <title>Title</title>
     <link rel="stylesheet" href="./css/reset.css">
     <link rel="stylesheet" href="./css/style.css">
-    <script src="./js/jquery-2.2.4.min.js"></script>
-    <script src="./js/hahaha.js"></script>
+
 </head>
 <body>
 <div class="warranty-wrapper">
@@ -192,5 +191,13 @@
         <i>!</i>没有合适的推荐方案
     </div>
 </div>
+<script src="./js/jquery-2.2.4.min.js"></script>
+<script>
+    $(function () {
+        $('.home-list ul li').click(function () {
+            $(this).addClass('active').siblings().removeClass('active');
+        })
+    })
+</script>
 </body>
 </html>
