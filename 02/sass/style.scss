@@ -323,46 +323,25 @@ $color-blue: #1e83d3;
     line-height: .32rem;
     margin-bottom: .1rem;
   }
-  div.recommend-list {
+  .recommend-list {
     margin-top: .2rem;
     p {
-      position: relative;
       padding: .05rem 0;
-      height: .6rem;
+      line-height: .5rem;
       span {
-        position: absolute;
-        bottom: .1rem;
         display: inline-block;
         width: 45%;
-        &:nth-of-type(even) {
-          left: 50%;
-        }
-        &.special-item {
-          top: .1rem;
-        }
       }
       b {
         font-size: .46rem;
         color: $color-yellow;
         font-family: "numfont";
         margin-top: .1rem;
+        vertical-align: baseline;
       }
       i {
         color: $color-yellow;
-      }
-    }
-  }
-  .classify-total {
-    padding-left: 30%;
-    overflow: hidden;
-    padding-bottom: .2rem;
-    /*background-color: #f6f6f6;*/
-    p {
-      font-size: .2rem;
-      line-height: .32rem;
-      padding-top: .1rem;
-      span {
-        color: $color-yellow;
+        vertical-align: baseline;
       }
     }
   }

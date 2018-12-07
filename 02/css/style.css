@@ -310,48 +310,27 @@
   line-height: .32rem;
   margin-bottom: .1rem;
 }
-.classify-list div.recommend-list {
+.classify-list .recommend-list {
   margin-top: .2rem;
 }
-.classify-list div.recommend-list p {
-  position: relative;
+.classify-list .recommend-list p {
   padding: .05rem 0;
-  height: .6rem;
+  line-height: .5rem;
 }
-.classify-list div.recommend-list p span {
-  position: absolute;
-  bottom: .1rem;
+.classify-list .recommend-list p span {
   display: inline-block;
   width: 45%;
 }
-.classify-list div.recommend-list p span:nth-of-type(even) {
-  left: 50%;
-}
-.classify-list div.recommend-list p span.special-item {
-  top: .1rem;
-}
-.classify-list div.recommend-list p b {
+.classify-list .recommend-list p b {
   font-size: .46rem;
   color: #ec9a71;
   font-family: "numfont";
   margin-top: .1rem;
+  vertical-align: baseline;
 }
-.classify-list div.recommend-list p i {
+.classify-list .recommend-list p i {
   color: #ec9a71;
-}
-.classify-list .classify-total {
-  padding-left: 30%;
-  overflow: hidden;
-  padding-bottom: .2rem;
-  /*background-color: #f6f6f6;*/
-}
-.classify-list .classify-total p {
-  font-size: .2rem;
-  line-height: .32rem;
-  padding-top: .1rem;
-}
-.classify-list .classify-total p span {
-  color: #ec9a71;
+  vertical-align: baseline;
 }
 
 .classify-none {
