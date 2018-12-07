@@ -1,5 +1,37 @@
-body {
+@charset "UTF-8";
+/*body {
   background-color: #fff;
+}*/
+/* 分割线 */
+.dividing-line {
+  width: 100%;
+  height: .1rem;
+  overflow: hidden;
+  border-radius: .05rem;
+  margin: .1rem auto 0;
+  z-index: 111;
+}
+.dividing-line span {
+  float: left;
+  height: .1rem;
+}
+.dividing-line span:nth-of-type(1) {
+  width: 30%;
+  background-color: #4580f0;
+  border-radius: .05rem 0 0 .05rem;
+}
+.dividing-line span:nth-of-type(2) {
+  width: 34%;
+  background-color: #ec9a71;
+}
+.dividing-line span:nth-of-type(3) {
+  width: 20%;
+  background-color: #dc71a1;
+}
+.dividing-line span:nth-of-type(4) {
+  width: 16%;
+  background-color: #74c8ec;
+  border-radius: 0 .05rem .05rem 0rem;
 }
 
 .home-list {
@@ -34,14 +66,15 @@ body {
 .warranty-title {
   font-size: .34rem;
   font-weight: bold;
-  line-height: .72rem;
   color: #1e83d3;
+  margin: .4rem 0 .1rem;
 }
 
 .warranty-total {
   color: #ec9a71;
-  line-height: .6rem;
   font-size: .28rem;
+  line-height: .4rem;
+  padding: .1rem 0;
 }
 .warranty-total p {
   float: left;
@@ -51,10 +84,11 @@ body {
 }
 
 .warranty-list > li {
-  margin-top: .2rem;
+  margin-top: .3rem;
   background-color: #fff;
   padding-top: .1rem;
-  box-shadow: 0 2px 8px #ddd;
+  border-radius: .1rem;
+  box-shadow: 0 2px 10px #aaa;
 }
 .warranty-list > li.list-one ul {
   background: #fff url(../img/list1.png) center no-repeat;
@@ -202,6 +236,7 @@ body {
   padding: .2rem;
   font-size: .26rem;
   background-color: #fafafa;
+  border-radius: 0 0 .1rem .12rem;
 }
 .warranty-list > li > p.list-total span {
   display: inline-block;
@@ -213,12 +248,18 @@ body {
 }
 
 .classify-list {
-  padding: .2rem;
+  width: 7rem;
+  margin: .3rem auto;
+  padding: .2rem 0 0;
   color: #999;
+  box-shadow: 0 2px 8px #aaa;
+  border-radius: .1rem;
 }
 .classify-list .classify-title {
   line-height: .4rem;
-  font-size: .28rem;
+  font-size: .32rem;
+  font-weight: bold;
+  padding: 0 .1rem;
 }
 .classify-list .classify-title h3 {
   float: left;
@@ -232,6 +273,7 @@ body {
   background-color: #f3f8ff;
   text-align: center;
   vertical-align: middle;
+  margin-top: -.1rem;
 }
 .classify-list .classify-title h3 span img {
   height: .29rem;
@@ -245,51 +287,68 @@ body {
   margin-top: .2rem;
 }
 .classify-list > ul > li {
-  box-shadow: 0 2px 8px #ddd;
-  margin-bottom: .3rem;
   overflow: hidden;
+  border-top: 1px solid #ddd;
 }
 .classify-list > ul > li .li-left {
   float: left;
   width: 30%;
   padding: .1rem;
+  vertical-align: middle;
 }
 .classify-list > ul > li .li-left img {
-  width: 100%;
+  width: 98%;
 }
 .classify-list > ul > li .li-right {
   float: left;
   width: 70%;
-  padding: .2rem;
+  padding: .2rem .2rem .1rem 0;
+  vertical-align: middle;
 }
 .classify-list h4 {
-  font-size: .26rem;
+  font-size: .3rem;
+  line-height: .32rem;
   margin-bottom: .1rem;
 }
-.classify-list ul.recommend-list li {
-  float: left;
-  width: 50%;
-  padding-top: .2rem;
-  height: .5rem;
+.classify-list div.recommend-list {
+  margin-top: .2rem;
 }
-.classify-list ul.recommend-list li span {
+.classify-list div.recommend-list p {
+  position: relative;
+  padding: .05rem 0;
+  height: .6rem;
+}
+.classify-list div.recommend-list p span {
+  position: absolute;
+  bottom: .1rem;
+  display: inline-block;
+  width: 45%;
+}
+.classify-list div.recommend-list p span:nth-of-type(even) {
+  left: 50%;
+}
+.classify-list div.recommend-list p span.special-item {
+  top: .1rem;
+}
+.classify-list div.recommend-list p b {
+  font-size: .46rem;
+  color: #ec9a71;
+  font-family: "numfont";
+  margin-top: .1rem;
+}
+.classify-list div.recommend-list p i {
   color: #ec9a71;
 }
-.classify-list ul.recommend-list li span b {
-  font-size: .46rem;
-}
-.classify-list ul.recommend-list li:nth-of-type(even) {
-  margin-top: .17rem;
-  padding-left: .2rem;
-}
 .classify-list .classify-total {
+  padding-left: 30%;
   overflow: hidden;
+  padding-bottom: .2rem;
+  /*background-color: #f6f6f6;*/
 }
 .classify-list .classify-total p {
-  width: 70%;
-  float: right;
   font-size: .2rem;
   line-height: .32rem;
+  padding-top: .1rem;
 }
 .classify-list .classify-total p span {
   color: #ec9a71;
@@ -311,5 +370,3 @@ body {
   line-height: .6rem;
   margin-right: .2rem;
 }
-
-/*# sourceMappingURL=style.css.map */

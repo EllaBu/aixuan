@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no,viewport-fit=cover"/>
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="format-detection" content="telephone=no">
+    <title>Title</title>
+    <link rel="stylesheet" href="./css/reset.css">
+    <link rel="stylesheet" href="./css/style.css">
+
+</head>
+<body>
+<div class="warranty-wrapper">
+    <!-- 切换标题 -->
+    <div class="home-list">
+        <ul>
+            <li class="active">我的家</li>
+            <li>本人</li>
+            <li>配偶</li>
+            <li>孩子(一)</li>
+            <li>孩子(一)</li>
+            <li>孩子(一)</li>
+            <li>孩子(一)</li>
+        </ul>
+    </div>
+
+    <!-- 没有方案 -->
+    <div class="classify-none">
+        <i>!</i>没有合适的推荐方案
+    </div>
+</div>
+<script src="./js/jquery-2.2.4.min.js"></script>
+<script>
+    $(function () {
+        $('.home-list ul li').click(function () {
+            $(this).addClass('active').siblings().removeClass('active');
+        })
+    })
+</script>
+</body>
+</html>
