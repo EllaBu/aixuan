@@ -1,0 +1,207 @@
+/* reset */
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -o-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+ul, li {
+  list-style: none;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-size: 14px;
+}
+
+i {
+  font-style: normal;
+}
+
+a {
+  text-decoration: none;
+  color: #333;
+}
+
+textarea {
+  resize: none;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.clearfix:after {
+  content: "";
+  display: block;
+  clear: both;
+  visibility: hidden;
+  height: 0;
+  font-size: 0;
+}
+
+body {
+  font-size: 14px;
+  color: #333;
+}
+
+h3 {
+  height: 50px;
+  line-height: 50px;
+  font-size: 24px;
+}
+
+.header {
+  padding: 10px 10px 20px;
+  border-bottom: 1px solid #ddd;
+}
+.header .server {
+  background-color: #f6f6f6;
+  padding: 10px 0;
+}
+.header li {
+  float: left;
+  width: 20%;
+  font-weight: bold;
+  margin-bottom: 5px;
+  line-height: 20px;
+}
+.header li i {
+  display: inline-block;
+  width: 70px;
+  text-align: right;
+}
+.header li span {
+  padding: 1px 5px;
+  background-color: #d8c58c;
+  border-radius: 2px;
+  font-weight: normal;
+}
+.header .choose {
+  padding: 0 10px;
+  margin-top: 10px;
+}
+.header .choose input {
+  vertical-align: middle;
+  width: 14px;
+  height: 14px;
+}
+
+.content {
+  padding: 10px;
+  width: 1366px;
+}
+.content .server-style {
+  position: absolute;
+  z-index: 112;
+}
+.content .server-style span {
+  float: left;
+  display: inline-block;
+  width: 170px;
+  height: 34px;
+  line-height: 34px;
+  border-left: 1px dashed #999;
+  border-bottom: 1px solid #fff;
+}
+.content .item {
+  height: 34px;
+  line-height: 34px;
+}
+.content .left {
+  float: left;
+  width: 326px;
+}
+.content .left .item, .content .left .item-title {
+  background-color: #525d76;
+  color: #fff;
+  height: 34px;
+  line-height: 34px;
+  border-bottom: 1px solid #fff;
+}
+.content .right {
+  float: left;
+  width: 1020px;
+}
+.content .right .item-title {
+  height: 34px;
+  line-height: 34px;
+}
+.content .right .item-title .server-style span {
+  position: relative;
+  background-color: #ffdc75;
+}
+.content .right .item-title .server-style span b {
+  position: absolute;
+  transform: translateX(-50%);
+}
+.content .item-content .item-sort {
+  height: 34px;
+  position: relative;
+}
+.content .item-content .item-sort .server-style {
+  position: absolute;
+  z-index: 112;
+}
+.content .item-content .item-sort .server-state {
+  position: absolute;
+  width: 100%;
+  z-index: 111;
+  line-height: 34px;
+}
+.content .item-content .item-sort .server-state p {
+  background-color: #ebf4fa;
+}
+
+table th {
+  background-color: #ffdc75;
+  border: 2px solid #fff;
+  padding: 4px;
+  width: 14.2%;
+}
+table td {
+  border: 2px solid #fff;
+}
+table td p {
+  padding: 4px;
+}
+table td.server-name p {
+  background-color: #525d76;
+  color: #fff;
+}
+table td.server-error {
+  background-color: #ffeced;
+}
+table td a {
+  color: #fff;
+  font-size: 16px;
+}
+table td.server-detail {
+  border: 3px solid #dbdbdb;
+}
+table td.server-state p {
+  background-color: #EBF4FA;
+}
+table dl {
+  line-height: 22px;
+  overflow: hidden;
+}
+table dt {
+  display: inline-block;
+  width: 8%;
+  vertical-align: middle;
+  word-break: break-all;
+}
+table dd {
+  display: inline-block;
+  width: 90%;
+  vertical-align: middle;
+}
+table dd textarea {
+  width: 100%;
+  height: 160px;
+  padding: 4px;
+}
