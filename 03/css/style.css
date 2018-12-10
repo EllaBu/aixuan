@@ -94,66 +94,79 @@ h3 {
   padding: 10px;
   width: 1366px;
 }
+.content .server-content {
+  width: 1346px;
+}
+.content p {
+  height: 34px;
+  line-height: 34px;
+}
 .content .server-style {
   position: absolute;
-  z-index: 112;
+  top: 0;
+  left: 326px;
+  width: 1020px;
 }
 .content .server-style span {
   float: left;
   display: inline-block;
-  width: 170px;
+  width: 1px;
   height: 34px;
+  margin-right: 169px;
   line-height: 34px;
   border-left: 1px dashed #999;
-  border-bottom: 1px solid #fff;
 }
-.content .item {
-  height: 34px;
-  line-height: 34px;
-}
-.content .left {
+.content .server-name {
   float: left;
   width: 326px;
-}
-.content .left .item, .content .left .item-title {
   background-color: #525d76;
-  color: #fff;
-  height: 34px;
-  line-height: 34px;
-  border-bottom: 1px solid #fff;
 }
-.content .right {
-  float: left;
+.content .server-title {
+  position: relative;
+}
+.content .server-title .server-name {
+  background-color: #525d76;
+}
+.content .server-title .server-style {
+  background-color: #ebfaf4;
+}
+.content .server-state {
+  position: relative;
+  top: 0;
+  left: 0;
+  background-color: #ebfaf4;
+}
+.content .server-item {
+  position: relative;
+  border-top: 1px solid #fff;
+}
+.content .server-right {
+  position: absolute;
+  left: 326px;
+  top: 0;
   width: 1020px;
 }
-.content .right .item-title {
-  height: 34px;
-  line-height: 34px;
-}
-.content .right .item-title .server-style span {
-  position: relative;
-  background-color: #ffdc75;
-}
-.content .right .item-title .server-style span b {
-  position: absolute;
-  transform: translateX(-50%);
-}
-.content .item-content .item-sort {
-  height: 34px;
-  position: relative;
-}
-.content .item-content .item-sort .server-style {
-  position: absolute;
+.content .server-right .server-style {
+  left: 0;
   z-index: 112;
 }
-.content .item-content .item-sort .server-state {
+.content .server-right .server-news {
   position: absolute;
-  width: 100%;
   z-index: 111;
-  line-height: 34px;
+  width: 100%;
 }
-.content .item-content .item-sort .server-state p {
-  background-color: #ebf4fa;
+.content .server-right .server-detail {
+  border: 1px solid #ddd;
+  width: 100%;
+}
+.content .server-right .server-detail > div {
+  margin: 10px 0;
+}
+.content .server-right .server-detail label {
+  display: inline-block;
+  vertical-align: middle;
+  width: 80px;
+  text-align: right;
 }
 
 table th {

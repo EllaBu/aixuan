@@ -91,68 +91,77 @@ h3 {
 .content {
   padding: 10px;
   width: 1366px;
-  .server-style {
-    position: absolute;
-    z-index: 112;
-    span {
-      float: left;
-      display: inline-block;
-      width: $right-span;
-      height: 34px;
-      line-height: 34px;
-      border-left: 1px dashed #999;
-      border-bottom: 1px solid #fff;
-    }
+  .server-content {
+    width: 1346px;
   }
-  .item {
+  p {
     height: 34px;
     line-height: 34px;
   }
-  .left {
+  .server-style {
+    position: absolute;
+    top: 0;
+    left: $left;
+    width: $right;
+    span {
+      float: left;
+      display: inline-block;
+      width: 1px;
+      height: 34px;
+      margin-right: $right-span - 1px;
+      line-height: 34px;
+      border-left: 1px dashed #999;
+    }
+  }
+  .server-name {
     float: left;
     width: $left;
-    .item,.item-title {
+    background-color: #525d76;
+  }
+  .server-title {
+    position: relative;
+    .server-name {
       background-color: #525d76;
-      color: #fff;
-      height: 34px;
-      line-height: 34px;
-      border-bottom: 1px solid #fff;
+    }
+    .server-style {
+      background-color: #ebfaf4;
     }
   }
-  .right {
-    float: left;
+  .server-state {
+    position: relative;
+    top: 0;
+    left: 0;
+    background-color: #ebfaf4;
+  }
+  .server-item {
+    position: relative;
+    border-top: 1px solid #fff;
+  }
+  .server-right {
+    position: absolute;
+    left: $left;
+    top: 0;
     width: $right;
-    .item-title {
-      height: 34px;
-      line-height: 34px;
-      .server-style {
-        span {
-          position: relative;
-          background-color: #ffdc75;
-          b {
-            position: absolute;
-            transform: translateX(-50%);
-          }
-        }
-      }
+    .server-style {
+      left: 0;
+      z-index: 112;
     }
-  }
-  .item-content {
-    .item-sort {
-      height: 34px;
-      position: relative;
-      .server-style {
-        position: absolute;
-        z-index: 112;
+    .server-news {
+      position: absolute;
+      z-index: 111;
+      width: 100%;
+    }
+    .server-detail {
+      border: 1px solid #ddd;
+      width: 100%;
+      & > div {
+        margin: 10px 0;
       }
-      .server-state {
-        position: absolute;
-        width: 100%;
-        z-index: 111;
-        line-height: 34px;
-        p {
-          background-color: #ebf4fa;
-        }
+      label {
+        display: inline-block;
+        vertical-align: middle;
+        width: 80px;
+        text-align: right;
       }
     }
   }
