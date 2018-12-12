@@ -39,39 +39,120 @@
                 <span></span>
                 <span></span>
             </p>
+            <p class="server-tip">
+                <b>0</b>
+                <b>82.600ms</b>
+                <b>165.200ms</b>
+                <b>247.800ms</b>
+                <b>330.400ms</b>
+                <b>413.000ms</b>
+            </p>
         </div>
-        <div class="server-item clearfix">
-            <p class="server-name">services</p>
-            <div class="server-right">
-                <p class="server-style">
-                    <span></span>
-                    <span></span>
-                    <span></span>
-                    <span></span>
-                    <span></span>
-                    <span></span>
-                </p>
-                <div class="server-news">
-                    <p class="server-state" style="margin-left: 20px; width: 410px">3333333</p>
-                    <div class="server-detail">
-                        <div>
-                            <label for="">服务</label>
-                            <span>ts/m3</span>
-                        </div>
-                        <div>
-                            <label for="">请求</label>
-                            <textarea name="" id="" cols="30" rows="10"></textarea>
-                        </div>
-                        <div>
-                            <label for="">响应</label>
-                            <textarea name="" id="" cols="30" rows="10"></textarea>
-                        </div>
-                    </div>
+
+        <div class="server-item">
+            <div class="server-head">
+                <p class="server-name first-name">+services</p>
+                <div class="server-right">
+                    <p class="server-style">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </p>
+                    <p class="server-state" style="width: 900px">3333333</p>
+
+                </div>
+            </div>
+            <div class="server-detail">
+                <div>
+                    <label for="">服务</label>
+                    <p>ts/m3</p>
+                </div>
+                <div>
+                    <label for="">请求参数</label>
+                    <textarea name="" id="" cols="30" rows="10"></textarea>
+                </div>
+                <div>
+                    <label for="">返回结果</label>
+                    <textarea name="" id="" cols="30" rows="10"></textarea>
+                </div>
+                <div>
+                    <label for="">MESSAGE</label>
+                    <p>ts/m3</p>
                 </div>
             </div>
         </div>
+
+        <div class="server-item">
+            <div class="server-head">
+                <p class="server-name second-name">+services</p>
+                <div class="server-right">
+                    <p class="server-style">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </p>
+                    <p class="error-state">超时</p>
+
+                </div>
+            </div>
+            <div class="server-detail">
+                <p>请求出错</p>
+            </div>
+        </div>
+
+        <div class="server-item">
+            <div class="server-head">
+                <p class="server-name third-name">services</p>
+                <div class="server-right">
+                    <p class="server-style">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </p>
+                    <p class="server-state" style="margin-left: 20px; width: 410px">3333333</p>
+
+                </div>
+            </div>
+            <div class="server-detail">
+                <div>
+                    <label for="">服务</label>
+                    <span>ts/m3</span>
+                </div>
+                <div>
+                    <label for="">请求</label>
+                    <textarea name="" id="" cols="30" rows="10"></textarea>
+                </div>
+                <div>
+                    <label for="">响应</label>
+                    <textarea name="" id="" cols="30" rows="10"></textarea>
+                </div>
+            </div>
+        </div>
+
+
+
+
+
+
     </div>
 </div>
 <script src="./js/jquery-2.2.4.min.js"></script>
+<script>
+    $(function () {
+        $('.server-head').click(function () {
+            $(this).parent('.server-item').siblings().find('.server-detail').slideUp();
+            $(this).siblings('.server-detail').slideToggle();
+        })
+    })
+</script>
 </body>
 </html>

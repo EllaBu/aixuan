@@ -104,31 +104,44 @@ h3 {
 .content .server-style {
   position: absolute;
   top: 0;
-  left: 326px;
-  width: 1020px;
+  left: 356px;
+  width: 991.2px;
 }
 .content .server-style span {
   float: left;
   display: inline-block;
   width: 1px;
   height: 34px;
-  margin-right: 169px;
+  margin-right: 164.2px;
   line-height: 34px;
   border-left: 1px dashed #999;
 }
+.content .server-tip {
+  position: absolute;
+  left: 352px;
+  z-index: 112;
+}
+.content .server-tip b:nth-of-type(2) {
+  margin-left: 125.2px;
+}
+.content .server-tip b:nth-of-type(3), .content .server-tip b:nth-of-type(4), .content .server-tip b:nth-of-type(5), .content .server-tip b:nth-of-type(6) {
+  margin-left: 85.2px;
+}
 .content .server-name {
   float: left;
-  width: 326px;
+  width: 356px;
   background-color: #525d76;
+  font-weight: bold;
 }
 .content .server-title {
   position: relative;
 }
 .content .server-title .server-name {
-  background-color: #525d76;
+  background-color: #ffdc75;
+  text-align: center;
 }
 .content .server-title .server-style {
-  background-color: #ebfaf4;
+  background-color: #ffdc75;
 }
 .content .server-state {
   position: relative;
@@ -136,85 +149,68 @@ h3 {
   left: 0;
   background-color: #ebfaf4;
 }
-.content .server-item {
+.content .server-head {
   position: relative;
   border-top: 1px solid #fff;
+  overflow: hidden;
+  cursor: pointer;
+}
+.content .server-head .server-name {
+  color: #fff;
+}
+.content .server-head .server-name.first-name {
+  text-indent: 4px;
+}
+.content .server-head .server-name.second-name {
+  text-indent: 24px;
+}
+.content .server-head .server-name.third-name {
+  text-indent: 44px;
 }
 .content .server-right {
   position: absolute;
-  left: 326px;
+  left: 356px;
   top: 0;
-  width: 1020px;
+  width: 991.2px;
 }
 .content .server-right .server-style {
   left: 0;
   z-index: 112;
 }
-.content .server-right .server-news {
+.content .server-right .server-state {
   position: absolute;
   z-index: 111;
   width: 100%;
+  padding-left: 3px;
 }
-.content .server-right .server-detail {
-  border: 1px solid #ddd;
+.content .server-right .error-state {
+  position: absolute;
+  z-index: 111;
   width: 100%;
+  background-color: #ffeced;
+  padding-left: 3px;
 }
-.content .server-right .server-detail > div {
+.content .server-detail {
+  border: 1px solid #ddd;
+  width: 991.2px;
+  margin-left: 356px;
+  display: none;
+}
+.content .server-detail > div {
   margin: 10px 0;
 }
-.content .server-right .server-detail label {
+.content .server-detail > div > p {
+  display: inline-block;
+  vertical-align: middle;
+}
+.content .server-detail label {
   display: inline-block;
   vertical-align: middle;
   width: 80px;
   text-align: right;
+  font-weight: bold;
 }
-
-table th {
-  background-color: #ffdc75;
-  border: 2px solid #fff;
-  padding: 4px;
-  width: 14.2%;
-}
-table td {
-  border: 2px solid #fff;
-}
-table td p {
-  padding: 4px;
-}
-table td.server-name p {
-  background-color: #525d76;
-  color: #fff;
-}
-table td.server-error {
-  background-color: #ffeced;
-}
-table td a {
-  color: #fff;
-  font-size: 16px;
-}
-table td.server-detail {
-  border: 3px solid #dbdbdb;
-}
-table td.server-state p {
-  background-color: #EBF4FA;
-}
-table dl {
-  line-height: 22px;
-  overflow: hidden;
-}
-table dt {
-  display: inline-block;
-  width: 8%;
+.content .server-detail textarea {
+  width: 891.2px;
   vertical-align: middle;
-  word-break: break-all;
-}
-table dd {
-  display: inline-block;
-  width: 90%;
-  vertical-align: middle;
-}
-table dd textarea {
-  width: 100%;
-  height: 160px;
-  padding: 4px;
 }
