@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no,viewport-fit=cover"/>
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="format-detection" content="telephone=no">
+    <title>Title</title>
+    <link rel="stylesheet" href="./css/reset.css">
+    <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="./css/mobileSelect.css">
+
+</head>
+<body>
+<div class="new-wrapper">
+    <!-- 添加家庭成员 -->
+
+    <h3>保单录入</h3>
+    <div class="insurance-item">
+        <div class="item">
+            <label for="">合同编号：</label>
+            <input type="text">
+        </div>
+        <div class="item">
+            <label for="">投保日期：</label>
+            <span id="insureDate" class="mobile-select"></span>
+        </div>
+        <div class="item">
+            <label for="">生效日期：</label>
+            <span id="effectiveDate" class="mobile-select"></span>
+        </div>
+    </div>
+    <div class="insurance-item">
+        <div class="item">
+            <label for="">保额：</label>
+            <input type="text">
+            <span>元</span>
+        </div>
+        <div class="item">
+            <label for="">保费：</label>
+            <input type="text">
+            <span>元</span>
+        </div>
+        <div class="item item-two">
+            <label for="">保障期：</label>
+            <span id="safeguard" class="mobile-select"></span>
+            <input type="text">
+        </div>
+        <div class="item item-two">
+            <label for="">缴费期：</label>
+            <span id="payment" class="mobile-select"></span>
+            <input type="text">
+        </div>
+        <div class="item">
+            <label for="">缴费周期：</label>
+            <input type="text">
+        </div>
+        <div class="item">
+            <label for="">缴费时间：</label>
+            <span id="paymentTime" class="mobile-select"></span>
+        </div>
+
+    </div>
+    <div class="insurance-item">
+        <div class="item">
+            <label for="">投保人：</label>
+            <input type="text">
+        </div>
+        <div class="item">
+            <label for="">被保人：</label>
+            <span id="" class="mobile-select"></span>
+        </div>
+        <div class="item">
+            <label for="">受益人：</label>
+            <span id="" class="mobile-select"></span>
+        </div>
+    </div>
+    <div class="insurance-item">
+        <button class="save-btn">保存</button>
+    </div>
+
+</div>
+<script src="./js/jquery-2.2.4.min.js"></script>
+<script src="./js/mobileSelect.min.js"></script>
+<script>
+    var yearArr = ['1900年','1902年','1902年','1903年']
+    var monthArr = ['1月','2月','3月','4月','5月','6月','7月','8月']
+    var dayArr = ['1日','2日']
+    var mobileSelect1 = new MobileSelect({
+        trigger: '#insureDate',
+        title: '投保日期',
+        wheels: [
+            {data: yearArr},
+            {data: monthArr},
+            {data: dayArr}
+        ],
+        position:[2], //初始化定位 打开时默认选中的哪个 如果不填默认为0
+    });
+    var mobileSelect2 = new MobileSelect({
+        trigger: '#effectiveDate',
+        title: '生效日期',
+        wheels: [
+            {data: yearArr},
+            {data: monthArr},
+            {data: dayArr}
+        ],
+        position:[2], //初始化定位 打开时默认选中的哪个 如果不填默认为0
+    });
+</script>
+</body>
+</html>

@@ -349,3 +349,122 @@
   line-height: .6rem;
   margin-right: .2rem;
 }
+
+.new-wrapper {
+  /* 家庭成员页面 */
+  /* 保单详情页面 */
+}
+.new-wrapper h3 {
+  height: .8rem;
+  line-height: .8rem;
+  font-size: .32rem;
+  color: #ec9a71;
+  padding: 0 .2rem;
+  border-bottom: 1px solid #ddd;
+}
+.new-wrapper input[type="text"], .new-wrapper .mobile-select {
+  display: inline-block;
+  width: 3rem;
+  height: .6rem;
+  line-height: .6rem;
+  background-color: transparent;
+  border-bottom: 1px solid #bbb;
+  vertical-align: middle;
+}
+.new-wrapper button.save-btn {
+  width: 100%;
+  height: .6rem;
+  line-height: .6rem;
+  font-size: .3rem;
+  font-weight: normal;
+  background-color: #71a5ef;
+  color: #fff;
+  border-radius: .1rem;
+  outline: none;
+}
+.new-wrapper .person-list {
+  padding: .2rem;
+  line-height: .32rem;
+}
+.new-wrapper .person-list li {
+  margin-top: .3rem;
+}
+.new-wrapper .person-list li span {
+  display: inline-block;
+  width: .8rem;
+  height: .8rem;
+  border-radius: .4rem;
+  background-color: #f3f8ff;
+  text-align: center;
+  border: .02rem solid #d2dff5;
+  vertical-align: middle;
+}
+.new-wrapper .person-list li span img {
+  height: .5rem;
+  margin-top: .15rem;
+}
+.new-wrapper .person-list li b {
+  display: inline-block;
+  width: 2.6rem;
+  vertical-align: middle;
+  margin-left: .3rem;
+}
+.new-wrapper .person-list li i {
+  display: inline-block;
+  width: 2rem;
+  vertical-align: middle;
+}
+.new-wrapper .person-list li a {
+  display: inline-block;
+  vertical-align: middle;
+}
+.new-wrapper button {
+  display: block;
+  width: 2rem;
+  margin: 0 auto;
+  font-weight: bold;
+  font-size: .6rem;
+  background-color: transparent;
+}
+.new-wrapper .person-add {
+  margin: .2rem;
+  background-color: #f1f1f1;
+  padding: .2rem .6rem;
+}
+.new-wrapper .person-add .item {
+  padding: .2rem;
+}
+.new-wrapper .person-add .item label {
+  display: inline-block;
+  width: 1.5rem;
+  text-align: right;
+  vertical-align: middle;
+  margin-right: .2rem;
+}
+.new-wrapper .insurance-item {
+  margin: .2rem;
+  padding: .2rem 0;
+  background-color: #f1f1f1;
+}
+.new-wrapper .insurance-item:last-of-type {
+  background-color: transparent;
+}
+.new-wrapper .insurance-item label {
+  display: inline-block;
+  width: 2rem;
+  text-align: right;
+  vertical-align: middle;
+}
+.new-wrapper .insurance-item .item {
+  padding: 0 .2rem;
+}
+.new-wrapper .insurance-item .item span {
+  display: inline-block;
+  vertical-align: middle;
+}
+.new-wrapper .insurance-item .item-two .mobile-select {
+  width: 1rem;
+}
+.new-wrapper .insurance-item .item-two input[type="text"] {
+  width: 1.91rem;
+}
