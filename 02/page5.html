@@ -16,7 +16,22 @@
 <div class="new-wrapper">
     <!-- 添加家庭成员 -->
 
-    <h3>保单录入</h3>
+    <h3 class="new-title">保单录入</h3>
+    <div class="insurance-img">
+        <img src="./img/im5.jpg" alt="">
+        <input type="text">
+        <a href="javascript:;">请选择</a>
+    </div>
+
+    <div class="additional">
+        <div class="item">
+            <label for="">附加险：</label>
+            <input type="text">
+            <i>+</i>
+        </div>
+
+    </div>
+
     <div class="insurance-item">
         <div class="item">
             <label for="">合同编号：</label>
@@ -54,7 +69,10 @@
         </div>
         <div class="item">
             <label for="">缴费周期：</label>
-            <input type="text">
+            <div class="item-choose">
+                <span><input type="radio" name="">月缴</span>
+                <span><input type="radio" name="">年缴</span>
+            </div>
         </div>
         <div class="item">
             <label for="">缴费时间：</label>
@@ -84,6 +102,13 @@
 <script src="./js/jquery-2.2.4.min.js"></script>
 <script src="./js/mobileSelect.min.js"></script>
 <script>
+    $(function () {
+        $('.additional i').click(function () {
+            var addHtml = '<div class="item"><label for="">附加险：</label>\n' +
+                '<input type="text"></div>'
+            $(this).parent().append(addHtml)
+        })
+    })
     var yearArr = ['1900年','1902年','1902年','1903年']
     var monthArr = ['1月','2月','3月','4月','5月','6月','7月','8月']
     var dayArr = ['1日','2日']

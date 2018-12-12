@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no,viewport-fit=cover"/>
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="format-detection" content="telephone=no">
+    <title>Title</title>
+    <link rel="stylesheet" href="./css/reset.css">
+    <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="./css/mobileSelect.css">
+
+</head>
+<body>
+<div class="new-wrapper">
+    <!-- 搜索产品 -->
+
+    <h3 class="new-title">
+        <span>搜索产品</span>
+        <span class="active">手工录入</span>
+    </h3>
+
+    <div class="new-add">
+        <div class="item">
+            <label for="">保险名称：</label>
+            <input type="text">
+        </div>
+        <div class="item">
+            <label for="">保险公司：</label>
+            <span id="insurer" class="mobile-select"></span>
+        </div>
+        <div class="item item-three">
+            <label for="">产品分类：</label>
+            <span id="" class="mobile-select">选择</span>
+            <span id="" class="mobile-select">选择</span>
+        </div>
+    </div>
+
+    <ul class="result">
+        <li>
+            <div class="image">
+                <img src="./img/im5.jpg" alt="">
+            </div>
+            <div class="detail">
+                <h4>人保寿险金色朝阳少儿定期寿险（A款）</h4>
+                <p>这里是一些描述---这里是一些描述---这里是一些描述---这里是一些描述---</p>
+            </div>
+        </li>
+        <li>
+            <div class="image">
+                <img src="./img/im6.jpg" alt="">
+            </div>
+            <div class="detail">
+                <h4>人保寿险金色朝阳少儿定期寿险（A款）</h4>
+                <p>这里是一些描述---这里是一些描述---这里是一些描述---这里是一些描述---</p>
+            </div>
+        </li>
+        <li>
+            <div class="image">
+                <img src="./img/im5.jpg" alt="">
+            </div>
+            <div class="detail">
+                <h4>人保寿险金色朝阳少儿定期寿险（A款）</h4>
+                <p>这里是一些描述---这里是一些描述---这里是一些描述---这里是一些描述---</p>
+            </div>
+        </li>
+        <li>
+            <div class="image">
+                <img src="./img/im6.jpg" alt="">
+            </div>
+            <div class="detail">
+                <h4>人保寿险金色朝阳少儿定期寿险（A款）</h4>
+                <p>这里是一些描述---这里是一些描述---这里是一些描述---这里是一些描述---</p>
+            </div>
+        </li>
+    </ul>
+    <button class="save-btn">确定</button>
+</div>
+<script src="./js/jquery-2.2.4.min.js"></script>
+<script src="./js/mobileSelect.min.js"></script>
+<script>
+    $(function () {
+        $('.new-title span').click( function () {
+            $(this).addClass('active').siblings().removeClass('active')
+        })
+
+        var insurerArr = ['爱康', 'iKang']
+
+        var mobileSelect1 = new MobileSelect({
+            trigger: '#insurer',
+            title: '保险公司',
+            wheels: [
+                {data: insurerArr}
+            ],
+            position:[0], //初始化定位 打开时默认选中的哪个 如果不填默认为0
+        });
+    })
+
+</script>
+</body>
+</html>

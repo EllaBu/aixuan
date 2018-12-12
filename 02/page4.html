@@ -16,7 +16,7 @@
 <div class="new-wrapper">
     <!-- 添加家庭成员 -->
 
-    <h3>家庭成员</h3>
+    <h3 class="new-title">家庭成员</h3>
     <ul class="person-list">
         <li>
             <span><img src="./img/man.png" alt=""></span>
@@ -49,7 +49,10 @@
         </div>
         <div class="item">
             <label for="">性别：</label>
-            <input type="text">
+            <div class="img-choose">
+                <span class="active"><img src="./img/man.png" alt=""></span>
+                <span><img src="./img/women.png" alt=""></span>
+            </div>
         </div>
         <div class="item">
             <label for="">生日：</label>
@@ -63,6 +66,11 @@
 <script src="./js/jquery-2.2.4.min.js"></script>
 <script src="./js/mobileSelect.min.js"></script>
 <script>
+    $(function () {
+        $('.img-choose span').click( function () {
+            $(this).addClass('active').siblings().removeClass('active')
+        })
+    })
     var identityArr = ['周日','周一','周二','周三','周四','周五','周六'];
     var mobileSelect1 = new MobileSelect({
         trigger: '#identity',

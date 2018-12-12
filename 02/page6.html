@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no,viewport-fit=cover"/>
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="format-detection" content="telephone=no">
+    <title>Title</title>
+    <link rel="stylesheet" href="./css/reset.css">
+    <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="./css/mobileSelect.css">
+
+</head>
+<body>
+<div class="new-wrapper">
+    <!-- 搜索产品 -->
+
+    <h3 class="new-title">
+        <span class="active">搜索产品</span>
+        <span>手工录入</span>
+    </h3>
+
+    <div class="search">
+        <input type="text">
+        <a href="javascript:;">搜索</a>
+    </div>
+    <!-- 没有搜索结果-->
+    <div class="result-none">查无结果，您可以进行手工录入</div>
+
+    <!-- 有搜索结果-->
+    <ul class="result">
+        <li>
+            <div class="image">
+                <img src="./img/im5.jpg" alt="">
+            </div>
+            <div class="detail">
+                <h4>人保寿险金色朝阳少儿定期寿险（A款）</h4>
+                <p>这里是一些描述---这里是一些描述---这里是一些描述---这里是一些描述---</p>
+            </div>
+        </li>
+        <li>
+            <div class="image">
+                <img src="./img/im6.jpg" alt="">
+            </div>
+            <div class="detail">
+                <h4>人保寿险金色朝阳少儿定期寿险（A款）</h4>
+                <p>这里是一些描述---这里是一些描述---这里是一些描述---这里是一些描述---</p>
+            </div>
+        </li>
+        <li>
+            <div class="image">
+                <img src="./img/im5.jpg" alt="">
+            </div>
+            <div class="detail">
+                <h4>人保寿险金色朝阳少儿定期寿险（A款）</h4>
+                <p>这里是一些描述---这里是一些描述---这里是一些描述---这里是一些描述---</p>
+            </div>
+        </li>
+        <li>
+            <div class="image">
+                <img src="./img/im6.jpg" alt="">
+            </div>
+            <div class="detail">
+                <h4>人保寿险金色朝阳少儿定期寿险（A款）</h4>
+                <p>这里是一些描述---这里是一些描述---这里是一些描述---这里是一些描述---</p>
+            </div>
+        </li>
+    </ul>
+
+</div>
+<script src="./js/jquery-2.2.4.min.js"></script>
+<script>
+    $(function () {
+        $('.new-title span').click( function () {
+            $(this).addClass('active').siblings().removeClass('active')
+        })
+    })
+</script>
+</body>
+</html>

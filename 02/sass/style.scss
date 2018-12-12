@@ -366,13 +366,22 @@ $color-blue: #1e83d3;
 
 
 .new-wrapper {
-  h3 {
+  padding: 0 .2rem .5rem;
+  h3.new-title {
     height: .8rem;
     line-height: .8rem;
     font-size: .32rem;
     color: $color-yellow;
-    padding: 0 .2rem;
-    border-bottom: 1px solid #ddd;
+    span {
+      display: inline-block;
+      width: 1.6rem;
+      text-align: center;
+      color: #333;
+      &.active {
+        color: $color-yellow;
+        border-bottom: 2px solid $color-yellow;
+      }
+    }
   }
   input[type="text"], .mobile-select {
     display: inline-block;
@@ -394,9 +403,54 @@ $color-blue: #1e83d3;
     border-radius: .1rem;
     outline: none;
   }
+  .img-choose {
+    display: inline-block;
+    width: 3rem;
+    vertical-align: middle;
+    span {
+      position: relative;
+      background-color: #f3f8ff;
+      text-align: center;
+      display: inline-block;
+      border: .02rem solid #d2dff5;
+      width: .8rem;
+      height: .8rem;
+      border-radius: .4rem;
+      margin-right: .5rem;
+      img {
+        height: .5rem;
+        margin-top: .15rem;
+      }
+      &.active:after {
+        position: absolute;
+        right: -.2rem;
+        bottom: 0;
+        content: "";
+        width: .3rem;
+        height: .3rem;
+        background: url("../img/ic32.png") no-repeat center;
+        background-size: .3rem .3rem;
+      }
+    }
+  }
+  .item-choose {
+    display: inline-block;
+    width: 3rem;
+    vertical-align: middle;
+    overflow: hidden;
+    span {
+      display: inline-block;
+      width: 1rem;
+      margin-right: .3rem;
+      line-height: .6rem;
+      input {
+        vertical-align: middle;
+      }
+    }
+  }
   /* 家庭成员页面 */
   .person-list {
-    padding: .2rem;
+    padding: .2rem 0;
     line-height: .32rem;
     li {
       margin-top: .3rem;
@@ -440,7 +494,7 @@ $color-blue: #1e83d3;
     background-color: transparent;
   }
   .person-add {
-    margin: .2rem;
+    margin-top: .2rem;
     background-color: #f1f1f1;
     padding: .2rem .6rem;
     .item {
@@ -457,8 +511,37 @@ $color-blue: #1e83d3;
   }
 
   /* 保单详情页面 */
+  .insurance-img {
+    padding-left: .55rem;
+    img {
+      height: 1.6rem;
+      vertical-align: middle;
+    }
+    a {
+      display: inline-block;
+      vertical-align: middle;
+      color: $color-blue;
+      font-weight: bold;
+    }
+  }
+  .additional {
+    padding: .2rem .2rem 0;
+    label {
+      display: inline-block;
+      width: 2rem;
+      text-align: right;
+    }
+    i {
+      display: inline-block;
+      width: .6rem;
+      height: .6rem;
+      font-weight: bold;
+      font-size: .4rem;
+      text-align: center;
+    }
+  }
   .insurance-item {
-    margin: .2rem;
+    margin: .2rem 0;
     padding: .2rem 0;
     background-color: #f1f1f1;
     &:last-of-type {
@@ -483,6 +566,84 @@ $color-blue: #1e83d3;
       }
       input[type="text"] {
         width: 1.91rem;
+      }
+    }
+  }
+
+  /* 搜索产品页面 */
+  .search {
+    padding: .3rem 0;
+    background-color: #f9f9f9;
+    margin-top: .2rem;
+    input {
+      width: 5rem;
+      padding-left: .2rem;
+      border: 1px solid #ddd;
+    }
+    a {
+      display: inline-block;
+      width: 2rem;
+      height: .6rem;
+      line-height: .6rem;
+      background-color: $color-blue;
+      text-align: center;
+      color: #fff;
+      border-radius: .1rem;
+      font-weight: bold;
+      vertical-align: middle;
+    }
+  }
+  .result-none {
+    padding: .5rem 0;
+    text-align: center;
+    font-weight: bold;
+    color: #999;
+    font-size: .3rem;
+  }
+  .result {
+
+    li {
+      overflow: hidden;
+      box-shadow: 0 3px 8px #ddd;
+      margin-bottom: .3rem;
+    }
+    .image {
+      float: left;
+      width: 2rem;
+      padding: .3rem;
+      img {
+        height: 1.4rem;
+      }
+    }
+    .detail {
+      width: 5rem;
+      float: left;
+      padding: .3rem 0;
+      h4 {
+        font-size: .28rem;
+        font-weight: bold;
+        margin: .1rem 0 .2rem;
+      }
+      p {
+        line-height: .3rem;
+      }
+    }
+  }
+  .new-add {
+    margin: .2rem 0;
+    padding: .2rem;
+    background-color: #f1f1f1;
+    .item {
+      margin-bottom: .2rem;
+    }
+    label {
+      display: inline-block;
+      width: 2rem;
+      text-align: right;
+    }
+    .item-three {
+      span {
+        width: 1.46rem;
       }
     }
   }
