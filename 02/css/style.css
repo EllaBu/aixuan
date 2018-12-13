@@ -436,15 +436,18 @@
 }
 .new-wrapper .item-choose span input {
   vertical-align: middle;
+  width: .28rem;
+  height: .28rem;
+  margin-top: -.06rem;
 }
 .new-wrapper .person-list {
   padding: .2rem 0;
   line-height: .32rem;
 }
-.new-wrapper .person-list li {
+.new-wrapper .person-list > li {
   margin-top: .3rem;
 }
-.new-wrapper .person-list li span {
+.new-wrapper .person-list > li > span {
   display: inline-block;
   width: .8rem;
   height: .8rem;
@@ -454,22 +457,22 @@
   border: .02rem solid #d2dff5;
   vertical-align: middle;
 }
-.new-wrapper .person-list li span img {
+.new-wrapper .person-list > li > span img {
   height: .5rem;
   margin-top: .15rem;
 }
-.new-wrapper .person-list li b {
+.new-wrapper .person-list > li b {
   display: inline-block;
   width: 2.6rem;
   vertical-align: middle;
   margin-left: .3rem;
 }
-.new-wrapper .person-list li i {
+.new-wrapper .person-list > li i {
   display: inline-block;
   width: 2rem;
   vertical-align: middle;
 }
-.new-wrapper .person-list li a {
+.new-wrapper .person-list > li a {
   display: inline-block;
   vertical-align: middle;
 }
@@ -524,6 +527,7 @@
   font-weight: bold;
   font-size: .4rem;
   text-align: center;
+  margin-left: .1rem;
 }
 .new-wrapper .insurance-item {
   margin: .2rem 0;
@@ -587,22 +591,24 @@
   margin-bottom: .3rem;
 }
 .new-wrapper .result .image {
-  float: left;
+  display: inline-block;
   width: 2rem;
   padding: .3rem;
+  vertical-align: middle;
 }
 .new-wrapper .result .image img {
   height: 1.4rem;
 }
 .new-wrapper .result .detail {
   width: 5rem;
-  float: left;
+  display: inline-block;
   padding: .3rem 0;
+  vertical-align: middle;
 }
 .new-wrapper .result .detail h4 {
   font-size: .28rem;
   font-weight: bold;
-  margin: .1rem 0 .2rem;
+  margin-bottom: .2rem;
 }
 .new-wrapper .result .detail p {
   line-height: .3rem;

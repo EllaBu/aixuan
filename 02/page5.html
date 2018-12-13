@@ -27,7 +27,7 @@
         <div class="item">
             <label for="">附加险：</label>
             <input type="text">
-            <i>+</i>
+            <i class="add-item">+</i>
         </div>
 
     </div>
@@ -91,7 +91,7 @@
         </div>
         <div class="item">
             <label for="">受益人：</label>
-            <span id="" class="mobile-select"></span>
+            <input type="text">
         </div>
     </div>
     <div class="insurance-item">
@@ -103,10 +103,14 @@
 <script src="./js/mobileSelect.min.js"></script>
 <script>
     $(function () {
-        $('.additional i').click(function () {
+        $('.additional .add-item').click(function () {
             var addHtml = '<div class="item"><label for="">附加险：</label>\n' +
-                '<input type="text"></div>'
-            $(this).parent().append(addHtml)
+                '<input type="text">\n' +
+                '<i class="delete">-</i></div>'
+            $(this).parents('.additional').append(addHtml)
+        })
+        $('.additional').on('click', '.delete', function () {
+            $(this).parent('.item').remove();
         })
     })
     var yearArr = ['1900年','1902年','1902年','1903年']
