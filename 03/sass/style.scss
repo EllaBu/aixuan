@@ -134,17 +134,17 @@ h3 {
   .server-name {
     float: left;
     width: $left;
-    background-color: #525d76;
+    background-color: #ffdc75;
     font-weight: bold;
   }
   .server-title {
     position: relative;
     .server-name {
-      background-color: #ffdc75;
+      background-color: #d2a41c;
       text-align: center;
     }
     .server-style {
-      background-color: #ffdc75;
+      background-color: #d2a41c;
     }
   }
   .server-state {
@@ -159,7 +159,6 @@ h3 {
     overflow: hidden;
     cursor: pointer;
     .server-name {
-      color: #fff;
       &.first-name {
         text-indent: 4px;
       }

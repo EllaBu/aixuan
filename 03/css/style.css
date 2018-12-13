@@ -132,18 +132,18 @@ h3 {
 .content .server-name {
   float: left;
   width: 356px;
-  background-color: #525d76;
+  background-color: #ffdc75;
   font-weight: bold;
 }
 .content .server-title {
   position: relative;
 }
 .content .server-title .server-name {
-  background-color: #ffdc75;
+  background-color: #d2a41c;
   text-align: center;
 }
 .content .server-title .server-style {
-  background-color: #ffdc75;
+  background-color: #d2a41c;
 }
 .content .server-state {
   position: relative;
@@ -156,9 +156,6 @@ h3 {
   border-top: 1px solid #fff;
   overflow: hidden;
   cursor: pointer;
-}
-.content .server-head .server-name {
-  color: #fff;
 }
 .content .server-head .server-name.first-name {
   text-indent: 4px;
