@@ -72,9 +72,10 @@
 <script src="./js/mobileSelect.min.js"></script>
 <script>
     $(function () {
-        $('.img-choose span').click( function () {
+        $('.new-wrapper').on('click', '.img-choose span', function () {
             $(this).addClass('active').siblings().removeClass('active')
         })
+
         var addHtml = '<div class="person-add">\n' +
             '                <div class="item">\n' +
             '                    <label for="">姓名：</label>\n' +
@@ -99,7 +100,7 @@
             '                    <button class="save-btn">保存</button>\n' +
             '                </div>\n' +
             '            </div>'
-        $('.person-list a').click(function () {
+        $('.person-list').on('click', 'a', function () {
             console.log($(this).parents('li').attr('add'))
             if ($(this).parents('li').attr('add')) {
                 return false;
