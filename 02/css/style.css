@@ -34,15 +34,29 @@
   border-radius: 0 .05rem .05rem 0rem;
 }
 
+.add-btn {
+  margin-top: .2rem;
+  height: .8rem;
+  line-height: .8rem;
+  text-align: center;
+}
+.add-btn a {
+  background-color: #397ff8;
+  color: #fff;
+  font-size: .3rem;
+  padding: .15rem .2rem;
+  border-radius: .1rem;
+}
+
 .home-list {
   background-color: #fff;
 }
 .home-list ul {
   height: 1.1rem;
-  margin: 0 auto .1rem;
   white-space: nowrap;
   overflow-x: auto;
   padding: .1rem .2rem;
+  width: 6.6rem;
 }
 .home-list ul li {
   font-size: .36rem;
@@ -55,6 +69,16 @@
 .home-list ul li.active {
   color: #ec9a71;
   border-bottom: 3px solid #ec9a71;
+}
+.home-list a {
+  float: right;
+  width: .8rem;
+  height: .8rem;
+  text-align: center;
+  font-size: .6rem;
+  color: #1e83d3;
+  font-weight: bold;
+  margin-top: -.9rem;
 }
 
 .home-content {
@@ -90,6 +114,11 @@
   border-radius: .1rem;
   box-shadow: 0 2px 10px #aaa;
 }
+.warranty-list > li ul {
+  background: #fff url(../img/im1.png) center no-repeat;
+  -webkit-background-size: 100% 100%;
+  background-size: 100% 100%;
+}
 .warranty-list > li.list-one ul {
   background: #fff url(../img/list1.png) center no-repeat;
   -webkit-background-size: 100% 100%;
@@ -107,6 +136,11 @@
 }
 .warranty-list > li.list-four ul {
   background: #fff url(../img/list4.png) center no-repeat;
+  -webkit-background-size: 100% 100%;
+  background-size: 100% 100%;
+}
+.warranty-list > li.list-five ul {
+  background: #fff url(../img/im1.png) center no-repeat;
   -webkit-background-size: 100% 100%;
   background-size: 100% 100%;
 }
@@ -177,21 +211,29 @@
   font-weight: normal;
   font-family: fontm;
 }
-.warranty-list > li div li.li-item1 {
+.warranty-list > li div li:nth-of-type(1) {
   left: .48rem;
   top: 1.26rem;
 }
-.warranty-list > li div li.li-item2 {
+.warranty-list > li div li:nth-of-type(2) {
   right: .48rem;
   top: .22rem;
 }
-.warranty-list > li div li.li-item3 {
+.warranty-list > li div li:nth-of-type(3) {
   left: .48rem;
   top: .24rem;
 }
-.warranty-list > li div li.li-item4 {
+.warranty-list > li div li:nth-of-type(4) {
   right: .48rem;
   top: 1.26rem;
+}
+.warranty-list > li div li:nth-of-type(5) {
+  left: 1.85rem;
+  top: -.05rem;
+}
+.warranty-list > li div li:nth-of-type(6) {
+  right: 1.85rem;
+  top: -.05rem;
 }
 .warranty-list > li div li h3 {
   width: .5rem;
@@ -300,15 +342,27 @@
   width: 98%;
 }
 .classify-list > ul > li .li-right {
+  position: relative;
   float: left;
   width: 70%;
   padding: .2rem .2rem .1rem 0;
   vertical-align: middle;
 }
+.classify-list > ul > li .li-right .li-edit {
+  position: absolute;
+  display: block;
+  width: .32rem;
+  height: .32rem;
+  right: .14rem;
+  top: .18rem;
+  background: url("../img/ic45.png") no-repeat;
+  background-size: 100%;
+}
 .classify-list h4 {
   font-size: .3rem;
   line-height: .32rem;
   margin-bottom: .1rem;
+  padding-right: .4rem;
 }
 .classify-list .recommend-list {
   margin-top: .2rem;
@@ -359,7 +413,7 @@
 .new-wrapper h3.new-title {
   height: .8rem;
   line-height: .8rem;
-  font-size: .32rem;
+  font-size: .36rem;
   color: #ec9a71;
 }
 .new-wrapper h3.new-title span {
@@ -475,14 +529,6 @@
 .new-wrapper .person-list > li a {
   display: inline-block;
   vertical-align: middle;
-}
-.new-wrapper button {
-  display: block;
-  width: 2rem;
-  margin: 0 auto;
-  font-weight: bold;
-  font-size: .6rem;
-  background-color: transparent;
 }
 .new-wrapper .person-add {
   margin-top: .2rem;
