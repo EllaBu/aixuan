@@ -4,7 +4,7 @@ $right-span: 165px;
 $right: $right-span*6;
 $success-color: #d3f5e7;
 $error-color: #f9d8d9;
-$title-color: #e7d63f;
+$title-color: #b2b2b2;
 /* reset */
 * {
   margin: 0;
@@ -82,10 +82,29 @@ h3 {
   .choose {
     padding: 0 10px;
     margin-top: 10px;
+    overflow: hidden;
+    label {
+      display: inline-block;
+      vertical-align: middle;
+    }
     input {
       vertical-align: middle;
       width: 14px;
       height: 14px;
+    }
+  }
+  .selected {
+    padding: 10px;
+    p {
+      margin-bottom: 10px;
+      display: none;
+      span {
+        display: inline-block;
+        padding: 1px 5px;
+        background-color: #d8c58c;
+        border-radius: 2px;
+        margin: 0 10px 6px 0;
+      }
     }
   }
 }
@@ -209,6 +228,15 @@ h3 {
       }
       td {
         padding: 8px;
+        &.ul-auto {
+          ul {
+            height: auto;
+          }
+          p {
+            background: url("../img/icon-up.png") no-repeat center;
+            background-size: 20px 20px;
+          }
+        }
       }
       textarea {
         width: 100%;
@@ -218,9 +246,16 @@ h3 {
       }
       ul {
         padding-left: 20px;
+        height: 60px;
+        overflow: hidden;
       }
       li {
         list-style: circle;
+      }
+      p {
+        height: 40px;
+        background: url("../img/icon-down.png") no-repeat center;
+        background-size: 20px 20px;
       }
     }
   }
