@@ -1,6 +1,7 @@
 @charset "UTF-8";
 $color-yellow: #ec9a71;
 $color-blue: #1e83d3;
+$btn-color: #71a5ef;
 /*body {
   background-color: #fff;
 }*/
@@ -35,17 +36,20 @@ $color-blue: #1e83d3;
     }
   }
 }
-.add-btn {
-  margin-top: .2rem;
+.btn-list {
+  margin-top: .3rem;
   height: .8rem;
   line-height: .8rem;
   text-align: center;
   a {
-    background-color: #397ff8;
+    display: inline-block;
+    background-color: $btn-color;
     color: #fff;
-    font-size: .3rem;
-    padding: .15rem .2rem;
+    font-size: .32rem;
+    padding: 0 .2rem;
     border-radius: .1rem;
+    margin: 0 .1rem;
+    min-width: 2rem;
   }
 }
 .home-list{
@@ -308,20 +312,44 @@ $color-blue: #1e83d3;
 }
 
 
+.tab-title {
+  height: .72rem;
+  line-height: .72rem;
+  display: flex;
+  margin-top: .2rem;
+  &>span {
+    display: inline-block;
+    flex: 1;
+    background-color: #eee;
+    text-align: center;
+    margin: 0 .2rem;
+    border-radius: .1rem;
+    cursor: pointer;
+    &.active {
+      background-color: $color-yellow;
+      color: #fff;
+    }
+  }
+}
 
+.tab-detail {
+  display: none;
+  &.show {
+    display: block;
+  }
+}
 
 .classify-list {
   width: 7rem;
   margin: .3rem auto;
-  padding: .2rem 0 0;
   color: #999;
   box-shadow: 0 2px 8px #aaa;
   border-radius: .1rem;
   .classify-title {
-    line-height: .4rem;
+    height: .8rem;
     font-size: .32rem;
     font-weight: bold;
-    padding: 0 .1rem;
+    padding-left: .2rem;
     h3 {
       float: left;
       span {
@@ -333,20 +361,33 @@ $color-blue: #1e83d3;
         background-color: #f3f8ff;
         text-align: center;
         vertical-align: middle;
-        margin-top: -.1rem;
+        padding-top: .1rem;
         img {
           height: .29rem;
-          margin-top: .1rem;
+          margin-top: -.2rem;
         }
+      }
+      i {
+        line-height: .8rem;
       }
     }
     p {
       float: right;
+      line-height: .8rem;
+      padding-right: .2rem;
       color: $color-yellow;
+    }
+    a {
+      float: right;
+      width: .8rem;
+      height: .8rem;
+      &.title-edit {
+        background: url("../img/edit.png") no-repeat center;
+        background-size: .4rem;
+      }
     }
   }
   &>ul {
-    margin-top: .2rem;
     &>li {
       overflow: hidden;
       border-top: 1px solid #ddd;
@@ -368,27 +409,33 @@ $color-blue: #1e83d3;
         .li-edit {
           position: absolute;
           display: block;
-          width: .32rem;
-          height: .32rem;
-          right: .14rem;
-          top: .18rem;
-          background: url("../img/ic45.png") no-repeat;
-          background-size: 100%;
+          width: .72rem;
+          height: .72rem;
+          right: 0;
+          top: 0;
+          background: url("../img/edit.png") no-repeat center;
+          background-size: .4rem;
+        }
+        .text-right {
+          text-align: right;
+          color: $color-yellow;
+          padding-right: .4rem;
         }
       }
     }
   }
   h4 {
-    font-size: .3rem;
-    line-height: .32rem;
+    font-size: .32rem;
+    line-height: .36rem;
     margin-bottom: .1rem;
     padding-right: .4rem;
   }
   .recommend-list {
     margin-top: .2rem;
+    font-size: .28rem;
     p {
-      padding: .05rem 0;
-      line-height: .5rem;
+      padding: .05rem 0 .2rem 0;
+      line-height: .32rem;
       span {
         display: inline-block;
         width: 45%;
@@ -425,6 +472,24 @@ $color-blue: #1e83d3;
   }
 }
 
+.add-layer {
+  position: fixed;
+  right: 0;
+  bottom: 2rem;
+  width: 1.4rem;
+  height: 1.4rem;
+  padding: .3rem;
+  text-align: center;
+  line-height: .36rem;
+  border-radius: 50%;
+  font-weight: bold;
+  font-size: .32rem;
+  background-color: rgba(0,0,0,.5);
+  a {
+    color: #fff;
+  }
+}
+
 
 .new-wrapper {
   padding: 0 .2rem .5rem;
@@ -433,6 +498,7 @@ $color-blue: #1e83d3;
     line-height: .8rem;
     font-size: .36rem;
     color: $color-yellow;
+    font-weight: bold;
     span {
       display: inline-block;
       width: 1.6rem;
@@ -446,24 +512,38 @@ $color-blue: #1e83d3;
   }
   input[type="text"], .mobile-select {
     display: inline-block;
-    width: 3rem;
-    height: .6rem;
-    line-height: .6rem;
+    width: 3.6rem;
+    height: .44rem;
+    line-height: .4rem;
     background-color: transparent;
     border-bottom: 1px solid #bbb;
     vertical-align: middle;
+    border-radius: 0;
   }
-  button.save-btn {
-    width: 100%;
-    height: .6rem;
-    line-height: .6rem;
-    font-size: .3rem;
-    font-weight: normal;
-    background-color: #71a5ef;
-    color: #fff;
-    border-radius: .1rem;
-    outline: none;
+  .btn-item {
+    margin-top: .2rem;
+    button {
+      width: 100%;
+      height: .8rem;
+      line-height: .8rem;
+      font-size: .36rem;
+      font-weight: normal;
+      background-color: $btn-color;
+      color: #fff;
+      border-radius: .1rem;
+      outline: none;
+      margin: 0;
+    }
+    &.btn-item-two {
+      button {
+        width: 49.3%;
+        &:nth-of-type(1) {
+          background-color: #bbb;
+        }
+      }
+    }
   }
+
   .img-choose {
     display: inline-block;
     width: 3rem;
@@ -568,7 +648,7 @@ $color-blue: #1e83d3;
   }
 
   /* 保单详情页面 */
-  .insurance-img {
+  /*.insurance-img {
     padding-left: .55rem;
     img {
       height: 1.6rem;
@@ -597,7 +677,7 @@ $color-blue: #1e83d3;
       text-align: center;
       margin-left: .1rem;
     }
-  }
+  }*/
   .insurance-item {
     margin: .2rem 0;
     padding: .2rem 0;
@@ -612,7 +692,7 @@ $color-blue: #1e83d3;
       vertical-align: middle;
     }
     .item {
-      padding: 0 .2rem;
+      padding: .14rem .2rem;
       span {
         display: inline-block;
         vertical-align: middle;
@@ -626,6 +706,42 @@ $color-blue: #1e83d3;
         width: 1.91rem;
       }
     }
+    a {
+      color: #333;
+    }
+  }
+  .product-list {
+    margin-top: .4rem;
+    h4 {
+      height: .72rem;
+      line-height: .72rem;
+      font-size: .36rem;
+      color: $color-yellow;
+    }
+    ul {
+      margin-top: .2rem;
+      li {
+        border-bottom: 1px dashed #ddd;
+        padding: .1rem 0;
+        span {
+          display: inline-block;
+          width: 6rem;
+          line-height: .36rem;
+          vertical-align: middle;
+        }
+        a {
+          display: inline-block;
+          width: 1rem;
+          vertical-align: middle;
+          height: .72rem;
+          font-size: .6rem;
+          color: #333;
+          background: url("../img/delete.png") no-repeat center;
+          text-align: center;
+          background-size: .44rem;
+        }
+      }
+    }
   }
 
   /* 搜索产品页面 */
@@ -635,6 +751,7 @@ $color-blue: #1e83d3;
     margin-top: .2rem;
     input {
       width: 5rem;
+      height: .6rem;
       padding-left: .2rem;
       border: 1px solid #ddd;
     }
@@ -680,12 +797,12 @@ $color-blue: #1e83d3;
       padding: .3rem 0;
       vertical-align: middle;
       h4 {
-        font-size: .28rem;
         font-weight: bold;
         margin-bottom: .2rem;
       }
       p {
         line-height: .3rem;
+        font-size: .28rem;
       }
     }
   }
@@ -695,6 +812,7 @@ $color-blue: #1e83d3;
     background-color: #f1f1f1;
     .item {
       margin-bottom: .2rem;
+      padding: .1rem;
     }
     label {
       display: inline-block;
