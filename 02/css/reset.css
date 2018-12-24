@@ -60,7 +60,9 @@ table {
 input, textarea {
     outline: 0;
     resize: none;
-    font-size: .28rem;
+    font-size: .32rem;
+    color: #333;
+    font-family: -apple-system,Helvetica,sans-serif;
 }
 
 .clearfix:after {
@@ -145,10 +147,11 @@ input, textarea {
 }
 
 body {
-    font-size: .24rem;
+    font-size: .32rem;
     color: #333;
     max-width: 768px;
     margin: 0 auto;
+    font-family: -apple-system,Helvetica,sans-serif;
     -webkit-text-size-adjust: auto;
     padding-top: constant(safe-area-inset-top);
     padding-left: constant(safe-area-inset-left);
@@ -156,8 +159,12 @@ body {
     padding-bottom: constant(safe-area-inset-bottom);
 }
 
+input::-webkit-input-placeholder {
+  font-size: .32rem;
+  color: #333;
+}
+
 @font-face {
     font-family: numfont;
     src: url('../fonts/aa.ttf');
-
 }

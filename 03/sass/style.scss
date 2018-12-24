@@ -4,7 +4,7 @@ $right-span: 165px;
 $right: $right-span*6;
 $success-color: #d3f5e7;
 $error-color: #f9d8d9;
-$title-color: #b2b2b2;
+$title-color: #aaa;
 /* reset */
 * {
   margin: 0;
@@ -212,16 +212,24 @@ h3 {
     }
   }
   .server-detail {
+    position: relative;
     border-left: 1px solid #ddd;
     width: $right;
     margin-left: $left;
     display: none;
+    &>p {
+      position: absolute;
+      top: 0;
+      left: 300px;
+      font-weight: bold;
+      color: darkred;
+    }
     table {
       tr {
         border-bottom: 1px solid #ddd;
       }
       th {
-        background-color: #f9f9f9;
+        background-color: #eee;
         width: 80px;
         padding: 8px;
         text-align: right;

@@ -34,18 +34,21 @@
   border-radius: 0 .05rem .05rem 0rem;
 }
 
-.add-btn {
-  margin-top: .2rem;
+.btn-list {
+  margin-top: .3rem;
   height: .8rem;
   line-height: .8rem;
   text-align: center;
 }
-.add-btn a {
-  background-color: #397ff8;
+.btn-list a {
+  display: inline-block;
+  background-color: #71a5ef;
   color: #fff;
-  font-size: .3rem;
-  padding: .15rem .2rem;
+  font-size: .32rem;
+  padding: 0 .2rem;
   border-radius: .1rem;
+  margin: 0 .1rem;
+  min-width: 2rem;
 }
 
 .home-list {
@@ -289,19 +292,45 @@
   text-align: right;
 }
 
+.tab-title {
+  height: .72rem;
+  line-height: .72rem;
+  display: flex;
+  margin-top: .2rem;
+}
+.tab-title > span {
+  display: inline-block;
+  flex: 1;
+  background-color: #eee;
+  text-align: center;
+  margin: 0 .2rem;
+  border-radius: .1rem;
+  cursor: pointer;
+}
+.tab-title > span.active {
+  background-color: #ec9a71;
+  color: #fff;
+}
+
+.tab-detail {
+  display: none;
+}
+.tab-detail.show {
+  display: block;
+}
+
 .classify-list {
   width: 7rem;
   margin: .3rem auto;
-  padding: .2rem 0 0;
   color: #999;
   box-shadow: 0 2px 8px #aaa;
   border-radius: .1rem;
 }
 .classify-list .classify-title {
-  line-height: .4rem;
+  height: .8rem;
   font-size: .32rem;
   font-weight: bold;
-  padding: 0 .1rem;
+  padding-left: .2rem;
 }
 .classify-list .classify-title h3 {
   float: left;
@@ -315,18 +344,29 @@
   background-color: #f3f8ff;
   text-align: center;
   vertical-align: middle;
-  margin-top: -.1rem;
+  padding-top: .1rem;
 }
 .classify-list .classify-title h3 span img {
   height: .29rem;
-  margin-top: .1rem;
+  margin-top: -.2rem;
+}
+.classify-list .classify-title h3 i {
+  line-height: .8rem;
 }
 .classify-list .classify-title p {
   float: right;
+  line-height: .8rem;
+  padding-right: .2rem;
   color: #ec9a71;
 }
-.classify-list > ul {
-  margin-top: .2rem;
+.classify-list .classify-title a {
+  float: right;
+  width: .8rem;
+  height: .8rem;
+}
+.classify-list .classify-title a.title-edit {
+  background: url("../img/edit.png") no-repeat center;
+  background-size: .4rem;
 }
 .classify-list > ul > li {
   overflow: hidden;
@@ -351,25 +391,31 @@
 .classify-list > ul > li .li-right .li-edit {
   position: absolute;
   display: block;
-  width: .32rem;
-  height: .32rem;
-  right: .14rem;
-  top: .18rem;
-  background: url("../img/ic45.png") no-repeat;
-  background-size: 100%;
+  width: .72rem;
+  height: .72rem;
+  right: 0;
+  top: 0;
+  background: url("../img/edit.png") no-repeat center;
+  background-size: .4rem;
+}
+.classify-list > ul > li .li-right .text-right {
+  text-align: right;
+  color: #ec9a71;
+  padding-right: .4rem;
 }
 .classify-list h4 {
-  font-size: .3rem;
-  line-height: .32rem;
+  font-size: .32rem;
+  line-height: .36rem;
   margin-bottom: .1rem;
   padding-right: .4rem;
 }
 .classify-list .recommend-list {
   margin-top: .2rem;
+  font-size: .28rem;
 }
 .classify-list .recommend-list p {
-  padding: .05rem 0;
-  line-height: .5rem;
+  padding: .05rem 0 .2rem 0;
+  line-height: .32rem;
 }
 .classify-list .recommend-list p span {
   display: inline-block;
@@ -404,10 +450,58 @@
   margin-right: .2rem;
 }
 
+.add-layer {
+  position: fixed;
+  right: 0;
+  bottom: 2rem;
+  width: 1.4rem;
+  height: 1.4rem;
+  padding: .3rem;
+  text-align: center;
+  line-height: .36rem;
+  border-radius: 50%;
+  font-weight: bold;
+  font-size: .32rem;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+.add-layer a {
+  color: #fff;
+}
+
 .new-wrapper {
   padding: 0 .2rem .5rem;
   /* 家庭成员页面 */
   /* 保单详情页面 */
+  /*.insurance-img {
+    padding-left: .55rem;
+    img {
+      height: 1.6rem;
+      vertical-align: middle;
+    }
+    a {
+      display: inline-block;
+      vertical-align: middle;
+      color: $color-blue;
+      font-weight: bold;
+    }
+  }
+  .additional {
+    padding: .2rem .2rem 0;
+    label {
+      display: inline-block;
+      width: 2rem;
+      text-align: right;
+    }
+    i {
+      display: inline-block;
+      width: .6rem;
+      height: .6rem;
+      font-weight: bold;
+      font-size: .4rem;
+      text-align: center;
+      margin-left: .1rem;
+    }
+  }*/
   /* 搜索产品页面 */
 }
 .new-wrapper h3.new-title {
@@ -415,6 +509,7 @@
   line-height: .8rem;
   font-size: .36rem;
   color: #ec9a71;
+  font-weight: bold;
 }
 .new-wrapper h3.new-title span {
   display: inline-block;
@@ -428,23 +523,34 @@
 }
 .new-wrapper input[type="text"], .new-wrapper .mobile-select {
   display: inline-block;
-  width: 3rem;
-  height: .6rem;
-  line-height: .6rem;
+  width: 3.6rem;
+  height: .44rem;
+  line-height: .4rem;
   background-color: transparent;
   border-bottom: 1px solid #bbb;
   vertical-align: middle;
+  border-radius: 0;
 }
-.new-wrapper button.save-btn {
+.new-wrapper .btn-item {
+  margin-top: .2rem;
+}
+.new-wrapper .btn-item button {
   width: 100%;
-  height: .6rem;
-  line-height: .6rem;
-  font-size: .3rem;
+  height: .8rem;
+  line-height: .8rem;
+  font-size: .36rem;
   font-weight: normal;
   background-color: #71a5ef;
   color: #fff;
   border-radius: .1rem;
   outline: none;
+  margin: 0;
+}
+.new-wrapper .btn-item.btn-item-two button {
+  width: 49.3%;
+}
+.new-wrapper .btn-item.btn-item-two button:nth-of-type(1) {
+  background-color: #bbb;
 }
 .new-wrapper .img-choose {
   display: inline-block;
@@ -545,36 +651,6 @@
   vertical-align: middle;
   margin-right: .2rem;
 }
-.new-wrapper .insurance-img {
-  padding-left: .55rem;
-}
-.new-wrapper .insurance-img img {
-  height: 1.6rem;
-  vertical-align: middle;
-}
-.new-wrapper .insurance-img a {
-  display: inline-block;
-  vertical-align: middle;
-  color: #1e83d3;
-  font-weight: bold;
-}
-.new-wrapper .additional {
-  padding: .2rem .2rem 0;
-}
-.new-wrapper .additional label {
-  display: inline-block;
-  width: 2rem;
-  text-align: right;
-}
-.new-wrapper .additional i {
-  display: inline-block;
-  width: .6rem;
-  height: .6rem;
-  font-weight: bold;
-  font-size: .4rem;
-  text-align: center;
-  margin-left: .1rem;
-}
 .new-wrapper .insurance-item {
   margin: .2rem 0;
   padding: .2rem 0;
@@ -585,12 +661,12 @@
 }
 .new-wrapper .insurance-item label {
   display: inline-block;
-  width: 2rem;
+  width: 1.8rem;
   text-align: right;
   vertical-align: middle;
 }
 .new-wrapper .insurance-item .item {
-  padding: 0 .2rem;
+  padding: .14rem 0 .14rem .2rem;
 }
 .new-wrapper .insurance-item .item span {
   display: inline-block;
@@ -602,6 +678,42 @@
 .new-wrapper .insurance-item .item-two input[type="text"] {
   width: 1.91rem;
 }
+.new-wrapper .insurance-item a {
+  color: #333;
+}
+.new-wrapper .product-list {
+  margin-top: .4rem;
+}
+.new-wrapper .product-list h4 {
+  height: .72rem;
+  line-height: .72rem;
+  font-size: .36rem;
+  color: #ec9a71;
+}
+.new-wrapper .product-list ul {
+  margin-top: .2rem;
+}
+.new-wrapper .product-list ul li {
+  border-bottom: 1px dashed #ddd;
+  padding: .1rem 0;
+}
+.new-wrapper .product-list ul li span {
+  display: inline-block;
+  width: 6rem;
+  line-height: .36rem;
+  vertical-align: middle;
+}
+.new-wrapper .product-list ul li a {
+  display: inline-block;
+  width: 1rem;
+  vertical-align: middle;
+  height: .72rem;
+  font-size: .6rem;
+  color: #333;
+  background: url("../img/delete.png") no-repeat center;
+  text-align: center;
+  background-size: .44rem;
+}
 .new-wrapper .search {
   padding: .3rem 0;
   background-color: #f9f9f9;
@@ -609,6 +721,7 @@
 }
 .new-wrapper .search input {
   width: 5rem;
+  height: .6rem;
   padding-left: .2rem;
   border: 1px solid #ddd;
 }
@@ -652,12 +765,12 @@
   vertical-align: middle;
 }
 .new-wrapper .result .detail h4 {
-  font-size: .28rem;
   font-weight: bold;
   margin-bottom: .2rem;
 }
 .new-wrapper .result .detail p {
   line-height: .3rem;
+  font-size: .28rem;
 }
 .new-wrapper .new-add {
   margin: .2rem 0;
@@ -666,6 +779,7 @@
 }
 .new-wrapper .new-add .item {
   margin-bottom: .2rem;
+  padding: .1rem;
 }
 .new-wrapper .new-add label {
   display: inline-block;
