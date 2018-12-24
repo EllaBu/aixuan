@@ -1,0 +1,230 @@
+@charset "UTF-8";
+$left: 356px;
+$right-span: 165px;
+$right: $right-span*6;
+$success-color: #d3f5e7;
+$error-color: #f9d8d9;
+$title-color: #b2b2b2;
+$style-height: 34px;
+/* reset */
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -o-box-sizing: border-box;
+  box-sizing: border-box;
+}
+ul, li {
+  list-style: none;
+}
+h1, h2, h3, h4, h5, h6 {
+  font-size: 14px;
+}
+i {
+  font-style: normal;
+}
+a {
+  text-decoration: none;
+  color: #333;
+}
+textarea {
+  resize: none;
+}
+table {
+  width: 100%;
+  border-collapse:collapse;
+}
+.clearfix:after {
+  content: "";
+  display: block;
+  clear: both;
+  visibility: hidden;
+  height: 0;
+  font-size: 0;
+}
+
+
+body {
+  font-size: 14px;
+  color: #333;
+}
+
+h3 {
+  height: 50px;
+  line-height: 50px;
+  font-size: 24px;
+}
+.header {
+  padding: 10px 10px 20px;
+  border-bottom: 1px solid #ddd;
+  .server {
+    background-color: #f6f6f6;
+    padding: 10px 0;
+  }
+  li {
+    float: left;
+    width: 20%;
+    font-weight: bold;
+    margin-bottom: 5px;
+    line-height: 20px;
+    i {
+      display: inline-block;
+      width: 70px;
+      text-align: right;
+    }
+    span {
+      padding: 1px 5px;
+      background-color: #d8c58c;
+      border-radius: 2px;
+      font-weight: normal;
+    }
+  }
+  .choose {
+    padding: 0 10px;
+    margin-top: 10px;
+    overflow: hidden;
+    label {
+      display: inline-block;
+      vertical-align: middle;
+    }
+    input {
+      vertical-align: middle;
+      width: 14px;
+      height: 14px;
+    }
+  }
+  .selected {
+    padding: 10px;
+    p {
+      margin-bottom: 10px;
+      display: none;
+      span {
+        display: inline-block;
+        padding: 1px 5px;
+        background-color: #d8c58c;
+        border-radius: 2px;
+        margin: 0 10px 6px 0;
+      }
+    }
+  }
+}
+
+
+.content {
+  padding: 10px;
+  width: 1366px;
+  .server-style {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: $right;
+    height: $style-height;
+    cursor: pointer;
+    span {
+      float: left;
+      width: $right-span;
+      height: $style-height;
+      line-height: $style-height;
+      border-right: 1px dashed #999;
+    }
+  }
+  table.server-table {
+    width: $left + $right;
+    &>tbody {
+      &>tr {
+        &:first-of-type {
+          background-color: $title-color;
+          td:first-of-type {
+            background-color: $title-color;
+          }
+        }
+        &>td {
+          border: 1px solid #ddd;
+          &:first-of-type {
+            width: $left;
+            background-color: #f1f1f1;
+            vertical-align: top;
+            padding-top: 7px;
+          }
+        }
+      }
+    }
+
+    .server-title {
+      position: relative;
+      height: $style-height;
+      .server-tip {
+        position: absolute;
+        width: $right-span*7;
+        top: 7px;
+        left: -$right-span/2;
+        z-index: 112;
+        b {
+          float: left;
+          width: $right-span;
+          text-align: center;
+        }
+      }
+    }
+    .server-detail {
+      position: relative;
+      .server-state {
+        p {
+          height: $style-height;
+          line-height: $style-height;
+          background-color: $success-color;
+        }
+      }
+      .error-state {
+        p {
+          height: $style-height;
+          line-height: $style-height;
+          background-color: $error-color;
+        }
+      }
+    }
+    table.server-list {
+      display: none;
+      tr {
+        border-top: 1px solid #ddd;
+        td {
+          padding: 7px 5px;
+          &:first-of-type {
+            width: 100px;
+            background-color: #eee;
+            text-align: right;
+            font-weight: bold;
+            color: #444;
+          }
+        }
+      }
+      a.fold {
+        float: right;
+        width: 40px;
+        height: 40px;
+        background: url("../img/icon-down.png") no-repeat center;
+        background-size: 20px;
+        &.active {
+          background: url("../img/icon-up.png") no-repeat center;
+          background-size: 20px;
+        }
+      }
+      .process {
+        height: 60px;
+        overflow: hidden;
+        transition: height 1s;
+        &.h-auto {
+          height: auto;
+        }
+      }
+      textarea {
+        width: $right - 110px;
+        height: 140px;
+        vertical-align: middle;
+        border: none;
+        outline: none;
+      }
+    }
+  }
+}
