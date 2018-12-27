@@ -137,6 +137,7 @@ h3 {
   }
   .server-tip {
     position: absolute;
+    width: $right;
     left: $left - $right-span/2;
     z-index: 112;
     b {
@@ -235,12 +236,13 @@ h3 {
         text-align: right;
       }
       td {
+        position: relative;
         padding: 8px;
         &.ul-auto {
           ul {
             height: auto;
           }
-          p {
+          a {
             background: url("../img/icon-up.png") no-repeat center;
             background-size: 20px 20px;
           }
@@ -260,7 +262,11 @@ h3 {
       li {
         list-style: circle;
       }
-      p {
+      a {
+        position: absolute;
+        top: 0;
+        right: 0;
+        width: 40px;
         height: 40px;
         background: url("../img/icon-down.png") no-repeat center;
         background-size: 20px 20px;

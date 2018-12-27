@@ -137,6 +137,7 @@ h3 {
 }
 .content .server-tip {
   position: absolute;
+  width: 990px;
   left: 273.5px;
   z-index: 112;
 }
@@ -233,12 +234,13 @@ h3 {
   text-align: right;
 }
 .content .server-detail table td {
+  position: relative;
   padding: 8px;
 }
 .content .server-detail table td.ul-auto ul {
   height: auto;
 }
-.content .server-detail table td.ul-auto p {
+.content .server-detail table td.ul-auto a {
   background: url("../img/icon-up.png") no-repeat center;
   background-size: 20px 20px;
 }
@@ -256,7 +258,11 @@ h3 {
 .content .server-detail table li {
   list-style: circle;
 }
-.content .server-detail table p {
+.content .server-detail table a {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 40px;
   height: 40px;
   background: url("../img/icon-down.png") no-repeat center;
   background-size: 20px 20px;
