@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport"
+        content="width=device-width,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no,viewport-fit=cover"/>
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black">
+  <meta name="format-detection" content="telephone=no">
+  <title>page1</title>
+  <link rel="stylesheet" href="./css/reset.css">
+  <link rel="stylesheet" href="./css/style.css">
+  <link rel="stylesheet" href="./css/mobileSelect.css">
+</head>
+<body>
+<div>
+  <div class="progress">
+    <span class="current" style="width: 50%;"></span>
+    <b><em id="position">1</em>/2</b>
+  </div>
+
+  <div class="main info">
+    <dl>
+      <dt>性别：</dt>
+      <dd id="sex">
+        <span class="active"><img src="img/ic17.png" alt=""></span>
+        <span><img src="img/ic18.png" alt=""></span>
+      </dd>
+    </dl>
+    <dl>
+      <dt>年龄：</dt>
+      <dd>
+        <p id="age"></p><label for="">岁</label>
+      </dd>
+    </dl>
+  </div>
+
+  <div class="next">
+    <a href="javascript:;"></a>
+  </div>
+
+</div>
+<script src="js/jquery-2.2.4.min.js"></script>
+<script src="js/mobileSelect.min.js"></script>
+<script>
+  var ageSelect = new MobileSelect({
+    trigger: '#age',
+    title: '请选择年龄',
+    wheels: [
+      {data:['24','25','26','27','28','29','30']}
+    ],
+    position:[2] //初始化定位
+  });
+  $('#insurance li').click (function () {
+    $(this).addClass('active').siblings().removeClass('active')
+  })
+  $('#sex span').click (function () {
+    $(this).addClass('active').siblings().removeClass('active')
+  })
+</script>
+</body>
+</html>
