@@ -351,7 +351,9 @@
   margin-top: -.2rem;
 }
 .classify-list .classify-title h3 i {
+  display: inline-block;
   line-height: .8rem;
+  vertical-align: middle;
 }
 .classify-list .classify-title p {
   float: right;
