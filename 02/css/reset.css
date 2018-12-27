@@ -22,11 +22,6 @@ article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, 
     display: block;
 }
 
-body {
-    line-height: 1;
-    font-family: Source Han Sans, Microsoft YaHei, Arial, Helvetica, sans-serif;
-}
-
 li, ol, ul {
     list-style: none;
 }
@@ -62,7 +57,7 @@ input, textarea {
     resize: none;
     font-size: .32rem;
     color: #333;
-    font-family: -apple-system,Helvetica,sans-serif;
+    font-family: arial,"Hiragino Sans GB","Microsoft Yahei",sans-serif;
 }
 
 .clearfix:after {
@@ -151,7 +146,7 @@ body {
     color: #333;
     max-width: 768px;
     margin: 0 auto;
-    font-family: -apple-system,Helvetica,sans-serif;
+    font-family: arial,"Hiragino Sans GB","Microsoft Yahei",sans-serif;
     -webkit-text-size-adjust: auto;
     padding-top: constant(safe-area-inset-top);
     padding-left: constant(safe-area-inset-left);

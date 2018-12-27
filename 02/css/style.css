@@ -351,9 +351,7 @@
   margin-top: -.2rem;
 }
 .classify-list .classify-title h3 i {
-  display: inline-block;
   line-height: .8rem;
-  vertical-align: middle;
 }
 .classify-list .classify-title p {
   float: right;
@@ -400,10 +398,8 @@
   background: url("../img/edit.png") no-repeat center;
   background-size: .4rem;
 }
-.classify-list > ul > li .li-right .text-right {
-  text-align: right;
-  color: #ec9a71;
-  padding-right: .4rem;
+.classify-list > ul > li .li-right.li-no-edit h4 {
+  padding: 0;
 }
 .classify-list h4 {
   font-size: .32rem;
@@ -433,6 +429,23 @@
 .classify-list .recommend-list p i {
   color: #ec9a71;
   vertical-align: baseline;
+}
+.classify-list .duty-list p {
+  float: right;
+  margin: .34rem .2rem 0 0;
+  font-size: .28rem;
+  font-weight: 600;
+  padding: .04rem .1rem;
+}
+.classify-list .duty-list p span {
+  color: #ec9a71;
+}
+
+.not-include {
+  margin-top: .4rem;
+  padding: .2rem;
+  background-color: #ec9a71;
+  color: #fff;
 }
 
 .classify-none {
@@ -525,7 +538,7 @@
 }
 .new-wrapper input[type="text"], .new-wrapper .mobile-select {
   display: inline-block;
-  width: 3.6rem;
+  width: 3.8rem;
   height: .44rem;
   line-height: .4rem;
   background-color: transparent;
@@ -675,10 +688,11 @@
   vertical-align: middle;
 }
 .new-wrapper .insurance-item .item-two .mobile-select {
-  width: 1rem;
+  width: 1.7rem;
+  line-height: 1.3;
 }
 .new-wrapper .insurance-item .item-two input[type="text"] {
-  width: 1.91rem;
+  width: 2.02rem;
 }
 .new-wrapper .insurance-item a {
   color: #333;
