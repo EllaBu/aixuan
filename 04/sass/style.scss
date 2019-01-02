@@ -122,15 +122,12 @@
         margin-bottom: .06rem;
       }
       p {
-        span, b {
+        b {
           display: inline-block;
           vertical-align: middle;
         }
-        span {
-          width: 1rem;
-        }
         input {
-          width: 4rem;
+          width: 4.8rem;
           height: .6rem;
           padding-left: .1rem;
           border: 1px solid #ddd;
