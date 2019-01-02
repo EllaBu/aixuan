@@ -96,20 +96,26 @@
   color: #1e83d3;
   margin: .4rem 0 .1rem;
 }
-
-.warranty-total {
+.warranty-title p {
+  float: right;
   color: #ec9a71;
+  font-size: .28rem;
+  line-height: .52rem;
+  font-weight: normal;
+}
+
+/*.warranty-total {
+  color: $color-yellow;
   font-size: .28rem;
   line-height: .4rem;
   padding: .1rem 0;
-}
-.warranty-total p {
-  float: left;
-}
-.warranty-total p:last-of-type {
-  float: right;
-}
-
+  p {
+    float: left;
+    &:last-of-type {
+      float: right;
+    }
+  }
+}*/
 .warranty-list > li {
   margin-top: .3rem;
   background-color: #fff;
@@ -369,6 +375,7 @@
   background-size: .4rem;
 }
 .classify-list > ul > li {
+  position: relative;
   overflow: hidden;
   border-top: 1px solid #ddd;
 }
@@ -440,6 +447,26 @@
 .classify-list .duty-list p span {
   color: #ec9a71;
 }
+.classify-list a.fold {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  width: .6rem;
+  height: .6rem;
+  background: url("../img/fold-down.png") no-repeat center;
+  background-size: .4rem;
+}
+.classify-list a.fold.active {
+  transform: rotate(180deg);
+  -webkit-transform: rotate(180deg);
+}
+
+.guarantee-detail .classify-list ul li:nth-child(n+2) {
+  display: none;
+}
+.guarantee-detail .classify-list.auto-list ul li:nth-child(n+2) {
+  display: block;
+}
 
 .not-include {
   margin-top: .4rem;
@@ -486,37 +513,6 @@
 .new-wrapper {
   padding: 0 .2rem .5rem;
   /* 家庭成员页面 */
-  /* 保单详情页面 */
-  /*.insurance-img {
-    padding-left: .55rem;
-    img {
-      height: 1.6rem;
-      vertical-align: middle;
-    }
-    a {
-      display: inline-block;
-      vertical-align: middle;
-      color: $color-blue;
-      font-weight: bold;
-    }
-  }
-  .additional {
-    padding: .2rem .2rem 0;
-    label {
-      display: inline-block;
-      width: 2rem;
-      text-align: right;
-    }
-    i {
-      display: inline-block;
-      width: .6rem;
-      height: .6rem;
-      font-weight: bold;
-      font-size: .4rem;
-      text-align: center;
-      margin-left: .1rem;
-    }
-  }*/
   /* 搜索产品页面 */
 }
 .new-wrapper h3.new-title {
@@ -697,38 +693,21 @@
 .new-wrapper .insurance-item a {
   color: #333;
 }
-.new-wrapper .product-list {
-  margin-top: .4rem;
-}
-.new-wrapper .product-list h4 {
-  height: .72rem;
-  line-height: .72rem;
-  font-size: .36rem;
-  color: #ec9a71;
-}
-.new-wrapper .product-list ul {
-  margin-top: .2rem;
-}
-.new-wrapper .product-list ul li {
-  border-bottom: 1px dashed #ddd;
+.new-wrapper .insurance-item .favoree p {
   padding: .1rem 0;
 }
-.new-wrapper .product-list ul li span {
-  display: inline-block;
-  width: 6rem;
-  line-height: .36rem;
-  vertical-align: middle;
+.new-wrapper .insurance-item .favoree input {
+  width: 1.68rem;
 }
-.new-wrapper .product-list ul li a {
-  display: inline-block;
+.new-wrapper .insurance-item .favoree input:last-of-type {
   width: 1rem;
-  vertical-align: middle;
-  height: .72rem;
-  font-size: .6rem;
-  color: #333;
-  background: url("../img/delete.png") no-repeat center;
+}
+.new-wrapper .insurance-item .favoree a {
+  display: inline-block;
+  width: .6rem;
   text-align: center;
-  background-size: .44rem;
+  font-size: .4rem;
+  font-weight: bold;
 }
 .new-wrapper .search {
   padding: .3rem 0;
@@ -804,4 +783,78 @@
 }
 .new-wrapper .new-add .item-three span {
   width: 1.46rem;
+}
+
+.auto-wrapper {
+  padding: 0 0 .3rem;
+}
+.auto-wrapper .insurance-item {
+  margin: .2rem;
+}
+.auto-wrapper .btn-item {
+  padding: 0 .2rem;
+}
+
+.auto-wrapper h3, .product-list h3 {
+  height: .72rem;
+  line-height: .72rem;
+  background-color: #ec9a71;
+  color: #fff;
+  padding-left: .2rem;
+}
+.auto-wrapper h3 .fold-item, .product-list h3 .fold-item {
+  float: right;
+  width: .72rem;
+  height: .72rem;
+  background: #f1f1f1 url("../img/fold-down.png") no-repeat center;
+  background-size: .4rem;
+}
+.auto-wrapper h3 .fold-item.active, .product-list h3 .fold-item.active {
+  transform: rotate(180deg);
+}
+
+.product-list {
+  padding-bottom: .3rem;
+}
+.product-list ul {
+  margin-top: .2rem;
+}
+.product-list ul li {
+  padding: .1rem .3rem;
+  box-shadow: 0 4px 8px #ddd;
+  margin-bottom: .2rem;
+}
+.product-list ul li h4 {
+  height: .72rem;
+  line-height: .72rem;
+  font-size: .32rem;
+  font-weight: bold;
+}
+.product-list ul li h4 b {
+  font-weight: normal;
+  color: #1e83d3;
+  float: right;
+}
+.product-list ul li dl {
+  overflow: hidden;
+  font-size: .28rem;
+}
+.product-list ul li dl dt {
+  float: left;
+  width: 50%;
+}
+.product-list ul li dl dd {
+  float: right;
+  width: 50%;
+  padding-right: 6%;
+  text-align: right;
+}
+.product-list ul li dl dd p.valid {
+  color: green;
+}
+.product-list ul li dl dd p.no-valid {
+  color: red;
+}
+.product-list ul li dl dd p a {
+  color: #ec9a71;
 }

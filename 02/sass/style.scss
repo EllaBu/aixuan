@@ -2,6 +2,8 @@
 $color-yellow: #ec9a71;
 $color-blue: #1e83d3;
 $btn-color: #71a5ef;
+$color-success: green;
+$color-error: red;
 /*body {
   background-color: #fff;
 }*/
@@ -96,10 +98,16 @@ $btn-color: #71a5ef;
   font-weight: bold;
   color: $color-blue;
   margin: .4rem 0 .1rem;
-  //background-color: #fff;
+  p {
+    float: right;
+    color: $color-yellow;
+    font-size: .28rem;
+    line-height: .52rem;
+    font-weight: normal;
+  }
 }
 
-.warranty-total {
+/*.warranty-total {
   color: $color-yellow;
   font-size: .28rem;
   line-height: .4rem;
@@ -110,7 +118,7 @@ $btn-color: #71a5ef;
       float: right;
     }
   }
-}
+}*/
 
 .warranty-list {
   &>li {
@@ -345,6 +353,7 @@ $btn-color: #71a5ef;
   color: #999;
   box-shadow: 0 2px 8px #aaa;
   border-radius: .1rem;
+
   .classify-title {
     height: .8rem;
     font-size: .32rem;
@@ -389,6 +398,7 @@ $btn-color: #71a5ef;
   }
   &>ul {
     &>li {
+      position: relative;
       overflow: hidden;
       border-top: 1px solid #ddd;
       .li-left{
@@ -470,6 +480,38 @@ $btn-color: #71a5ef;
     }
   }
   // 新增1227 end
+
+  // 新增0102 start
+  a.fold {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    width: .6rem;
+    height: .6rem;
+    background: url("../img/fold-down.png") no-repeat center;
+    background-size: .4rem;
+    &.active {
+      transform: rotate(180deg);
+      -webkit-transform: rotate(180deg);
+    }
+  }
+  // 新增0102 end
+}
+.guarantee-detail {
+  .classify-list {
+    ul{
+      li:nth-child(n+2){
+        display: none;
+      }
+    }
+    &.auto-list{
+      ul{
+        li:nth-child(n+2){
+          display: block;
+        }
+      }
+    }
+  }
 }
 
 // 新增1227 start
@@ -673,37 +715,6 @@ $btn-color: #71a5ef;
     }
   }
 
-  /* 保单详情页面 */
-  /*.insurance-img {
-    padding-left: .55rem;
-    img {
-      height: 1.6rem;
-      vertical-align: middle;
-    }
-    a {
-      display: inline-block;
-      vertical-align: middle;
-      color: $color-blue;
-      font-weight: bold;
-    }
-  }
-  .additional {
-    padding: .2rem .2rem 0;
-    label {
-      display: inline-block;
-      width: 2rem;
-      text-align: right;
-    }
-    i {
-      display: inline-block;
-      width: .6rem;
-      height: .6rem;
-      font-weight: bold;
-      font-size: .4rem;
-      text-align: center;
-      margin-left: .1rem;
-    }
-  }*/
   .insurance-item {
     margin: .2rem 0;
     padding: .2rem 0;
@@ -736,40 +747,26 @@ $btn-color: #71a5ef;
     a {
       color: #333;
     }
-  }
-  .product-list {
-    margin-top: .4rem;
-    h4 {
-      height: .72rem;
-      line-height: .72rem;
-      font-size: .36rem;
-      color: $color-yellow;
-    }
-    ul {
-      margin-top: .2rem;
-      li {
-        border-bottom: 1px dashed #ddd;
+    .favoree {
+      p {
         padding: .1rem 0;
-        span {
-          display: inline-block;
-          width: 6rem;
-          line-height: .36rem;
-          vertical-align: middle;
-        }
-        a {
-          display: inline-block;
+      }
+      input {
+        width: 1.68rem;
+        &:last-of-type {
           width: 1rem;
-          vertical-align: middle;
-          height: .72rem;
-          font-size: .6rem;
-          color: #333;
-          background: url("../img/delete.png") no-repeat center;
-          text-align: center;
-          background-size: .44rem;
         }
+      }
+      a {
+        display: inline-block;
+        width: .6rem;
+        text-align: center;
+        font-size: .4rem;
+        font-weight: bold;
       }
     }
   }
+
 
   /* 搜索产品页面 */
   .search {
@@ -851,5 +848,81 @@ $btn-color: #71a5ef;
         width: 1.46rem;
       }
     }
+  }
+}
+
+.auto-wrapper {
+  padding: 0 0 .3rem;
+  .insurance-item {
+    margin: .2rem;
+  }
+  .btn-item {
+    padding: 0 .2rem;
+  }
+}
+.auto-wrapper h3, .product-list h3 {
+  height: .72rem;
+  line-height: .72rem;
+  background-color: $color-yellow;
+  color: #fff;
+  padding-left: .2rem;
+  .fold-item {
+    float: right;
+    width: .72rem;
+    height: .72rem;
+    background: #f1f1f1 url("../img/fold-down.png") no-repeat center;
+    background-size: .4rem;
+    &.active {
+      transform: rotate(180deg);
+    }
+  }
+}
+
+.product-list {
+  padding-bottom: .3rem;
+  ul {
+    margin-top: .2rem;
+    li {
+      padding: .1rem .3rem;
+      box-shadow: 0 4px 8px #ddd;
+      margin-bottom: .2rem;
+      h4 {
+        height: .72rem;
+        line-height: .72rem;
+        font-size: .32rem;
+        font-weight: bold;
+        b {
+          font-weight: normal;
+          color: $color-blue;
+          float: right;
+        }
+      }
+      dl {
+        overflow: hidden;
+        font-size: .28rem;
+        dt {
+          float: left;
+          width: 50%;
+        }
+        dd {
+          float: right;
+          width: 50%;
+          padding-right: 6%;
+          text-align: right;
+          p {
+            &.valid {
+              color: $color-success;
+            }
+            &.no-valid {
+              color: $color-error;
+            }
+            a {
+              color: $color-yellow;
+            }
+          }
+        }
+      }
+    }
+
   }
 }

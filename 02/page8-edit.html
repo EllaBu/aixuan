@@ -1,189 +1,167 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no,viewport-fit=cover"/>
-    <meta name="apple-mobile-web-app-capable" content="yes">
-    <meta name="apple-mobile-web-app-status-bar-style" content="black">
-    <meta name="format-detection" content="telephone=no">
-    <title>编辑保单</title>
-    <link rel="stylesheet" href="./css/reset.css">
-    <link rel="stylesheet" href="./css/style.css">
-    <link rel="stylesheet" href="./css/mobileSelect.css">
+  <meta charset="UTF-8">
+  <meta name="viewport"
+        content="width=device-width,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no,viewport-fit=cover"/>
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black">
+  <meta name="format-detection" content="telephone=no">
+  <title>编辑保单</title>
+  <link rel="stylesheet" href="./css/reset.css">
+  <link rel="stylesheet" href="./css/style.css">
+  <link rel="stylesheet" href="./css/mobileSelect.css">
 
 </head>
 <body>
-<div class="new-wrapper">
-    <!-- 添加家庭成员 -->
+<div class="new-wrapper auto-wrapper">
+  <!-- 添加家庭成员 -->
 
-    <h3 class="new-title">保单编辑</h3>
-    <!--<div class="insurance-img">
-        <img src="./img/im5.jpg" alt="">
+  <h3>保单编辑 <a class="fold-item" href="javascript:;"></a></h3>
+
+  <div class="insurance-item">
+    <div class="item">
+      <label for="">合同编号：</label>
+      <input type="text">
+    </div>
+    <div class="item">
+      <label for="">生效日期：</label>
+      <span id="effectiveDate" class="mobile-select"></span>
+    </div>
+  </div>
+  <div class="insurance-item">
+    <div class="item">
+      <label for="">投保人：</label>
+      <input type="text">
+    </div>
+    <div class="item">
+      <label for="">被保人：</label>
+      <span id="recognizee" class="mobile-select"></span>
+    </div>
+    <div class="item favoree">
+      <p>
+        <label for="">受益人：</label>
         <input type="text">
-        <a href="javascript:;">请选择</a>
-    </div>
-
-    <div class="additional">
-        <div class="item">
-            <label for="">附加险：</label>
-            <input type="text">
-            <i class="add-item">+</i>
-        </div>
-    </div>-->
-
-    <div class="insurance-item">
-        <div class="item">
-            <label for="">合同编号：</label>
-            <input type="text">
-        </div>
-        <div class="item">
-            <label for="">投保日期：</label>
-            <span id="insureDate" class="mobile-select"></span>
-        </div>
-        <div class="item">
-            <label for="">生效日期：</label>
-            <span id="effectiveDate" class="mobile-select"></span>
-        </div>
-    </div>
-    <div class="insurance-item">
-        <!--<div class="item">
-            <label for="">保额：</label>
-            <input type="text">
-            <span>元</span>
-        </div>
-        <div class="item">
-            <label for="">保费：</label>
-            <input type="text">
-            <span>元</span>
-        </div>
-        <div class="item item-two">
-            <label for="">保障期：</label>
-            <span id="safeguard" class="mobile-select"></span>
-            <input type="text">
-        </div>
-        <div class="item item-two">
-            <label for="">缴费期：</label>
-            <span id="payment" class="mobile-select"></span>
-            <input type="text">
-        </div>
-        <div class="item">
-            <label for="">缴费周期：</label>
-            <div class="item-choose">
-                <span><input type="radio" name="">月缴</span>
-                <span><input type="radio" name="">年缴</span>
-            </div>
-        </div>-->
-        <div class="item">
-            <label for="">缴费日期：</label>
-            <span id="paymentTime" class="mobile-select"></span>
-        </div>
+        <span>比例：</span>
+        <input type="text">
+        <a href="javascript:;">+</a>
+      </p>
 
     </div>
-    <div class="insurance-item">
-        <div class="item">
-            <label for="">投保人：</label>
-            <input type="text">
-        </div>
-        <div class="item">
-            <label for="">被保人：</label>
-            <span id="recognizee" class="mobile-select"></span>
-        </div>
-        <div class="item">
-            <label for="">受益人：</label>
-            <input type="text">
-        </div>
-    </div>
+  </div>
 
-    <div class="btn-item btn-item-two">
-        <button>删除</button>
-        <button>保存</button>
-    </div>
+  <div class="btn-item btn-item-two">
+    <button>删除</button>
+    <button>保存</button>
+  </div>
 
-
-    <div class="product-list">
-        <h4>保单中的产品</h4>
-        <ul>
-            <li>
-                <span>人保寿险金色朝阳少儿定期寿险（A款）1</span>
-                <a href="javascript:;"></a>
-            </li>
-            <li>
-                <span>人保寿险金色朝阳少儿定期寿险（A款）2</span>
-                <a href="javascript:;"></a>
-            </li>
-            <li>
-                <span>人保寿险金色朝阳少儿定期寿险（A款）3人保寿险金色朝阳少儿定期寿险（A款）</span>
-                <a href="javascript:;"></a>
-            </li>
-        </ul>
-        <div class="btn-list">
-            <a href="page9-product.html">+增加产品</a>
-        </div>
-    </div>
+</div>
+<div class="product-list">
+  <h3>保单中的产品 <a class="fold-item" href="javascript:;"></a></h3>
+  <ul>
+    <li>
+      <h4>
+        <span>人保寿险金色朝阳少儿定期寿险（A款）</span>
+        <b>主合同</b>
+      </h4>
+      <dl>
+        <dt>
+          <p>基本保额：1000,000 元</p>
+          <p>保费：1000,000 元</p>
+          <p>保障期：终身</p>
+          <p>缴费期：20年</p>
+        </dt>
+        <dd>
+          <p class="valid">保单生效中</p>
+          <p>距离下次缴费时间</p>
+          <p>40年</p>
+          <p>
+            <a href="javascript:;">查看责任</a>
+          </p>
+        </dd>
+      </dl>
+    </li>
+    <li>
+      <h4>
+        <span>人保寿险金色朝阳少儿定期寿险（A款）</span>
+        <b>主合同</b>
+      </h4>
+      <dl>
+        <dt>
+          <p>基本保额：1000,000 元</p>
+          <p>保费：1000,000 元</p>
+          <p>保障期：终身</p>
+          <p>缴费期：20年</p>
+        </dt>
+        <dd>
+          <p class="no-valid">保单无效</p>
+          <p>距离下次缴费时间</p>
+          <p>40年</p>
+          <p>
+            <a href="javascript:;">查看责任</a>
+          </p>
+        </dd>
+      </dl>
+    </li>
+  </ul>
+  <div class="btn-list">
+    <a href="page9-product.html">+增加产品</a>
+  </div>
 
 </div>
 <script src="./js/jquery-2.2.4.min.js"></script>
 <script src="./js/mobileSelect.min.js"></script>
 <script>
-    $(function () {
-        $('.additional .add-item').click(function () {
-            var addHtml = '<div class="item"><label for="">附加险：</label>\n' +
-                '<input type="text">\n' +
-                '<i class="delete">-</i></div>'
-            $(this).parents('.additional').append(addHtml)
-        })
-        $('.additional').on('click', '.delete', function () {
-            $(this).parent('.item').remove();
-        })
-      $('.product-list a').bind('click', function () {
-        $(this).parents('li').remove();
-      })
-      $('input[type="text"]').bind('blur', function () {
-        document.body && (document.body.scrollTop = document.body.scrollTop);
-      })
+  $(function () {
+    $('.favoree a').bind('click', function () {
+      var addHtml = '<p>\n' +
+        '<label for="">受益人：</label>\n' +
+        '<input type="text">\n' +
+        '<span>比例：</span>\n' +
+        '<input type="text">\n' +
+        '<a class="delete" href="javascript:;">-</a>\n' +
+        '</p>'
+      $(this).parents('.favoree').append(addHtml)
     })
-    var yearArr = ['1900年','1902年','1902年','1903年']
-    var monthArr = ['1月','2月','3月','4月','5月','6月','7月','8月']
-    var dayArr = ['1日','2日']
-    var mobileSelect1 = new MobileSelect({
-        trigger: '#insureDate',
-        title: '投保日期',
-        wheels: [
-            {data: yearArr},
-            {data: monthArr},
-            {data: dayArr}
-        ],
-        position:[2], //初始化定位 打开时默认选中的哪个 如果不填默认为0
-    });
-    var mobileSelect2 = new MobileSelect({
-        trigger: '#effectiveDate',
-        title: '生效日期',
-        wheels: [
-            {data: yearArr},
-            {data: monthArr},
-            {data: dayArr}
-        ],
-        position:[2], //初始化定位 打开时默认选中的哪个 如果不填默认为0
-    });
-    var mobileSelect2 = new MobileSelect({
-        trigger: '#paymentTime',
-        title: '缴费日期',
-        wheels: [
-            {data: yearArr},
-            {data: monthArr},
-            {data: dayArr}
-        ],
-        position:[2], //初始化定位 打开时默认选中的哪个 如果不填默认为0
-    });
-    var recognizeeArr = ['父亲','母亲','孩子一','孩子二','孩子三']
-    var mobileSelect2 = new MobileSelect({
-        trigger: '#recognizee',
-        title: '被保人',
-        wheels: [
-            {data: recognizeeArr},
-        ],
-        position:[2], //初始化定位 打开时默认选中的哪个 如果不填默认为0
-    });
+    $('.favoree').on('click', '.delete', function () {
+      $(this).parent('p').remove();
+    })
+    $('.auto-wrapper .fold-item').bind('click', function () {
+      $(this).toggleClass('active')
+      $(this).parents('h3').siblings('div').slideToggle();
+    })
+    $('.product-list .fold-item').bind('click', function () {
+      $(this).toggleClass('active')
+      $(this).parents('h3').siblings().slideToggle();
+    })
+    $('input[type="text"]').bind('blur', function () {
+      document.body && (document.body.scrollTop = document.body.scrollTop);
+    })
+  })
+  var yearArr = ['1900年', '1902年', '1902年', '1903年']
+  var monthArr = ['1月', '2月', '3月', '4月', '5月', '6月', '7月', '8月']
+  var dayArr = ['1日', '2日']
+
+  var mobileSelect1 = new MobileSelect({
+    trigger: '#effectiveDate',
+    title: '生效日期',
+    wheels: [
+      {data: yearArr},
+      {data: monthArr},
+      {data: dayArr}
+    ],
+    position: [2], //初始化定位 打开时默认选中的哪个 如果不填默认为0
+  });
+
+  var recognizeeArr = ['父亲', '母亲', '孩子一', '孩子二', '孩子三']
+  var mobileSelect2 = new MobileSelect({
+    trigger: '#recognizee',
+    title: '被保人',
+    wheels: [
+      {data: recognizeeArr},
+    ],
+    position: [2], //初始化定位 打开时默认选中的哪个 如果不填默认为0
+  });
 </script>
 </body>
 </html>
