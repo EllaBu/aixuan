@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport"
+        content="width=device-width,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no,viewport-fit=cover"/>
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black">
+  <meta name="format-detection" content="telephone=no">
+  <title>Title</title>
+  <link rel="stylesheet" href="./css/reset.css">
+  <link rel="stylesheet" href="./css/style.css">
+  <link rel="stylesheet" href="./css/mobileSelect.css">
+</head>
+<body>
+<header class="header">
+  <!--<i></i>-->
+  <span>索赔类型</span>
+</header>
+
+<section class="claim-detail">
+  <h3>重大疾病（重大理赔）</h3>
+  <div class="select-list">
+    <div>
+      <span class="switch-btn">
+        <i></i>
+      </span>
+      <input type="text" placeholder="重大疾病模糊查询">
+      <i class="search"></i>
+    </div>
+    <div class="select-item" id="selectOne" style="margin-left: 1.12rem">重大疾病-请选择</div>
+  </div>
+  <div class="select-list">
+    <h3>身故（重大理赔）</h3>
+    <span class="switch-btn">
+      <i></i>
+    </span>
+    <div class="select-item" id="selectTwo">身故-请选择</div>
+  </div>
+  <div class="select-list">
+    <h3>伤残（重大理赔）</h3>
+    <span class="switch-btn">
+      <i></i>
+    </span>
+    <div class="select-item" id="selectThree">一般意外事故</div>
+  </div>
+  <div class="select-list">
+    <h3>豁免（重大理赔）</h3>
+    <span class="switch-btn">
+      <i></i>
+    </span>
+    <div class="select-item" id="selectFour">豁免-请选择</div>
+    <p class="item-margin" style="margin-left: 1.22rem;"><input type="text" placeholder="豁免原因"></p>
+  </div>
+  <div class="select-list">
+    <h3>住院费用补偿（普通理赔）</h3>
+    <span class="switch-btn">
+      <i></i>
+    </span>
+    <div class="select-item" id="selectFive">住院费用补偿-请选择</div>
+  </div>
+  <div class="select-list">
+    <h3>手术费用补偿（普通理赔）</h3>
+    <span class="switch-btn">
+      <i></i>
+    </span>
+    <div class="select-item" id="selectSix">手术费用补偿-请选择</div>
+  </div>
+  <div class="select-list">
+    <h3>门诊费用补偿（普通理赔）</h3>
+    <span class="switch-btn">
+      <i></i>
+    </span>
+    <div class="select-item" id="selectSeven">门诊费用补偿-请选择</div>
+  </div>
+  <div class="select-list">
+    <h3>津贴（普通理赔）</h3>
+    <span class="switch-btn">
+      <i></i>
+    </span>
+    <div class="select-item" id="selectEight">津贴-请选择</div>
+  </div>
+</section>
+
+<section class="next">
+  <a href="javascript:;"></a>
+</section>
+
+<script src="./js/jquery-2.2.4.min.js"></script>
+<script src="./js/mobileSelect.min.js"></script>
+<script>
+  $(function () {
+    var selectOneArr = ['高血压','癌症','高血压1','癌症1','高血压2','癌症2']
+    var selectOne = new MobileSelect({
+      trigger: '#selectOne',
+      title: '重大疾病-请选择',
+      wheels: [
+        {data: selectOneArr}
+      ],
+      position: [2], //初始化定位 打开时默认选中的哪个 如果不填默认为0
+    });
+
+    $('.switch-btn').bind('click', function () {
+      $(this).toggleClass('active')
+    })
+  })
+
+
+</script>
+</body>
+</html>

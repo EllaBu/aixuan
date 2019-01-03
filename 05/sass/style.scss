@@ -1,0 +1,216 @@
+$color-yellow: #ec9a71;
+$color-blue: #1e83d3;
+$btn-color: #71a5ef;
+.header {
+  position: relative;
+  height: 1rem;
+  line-height: 1rem;
+  border-bottom: .02rem solid #ddd;
+  font-size: .4rem;
+  font-weight: bold;
+  text-align: center;
+  i {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 1rem;
+    height: 1rem;
+    background: url("../img/icon-back.png") no-repeat center;
+    background-size: .5rem;
+  }
+}
+
+.switch-btn {
+  position: relative;
+  display: inline-block;
+  width: 1rem;
+  height: .6rem;
+  border: 1px solid #ddd;
+  border-radius: .8rem;
+  vertical-align: middle;
+  i {
+    position: absolute;
+    top: .02rem;
+    left: .03rem;
+    display: block;
+    width: .52rem;
+    height: .52rem;
+    border-radius: .26rem;
+    background-color: $color-yellow;
+    transition: .3s;
+  }
+  &.active {
+    i {
+      left: .4rem;
+    }
+  }
+}
+
+
+
+.claim-detail {
+  margin-top: .2rem;
+  padding-left: .3rem;
+  h3 {
+    display: inline-block;
+    padding: .2rem;
+    vertical-align: middle;
+  }
+  .select-list {
+    p {
+      display: none;
+      margin-left: 1.3rem;
+    }
+    input {
+      width: 5rem;
+      height: .6rem;
+      border-bottom: .02rem solid #ddd;
+    }
+  }
+
+  /*.select-list {
+    padding: .2rem;
+    box-shadow: 0 0 8px #ddd;
+    input {
+      width: 5rem;
+      height: .6rem;
+      border-bottom: .02rem solid #ddd;
+    }
+    .search {
+      display: inline-block;
+      width: .6rem;
+      height: .6rem;
+      background: url("../img/icon-search.png") no-repeat center;
+      background-size: .4rem;
+      vertical-align: middle;
+    }
+  }*/
+}
+
+
+
+.presentation {
+  margin-top: .2rem;
+  .title {
+    b {
+      padding-left: .2rem;
+      font-weight: bold;
+      color: $color-yellow;
+      font-size: .36rem;
+    }
+    span {
+      font-weight: bold;
+    }
+  }
+  .description {
+    padding: .2rem;
+    font-size: .3rem;
+    p {
+      text-indent: .3rem;
+    }
+  }
+}
+
+.product {
+  padding-bottom: .4rem;
+  h3 {
+    line-height: .72rem;
+    background-color: $color-yellow;
+    color: #fff;
+    padding: 0 .2rem;
+  }
+}
+.product-list {
+  padding-top: .2rem;
+  dl {
+    overflow: hidden;
+    border-bottom: 1px solid #ddd;
+    dt {
+      display: inline-block;
+      width: 26%;
+      vertical-align: middle;
+      text-align: center;
+      img {
+        width: 70%;
+      }
+    }
+    dd {
+      display: inline-block;
+      width: 70%;
+      vertical-align: middle;
+      font-weight: bold;
+    }
+  }
+}
+
+.search {
+  padding: .8rem;
+  input {
+    width: 5rem;
+    height: .6rem;
+    padding-left: .1rem;
+    border-bottom: .02rem solid #ddd;
+  }
+  .search-btn {
+    display: inline-block;
+    width: .6rem;
+    height: .6rem;
+    background: url("../img/icon-search.png") no-repeat center;
+    background-size: .4rem;
+    vertical-align: middle;
+  }
+  .select-item {
+    width: 5rem;
+    line-height: .6rem;
+    margin-top: .5rem;
+    padding-left: .1rem;
+    border-bottom: .02rem solid #ddd;
+  }
+  .search-result {
+    position: relative;
+    ul {
+      position: absolute;
+      left: 0;
+      top: .6rem;
+      width: 100%;
+      max-height: 8.5rem;
+      overflow-y: auto;
+      box-shadow: 0 4px 8px $color-yellow;
+      background-color: #fff;
+      display: none;
+      li {
+        height: .88rem;
+        line-height: .88rem;
+        padding-left: .1rem;
+        border-bottom: 1px solid #ddd;
+        &:nth-of-type(even) {
+          background-color: #f6f6f6;
+        }
+      }
+    }
+  }
+}
+
+.next {
+  width: 1.4rem;
+  height: 1.4rem;
+  margin: .3rem auto;
+  text-align: center;
+  background-color: #eca483;
+  border-radius: 50%;
+  box-shadow: 0 .15rem .15rem rgba(236,166,129,.4);
+  a {
+    display: block;
+    width: 1.4rem;
+    height: 1.4rem;
+    background-image: url("../img/ic10.png");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: .4rem;
+  }
+  span {
+    color: #fff;
+    line-height: 1.4rem;
+    font-size: .4rem;
+  }
+}

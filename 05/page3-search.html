@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport"
+        content="width=device-width,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no,viewport-fit=cover"/>
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black">
+  <meta name="format-detection" content="telephone=no">
+  <title>搜索</title>
+  <link rel="stylesheet" href="./css/reset.css">
+  <link rel="stylesheet" href="./css/style.css">
+  <link rel="stylesheet" href="./css/mobileSelect.css">
+</head>
+<body>
+<header class="header">
+  <i></i>
+  <span>重大疾病选择</span>
+</header>
+<section class="search">
+  <div class="search-result">
+    <input type="text" placeholder="重大疾病模糊查询" id="search">
+    <i class="search-btn"></i>
+  </div>
+  <div class="select-item" id="illness">重大疾病-请选择</div>
+</section>
+<section class="next">
+  <a href="javascript:;"></a>
+</section>
+<script src="./js/jquery-2.2.4.min.js"></script>
+<script src="./js/mobileSelect.min.js"></script>
+<script>
+  $(function () {
+    var illnessArr = ['高血压','癌症','高血压1','癌症1','高血压2','癌症2','高血压','癌症','高血压','癌症','高血压','癌症']
+    var illness = new MobileSelect({
+      trigger: '#illness',
+      title: '重大疾病-请选择',
+      wheels: [
+        {data: illnessArr}
+      ],
+      position: [2], //初始化定位 打开时默认选中的哪个 如果不填默认为0
+    });
+
+    var nowWord = ''
+
+    $('.search-btn').bind('click', function () {
+
+      var serchKey = $('#search').val();
+      if (nowWord == serchKey) {
+        return
+      }
+      $(this).parents('.search-result').find('ul').remove();
+      nowWord = serchKey;
+      var serchResult = fuzzyQuery(illnessArr, serchKey)
+      var liLists = ''
+      liLists = '<ul>'
+      if (serchResult.length > 0) {
+        $.each(serchResult, function (i, item) {
+          liLists += '<li>' + item + '</li>'
+        })
+      } else {
+        liLists += '<li>没有搜索结果，请重新输入！</li>'
+      }
+      liLists += '</ul>'
+      console.log(liLists)
+      $(this).parents('.search-result').append(liLists)
+      $(this).parents('.search-result').find('ul').slideDown();
+      console.log($('#search').val())
+      console.log(serchResult)
+    })
+    
+    $('.search-result').on('click', 'li', function () {
+      $(this).parents('.search-result').find('input').val($(this).text())
+      $(this).parents('.search-result').find('ul').slideUp();
+      console.log($(this).text())
+    })
+  })
+
+  function fuzzyQuery(list, keyWord) {
+    var reg =  new RegExp(keyWord);
+    var arr = [];
+    for (var i = 0; i < list.length; i++) {
+      if (reg.test(list[i])) {
+        arr.push(list[i]);
+      }
+    }
+    return arr;
+  }
+
+
+</script>
+</body>
+</html>

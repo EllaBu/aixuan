@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport"
+        content="width=device-width,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no,viewport-fit=cover"/>
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black">
+  <meta name="format-detection" content="telephone=no">
+  <title>选择索赔类型</title>
+  <link rel="stylesheet" href="./css/reset.css">
+  <link rel="stylesheet" href="./css/style.css">
+</head>
+<body>
+<header class="header">
+  <!--<i></i>-->
+  <span>索赔类型</span>
+</header>
+
+<section class="claim-detail">
+  <div class="select-list">
+    <span class="switch-btn">
+      <i></i>
+    </span>
+    <h3>重大疾病（重大理赔）</h3>
+  </div>
+  <div class="select-list">
+    <span class="switch-btn">
+      <i></i>
+    </span>
+    <h3>身故（重大理赔）</h3>
+  </div>
+  <div class="select-list">
+    <span class="switch-btn">
+      <i></i>
+    </span>
+    <h3>伤残（重大理赔）</h3>
+  </div>
+  <div class="select-list exempt-item">
+    <span class="switch-btn">
+      <i></i>
+    </span>
+    <h3>豁免（重大理赔）</h3>
+    <p><input type="text" placeholder="豁免原因"></p>
+  </div>
+  <div class="select-list">
+    <span class="switch-btn">
+      <i></i>
+    </span>
+    <h3>住院费用补偿（普通理赔）</h3>
+  </div>
+  <div class="select-list">
+    <span class="switch-btn">
+      <i></i>
+    </span>
+    <h3>手术费用补偿（普通理赔）</h3>
+  </div>
+  <div class="select-list">
+    <span class="switch-btn">
+      <i></i>
+    </span>
+    <h3>门诊费用补偿（普通理赔）</h3>
+  </div>
+  <div class="select-list">
+    <span class="switch-btn">
+      <i></i>
+    </span>
+    <h3>津贴（普通理赔）</h3>
+  </div>
+</section>
+
+<section class="next">
+  <a href="javascript:;"></a>
+</section>
+
+<script src="./js/jquery-2.2.4.min.js"></script>
+<script>
+  $(function () {
+
+    $('.exempt-item .switch-btn').bind('click', function () {
+      $(this).parents('.exempt-item').find('p').slideToggle();
+    })
+
+    $('.switch-btn').bind('click', function () {
+      $(this).toggleClass('active')
+    })
+
+    /*$('.switch-btn').bind('click', function () {
+
+
+      $(this).addClass('active').parents('select-list').siblings().removeClass('active')
+      if($('.exempt-item .switch-btn').hasClass('active')) {
+        $(this).siblings('p').slideUp()
+      } else {
+        $(this).siblings('p').slideDown()
+      }
+    })*/
+  })
+
+
+</script>
+</body>
+</html>
