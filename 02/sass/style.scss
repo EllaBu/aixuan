@@ -802,8 +802,9 @@ $color-error: red;
   .result {
 
     li {
+      position: relative;
       overflow: hidden;
-      box-shadow: 0 3px 8px #ddd;
+      box-shadow: 0 1px 8px #ddd;
       margin-bottom: .3rem;
     }
     .image {
@@ -828,6 +829,21 @@ $color-error: red;
         line-height: .3rem;
         font-size: .28rem;
       }
+    }
+    .tag {
+      position: absolute;
+      top: .18rem;
+      left: -.4rem;
+      display: block;
+      width: 1.6rem;
+      line-height: .4rem;
+      padding: 0 .06rem;
+      border-radius: .1rem;
+      text-align: center;
+      background-color: $color-yellow;
+      color: #fff;
+      font-size: .24rem;
+      transform: rotate(-45deg);
     }
   }
   .new-add {

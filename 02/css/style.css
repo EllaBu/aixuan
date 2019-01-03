@@ -740,8 +740,9 @@
   font-size: .3rem;
 }
 .new-wrapper .result li {
+  position: relative;
   overflow: hidden;
-  box-shadow: 0 3px 8px #ddd;
+  box-shadow: 0 1px 8px #ddd;
   margin-bottom: .3rem;
 }
 .new-wrapper .result .image {
@@ -766,6 +767,21 @@
 .new-wrapper .result .detail p {
   line-height: .3rem;
   font-size: .28rem;
+}
+.new-wrapper .result .tag {
+  position: absolute;
+  top: .18rem;
+  left: -.4rem;
+  display: block;
+  width: 1.6rem;
+  line-height: .4rem;
+  padding: 0 .06rem;
+  border-radius: .1rem;
+  text-align: center;
+  background-color: #ec9a71;
+  color: #fff;
+  font-size: .24rem;
+  transform: rotate(-45deg);
 }
 .new-wrapper .new-add {
   margin: .2rem 0;
