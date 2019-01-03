@@ -53,10 +53,12 @@ table {
 }
 
 input, textarea {
+    border: none;
     outline: 0;
     resize: none;
     font-size: .32rem;
     color: #333;
+    border-radius: 0; /*解决IOS只有底部边框时，出现四周虚线框的问题*/
     -webkit-appearance: none;  /*解决iOS边框阴影*/
     font-family: arial,"Hiragino Sans GB","Microsoft Yahei",sans-serif;
 }
@@ -158,9 +160,4 @@ body {
 input::-webkit-input-placeholder {
   font-size: .32rem;
   color: #333;
-}
-
-@font-face {
-    font-family: numfont;
-    src: url('../fonts/aa.ttf');
 }
