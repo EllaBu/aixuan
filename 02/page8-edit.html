@@ -19,93 +19,99 @@
 
   <h3>保单编辑 <a class="fold-item" href="javascript:;"></a></h3>
 
-  <div class="insurance-item">
-    <div class="item">
-      <label for="">合同编号：</label>
-      <input type="text">
-    </div>
-    <div class="item">
-      <label for="">生效日期：</label>
-      <span id="effectiveDate" class="mobile-select"></span>
-    </div>
-  </div>
-  <div class="insurance-item">
-    <div class="item">
-      <label for="">投保人：</label>
-      <input type="text">
-    </div>
-    <div class="item">
-      <label for="">被保人：</label>
-      <span id="recognizee" class="mobile-select"></span>
-    </div>
-    <div class="item favoree">
-      <p>
-        <label for="">受益人：</label>
+  <div>
+    <div class="insurance-item">
+      <div class="item">
+        <label for="">合同编号：</label>
         <input type="text">
-        <span>比例：</span>
+      </div>
+      <div class="item">
+        <label for="">生效日期：</label>
+        <span id="effectiveDate" class="mobile-select"></span>
+      </div>
+    </div>
+    <div class="insurance-item">
+      <div class="item">
+        <label for="">投保人：</label>
         <input type="text">
-        <a href="javascript:;">+</a>
-      </p>
+      </div>
+      <div class="item">
+        <label for="">被保人：</label>
+        <span id="recognizee" class="mobile-select"></span>
+      </div>
+      <div class="item favoree">
+        <p>
+          <label for="">受益人：</label>
+          <input type="text">
+          <span>比例：</span>
+          <input type="text">
+          <a href="javascript:;">+</a>
+        </p>
 
+      </div>
+    </div>
+
+    <div class="btn-item btn-item-two">
+      <button>删除</button>
+      <button>保存</button>
     </div>
   </div>
 
-  <div class="btn-item btn-item-two">
-    <button>删除</button>
-    <button>保存</button>
-  </div>
+
 
 </div>
 <div class="product-list">
   <h3>保单中的产品 <a class="fold-item" href="javascript:;"></a></h3>
-  <ul>
-    <li>
-      <h4>
-        <span>人保寿险金色朝阳少儿定期寿险（A款）</span>
-        <b>主合同</b>
-      </h4>
-      <dl>
-        <dt>
-          <p>基本保额：1000,000 元</p>
-          <p>保费：1000,000 元</p>
-          <p>保障期：终身</p>
-          <p>缴费期：20年</p>
-        </dt>
-        <dd>
-          <p class="valid">保单生效中</p>
-          <p>距离下次缴费时间</p>
-          <p>40年</p>
-          <p>
-            <a href="javascript:;">查看责任</a>
-          </p>
-        </dd>
-      </dl>
-    </li>
-    <li>
-      <h4>
-        <span>人保寿险金色朝阳少儿定期寿险（A款）</span>
-        <b>主合同</b>
-      </h4>
-      <dl>
-        <dt>
-          <p>基本保额：1000,000 元</p>
-          <p>保费：1000,000 元</p>
-          <p>保障期：终身</p>
-          <p>缴费期：20年</p>
-        </dt>
-        <dd>
-          <p class="no-valid">保单无效</p>
-          <p>距离下次缴费时间</p>
-          <p>40年</p>
-          <p>
-            <a href="javascript:;">查看责任</a>
-          </p>
-        </dd>
-      </dl>
-    </li>
-  </ul>
-  <div class="btn-list">
-    <a href="page9-product.html">+增加产品</a>
+  <div>
+    <ul>
+      <li>
+        <h4>
+          <span>人保寿险金色朝阳少儿定期寿险（A款）</span>
+          <b>主合同</b>
+        </h4>
+        <dl>
+          <dt>
+            <p>基本保额：1000,000 元</p>
+            <p>保费：1000,000 元</p>
+            <p>保障期：终身</p>
+            <p>缴费期：20年</p>
+          </dt>
+          <dd>
+            <p class="valid">保单生效中</p>
+            <p>距离下次缴费时间</p>
+            <p>40年</p>
+            <p>
+              <a href="javascript:;">查看责任</a>
+            </p>
+          </dd>
+        </dl>
+      </li>
+      <li>
+        <h4>
+          <span>人保寿险金色朝阳少儿定期寿险（A款）</span>
+          <b>主合同</b>
+        </h4>
+        <dl>
+          <dt>
+            <p>基本保额：1000,000 元</p>
+            <p>保费：1000,000 元</p>
+            <p>保障期：终身</p>
+            <p>缴费期：20年</p>
+          </dt>
+          <dd>
+            <p class="no-valid">保单无效</p>
+            <p>距离下次缴费时间</p>
+            <p>40年</p>
+            <p>
+              <a href="javascript:;">查看责任</a>
+            </p>
+          </dd>
+        </dl>
+      </li>
+    </ul>
+    <div class="btn-list">
+      <a href="page9-product.html">+增加产品</a>
+    </div>
   </div>
 
 </div>
@@ -132,7 +138,7 @@
     })
     $('.product-list .fold-item').bind('click', function () {
       $(this).toggleClass('active')
-      $(this).parents('h3').siblings().slideToggle();
+      $(this).parents('h3').siblings('div').slideToggle();
     })
     $('input[type="text"]').bind('blur', function () {
       document.body && (document.body.scrollTop = document.body.scrollTop);
