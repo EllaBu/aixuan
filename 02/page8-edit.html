@@ -15,9 +15,10 @@
 </head>
 <body>
 <div class="new-wrapper auto-wrapper">
-  <!-- 添加家庭成员 -->
 
-  <h3>保单编辑 <a class="fold-item" href="javascript:;"></a></h3>
+  <h3 class="new-title">保单管理</h3>
+
+  <h4>保单编辑 <a class="fold-item" href="javascript:;"></a></h4>
 
   <div>
     <div class="insurance-item">
@@ -61,14 +62,14 @@
 
 </div>
 <div class="product-list">
-  <h3>保单中的产品 <a class="fold-item" href="javascript:;"></a></h3>
+  <h4>保单中的产品 <a class="fold-item" href="javascript:;"></a></h4>
   <div>
     <ul>
       <li>
-        <h4>
+        <h5>
           <span>人保寿险金色朝阳少儿定期寿险（A款）</span>
           <b>主合同</b>
-        </h4>
+        </h5>
         <dl>
           <dt>
             <p>基本保额：1000,000 元</p>
@@ -87,10 +88,10 @@
         </dl>
       </li>
       <li>
-        <h4>
+        <h5>
           <span>人保寿险金色朝阳少儿定期寿险（A款）</span>
           <b>主合同</b>
-        </h4>
+        </h5>
         <dl>
           <dt>
             <p>基本保额：1000,000 元</p>
@@ -134,11 +135,11 @@
     })
     $('.auto-wrapper .fold-item').bind('click', function () {
       $(this).toggleClass('active')
-      $(this).parents('h3').siblings('div').slideToggle();
+      $(this).parents('h4').siblings('div').slideToggle();
     })
     $('.product-list .fold-item').bind('click', function () {
       $(this).toggleClass('active')
-      $(this).parents('h3').siblings('div').slideToggle();
+      $(this).parents('h4').siblings('div').slideToggle();
     })
     $('input[type="text"]').bind('blur', function () {
       document.body && (document.body.scrollTop = document.body.scrollTop);

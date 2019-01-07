@@ -8,7 +8,7 @@
   height: .1rem;
   overflow: hidden;
   border-radius: .05rem;
-  margin: .1rem auto 0;
+  margin: .2rem auto 0;
   z-index: 111;
 }
 .dividing-line span {
@@ -279,16 +279,20 @@
   height: .72rem;
   line-height: .72rem;
   display: flex;
-  margin-top: .2rem;
+  margin: .2rem;
 }
 .tab-title > span {
   display: inline-block;
   flex: 1;
   background-color: #eee;
   text-align: center;
-  margin: 0 .2rem;
-  border-radius: .1rem;
   cursor: pointer;
+}
+.tab-title > span:nth-of-type(1) {
+  border-radius: .2rem 0 0 .2rem;
+}
+.tab-title > span:nth-of-type(2) {
+  border-radius: 0 .2rem .2rem 0;
 }
 .tab-title > span.active {
   background-color: #ec9a71;
@@ -300,6 +304,19 @@
 }
 .tab-detail.show {
   display: block;
+}
+
+.classify-total {
+  margin-top: .2rem;
+  text-align: center;
+  font-size: .28rem;
+}
+.classify-total span {
+  padding: .1rem .6rem;
+  background-color: #ec9a71;
+  color: #fff;
+  border-radius: .5rem;
+  line-height: .6rem;
 }
 
 .classify-list {
@@ -356,6 +373,10 @@
   overflow: hidden;
   border-top: 1px solid #ddd;
 }
+.classify-list > ul > li.list-novaild {
+  background: url("../img/img-novaild3.png") no-repeat right 0.7rem;
+  background-size: 1.2rem;
+}
 .classify-list > ul > li .li-left {
   float: left;
   width: 30%;
@@ -403,6 +424,9 @@
   display: inline-block;
   width: 45%;
 }
+.classify-list .recommend-list p span:last-of-type {
+  width: 53%;
+}
 .classify-list .recommend-list p b {
   font-size: .46rem;
   color: #ec9a71;
@@ -413,6 +437,13 @@
 .classify-list .recommend-list p i {
   color: #ec9a71;
   vertical-align: baseline;
+}
+.classify-list .recommend-list p a {
+  margin-left: 3%;
+  padding: .02rem;
+  background-color: #1e83d3;
+  color: #fff;
+  border-radius: .05rem;
 }
 .classify-list .duty-list p {
   float: right;
@@ -787,22 +818,25 @@
 .auto-wrapper .btn-item {
   padding: 0 .2rem;
 }
+.auto-wrapper h3 {
+  padding-left: .2rem;
+}
 
-.auto-wrapper h3, .product-list h3 {
+.auto-wrapper h4, .product-list h4 {
   height: .72rem;
   line-height: .72rem;
-  background-color: #ec9a71;
+  background-color: rgba(30, 131, 211, 0.6);
   color: #fff;
   padding-left: .2rem;
 }
-.auto-wrapper h3 .fold-item, .product-list h3 .fold-item {
+.auto-wrapper h4 .fold-item, .product-list h4 .fold-item {
   float: right;
   width: .72rem;
   height: .72rem;
   background: #f1f1f1 url("../img/fold-down.png") no-repeat center;
   background-size: .4rem;
 }
-.auto-wrapper h3 .fold-item.active, .product-list h3 .fold-item.active {
+.auto-wrapper h4 .fold-item.active, .product-list h4 .fold-item.active {
   transform: rotate(180deg);
 }
 
@@ -817,13 +851,13 @@
   box-shadow: 0 4px 8px #ddd;
   margin-bottom: .2rem;
 }
-.product-list ul li h4 {
+.product-list ul li h5 {
   height: .72rem;
   line-height: .72rem;
   font-size: .32rem;
   font-weight: bold;
 }
-.product-list ul li h4 b {
+.product-list ul li h5 b {
   font-weight: normal;
   color: #1e83d3;
   float: right;

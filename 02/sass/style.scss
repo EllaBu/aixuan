@@ -13,7 +13,7 @@ $color-error: red;
   height: .1rem;
   overflow: hidden;
   border-radius: .05rem;
-  margin: .1rem auto 0;
+  margin: .2rem auto 0;
   z-index: 111;
   span {
     float: left;
@@ -288,15 +288,19 @@ $color-error: red;
   height: .72rem;
   line-height: .72rem;
   display: flex;
-  margin-top: .2rem;
+  margin: .2rem;
   &>span {
     display: inline-block;
     flex: 1;
     background-color: #eee;
     text-align: center;
-    margin: 0 .2rem;
-    border-radius: .1rem;
     cursor: pointer;
+    &:nth-of-type(1){
+      border-radius: .2rem 0 0 .2rem;
+    }
+    &:nth-of-type(2){
+      border-radius: 0 .2rem .2rem 0;
+    }
     &.active {
       background-color: $color-yellow;
       color: #fff;
@@ -308,6 +312,19 @@ $color-error: red;
   display: none;
   &.show {
     display: block;
+  }
+}
+
+.classify-total {
+  margin-top: .2rem;
+  text-align: center;
+  font-size: .28rem;
+  span {
+    padding: .1rem .6rem;
+    background-color: $color-yellow;
+    color: #fff;
+    border-radius: .5rem;
+    line-height: .6rem;
   }
 }
 
@@ -365,6 +382,10 @@ $color-error: red;
       position: relative;
       overflow: hidden;
       border-top: 1px solid #ddd;
+      &.list-novaild {
+        background: url("../img/img-novaild3.png") no-repeat right .7rem;
+        background-size: 1.2rem;
+      }
       .li-left{
         float: left;
         width: 30%;
@@ -415,6 +436,9 @@ $color-error: red;
       span {
         display: inline-block;
         width: 45%;
+        &:last-of-type {
+          width: 53%;
+        }
       }
       b {
         font-size: .46rem;
@@ -426,6 +450,13 @@ $color-error: red;
       i {
         color: $color-yellow;
         vertical-align: baseline;
+      }
+      a {
+        margin-left: 3%;
+        padding: .02rem;
+        background-color: $color-blue;
+        color: #fff;
+        border-radius: .05rem;
       }
     }
   }
@@ -839,11 +870,14 @@ $color-error: red;
   .btn-item {
     padding: 0 .2rem;
   }
+  h3 {
+    padding-left: .2rem;
+  }
 }
-.auto-wrapper h3, .product-list h3 {
+.auto-wrapper h4, .product-list h4 {
   height: .72rem;
   line-height: .72rem;
-  background-color: $color-yellow;
+  background-color: rgba($color-blue, .6);
   color: #fff;
   padding-left: .2rem;
   .fold-item {
@@ -866,7 +900,7 @@ $color-error: red;
       padding: .1rem .3rem;
       box-shadow: 0 4px 8px #ddd;
       margin-bottom: .2rem;
-      h4 {
+      h5 {
         height: .72rem;
         line-height: .72rem;
         font-size: .32rem;
