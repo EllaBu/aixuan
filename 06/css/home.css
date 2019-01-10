@@ -1,0 +1,113 @@
+.home-list {
+  padding: 0 .1rem;
+}
+.home-list li {
+  position: relative;
+  height: 2.8rem;
+  line-height: 2.8rem;
+  border-bottom: 1px solid #ddd;
+  margin-bottom: .1rem;
+  overflow: hidden;
+}
+.home-list li img {
+  width: 100%;
+}
+.home-list li div {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.3);
+  text-align: center;
+  color: #fff;
+  font-size: .48rem;
+  letter-spacing: .02rem;
+}
+
+.form-box .form-title {
+  position: relative;
+  height: 1rem;
+  line-height: 1rem;
+  background-color: #5cafff;
+  color: #fff;
+  text-align: center;
+  font-weight: bold;
+  font-size: .4rem;
+}
+.form-box .form-title i {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 1rem;
+  height: 1rem;
+  background: url("../img/icon-back.png") no-repeat center;
+  background-size: .48rem;
+}
+.form-box .logo {
+  margin-top: .4rem;
+  text-align: center;
+}
+.form-box .logo img {
+  width: 3rem;
+}
+.form-box .form-list {
+  padding: .2rem .4rem;
+}
+.form-box .form-list .form-item {
+  position: relative;
+  height: 1.06rem;
+  padding-top: .4rem;
+  border-bottom: 1px solid #ccc;
+}
+.form-box .form-list .form-item label {
+  display: inline-block;
+  width: 1.5rem;
+  height: .6rem;
+  line-height: .6rem;
+  vertical-align: top;
+}
+.form-box .form-list .form-item input {
+  width: 5rem;
+  height: .6rem;
+  line-height: .6rem;
+  vertical-align: top;
+}
+.form-box .form-list .form-item .get-code {
+  position: absolute;
+  right: 0;
+  bottom: .1rem;
+  width: 2rem;
+  height: .72rem;
+  line-height: .72rem;
+  text-align: center;
+  border: 1px solid #ccc;
+  background-color: #f1f1f1;
+  border-radius: .1rem;
+  font-size: .28rem;
+}
+.form-box .form-handle {
+  margin-top: .6rem;
+}
+.form-box .form-handle button {
+  width: 100%;
+  height: .8rem;
+  line-height: .8rem;
+  background-color: #5cafff;
+  color: #fff;
+  border-radius: .1rem;
+}
+.form-box .form-handle input[type="checkbox"] {
+  width: .32rem;
+  height: .32rem;
+  border: 1px solid #ccc;
+  -webkit-appearance: checkbox;
+  vertical-align: middle;
+}
+.form-box .form-handle label {
+  display: inline-block;
+  vertical-align: middle;
+}
+.form-box .form-handle p {
+  margin-bottom: .2rem;
+}
