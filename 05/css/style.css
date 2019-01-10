@@ -64,12 +64,13 @@
 }
 .claim-detail h3 {
   display: inline-block;
+  width: 5.3rem;
   padding: .2rem;
   vertical-align: middle;
 }
 .claim-detail .select-list p {
   display: none;
-  margin-left: 1.3rem;
+  margin: .1rem 0 0 .2rem;
 }
 .claim-detail .select-list input {
   width: 5rem;
@@ -77,17 +78,25 @@
   border-bottom: .02rem solid #ddd;
 }
 
+h3.title {
+  line-height: .72rem;
+  background-color: #ec9a71;
+  color: #fff;
+  padding: 0 .2rem;
+}
+
 .presentation {
-  margin-top: .2rem;
+  margin: .2rem 0;
 }
-.presentation .title b {
-  padding-left: .2rem;
+.presentation ul {
+  display: inline-block;
   font-weight: bold;
-  color: #ec9a71;
-  font-size: .36rem;
+  vertical-align: top;
+  line-height: .44rem;
+  padding: .2rem .2rem .2rem .8rem;
 }
-.presentation .title span {
-  font-weight: bold;
+.presentation ul li {
+  list-style: square;
 }
 .presentation .description {
   padding: .2rem;
@@ -100,16 +109,7 @@
 .product {
   padding-bottom: .4rem;
 }
-.product h3 {
-  line-height: .72rem;
-  background-color: #ec9a71;
-  color: #fff;
-  padding: 0 .2rem;
-}
 
-.product-list {
-  padding-top: .2rem;
-}
 .product-list dl {
   overflow: hidden;
   border-bottom: 1px solid #ddd;
@@ -128,6 +128,7 @@
   width: 70%;
   vertical-align: middle;
   font-weight: bold;
+  padding: .2rem 0;
 }
 
 .search {

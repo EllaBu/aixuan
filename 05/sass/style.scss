@@ -53,13 +53,14 @@ $btn-color: #71a5ef;
   padding-left: .3rem;
   h3 {
     display: inline-block;
+    width: 5.3rem;
     padding: .2rem;
     vertical-align: middle;
   }
   .select-list {
     p {
       display: none;
-      margin-left: 1.3rem;
+      margin: .1rem 0 0 .2rem;
     }
     input {
       width: 5rem;
@@ -87,21 +88,26 @@ $btn-color: #71a5ef;
   }*/
 }
 
-
+h3.title {
+  line-height: .72rem;
+  background-color: $color-yellow;
+  color: #fff;
+  padding: 0 .2rem;
+}
 
 .presentation {
-  margin-top: .2rem;
-  .title {
-    b {
-      padding-left: .2rem;
-      font-weight: bold;
-      color: $color-yellow;
-      font-size: .36rem;
-    }
-    span {
-      font-weight: bold;
+  margin: .2rem 0;
+  ul {
+    display: inline-block;
+    font-weight: bold;
+    vertical-align: top;
+    line-height: .44rem;
+    padding: .2rem .2rem .2rem .8rem;
+    li {
+      list-style: square;
     }
   }
+
   .description {
     padding: .2rem;
     font-size: .3rem;
@@ -113,15 +119,8 @@ $btn-color: #71a5ef;
 
 .product {
   padding-bottom: .4rem;
-  h3 {
-    line-height: .72rem;
-    background-color: $color-yellow;
-    color: #fff;
-    padding: 0 .2rem;
-  }
 }
 .product-list {
-  padding-top: .2rem;
   dl {
     overflow: hidden;
     border-bottom: 1px solid #ddd;
@@ -139,6 +138,7 @@ $btn-color: #71a5ef;
       width: 70%;
       vertical-align: middle;
       font-weight: bold;
+      padding: .2rem 0;
     }
   }
 }
