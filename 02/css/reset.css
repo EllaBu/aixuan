@@ -154,11 +154,6 @@ body {
     padding-bottom: constant(safe-area-inset-bottom);
 }
 
-input::-webkit-input-placeholder {
-  font-size: .32rem;
-  color: #333;
-}
-
 @font-face {
     font-family: numfont;
     src: url('../fonts/aa.ttf');

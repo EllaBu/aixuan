@@ -550,6 +550,9 @@
   vertical-align: middle;
   border-radius: 0;
 }
+.new-wrapper .mobile-select {
+  color: #aaa;
+}
 .new-wrapper .btn-item {
   margin-top: .2rem;
 }

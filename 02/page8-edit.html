@@ -24,11 +24,11 @@
     <div class="insurance-item">
       <div class="item">
         <label for="">合同编号：</label>
-        <input type="text">
+        <input type="text" placeholder="合同编号">
       </div>
       <div class="item">
         <label for="">生效日期：</label>
-        <span id="effectiveDate" class="mobile-select"></span>
+        <span id="effectiveDate" class="mobile-select">生效日期</span>
       </div>
     </div>
     <div class="insurance-item">
@@ -158,6 +158,9 @@
       {data: dayArr}
     ],
     position: [2], //初始化定位 打开时默认选中的哪个 如果不填默认为0
+    callback:function(){
+      $(this).css('color', '#333')
+    }
   });
 
   var recognizeeArr = ['父亲', '母亲', '孩子一', '孩子二', '孩子三']
