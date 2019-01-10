@@ -35,6 +35,7 @@ a, div, header, span {
 }
 
 a {
+    color: #333;
     text-decoration: none;
 }
 
