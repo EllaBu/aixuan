@@ -1,5 +1,8 @@
 @charset "UTF-8";
 $color-common: #5cafff;
+body {
+  background-color: #fff;
+}
 .home-list {
   padding: 0 .1rem;
   li {
