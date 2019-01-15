@@ -185,11 +185,14 @@
       overflow: hidden;
       margin-bottom: .2rem;
       dt, dd {
-        float: left;
+        display: inline-block;
         vertical-align: top;
       }
       dt {
         font-weight: bold;
+        img {
+          width: 2.4rem;
+        }
       }
 
       dd {
@@ -200,12 +203,32 @@
         p:last-of-type {
           color: #4580f0;
         }
+        .result-tip {
+          font-weight: bold;
+          color: #999;
+          font-size: .4rem;
+        }
+      }
+    }
+  }
+  .no-result {
+    background-color: #fff;
+    dl {
+      dt, dd {
+        vertical-align: middle;
+      }
+      dt {
+        width: 2.4rem;
+        text-align: center;
+      }
+      dd {
+        width: 4.2rem;
       }
     }
   }
   .again {
     text-align: center;
-    margin-bottom: .2rem;
+    margin-top: .2rem;
     a {
       display: inline-block;
       width: 2rem;

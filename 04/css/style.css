@@ -181,11 +181,14 @@
   margin-bottom: .2rem;
 }
 .result .result-total dl dt, .result .result-total dl dd {
-  float: left;
+  display: inline-block;
   vertical-align: top;
 }
 .result .result-total dl dt {
   font-weight: bold;
+}
+.result .result-total dl dt img {
+  width: 2.4rem;
 }
 .result .result-total dl dd span {
   color: #4580f0;
@@ -194,9 +197,27 @@
 .result .result-total dl dd p:last-of-type {
   color: #4580f0;
 }
+.result .result-total dl dd .result-tip {
+  font-weight: bold;
+  color: #999;
+  font-size: .4rem;
+}
+.result .no-result {
+  background-color: #fff;
+}
+.result .no-result dl dt, .result .no-result dl dd {
+  vertical-align: middle;
+}
+.result .no-result dl dt {
+  width: 2.4rem;
+  text-align: center;
+}
+.result .no-result dl dd {
+  width: 4.2rem;
+}
 .result .again {
   text-align: center;
-  margin-bottom: .2rem;
+  margin-top: .2rem;
 }
 .result .again a {
   display: inline-block;

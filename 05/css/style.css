@@ -41,6 +41,24 @@
   left: .4rem;
 }
 
+.member {
+  padding: .2rem;
+}
+.member h4 {
+  color: #ec9a71;
+}
+.member ul {
+  margin: .2rem 0 .4rem;
+  overflow: hidden;
+}
+.member li {
+  float: left;
+  margin: 0 .4rem .2rem 0;
+}
+.member li input {
+  -webkit-appearance: checkbox;
+}
+
 .claim-detail {
   margin-top: .2rem;
   padding-left: .3rem;

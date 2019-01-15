@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport"
+        content="width=device-width,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no,viewport-fit=cover"/>
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black">
+  <meta name="format-detection" content="telephone=no">
+  <title>选择家庭成员</title>
+  <link rel="stylesheet" href="./css/reset.css">
+  <link rel="stylesheet" href="./css/style.css">
+</head>
+<body>
+<header class="header">
+  <!--<i></i>-->
+  <span>选择家庭成员</span>
+</header>
+
+<section class="member">
+  <h4>请选择理赔人</h4>
+  <ul>
+    <!--根据checkbox的ID，设置label 的 for-->
+    <li><input type="checkbox" id="oneself"><label for="oneself">本人</label></li>
+    <li><input type="checkbox" checked><label for="">父亲</label></li>
+    <li><input type="checkbox"><label for="">母亲</label></li>
+    <li><input type="checkbox"><label for="">儿子</label></li>
+    <li><input type="checkbox"><label for="">女儿</label></li>
+    <li><input type="checkbox"><label for="">父亲</label></li>
+    <li><input type="checkbox"><label for="">母亲</label></li>
+    <li><input type="checkbox"><label for="">儿子（一）</label></li>
+    <li><input type="checkbox"><label for="">女儿</label></li>
+  </ul>
+</section>
+
+<section class="next">
+  <a href="javascript:;"></a>
+</section>
+
+<script src="./js/jquery-2.2.4.min.js"></script>
+<script>
+  $(function () {
+
+    $('.exempt-item .switch-btn').bind('click', function () {
+      $(this).parents('.exempt-item').find('p').slideToggle();
+    })
+
+    $('.switch-btn').bind('click', function () {
+      $(this).toggleClass('active')
+    })
+
+    /*$('.switch-btn').bind('click', function () {
+
+
+      $(this).addClass('active').parents('select-list').siblings().removeClass('active')
+      if($('.exempt-item .switch-btn').hasClass('active')) {
+        $(this).siblings('p').slideUp()
+      } else {
+        $(this).siblings('p').slideDown()
+      }
+    })*/
+  })
+
+
+</script>
+</body>
+</html>
