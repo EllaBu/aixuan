@@ -4,7 +4,7 @@ $right-span: 165px;
 $right: $right-span*6;
 $success-color: #d3f5e7;
 $error-color: #f9d8d9;
-$title-color: #b2b2b2;
+$title-color: #deb887;
 $style-height: 34px;
 /* reset */
 * {
@@ -28,8 +28,11 @@ a {
   text-decoration: none;
   color: #333;
 }
-textarea {
-  resize: none;
+xmp {
+  font-size: 14px;
+  color: #333;
+  font-family: arial, "Hiragino Sans GB", "Microsoft Yahei", sans-serif;
+  background-color: transparent;
 }
 table {
   width: 100%;
@@ -48,6 +51,7 @@ table {
 body {
   font-size: 14px;
   color: #333;
+  font-family: arial, "Hiragino Sans GB", "Microsoft Yahei", sans-serif;
 }
 
 h3 {
@@ -113,7 +117,7 @@ h3 {
 
 .content {
   padding: 10px;
-  width: 1366px;
+  //width: 1366px;
   .server-style {
     position: absolute;
     top: 0;
@@ -130,22 +134,27 @@ h3 {
     }
   }
   table.server-table {
-    width: $left + $right;
+    //width: $left + $right;
     &>tbody {
       &>tr {
         &:first-of-type {
           background-color: $title-color;
           td:first-of-type {
             background-color: $title-color;
+            text-align: center;
+            font-weight: bold;
           }
         }
         &>td {
           border: 1px solid #ddd;
           &:first-of-type {
-            width: $left;
+            //width: $left;
             background-color: #f1f1f1;
             vertical-align: top;
             padding-top: 7px;
+          }
+          &:last-of-type {
+            width: $right;
           }
         }
       }
@@ -156,9 +165,9 @@ h3 {
       height: $style-height;
       .server-tip {
         position: absolute;
-        width: $right-span*7;
+        width: $right-span*6;
         top: 7px;
-        left: -$right-span/2;
+        left: $right-span/2;
         z-index: 112;
         b {
           float: left;
@@ -197,34 +206,135 @@ h3 {
             font-weight: bold;
             color: #444;
           }
+          .server-code {
+            display: inline-block;
+            width: 80px;
+            line-height: 22px;
+            text-align: center;
+            border-radius: 4px;
+          }
+          .success-code {
+            background-color: $success-color;
+          }
+          .error-code {
+            background-color: $error-color;
+          }
+          &.process {
+            position: relative;
+            ul {
+              display: none;
+            }
+            &.list-fold {
+              p {
+                display: none;
+              }
+              ul {
+                display: block;
+                li:nth-of-type(even) {
+                  background-color: #f3f3f3;
+                }
+              }
+            }
+          }
         }
       }
       a.fold {
-        float: right;
-        width: 40px;
-        height: 40px;
+        position: absolute;
+        display: block;
+        width: 32px;
+        height: 32px;
         background: url("../img/icon-down.png") no-repeat center;
         background-size: 20px;
+        right: 0;
+        top: 0;
         &.active {
           background: url("../img/icon-up.png") no-repeat center;
           background-size: 20px;
         }
       }
-      .process {
-        height: 60px;
-        overflow: hidden;
-        transition: height 1s;
-        &.h-auto {
-          height: auto;
-        }
-      }
       textarea {
-        width: $right - 110px;
-        height: 140px;
+        width: $right - 98px;
         vertical-align: middle;
         border: none;
         outline: none;
       }
+    }
+  }
+}
+
+.search {
+  padding: 30px 10px;
+  border-bottom: 1px solid #ddd;
+  .search-box {
+    overflow: hidden;
+    &>div {
+      float: left;
+    }
+  }
+  .search-span {
+    display: inline-block;
+    width: 101px;
+    height: 45px;
+    background: #f6f6f6;
+    border: 1px solid #e5e5e5;
+    -webkit-border-radius: 4px 0 0 4px;
+    border-radius: 4px 0 0 4px;
+    line-height: 44px;
+    text-align: center;
+  }
+  .search-input {
+    width: 420px;
+    height: 45px;
+    border: 1px solid #e5e5e5;
+    border-left: none;
+  }
+  .search-btn {
+    width: 100px;
+    height: 46px;
+    line-height: 44px;
+    text-align: center;
+    background-color: $title-color;
+    color: #fff;
+    font-weight: bold;
+    cursor: pointer;
+    border-radius: 0 5px 5px 0;
+    letter-spacing: 2px;
+    font-size: 16px;
+  }
+  input {
+    width: 400px;
+    height: 42px;
+    border: none;
+    padding-left: 8px;
+    outline: none;
+  }
+}
+
+.result {
+  padding: 20px 10px;
+  thead {
+    background-color: $title-color;
+  }
+  th, td {
+    padding: 10px 3px;
+    border: 1px solid #ddd;
+  }
+  tr:nth-of-type(even) {
+    background-color: #f1f1f1;
+  }
+}
+
+.nav {
+  height: 66px;
+  line-height: 66px;
+  box-shadow: 0 0 4px 4px #ddd;
+  li {
+    float: left;
+    padding: 0 40px;
+    font-size: 16px;
+    font-weight: bold;
+    &.active {
+      background-color: $title-color;
     }
   }
 }

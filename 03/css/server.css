@@ -25,8 +25,11 @@ a {
   color: #333;
 }
 
-textarea {
-  resize: none;
+xmp {
+  font-size: 14px;
+  color: #333;
+  font-family: arial, "Hiragino Sans GB", "Microsoft Yahei", sans-serif;
+  background-color: transparent;
 }
 
 table {
@@ -46,6 +49,7 @@ table {
 body {
   font-size: 14px;
   color: #333;
+  font-family: arial, "Hiragino Sans GB", "Microsoft Yahei", sans-serif;
 }
 
 h3 {
@@ -111,7 +115,6 @@ h3 {
 
 .content {
   padding: 10px;
-  width: 1366px;
 }
 .content .server-style {
   position: absolute;
@@ -128,23 +131,24 @@ h3 {
   line-height: 34px;
   border-right: 1px dashed #999;
 }
-.content table.server-table {
-  width: 1346px;
-}
 .content table.server-table > tbody > tr:first-of-type {
-  background-color: #b2b2b2;
+  background-color: #deb887;
 }
 .content table.server-table > tbody > tr:first-of-type td:first-of-type {
-  background-color: #b2b2b2;
+  background-color: #deb887;
+  text-align: center;
+  font-weight: bold;
 }
 .content table.server-table > tbody > tr > td {
   border: 1px solid #ddd;
 }
 .content table.server-table > tbody > tr > td:first-of-type {
-  width: 356px;
   background-color: #f1f1f1;
   vertical-align: top;
   padding-top: 7px;
+}
+.content table.server-table > tbody > tr > td:last-of-type {
+  width: 990px;
 }
 .content table.server-table .server-title {
   position: relative;
@@ -152,9 +156,9 @@ h3 {
 }
 .content table.server-table .server-title .server-tip {
   position: absolute;
-  width: 1155px;
+  width: 990px;
   top: 7px;
-  left: -82.5px;
+  left: 82.5px;
   z-index: 112;
 }
 .content table.server-table .server-title .server-tip b {
@@ -191,29 +195,128 @@ h3 {
   font-weight: bold;
   color: #444;
 }
+.content table.server-table table.server-list tr td .server-code {
+  display: inline-block;
+  width: 80px;
+  line-height: 22px;
+  text-align: center;
+  border-radius: 4px;
+}
+.content table.server-table table.server-list tr td .success-code {
+  background-color: #d3f5e7;
+}
+.content table.server-table table.server-list tr td .error-code {
+  background-color: #f9d8d9;
+}
+.content table.server-table table.server-list tr td.process {
+  position: relative;
+}
+.content table.server-table table.server-list tr td.process ul {
+  display: none;
+}
+.content table.server-table table.server-list tr td.process.list-fold p {
+  display: none;
+}
+.content table.server-table table.server-list tr td.process.list-fold ul {
+  display: block;
+}
+.content table.server-table table.server-list tr td.process.list-fold ul li:nth-of-type(even) {
+  background-color: #f3f3f3;
+}
 .content table.server-table table.server-list a.fold {
-  float: right;
-  width: 40px;
-  height: 40px;
+  position: absolute;
+  display: block;
+  width: 32px;
+  height: 32px;
   background: url("../img/icon-down.png") no-repeat center;
   background-size: 20px;
+  right: 0;
+  top: 0;
 }
 .content table.server-table table.server-list a.fold.active {
   background: url("../img/icon-up.png") no-repeat center;
   background-size: 20px;
 }
-.content table.server-table table.server-list .process {
-  height: 60px;
-  overflow: hidden;
-  transition: height 1s;
-}
-.content table.server-table table.server-list .process.h-auto {
-  height: auto;
-}
 .content table.server-table table.server-list textarea {
-  width: 880px;
-  height: 140px;
+  width: 892px;
   vertical-align: middle;
   border: none;
   outline: none;
+}
+
+.search {
+  padding: 30px 10px;
+  border-bottom: 1px solid #ddd;
+}
+.search .search-box {
+  overflow: hidden;
+}
+.search .search-box > div {
+  float: left;
+}
+.search .search-span {
+  display: inline-block;
+  width: 101px;
+  height: 45px;
+  background: #f6f6f6;
+  border: 1px solid #e5e5e5;
+  -webkit-border-radius: 4px 0 0 4px;
+  border-radius: 4px 0 0 4px;
+  line-height: 44px;
+  text-align: center;
+}
+.search .search-input {
+  width: 420px;
+  height: 45px;
+  border: 1px solid #e5e5e5;
+  border-left: none;
+}
+.search .search-btn {
+  width: 100px;
+  height: 46px;
+  line-height: 44px;
+  text-align: center;
+  background-color: #deb887;
+  color: #fff;
+  font-weight: bold;
+  cursor: pointer;
+  border-radius: 0 5px 5px 0;
+  letter-spacing: 2px;
+  font-size: 16px;
+}
+.search input {
+  width: 400px;
+  height: 42px;
+  border: none;
+  padding-left: 8px;
+  outline: none;
+}
+
+.result {
+  padding: 20px 10px;
+}
+.result thead {
+  background-color: #deb887;
+}
+.result th, .result td {
+  padding: 10px 3px;
+  border: 1px solid #ddd;
+}
+.result tr:nth-of-type(even) {
+  background-color: #f1f1f1;
+}
+
+.nav {
+  height: 66px;
+  line-height: 66px;
+  box-shadow: 0 0 4px 4px #ddd;
+}
+.nav li {
+  float: left;
+  padding: 0 40px;
+  font-size: 16px;
+  font-weight: bold;
+}
+.nav li.active {
+  background-color: #deb887;
 }
