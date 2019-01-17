@@ -15,4 +15,8 @@
       -webkit-overflow-scrolling: touch;
     }
 
-3、
+3、HTML 在手机软键盘弹出顶起影响页面布局
+    解决方法：$('body').height($('body')[0].clientHeight);
+    或者：
+    var winHeight = $(window).height(); //获取当前页面高度
+    $("body").height(winHeight);
