@@ -14,20 +14,29 @@
 <div class="nav">
  <ul>
    <li class="active"><a href="index.html">首页</a></li>
-   <li><a href="server.html">服务详情</a></li>
+   <!--<li><a href="server.html">服务详情</a></li>-->
  </ul>
 </div>
 <div class="search">
   <div class="search-box">
-    <div class="search-span">类型</div>
+    <div class="search-span">
+      <span><b>类型</b> <i></i></span>
+      <ul>
+        <li>类型一</li>
+        <li>类型二</li>
+        <li>类型三</li>
+        <li>类型四</li>
+        <li>类型五</li>
+      </ul>
+    </div>
     <div class="search-input">
       <input type="text" placeholder="请输入搜索类型">
     </div>
     <div class="search-btn">搜素</div>
   </div>
 </div>
-<div class="result">
-  <table style="width: 1366px;">
+<div class="result" style="width: 1366px;">
+  <table>
     <thead>
     <tr>
       <th>标题</th>
@@ -69,6 +78,29 @@
     </tr>
     </tbody>
   </table>
+  <div class="pagination">
+    <ul>
+      <li><a href="javascript;:">上一页</a></li>
+      <li><a href="javascript;:">首页</a></li>
+      <li class="active"><a href="javascript;:">1</a></li>
+      <li><a href="javascript;:">2</a></li>
+      <li><a href="javascript;:">3</a></li>
+      <li><a href="javascript;:">4</a></li>
+      <li><a href="javascript;:">下一页</a></li>
+    </ul>
+  </div>
 </div>
+<script src="./js/jquery-2.2.4.min.js"></script>
+<script>
+  $(function () {
+    $('.search-span span').bind('click', function () {
+      $(this).siblings('ul').slideDown();
+    })
+    $('.search-span li').bind('click', function () {
+      console.log($(this).text())
+      $(this).parents('ul').slideUp().siblings('span').find('b').text($(this).text())
+    })
+  })
+</script>
 </body>
 </html>
