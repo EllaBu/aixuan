@@ -246,6 +246,16 @@ h3 {
   resize: none;
 }
 
+.content-new .server-style {
+  width: 825px;
+}
+.content-new table.server-table > tbody > tr > td:last-of-type {
+  width: 825px;
+}
+.content-new table.server-table .server-title .server-tip {
+  width: 825px;
+}
+
 .search {
   padding: 30px 10px;
   border-bottom: 1px solid #ddd;

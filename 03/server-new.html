@@ -1,0 +1,984 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Title</title>
+  <link rel="stylesheet" href="./css/server.css">
+</head>
+<body>
+<div class="nav">
+  <ul>
+    <li><a href="index.html">首页</a></li>
+    <li class="active"><a href="server.html">服务详情</a></li>
+  </ul>
+</div>
+<div class="header">
+  <h3>服务调用信息</h3>
+  <ul class="server clearfix">
+    <li><i>响应时间：</i><span>410ms</span></li>
+    <li><i>持续时间：</i><span>413ms</span></li>
+    <li><i>pan总数：</i><span>S2</span></li>
+    <li><i>深度：</i><span>2</span></li>
+    <li><i>服务数：</i><span>2</span></li>
+    <li><i>涉及IP：</i><span>1</span></li>
+    <li><i>节点数：</i><span>1</span></li>
+    <li><i>应用数：</i><span>1</span></li>
+    <li><i>失败数：</i><span>0</span></li>
+    <li><i>慢服务：</i><span>0</span></li>
+  </ul>
+  <ul class="choose">
+    <li><label for="">APP汇总：</label><input type="checkbox" onclick="showSummary(this, 'app_summary')"></li>
+    <li><label for="">NODE汇总：</label><input type="checkbox" onclick="showSummary(this, 'node_summary')"></li>
+    <li><label for="">IP汇总：</label><input type="checkbox" onclick="showSummary(this, 'ip_summary')"></li>
+  </ul>
+  <div class="selected">
+    <p id="app_summary"><span>tangyuan2-demo *2</span></p>
+    <p id="node_summary"><span>*2</span></p>
+    <p id="ip_summary"><span>192.168.50.245 *2</span></p>
+  </div>
+</div>
+<div class="content content-new">
+  <h3>服务调用明细</h3>
+  <table id="treeTable1" class="server-table" style="width: 1381px;">
+    <tr>
+      <td style="width: 556px;">标题</td>
+      <td class="server-title">
+        <p class="server-style">
+          <span></span>
+          <span></span>
+          <span></span>
+          <span></span>
+        </p>
+        <p class="server-tip">
+          <b>82.600ms</b>
+          <b>165.200ms</b>
+          <b>247.800ms</b>
+          <b>330.400ms</b>
+          <b>413.000ms</b>
+        </p>
+      </td>
+    </tr>
+    <tr id="1">
+      <td><span controller="true">ts/m3</span></td>
+      <td class="server-detail">
+        <p class="server-style">
+          <span></span>
+          <span></span>
+          <span></span>
+          <span></span>
+        </p>
+        <div class="server-state">
+          <p style="width: 800px;">900ms</p>
+        </div>
+        <table class="server-list">
+
+          <tr>
+            <td>服务</td>
+            <td>ts/m3</td>
+          </tr>
+          <tr>
+            <td>请求参数</td>
+            <td>
+              <textarea readonly>
+                <?xml version="1.0" encoding="UTF-8"?>
+                <X>
+                  <I K="$$CODE" V="0"/>
+                  <XL K="$$DATA">
+                    <X>
+                      <L K="menu_id" V="1"/>
+                      <S K="menu_name" V="保险公司管理"/>
+                      <S K="menu_icon" V="icon-align-justify"/>
+                      <S K="menu_url" V="#"/>
+                      <I K="menu_level" V="1"/>
+                      <L K="menu_fid" V="0"/>
+                      <I K="menu_sort" V="2"/>
+                      <I K="menu_type" V="1"/>
+                      <I K="menu_state" V="1"/>
+                      <A K="create_time" V="2017-05-11 11:11:28"/>
+                    </X>
+                    <X>
+                      <L K="menu_id" V="26"/>
+                      <S K="menu_name" V="数据字典"/>
+                      <S K="menu_icon" V="icon-bar-chart"/>
+                      <S K="menu_url" V="#"/>
+                      <I K="menu_level" V="1"/>
+                      <L K="menu_fid" V="0"/>
+                      <I K="menu_sort" V="3"/>
+                      <I K="menu_type" V="1"/>
+                      <I K="menu_state" V="1"/>
+                      <A K="create_time" V="2017-05-11 11:11:29"/>
+                    </X>
+                    <X>
+                      <L K="menu_id" V="30"/>
+                      <S K="menu_name" V="系统用户管理"/>
+                      <S K="menu_icon" V="icon-user-md"/>
+                      <S K="menu_url" V="#"/>
+                      <I K="menu_level" V="1"/>
+                      <L K="menu_fid" V="0"/>
+                      <I K="menu_sort" V="4"/>
+                      <I K="menu_type" V="1"/>
+                      <I K="menu_state" V="1"/>
+                      <A K="create_time" V="2017-05-11 11:11:29"/>
+                    </X>
+                    <X>
+                      <L K="menu_id" V="32"/>
+                      <S K="menu_name" V="权限管理"/>
+                      <S K="menu_icon" V="icon-sitemap"/>
+                      <S K="menu_url" V="#"/>
+                      <I K="menu_level" V="1"/>
+                      <L K="menu_fid" V="0"/>
+                      <I K="menu_sort" V="5"/>
+                      <I K="menu_type" V="1"/>
+                      <I K="menu_state" V="1"/>
+                      <A K="create_time" V="2017-05-11 11:11:29"/>
+                    </X>
+                    <X>
+                      <L K="menu_id" V="10"/>
+                      <S K="menu_name" V="任务管理"/>
+                      <S K="menu_icon" V="icon-tasks"/>
+                      <S K="menu_url" V="#"/>
+                      <I K="menu_level" V="1"/>
+                      <L K="menu_fid" V="0"/>
+                      <I K="menu_sort" V="9"/>
+                      <I K="menu_type" V="1"/>
+                      <I K="menu_state" V="1"/>
+                      <A K="create_time" V="2018-11-11 11:11:11"/>
+                      <A K="update_time" V="2018-03-21 09:47:53"/>
+                    </X>
+                    <X>
+                      <L K="menu_id" V="59"/>
+                      <S K="menu_name" V="销售查询"/>
+                      <S K="menu_icon" V="icon-globe"/>
+                      <S K="menu_url" V="#"/>
+                      <I K="menu_level" V="1"/>
+                      <L K="menu_fid" V="0"/>
+                      <I K="menu_sort" V="10"/>
+                      <I K="menu_type" V="1"/>
+                      <I K="menu_state" V="1"/>
+                      <A K="create_time" V="2018-03-19 19:01:32"/>
+                      <A K="update_time" V="2018-03-21 09:48:18"/>
+                    </X>
+                    <X>
+                      <L K="menu_id" V="47"/>
+                      <S K="menu_name" V="接口管理"/>
+                      <S K="menu_icon" V="icon-hand-up"/>
+                      <S K="menu_url" V="#"/>
+                      <I K="menu_level" V="1"/>
+                      <L K="menu_fid" V="0"/>
+                      <I K="menu_sort" V="11"/>
+                      <I K="menu_type" V="1"/>
+                      <I K="menu_state" V="1"/>
+                      <A K="create_time" V="2018-02-28 15:56:32"/>
+                      <A K="update_time" V="2018-03-19 18:57:18"/>
+                    </X>
+                    <X>
+                      <L K="menu_id" V="50"/>
+                      <S K="menu_name" V="报表统计"/>
+                      <S K="menu_icon" V="icon-indent-right"/>
+                      <S K="menu_url" V="#"/>
+                      <I K="menu_level" V="1"/>
+                      <L K="menu_fid" V="0"/>
+                      <I K="menu_sort" V="12"/>
+                      <I K="menu_type" V="1"/>
+                      <I K="menu_state" V="1"/>
+                      <A K="create_time" V="2018-03-19 18:58:37"/>
+                    </X>
+                    <X>
+                      <L K="menu_id" V="56"/>
+                      <S K="menu_name" V="渠道管理"/>
+                      <S K="menu_icon" V="icon-briefcase"/>
+                      <S K="menu_url" V="#"/>
+                      <I K="menu_level" V="1"/>
+                      <L K="menu_fid" V="0"/>
+                      <I K="menu_sort" V="13"/>
+                      <I K="menu_type" V="1"/>
+                      <I K="menu_state" V="1"/>
+                      <A K="create_time" V="2018-03-19 19:00:34"/>
+                    </X>
+                    <X>
+                      <L K="menu_id" V="61"/>
+                      <S K="menu_name" V="分成管理"/>
+                      <S K="menu_icon" V="icon-certificate"/>
+                      <S K="menu_url" V="#"/>
+                      <I K="menu_level" V="1"/>
+                      <L K="menu_fid" V="0"/>
+                      <I K="menu_sort" V="15"/>
+                      <I K="menu_type" V="1"/>
+                      <I K="menu_state" V="1"/>
+                      <A K="create_time" V="2018-03-19 19:02:24"/>
+                    </X>
+                    <X>
+                      <L K="menu_id" V="63"/>
+                      <S K="menu_name" V="账务管理"/>
+                      <S K="menu_icon" V="icon-shopping-cart"/>
+                      <S K="menu_url" V="#"/>
+                      <I K="menu_level" V="1"/>
+                      <L K="menu_fid" V="0"/>
+                      <I K="menu_sort" V="16"/>
+                      <I K="menu_type" V="1"/>
+                      <I K="menu_state" V="1"/>
+                      <A K="create_time" V="2018-03-19 19:03:04"/>
+                    </X>
+                    <X>
+                      <L K="menu_id" V="65"/>
+                      <S K="menu_name" V="测试环境"/>
+                      <S K="menu_icon" V="icon-list-alt"/>
+                      <S K="menu_url" V="#"/>
+                      <I K="menu_level" V="1"/>
+                      <L K="menu_fid" V="0"/>
+                      <I K="menu_sort" V="17"/>
+                      <I K="menu_type" V="1"/>
+                      <I K="menu_state" V="1"/>
+                      <A K="create_time" V="2018-03-21 13:23:13"/>
+                    </X>
+                    <X>
+                      <L K="menu_id" V="76"/>
+                      <S K="menu_name" V="评测管理（新库）"/>
+                      <S K="menu_icon" V=" icon-align-justify"/>
+                      <S K="menu_url" V="#"/>
+                      <I K="menu_level" V="1"/>
+                      <L K="menu_fid" V="0"/>
+                      <I K="menu_sort" V="19"/>
+                      <I K="menu_type" V="1"/>
+                      <I K="menu_state" V="1"/>
+                      <A K="create_time" V="2018-05-14 09:43:46"/>
+                    </X>
+                    <X>
+                      <L K="menu_id" V="8"/>
+                      <S K="menu_name" V="保险产品"/>
+                      <S K="menu_icon" V="icon-star"/>
+                      <S K="menu_url" V="#"/>
+                      <I K="menu_level" V="1"/>
+                      <L K="menu_fid" V="0"/>
+                      <I K="menu_sort" V="21"/>
+                      <I K="menu_type" V="1"/>
+                      <I K="menu_state" V="1"/>
+                      <A K="create_time" V="2017-05-11 11:11:29"/>
+                      <A K="update_time" V="2018-10-18 15:49:10"/>
+                    </X>
+                    <X>
+                      <L K="menu_id" V="118"/>
+                      <S K="menu_name" V="病种库"/>
+                      <S K="menu_icon" V="icon-heart"/>
+                      <S K="menu_url" V="#"/>
+                      <I K="menu_level" V="1"/>
+                      <L K="menu_fid" V="0"/>
+                      <I K="menu_sort" V="26"/>
+                      <I K="menu_type" V="1"/>
+                      <I K="menu_state" V="1"/>
+                      <A K="create_time" V="2018-11-23 10:28:20"/>
+                    </X>
+                    <X>
+                      <L K="menu_id" V="121"/>
+                      <S K="menu_name" V="数据统计"/>
+                      <S K="menu_icon" V="icon-list-alt"/>
+                      <S K="menu_url" V="#"/>
+                      <I K="menu_level" V="1"/>
+                      <L K="menu_fid" V="0"/>
+                      <I K="menu_sort" V="27"/>
+                      <I K="menu_type" V="1"/>
+                      <I K="menu_state" V="1"/>
+                      <A K="create_time" V="2018-11-23 10:34:01"/>
+                    </X>
+                    <X>
+                      <L K="menu_id" V="84"/>
+                      <S K="menu_name" V="系统维护"/>
+                      <S K="menu_icon" V="icon-wrench"/>
+                      <S K="menu_url" V="#"/>
+                      <I K="menu_level" V="1"/>
+                      <L K="menu_fid" V="0"/>
+                      <I K="menu_sort" V="99"/>
+                      <I K="menu_type" V="1"/>
+                      <I K="menu_state" V="1"/>
+                      <A K="create_time" V="2018-08-13 10:51:42"/>
+                    </X>
+                    <X>
+                      <L K="menu_id" V="2"/>
+                      <S K="menu_name" V="公司管理"/>
+                      <S K="menu_icon" V=""/>
+                      <S K="menu_url" V="http://manager.boss.aixbx.com/organization/orgList.jsp"/>
+                      <I K="menu_level" V="2"/>
+                      <L K="menu_fid" V="1"/>
+                      <I K="menu_sort" V="1"/>
+                      <I K="menu_type" V="1"/>
+                      <I K="menu_state" V="1"/>
+                      <A K="create_time" V="2017-05-11 11:11:28"/>
+                    </X>
+                    <X>
+                      <L K="menu_id" V="3"/>
+                      <S K="menu_name" V="公司评分"/>
+                      <S K="menu_icon" V=""/>
+                      <S K="menu_url" V="http://manager.boss.aixbx.com/organization/orgScoreList.jsp"/>
+                      <I K="menu_level" V="2"/>
+                      <L K="menu_fid" V="1"/>
+                      <I K="menu_sort" V="2"/>
+                      <I K="menu_type" V="1"/>
+                      <I K="menu_state" V="1"/>
+                      <A K="create_time" V="2017-05-11 11:11:28"/>
+                    </X>
+                    <X>
+                      <L K="menu_id" V="4"/>
+                      <S K="menu_name" V="评分配比"/>
+                      <S K="menu_icon" V=""/>
+                      <S K="menu_url" V="http://manager.boss.aixbx.com/organization/orgScoreRatioList.jsp"/>
+                      <I K="menu_level" V="2"/>
+                      <L K="menu_fid" V="1"/>
+                      <I K="menu_sort" V="3"/>
+                      <I K="menu_type" V="1"/>
+                      <I K="menu_state" V="1"/>
+                      <A K="create_time" V="2017-05-11 11:11:28"/>
+                    </X>
+                    <X>
+                      <L K="menu_id" V="9"/>
+                      <S K="menu_name" V="产品总表"/>
+                      <S K="menu_icon" V=""/>
+                      <S K="menu_url" V="http://manager.boss.aixbx.com/product/productList.jsp"/>
+                      <I K="menu_level" V="2"/>
+                      <L K="menu_fid" V="8"/>
+                      <I K="menu_sort" V="1"/>
+                      <I K="menu_type" V="1"/>
+                      <I K="menu_state" V="1"/>
+                      <A K="create_time" V="2017-05-11 11:11:29"/>
+                      <A K="update_time" V="2018-02-09 20:44:13"/>
+                    </X>
+                    <X>
+                      <L K="menu_id" V="12"/>
+                      <S K="menu_name" V="定时任务"/>
+                      <S K="menu_icon" V=""/>
+                      <S K="menu_url" V="http://manager.boss.aixbx.com/task/timeTaskList.jsp"/>
+                      <I K="menu_level" V="2"/>
+                      <L K="menu_fid" V="10"/>
+                      <I K="menu_sort" V="4"/>
+                      <I K="menu_type" V="1"/>
+                      <I K="menu_state" V="1"/>
+                      <A K="create_time" V="2017-05-11 11:11:29"/>
+                    </X>
+                    <X>
+                      <L K="menu_id" V="13"/>
+                      <S K="menu_name" V="任务列表"/>
+                      <S K="menu_icon" V=""/>
+                      <S K="menu_url" V="http://manager.boss.aixbx.com/task/taskList.jsp"/>
+                      <I K="menu_level" V="2"/>
+                      <L K="menu_fid" V="10"/>
+                      <I K="menu_sort" V="5"/>
+                      <I K="menu_type" V="1"/>
+                      <I K="menu_state" V="1"/>
+                      <A K="create_time" V="2018-01-31 11:37:26"/>
+                    </X>
+                    <X>
+                      <L K="menu_id" V="86"/>
+                      <S K="menu_name" V="调整综合分"/>
+                      <S K="menu_icon" V=""/>
+                      <S K="menu_url" V="http://manager.boss.aixbx.com/task/adjustScoreTask.jsp"/>
+                      <I K="menu_level" V="2"/>
+                      <L K="menu_fid" V="10"/>
+                      <I K="menu_sort" V="10"/>
+                      <I K="menu_type" V="1"/>
+                      <I K="menu_state" V="1"/>
+                      <A K="create_time" V="2018-08-15 13:38:34"/>
+                    </X>
+                    <X>
+                      <L K="menu_id" V="27"/>
+                      <S K="menu_name" V="分类维护"/>
+                      <S K="menu_icon" V=""/>
+                      <S K="menu_url" V="http://manager.boss.aixbx.com/dictionary/seriesList.jsp"/>
+                      <I K="menu_level" V="2"/>
+                      <L K="menu_fid" V="26"/>
+                      <I K="menu_sort" V="1"/>
+                      <I K="menu_type" V="1"/>
+                      <I K="menu_state" V="1"/>
+                      <A K="create_time" V="2017-05-11 11:11:29"/>
+                    </X>
+                    <X>
+                      <L K="menu_id" V="28"/>
+                      <S K="menu_name" V="责任项维护"/>
+                      <S K="menu_icon" V=""/>
+                      <S K="menu_url" V="http://manager.boss.aixbx.com/dictionary/dutyList.jsp"/>
+                      <I K="menu_level" V="2"/>
+                      <L K="menu_fid" V="26"/>
+                      <I K="menu_sort" V="2"/>
+                      <I K="menu_type" V="1"/>
+                      <I K="menu_state" V="1"/>
+                      <A K="create_time" V="2017-05-11 11:11:29"/>
+                    </X>
+                    <X>
+                      <L K="menu_id" V="37"/>
+                      <S K="menu_name" V="映射维护"/>
+                      <S K="menu_icon" V=""/>
+                      <S K="menu_url" V="http://manager.boss.aixbx.com/dictionary/dutySeriesList.jsp"/>
+                      <I K="menu_level" V="2"/>
+                      <L K="menu_fid" V="26"/>
+                      <I K="menu_sort" V="3"/>
+                      <I K="menu_type" V="1"/>
+                      <I K="menu_state" V="1"/>
+                      <A K="create_time" V="2018-01-30 18:12:34"/>
+                      <A K="update_time" V="2018-02-28 11:42:18"/>
+                    </X>
+                    <X>
+                      <L K="menu_id" V="38"/>
+                      <S K="menu_name" V="标签维护"/>
+                      <S K="menu_icon" V=""/>
+                      <S K="menu_url" V="http://manager.boss.aixbx.com/dictionary/labelsList.jsp"/>
+                      <I K="menu_level" V="2"/>
+                      <L K="menu_fid" V="26"/>
+                      <I K="menu_sort" V="4"/>
+                      <I K="menu_type" V="1"/>
+                      <I K="menu_state" V="1"/>
+                      <A K="create_time" V="2018-01-30 18:12:38"/>
+                    </X>
+                  </XL>
+                  <I K="$$PACKAGE" V="0"/>
+                </X>
+
+              </textarea>
+            </td>
+          </tr>
+          <tr>
+            <td>返回结果</td>
+            <td>
+              <textarea readonly>ddd<?xml version="1.0" encoding="UTF-8"?>
+                <X>
+                <I K="x" V="2222"/>
+              </X></textarea>
+            </td>
+          </tr>
+          <tr>
+            <td>code</td>
+            <td>
+              <span class="server-code success-code">333</span>
+            </td>
+          </tr>
+          <tr>
+            <td>MESSAGE</td>
+            <td>ts/m3</td>
+          </tr>
+          <tr>
+            <td>请求过程</td>
+            <td class="process">
+              <a class="fold" href="javascript:;"></a>
+              <p>有4条记录隐藏</p>
+              <ul>
+                <li>
+                  <textarea name="" id="" readonly readonly>
+                    SELECT
+                      s.*
+                    FROM
+                      system_role_menu m INNER JOIN system_menu s ON s.menu_id = m.menu_id
+                    WHERE
+                      m.role_id = 1
+                    ORDER BY
+                      s.menu_fid, s.menu_sort
+
+
+                  </textarea>
+                </li>
+                <li>
+                  <textarea name="" id="" readonly>第一条记录<X>
+                    <I K="x" V="2222"/>
+                  </X></textarea>
+                </li>
+                <li>
+                  <textarea name="" id="" readonly>第一条记录<X>
+                    <I K="x" V="2222"/>
+                  </X></textarea>
+                </li>
+                <li>
+                  <textarea name="" id="" readonly>第一条记录<X>
+                    <I K="x" V="2222"/>
+                  </X></textarea>
+                </li>
+              </ul>
+            </td>
+          </tr>
+        </table>
+      </td>
+    </tr>
+    <tr id="2" pId="1">
+      <td><span controller="true">2</span></td>
+      <td class="server-detail">
+        <p class="server-style">
+          <span></span>
+          <span></span>
+          <span></span>
+          <span></span>
+        </p>
+        <div class="server-state">
+          <p style="width: 700px;margin-left: 20px;">700ms</p>
+        </div>
+        <table class="server-list">
+
+          <tr>
+            <td>服务</td>
+            <td>ts/m3</td>
+          </tr>
+          <tr>
+            <td>请求参数</td>
+            <td>
+              <textarea readonly><?xml version="1.0" encoding="UTF-8"?>
+                <X>
+                <I K="x" V="2222"/>
+              </X></textarea>
+            </td>
+          </tr>
+          <tr>
+            <td>返回结果</td>
+            <td>
+              <textarea readonly><?xml version="1.0" encoding="UTF-8"?>
+                <X>
+                <I K="x" V="2222"/>
+              </X></textarea>
+            </td>
+          </tr>
+          <tr>
+            <td>code</td>
+            <td>
+              <span class="server-code success-code">333</span>
+            </td>
+          </tr>
+          <tr>
+            <td>MESSAGE</td>
+            <td>ts/m3</td>
+          </tr>
+          <tr>
+            <td>请求过程</td>
+            <td class="process">
+              <a class="fold" href="javascript:;"></a>
+              <p>有4条记录隐藏</p>
+              <ul>
+                <li>
+                  <textarea name="" id="" readonly>第一条记录<X>
+                    <I K="x" V="2222"/>
+                  </X></textarea>
+                </li>
+                <li>
+                  <textarea name="" id="" readonly>第一条记录<X>
+                    <I K="x" V="2222"/>
+                  </X></textarea>
+                </li>
+                <li>
+                  <textarea name="" id="" readonly>第一条记录<X>
+                    <I K="x" V="2222"/>
+                  </X></textarea>
+                </li>
+                <li>
+                  <textarea name="" id="" readonly>第一条记录<X>
+                    <I K="x" V="2222"/>
+                  </X></textarea>
+                </li>
+              </ul>
+            </td>
+          </tr>
+        </table>
+      </td>
+    </tr>
+    <tr id="3" pId="2">
+      <td>3</td>
+      <td class="server-detail">
+        <p class="server-style">
+          <span></span>
+          <span></span>
+          <span></span>
+          <span></span>
+        </p>
+        <div class="error-state">
+          <p>请求出错</p>
+        </div>
+        <table class="server-list">
+
+          <tr>
+            <td>服务</td>
+            <td>ts/m3</td>
+          </tr>
+          <tr>
+            <td>请求参数</td>
+            <td>
+              <textarea readonly><?xml version="1.0" encoding="UTF-8"?>
+                <X>
+                <I K="x" V="2222"/>
+              </X></textarea>
+            </td>
+          </tr>
+          <tr>
+            <td>返回结果</td>
+            <td>
+              <textarea readonly><?xml version="1.0" encoding="UTF-8"?>
+                <X>
+                <I K="x" V="2222"/>
+              </X></textarea>
+            </td>
+          </tr>
+          <tr>
+            <td>code</td>
+            <td>
+              <span class="server-code error-code">222</span>
+            </td>
+          </tr>
+          <tr>
+            <td>MESSAGE</td>
+            <td>ts/m3</td>
+          </tr>
+          <tr>
+            <td>请求过程</td>
+            <td class="process">
+              <a class="fold" href="javascript:;"></a>
+              <p>有4条记录隐藏</p>
+              <ul>
+                <li>
+                  <textarea name="" id="" readonly>第一条记录<X>
+                    <I K="x" V="2222"/>
+                  </X></textarea>
+                </li>
+                <li>
+                  <textarea name="" id="" readonly>第一条记录<X>
+                    <I K="x" V="2222"/>
+                  </X></textarea>
+                </li>
+                <li>
+                  <textarea name="" id="" readonly>第一条记录<X>
+                    <I K="x" V="2222"/>
+                  </X></textarea>
+                </li>
+                <li>
+                  <textarea name="" id="" readonly>第一条记录<X>
+                    <I K="x" V="2222"/>
+                  </X></textarea>
+                </li>
+              </ul>
+            </td>
+          </tr>
+        </table>
+      </td>
+    </tr>
+    <tr id="4" pId="2">
+      <td>4</td>
+      <td class="server-detail">
+        <p class="server-style">
+          <span></span>
+          <span></span>
+          <span></span>
+          <span></span>
+        </p>
+        <div class="server-state">
+          <p style="width: 600px;margin-left: 50px;">600ms</p>
+        </div>
+        <table class="server-list">
+          <tr>
+            <td>code</td>
+            <td>333</td>
+          </tr>
+          <tr>
+            <td>服务</td>
+            <td>ts/m3</td>
+          </tr>
+          <tr>
+            <td>请求参数</td>
+            <td>
+              <textarea readonly><?xml version="1.0" encoding="UTF-8"?>
+                <X>
+                <I K="x" V="2222"/>
+              </X></textarea>
+            </td>
+          </tr>
+          <tr>
+            <td>返回结果</td>
+            <td>
+              <textarea readonly><?xml version="1.0" encoding="UTF-8"?>
+                <X>
+                <I K="x" V="2222"/>
+              </X></textarea>
+            </td>
+          </tr>
+          <tr>
+            <td>MESSAGE</td>
+            <td>ts/m3</td>
+          </tr>
+          <tr>
+            <td>请求过程</td>
+            <td class="process">
+              <a class="fold" href="javascript:;"></a>
+              <p>有4条记录隐藏</p>
+              <ul>
+                <li>
+                  <textarea name="" id="" readonly>第一条记录<X>
+                    <I K="x" V="2222"/>
+                  </X></textarea>
+                </li>
+                <li>
+                  <textarea name="" id="" readonly>第一条记录<X>
+                    <I K="x" V="2222"/>
+                  </X></textarea>
+                </li>
+                <li>
+                  <textarea name="" id="" readonly>第一条记录<X>
+                    <I K="x" V="2222"/>
+                  </X></textarea>
+                </li>
+                <li>
+                  <textarea name="" id="" readonly>第一条记录<X>
+                    <I K="x" V="2222"/>
+                  </X></textarea>
+                </li>
+              </ul>
+            </td>
+          </tr>
+        </table>
+      </td>
+    </tr>
+    <tr id="5" pId="4">
+      <td>4.1</td>
+
+      <td class="server-detail">
+        <p class="server-style">
+          <span></span>
+          <span></span>
+          <span></span>
+          <span></span>
+        </p>
+        <div class="error-state">
+          <p>请求超时</p>
+        </div>
+        <table class="server-list">
+          <tr>
+            <td>code</td>
+            <td>333</td>
+          </tr>
+          <tr>
+            <td>服务</td>
+            <td>ts/m3</td>
+          </tr>
+          <tr>
+            <td>请求参数</td>
+            <td>
+              <textarea readonly><?xml version="1.0" encoding="UTF-8"?>
+                <X>
+                <I K="x" V="2222"/>
+              </X></textarea>
+            </td>
+          </tr>
+          <tr>
+            <td>返回结果</td>
+            <td>
+              <textarea readonly><?xml version="1.0" encoding="UTF-8"?>
+                <X>
+                <I K="x" V="2222"/>
+              </X></textarea>
+            </td>
+          </tr>
+          <tr>
+            <td>MESSAGE</td>
+            <td>ts/m3</td>
+          </tr>
+          <tr>
+            <td>请求过程</td>
+            <td class="process">
+              <a class="fold" href="javascript:;"></a>
+              <p>有4条记录隐藏</p>
+              <ul>
+                <li>
+                  <textarea name="" id="" readonly>第一条记录<X>
+                    <I K="x" V="2222"/>
+                  </X></textarea>
+                </li>
+                <li>
+                  <textarea name="" id="" readonly>第一条记录<X>
+                    <I K="x" V="2222"/>
+                  </X></textarea>
+                </li>
+                <li>
+                  <textarea name="" id="" readonly>第一条记录<X>
+                    <I K="x" V="2222"/>
+                  </X></textarea>
+                </li>
+                <li>
+                  <textarea name="" id="" readonly>第一条记录<X>
+                    <I K="x" V="2222"/>
+                  </X></textarea>
+                </li>
+              </ul>
+            </td>
+          </tr>
+        </table>
+      </td>
+    </tr>
+
+    <tr id="6">
+      <td>8</td>
+      <td class="server-detail">
+        <p class="server-style">
+          <span></span>
+          <span></span>
+          <span></span>
+          <span></span>
+        </p>
+        <div class="error-state">
+          <p>请求出错</p>
+        </div>
+        <table class="server-list">
+          <tr>
+            <td>code</td>
+            <td>333</td>
+          </tr>
+          <tr>
+            <td>服务</td>
+            <td>ts/m3</td>
+          </tr>
+          <tr>
+            <td>请求参数</td>
+            <td>
+              <textarea readonly><?xml version="1.0" encoding="UTF-8"?>
+                <X>
+                <I K="x" V="2222"/>
+              </X></textarea>
+            </td>
+          </tr>
+          <tr>
+            <td>返回结果</td>
+            <td>
+              <textarea readonly><?xml version="1.0" encoding="UTF-8"?>
+                <X>
+                <I K="x" V="2222"/>
+              </X></textarea>
+            </td>
+          </tr>
+          <tr>
+            <td>MESSAGE</td>
+            <td>ts/m3</td>
+          </tr>
+          <tr>
+            <td>请求过程</td>
+            <td class="process">
+              <a class="fold" href="javascript:;"></a>
+              <p>有4条记录隐藏</p>
+              <ul>
+                <li>
+                  <textarea name="" id="" readonly>第一条记录<X>
+                    <I K="x" V="2222"/>
+                  </X></textarea>
+                </li>
+                <li>
+                  <textarea name="" id="" readonly>第一条记录<X>
+                    <I K="x" V="2222"/>
+                  </X></textarea>
+                </li>
+                <li>
+                  <textarea name="" id="" readonly>第一条记录<X>
+                    <I K="x" V="2222"/>
+                  </X></textarea>
+                </li>
+                <li>
+                  <textarea name="" id="" readonly>第一条记录<X>
+                    <I K="x" V="2222"/>
+                  </X></textarea>
+                </li>
+              </ul>
+            </td>
+          </tr>
+        </table>
+      </td>
+    </tr>
+    <!--<tr id="7" hasChild = "true">
+      <td>7</td>
+      <td>注意这个节点是动态加载的</td>
+    </tr>-->
+  </table>
+</div>
+<script src="./js/jquery-2.2.4.min.js"></script>
+<script src="./js/jquery.treeTable.js"></script>
+<script>
+  $(function () {
+      /*$.each($("textarea"), function(i, n){
+        $(n).css("height", n.scrollHeight + "px");
+      })*/
+
+      function readyNumber() {
+        $('textarea').each(function () {
+          this.setAttribute('style', 'height:' + (this.scrollHeight) + 'px;overflow-y:hidden;');
+        }).on('input', function () {
+          this.style.height = 'auto';
+          this.style.height = (this.scrollHeight) + 'px';
+        })
+      }
+
+      // textarea 自适应高度
+      function makeExpandingArea(el) {
+        var setStyle = function (el) {
+          el.style.height = 'auto';
+          el.style.height = el.scrollHeight + 'px';
+          // console.log(el.scrollHeight);
+        }
+        var delayedResize = function (el) {
+          window.setTimeout(function () {
+            setStyle(el)
+          }, 0);
+        }
+        if (el.addEventListener) {
+          el.addEventListener('input', function () {
+            setStyle(el)
+          }, false);
+          setStyle(el)
+        } else if (el.attachEvent) {
+          el.attachEvent('onpropertychange', function () {
+            setStyle(el)
+          });
+          setStyle(el)
+        }
+        if (window.VBArray && window.addEventListener) { //IE9
+          el.attachEvent("onkeydown", function () {
+            var key = window.event.keyCode;
+            if (key == 8 || key == 46) delayedResize(el);
+          });
+          el.attachEvent("oncut", function () {
+            delayedResize(el);
+          }); //处理粘贴
+        }
+      }
+
+      makeExpandingArea($('textarea'));
+
+
+      var option = {
+        theme: 'vsStyle',
+        expandLevel: 3,
+        // beforeExpand: function ($treeTable, id) {
+        //   //判断id是否已经有了孩子节点，如果有了就不再加载，这样就可以起到缓存的作用
+        //   if ($('.' + id, $treeTable).length) {
+        //     return;
+        //   }
+        //   //这里的html可以是ajax请求
+        //   var html = '<tr id="8" pId="7"><td>7.1</td><td>可以是ajax请求来的内容</td></tr>'
+        //     + '<tr id="9" pId="7"><td>7.2</td><td>动态的内容</td></tr>';
+        //
+        //   $treeTable.addChilds(html);
+        // },
+        // onSelect: function ($treeTable, id) {
+        //   window.console && console.log('onSelect:' + id);
+        //
+        // }
+
+      };
+      $('#treeTable1').treeTable(option);
+
+      $('.server-style').bind('click', function () {
+        $(this).parents('tr').siblings().find('.server-list').slideUp(1);
+        $(this).siblings('.server-list').slideToggle(300);
+      })
+
+      $('a.fold').bind('click', function () {
+        $(this).toggleClass('active');
+        $(this).parents('.process').toggleClass('list-fold')
+      })
+
+
+    }
+  );
+
+  function showSummary(o, id) {
+    if (o.checked) {
+      document.getElementById(id).style.display = 'block';
+    } else {
+      document.getElementById(id).style.display = 'none';
+    }
+  }
+</script>
+</body>
+</html>

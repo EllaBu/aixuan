@@ -7,6 +7,7 @@ $error-color: #f9d8d9;
 $title-color: #deb887;
 $style-height: 34px;
 $common-color: #60b5ff;
+
 /* reset */
 * {
   margin: 0;
@@ -123,7 +124,7 @@ h3 {
     position: absolute;
     top: 0;
     left: 0;
-    width: $right;
+    width: $right-span * 6;
     height: $style-height;
     cursor: pointer;
     span {
@@ -155,7 +156,7 @@ h3 {
             padding-top: 7px;
           }
           &:last-of-type {
-            width: $right;
+            width: $right-span * 6;
           }
         }
       }
@@ -166,7 +167,7 @@ h3 {
       height: $style-height;
       .server-tip {
         position: absolute;
-        width: $right-span*6;
+        width: $right-span * 6;
         top: 7px;
         left: $right-span/2;
         z-index: 112;
@@ -264,7 +265,28 @@ h3 {
     }
   }
 }
-
+.content-new {
+  .server-style {
+    width: $right-span * 5;
+  }
+  table.server-table {
+    //width: $left + $right;
+    & > tbody {
+      & > tr {
+        & > td {
+          &:last-of-type {
+            width: $right-span * 5;
+          }
+        }
+      }
+    }
+    .server-title {
+      .server-tip {
+        width: $right-span * 5;
+      }
+    }
+  }
+}
 .search {
   padding: 30px 10px;
   border-bottom: 1px solid #ddd;

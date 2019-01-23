@@ -93,8 +93,11 @@
 <script src="./js/jquery-2.2.4.min.js"></script>
 <script>
   $(function () {
-    $('.search-span span').bind('click', function () {
+    $('.search-span span').bind('mouseenter', function () {
       $(this).siblings('ul').slideDown();
+    })
+    $('.search-span ul').bind('mouseleave', function () {
+      $(this).slideUp();
     })
     $('.search-span li').bind('click', function () {
       console.log($(this).text())
