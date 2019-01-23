@@ -247,13 +247,24 @@ h3 {
 }
 
 .content-new .server-style {
-  width: 825px;
+  width: 990px;
+}
+.content-new .server-style span {
+  float: left;
+  width: 198px;
 }
 .content-new table.server-table > tbody > tr > td:last-of-type {
-  width: 825px;
+  width: 990px;
 }
 .content-new table.server-table .server-title .server-tip {
-  width: 825px;
+  width: 990px;
+  left: 99px;
+}
+.content-new table.server-table .server-title .server-tip b {
+  width: 198px;
+}
+.content-new table.server-table table.server-list textarea {
+  width: 892px;
 }
 
 .search {

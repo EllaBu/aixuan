@@ -1,7 +1,7 @@
 @charset "UTF-8";
 $left: 356px;
 $right-span: 165px;
-$right: $right-span*6;
+$right-new: 198px;
 $success-color: #d3f5e7;
 $error-color: #f9d8d9;
 $title-color: #deb887;
@@ -255,7 +255,7 @@ h3 {
         }
       }
       textarea {
-        width: $right - 98px;
+        width: $right-span * 6 - 98px;
         height: 100px;
         vertical-align: middle;
         border: none;
@@ -267,7 +267,11 @@ h3 {
 }
 .content-new {
   .server-style {
-    width: $right-span * 5;
+    width: $right-new * 5;
+    span {
+      float: left;
+      width: $right-new;
+    }
   }
   table.server-table {
     //width: $left + $right;
@@ -275,14 +279,23 @@ h3 {
       & > tr {
         & > td {
           &:last-of-type {
-            width: $right-span * 5;
+            width: $right-new * 5;
           }
         }
       }
     }
     .server-title {
       .server-tip {
-        width: $right-span * 5;
+        width: $right-new * 5;
+        left: $right-new/2;
+        b {
+          width: $right-new;
+        }
+      }
+    }
+    table.server-list {
+      textarea {
+        width: $right-new * 5 - 98px;
       }
     }
   }
