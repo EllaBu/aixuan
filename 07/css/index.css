@@ -1,0 +1,2146 @@
+﻿.linkPosition {
+  display: inline-block !important;
+  width: 100% !important;
+  height: 100% !important;
+  position: absolute !important;
+  top: 0 !important;
+  left: 0 !important;
+  z-index: 100 !important;
+}
+
+#wrap .public_fd_nav {
+  display: none;
+}
+
+.SolveList .no_ani {
+  cursor: default;
+}
+
+.SolveList .no_ani:hover span {
+  display: block;
+  transition-duration: 300ms;
+}
+
+.SolveList .no_ani:hover:hover .SolveListPack {
+  height: 0;
+  transition-duration: 300ms;
+}
+
+@media (min-width: 1200px ) {
+  #wrap {
+    position: relative;
+    width: 100%;
+    max-width: 1920px;
+    margin: 0 auto;
+    background: #fff;
+  }
+
+  .pack {
+    position: absolute;
+    width: 100%;
+    height: 99.66%;
+    background: #233340;
+    background-color: rgba(35, 51, 64, 0.5);
+  }
+
+  .swiper-container.swiper_index_banner {
+    padding-bottom: 0;
+  }
+
+  .swiper-container.swiper_index_banner .swiper-wrapper .swiper-slide {
+    position: relative;
+    width: 100%;
+    height: 620px;
+  }
+
+  .swiper-container.swiper_index_banner .swiper-pagination {
+    bottom: 15px;
+  }
+
+  .swiper-container.swiper_index_banner .swiper-wrapper .swiper-slide .pack {
+    height: 100%;
+  }
+
+  .swiper-container.swiper_index_banner .swiper-wrapper .swiper-slide img {
+    height: 620px;
+    width: 100%;
+  }
+
+  .banner_case_con {
+    margin: 0 auto;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    -webkit-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+  }
+
+  .banner_case_con_title {
+    font-family: "微软雅黑";
+    font-size: 59px;
+    color: #fff;
+  }
+
+  .banner_case_con_txt {
+    font-family: "微软雅黑";
+    font-size: 16px;
+    color: #fff;
+  }
+
+  .pc_banner_left_btn, .pc_banner_right_btn {
+    position: absolute;
+  }
+
+  .pc_banner_left_btn {
+    z-index: 10;
+    top: 40%;
+    left: 20px;
+    cursor: pointer;
+  }
+
+  .pc_banner_right_btn {
+    z-index: 10;
+    top: 40%;
+    right: 20px;
+    cursor: pointer;
+  }
+
+  .swiper-container.swiper_index_banner .swiper-pagination-bullet {
+    width: 10px;
+    height: 10px;
+    display: inline-block;
+    border-radius: 100%;
+    background: none;
+    opacity: 1;
+    border: solid 1px #fff;
+  }
+
+  .swiper-container.swiper_index_banner .swiper-pagination-bullet-active {
+    opacity: 1;
+    background: #ff3333;
+    border: solid 1px #ff3333;
+  }
+
+  /*智能决策*/
+  .PolicyContent {
+    width: 1180px;
+    margin: 0 auto;
+    padding-bottom: 40px;
+  }
+
+  .PolicyDescribe {
+    width: 70%;
+    margin: 0 auto;
+    text-align: center;
+    padding-top: 18px;
+    line-height: 2em;
+  }
+
+  .PolicyList, .BigDataList, .CognitionList, .SolveList, .CustomerList {
+    width: 100%;
+  }
+
+  .PolicyList {
+    text-align: center;
+    margin-top: 45px;
+  }
+
+  .PolicyList li {
+    float: initial;
+    width: 33%;
+    margin-left: 4%;
+    cursor: pointer;
+    margin-top: 40px;
+    padding: 22px 0;
+    display: inline-block;
+    margin: 0 auto;
+    height: 280px;
+    vertical-align: top;
+  }
+
+  .PolicyList li:hover {
+    background: #fff;
+    box-shadow: 0px 2px 5px 2px #dcdcdc;
+    transition-duration: 300ms;
+  }
+
+  /*.PolicyList li:nth-child(4){
+  margin-left: 19.5%;
+}*/
+  .imgcon1 {
+    width: 130px;
+    height: 105px;
+    margin: 0 auto;
+  }
+
+  .PolicyList li a {
+    display: block;
+    text-align: center;
+    width: 45%;
+    margin: 0 auto;
+    text-decoration: none;
+    padding-top: 11px;
+    height: 55px;
+    overflow: hidden;
+  }
+
+  .PolicyList li P {
+    width: 89%;
+    margin: 0 auto;
+    text-align: center;
+    padding-top: 10px;
+    line-height: 2em;
+    height: 96px;
+    overflow: hidden;
+  }
+
+  .PolicyList li:hover a {
+    color: #e21921;
+    transition-duration: 300ms;
+  }
+
+  /*认知产品*/
+  .CognitionMain, .SolveMain {
+    width: 100%;
+    padding-bottom: 68px;
+    background: #f0f0f0;
+  }
+
+  .CognitionContent {
+    width: 1180px;
+    margin: 0 auto;
+  }
+
+  .describeCognition {
+    width: 56%;
+    padding-bottom: 33px;
+  }
+
+  .CognitionList {
+    text-align: center;
+  }
+
+  .CognitionList li {
+    /*float: left;
+    width: 32%;
+    margin-left: 2%;
+    cursor: pointer;
+    margin-top: 40px;
+    background: #fff;
+    padding-bottom: 49px;
+    overflow: hidden;*/
+
+    float: initial;
+    width: 31%;
+    cursor: pointer;
+    display: inline-block;
+    margin: 0 auto;
+    height: 295px;
+    vertical-align: top;
+    background: #fff;
+    margin-top: 35px;
+    margin-left: 23px;
+  }
+
+  /*.CognitionList li:nth-child(3n+1) {
+      margin-left: 0;
+  }*/
+  .CognitionList li a {
+    display: block;
+    text-align: center;
+    width: 100%;
+    margin: 0 auto;
+    text-decoration: none;
+    padding-top: 11px;
+  }
+
+  .CognitionList li p {
+    width: 89%;
+    height: 100px;
+    margin: 0 auto;
+    text-align: center;
+    padding-top: 10px;
+    line-height: 2em;
+    overflow: hidden;
+  }
+
+  .CognitionList li:hover a {
+    color: #e21921;
+    transition-duration: 300ms;
+  }
+
+  .rz_imgcon {
+    width: 100px;
+    height: 90px;
+    margin: 0 auto;
+    margin-top: 24px;
+    overflow: hidden;
+  }
+
+  /*大数据操作*/
+  .BigDataContent {
+    width: 1180px;
+    margin: 0 auto;
+    padding: 0 55px;
+    padding-bottom: 65px;
+  }
+
+  .BigDataList li {
+    width: 19%;
+    height: 209px;
+    margin-left: 8%;
+    float: left;
+    margin-top: 79px;
+    cursor: pointer;
+    text-align: center;
+    padding-bottom: 26px;
+    position: relative;
+  }
+
+  .BigDataList li .BigData_icoCon {
+    width: 205px;
+    height: 205px;
+    border-radius: 50% 50%;
+    border: solid 1px #a0a0a0;
+    position: relative;
+  }
+
+  .BigDataList li .BigData_icoCon u {
+    display: block;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: url(../../img/Baifendian/in_cl2.png) no-repeat;
+    transition: all .4s ease-in-out 0s;
+  }
+
+  .BigDataList li .BigData_icoCon u.u_cr {
+    clip: rect(0px, 204px, 0, 0px);
+  }
+
+  .BigDataList li:hover .BigData_icoCon u.u_cr {
+    clip: rect(0px, 204px, 204px, 0px);
+  }
+
+  .BigDataList li:hover .BigData_icoCon {
+    border: solid 1px #e21921;
+  }
+
+  .BigDataList li:nth-child(4n+1) {
+    margin-left: 0;
+  }
+
+  .sj_imgCon {
+    width: 102px;
+    height: 92px;
+    margin: 0 auto;
+    margin-top: 45px;
+
+  }
+
+  .sj_imgCon img {
+    -webkit-filter: grayscale(1);
+    -moz-filter: grayscale(1);
+    /*-ms-filter: grayscale(1);*/
+    /*-o-filter: grayscale(1);
+    filter:progid:DXImageTransform.Microsoft.BasicImage(grayscale=1);*/
+    filter: grayscale(1);
+    max-width: 100%;
+    height: auto;
+  }
+
+  .BigDataList li:hover .sj_imgCon img {
+    -webkit-filter: grayscale(0);
+    -moz-filter: grayscale(0);
+    /*-ms-filter: grayscale(0);*/
+    /*-o-filter: grayscale(0);
+    filter:progid:DXImageTransform.Microsoft.BasicImage(grayscale=0);*/
+    filter: grayscale(0);
+    /*transition-duration:300ms;*/
+  }
+
+  .BigDataList li a {
+    width: 100px;
+    display: block;
+    word-break: break-word;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    margin: 0 auto;
+    height: 44px;
+  }
+
+  .BigDataList li:hover a {
+    color: #e21921;
+    transition-duration: 300ms;
+    text-decoration: none;
+  }
+
+  /*解决方案*/
+  .SolveContent {
+    width: 1180px;
+    margin: 0 auto;
+  }
+
+  .SolveList li {
+    width: 23.7%;
+    float: left;
+    margin-left: 1.6%;
+    position: relative;
+    margin-top: 1.2%;
+    height: 181px;
+    overflow: hidden;
+
+  }
+
+  .SolveList li:nth-child(4n+1) {
+    margin-left: 0;
+  }
+
+  .SolveList li span {
+    font-family: "微软雅黑";
+    font-size: 29px;
+    color: #fff;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    text-align: center;
+    width: 100%;
+    transition-duration: 300ms;
+    z-index: 4;
+  }
+
+  .SolveList li:hover span {
+    display: none;
+    transition-duration: 300ms;
+  }
+
+  .SolveList li:hover .SolveListPack {
+    height: 100%;
+    transition-duration: 300ms;
+  }
+
+  .SolveList .no_ani {
+    cursor: default;
+  }
+
+  .SolveList .no_ani:hover span {
+    display: block;
+    transition-duration: 300ms;
+  }
+
+  .SolveList .no_ani:hover:hover .SolveListPack {
+    height: 0;
+    transition-duration: 300ms;
+  }
+
+  .SolveListImg {
+    max-width: 100%;
+    height: auto;
+  }
+
+  .SolveListPack {
+    position: absolute;
+    width: 100%;
+    height: 0;
+    bottom: 0;
+    transition-duration: 300ms;
+    z-index: 7;
+  }
+
+  .SolveListPackTitle {
+    font-family: "微软雅黑";
+    font-size: 29px;
+    color: #fff;
+    width: 90%;
+    margin: 0 auto;
+    text-align: center;
+    padding-top: 42px;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
+  }
+
+  .SolveListPackImg {
+    margin: 0 auto;
+    margin-top: 10px;
+  }
+
+  .SolveListPack .in_details {
+    display: block;
+    font-family: "微软雅黑";
+    font-size: 16px;
+    color: #fff;
+    text-align: center;
+    text-decoration: none;
+    padding: 2px 10px;
+    border: solid 1px #fff;
+    width: 40%;
+    margin: 0 auto;
+    margin-top: 15px;
+  }
+
+  .SolveListTextPack {
+    position: absolute;
+    z-index: 3;
+    background: #000;
+    background-color: rgba(0, 0, 0, 0.6);
+    top: 0;
+    width: 100%;
+    height: 100%;
+  }
+
+  .SolveList li:nth-child(8n+1) .SolveListTextPack, .SolveList li:nth-child(8n+3) .SolveListTextPack, .SolveList li:nth-child(8n+6) .SolveListTextPack, .SolveList li:nth-child(8n+8) .SolveListTextPack {
+    background: #1b1c1c;
+    background-color: rgba(125, 125, 125, 0.8);
+  }
+
+  /*客户*/
+  .CustomerContent {
+    width: 1180px;
+    margin: 0 auto;
+    padding: 0 20px;
+    padding-bottom: 75px;
+  }
+
+  .CustomerList {
+    padding-top: 37px;
+  }
+
+  .swiper-container {
+    padding-bottom: 40px;
+  }
+
+  .swiper-container-horizontal > .swiper-pagination {
+    bottom: 0px;
+    left: 0;
+    width: 100%;
+  }
+
+  .swiper-container.swiper_kh .swiper-pagination-bullet-active {
+    opacity: 1;
+    background: #000;
+  }
+
+  .swiper-container.swiper_kh .swiper-pagination-bullet {
+    width: 36px;
+    height: 10px;
+    display: inline-block;
+    background: #e7e6e6;
+    border-radius: 0;
+    opacity: 1;
+  }
+
+  .swiper-container.swiper_kh .swiper-pagination-bullet:hover {
+    background: #d41d25;
+  }
+
+  .swiper-container.swiper_kh .swiper-pagination-bullet-active {
+    width: 36px;
+    height: 10px;
+    display: inline-block;
+    background: #d41d25;
+    border-radius: 0;
+    opacity: 1;
+  }
+
+  .swiper-slide ul li {
+    float: left;
+    width: 16.8%;
+    height: 55px;
+    margin-left: 4%;
+    margin-top: 3%;
+    overflow: hidden;
+    position: relative;
+  }
+
+  .swiper-slide ul li img {
+    margin: 0 auto;
+    max-width: 100%;
+    height: auto;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+  }
+
+  .swiper-slide ul li:nth-child(5n+1) {
+    margin-left: 0;
+  }
+
+}
+
+/*小屏*/
+@media (min-width: 992px) and (max-width: 1199px) {
+  #wrap {
+    position: relative;
+    width: 100%;
+    max-width: 1920px;
+    margin: 0 auto;
+    background: #fff;
+  }
+
+  .main, .banner {
+    width: 100%;
+    max-width: 1920px;
+    position: relative;
+    height: auto;
+  }
+
+  .pack {
+    position: absolute;
+    width: 100%;
+    height: 99.66%;
+    background: #233340;
+    background-color: rgba(35, 51, 64, 0.5);
+  }
+
+  .swiper-container.swiper_index_banner {
+    padding-bottom: 0;
+  }
+
+  .swiper-container.swiper_index_banner .swiper-wrapper .swiper-slide {
+    position: relative;
+    width: 100%;
+    height: 620px;
+  }
+
+  .swiper-container.swiper_index_banner .swiper-pagination {
+    bottom: 15px;
+  }
+
+  .swiper-container.swiper_index_banner .swiper-wrapper .swiper-slide .pack {
+    height: 100%;
+  }
+
+  .swiper-container.swiper_index_banner .swiper-wrapper .swiper-slide img {
+    height: 620px;
+    width: 100%;
+  }
+
+  .banner_case_con {
+    margin: 0 auto;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    -webkit-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+  }
+
+  .banner_case_con_title {
+    font-family: "微软雅黑";
+    font-size: 59px;
+    color: #fff;
+  }
+
+  .banner_case_con_txt {
+    font-family: "微软雅黑";
+    font-size: 16px;
+    color: #fff;
+  }
+
+  .pc_banner_left_btn, .pc_banner_right_btn {
+    position: absolute;
+  }
+
+  .pc_banner_left_btn {
+    z-index: 10;
+    top: 40%;
+    left: 20px;
+    cursor: pointer;
+  }
+
+  .pc_banner_right_btn {
+    z-index: 10;
+    top: 40%;
+    right: 20px;
+    cursor: pointer;
+  }
+
+  .swiper-container.swiper_index_banner .swiper-pagination-bullet {
+    width: 10px;
+    height: 10px;
+    display: inline-block;
+    border-radius: 100%;
+    background: none;
+    opacity: 1;
+    border: solid 1px #fff;
+  }
+
+  .swiper-container.swiper_index_banner .swiper-pagination-bullet-active {
+    opacity: 1;
+    background: #ff3333;
+    border: solid 1px #ff3333;
+  }
+
+  /*智能决策*/
+  .PolicyContent {
+    width: 970px;
+    margin: 0 auto;
+    padding-bottom: 7px;
+  }
+
+  .PolicyDescribe {
+    width: 70%;
+    margin: 0 auto;
+    text-align: center;
+    padding-top: 18px;
+    line-height: 2em;
+  }
+
+  .PolicyList, .BigDataList, .CognitionList, .SolveList, .CustomerList {
+    width: 100%;
+  }
+
+  .PolicyList {
+    text-align: center;
+    margin-top: 45px;
+  }
+
+  .PolicyList li {
+    float: initial;
+    width: 28%;
+    margin-left: 4%;
+    cursor: pointer;
+    margin-top: 40px;
+    padding: 22px 0;
+    display: inline-block;
+    height: 302px;
+    vertical-align: top;
+  }
+
+  .PolicyList li:hover {
+    background: #fff;
+    box-shadow: 0px 2px 5px 2px #dcdcdc;
+    transition-duration: 300ms;
+  }
+
+  .imgcon1 {
+    width: 130px;
+    height: 105px;
+    margin: 0 auto;
+  }
+
+  .PolicyList li a {
+    display: block;
+    text-align: center;
+    width: 50%;
+    margin: 0 auto;
+    text-decoration: none;
+    padding-top: 11px;
+    height: 55px;
+    overflow: hidden;
+  }
+
+  .PolicyList li P {
+    width: 89%;
+    margin: 0 auto;
+    text-align: center;
+    padding-top: 10px;
+    line-height: 2em;
+    height: 98px;
+    overflow: hidden;
+  }
+
+  .PolicyList li:hover a {
+    color: #e21921;
+    transition-duration: 300ms;
+  }
+
+  /*认知产品*/
+  .CognitionMain, .SolveMain {
+    width: 100%;
+    padding-bottom: 80px;
+    background: #f0f0f0;
+  }
+
+  .CognitionContent {
+    width: 970px;
+    margin: 0 auto;
+  }
+
+  .describeCognition {
+    width: 56%;
+    padding-bottom: 33px;
+  }
+
+  .CognitionList {
+    text-align: center;
+  }
+
+  .CognitionList li {
+    /*float: left;
+    width: 32%;
+    margin-left: 2%;
+    cursor: pointer;
+    margin-top: 40px;
+    background: #fff;
+    padding-bottom: 49px;*/
+
+    float: initial;
+    width: 31%;
+    cursor: pointer;
+    display: inline-block;
+    margin: 0 auto;
+    height: 295px;
+    vertical-align: top;
+    background: #fff;
+    margin-top: 35px;
+    margin-left: 20px;
+  }
+
+  /*.CognitionList li:nth-child(3n+1) {
+      margin-left: 0;
+  }*/
+  .CognitionList li a {
+    display: block;
+    text-align: center;
+    width: 100%;
+    height: 33px;
+    margin: 0 auto;
+    text-decoration: none;
+    padding-top: 11px;
+    overflow: hidden;
+  }
+
+  .CognitionList li p {
+    width: 89%;
+    height: 100px;
+    margin: 0 auto;
+    text-align: center;
+    padding-top: 10px;
+    line-height: 2em;
+    overflow: hidden;
+  }
+
+  .CognitionList li:hover a {
+    color: #e21921;
+    transition-duration: 300ms;
+  }
+
+  .rz_imgcon {
+    width: 100px;
+    height: 90px;
+    margin: 0 auto;
+    margin-top: 24px;
+    overflow: hidden;
+  }
+
+  /*大数据操作*/
+  .BigDataContent {
+    width: 970px;
+    margin: 0 auto;
+    padding: 0 55px;
+    padding-bottom: 82px;
+  }
+
+  .BigDataList li {
+    width: 19%;
+    height: 209px;
+    margin-left: 7%;
+    float: left;
+    margin-top: 79px;
+    cursor: pointer;
+    text-align: center;
+    padding-bottom: 26px;
+    position: relative;
+  }
+
+  .BigDataList li .BigData_icoCon {
+    width: 205px;
+    height: 205px;
+    border-radius: 50% 50%;
+    border: solid 1px #a0a0a0;
+    position: relative;
+  }
+
+  .BigDataList li .BigData_icoCon u {
+    display: block;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: url(../../img/Baifendian/in_cl2.png) no-repeat;
+    transition: all .4s ease-in-out 0s;
+  }
+
+  .BigDataList li .BigData_icoCon u.u_cr {
+    clip: rect(0px, 204px, 0, 0px);
+  }
+
+  .BigDataList li:hover .BigData_icoCon u.u_cr {
+    clip: rect(0px, 204px, 204px, 0px);
+  }
+
+  .BigDataList li:hover .BigData_icoCon {
+    border: solid 1px #e21921;
+  }
+
+  .BigDataList li:nth-child(4n+1) {
+    margin-left: 0;
+  }
+
+  .sj_imgCon {
+    width: 102px;
+    height: 92px;
+    margin: 0 auto;
+    margin-top: 45px;
+
+  }
+
+  .sj_imgCon img {
+    filter: grayscale(100%);
+  }
+
+  .BigDataList li:hover .sj_imgCon img {
+    filter: grayscale(0%);
+    transition-duration: 300ms;
+  }
+
+  .BigDataList li a {
+    width: 100px;
+    display: block;
+    word-break: break-word;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    margin: 0 auto;
+    height: 44px;
+  }
+
+  .BigDataList li:hover a {
+    color: #e21921;
+    transition-duration: 300ms;
+    text-decoration: none;
+  }
+
+  /*解决方案*/
+  .SolveContent {
+    width: 970px;
+    margin: 0 auto;
+  }
+
+  .SolveList li {
+    width: 23.7%;
+    float: left;
+    margin-left: 1.6%;
+    position: relative;
+    margin-top: 1.6%;
+    height: 150px;
+    overflow: hidden;
+
+  }
+
+  .SolveList li:nth-child(4n+1) {
+    margin-left: 0;
+  }
+
+  .SolveList li span {
+    font-family: "微软雅黑";
+    font-size: 29px;
+    color: #fff;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    text-align: center;
+    width: 100%;
+    transition-duration: 300ms;
+    z-index: 4;
+  }
+
+  .SolveList li:hover span {
+    display: none;
+    transition-duration: 300ms;
+  }
+
+  .SolveList li:hover .SolveListPack {
+    height: 100%;
+    transition-duration: 300ms;
+  }
+
+  .SolveListImg {
+    max-width: 100%;
+    height: auto;
+  }
+
+  .SolveListPack {
+    position: absolute;
+    width: 100%;
+    height: 0;
+    bottom: 0;
+    transition-duration: 300ms;
+    z-index: 7;
+  }
+
+  .SolveListPackTitle {
+    font-family: "微软雅黑";
+    font-size: 29px;
+    color: #fff;
+    width: 90%;
+    margin: 0 auto;
+    text-align: center;
+    padding-top: 42px;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
+  }
+
+  .SolveListPackImg {
+    margin: 0 auto;
+    margin-top: 10px;
+  }
+
+  .SolveListPack .in_details {
+    display: block;
+    font-family: "微软雅黑";
+    font-size: 16px;
+    color: #fff;
+    text-align: center;
+    text-decoration: none;
+    padding: 2px 10px;
+    border: solid 1px #fff;
+    width: 40%;
+    margin: 0 auto;
+    margin-top: 15px;
+  }
+
+  .SolveListTextPack {
+    position: absolute;
+    z-index: 3;
+    background: #000;
+    background-color: rgba(0, 0, 0, 0.6);
+    top: 0;
+    width: 100%;
+    height: 100%;
+  }
+
+  .SolveList li:nth-child(8n+1) .SolveListTextPack, .SolveList li:nth-child(8n+3) .SolveListTextPack, .SolveList li:nth-child(8n+6) .SolveListTextPack, .SolveList li:nth-child(8n+8) .SolveListTextPack {
+    background: #1b1c1c;
+    background-color: rgba(125, 125, 125, 0.8);
+  }
+
+  /*客户*/
+  .CustomerContent {
+    width: 970px;
+    margin: 0 auto;
+    padding: 0 20px;
+    padding-bottom: 71px;
+  }
+
+  .CustomerList {
+    padding-top: 37px;
+  }
+
+  .swiper-container {
+    padding-bottom: 40px;
+  }
+
+  .swiper-pagination-bullet:hover {
+    background: #d41d25;
+  }
+
+  .swiper-container.swiper_kh .swiper-pagination-bullet-active {
+    opacity: 1;
+    background: #000;
+  }
+
+  .swiper-container.swiper_kh .swiper-pagination-bullet {
+    width: 36px;
+    height: 10px;
+    display: inline-block;
+    background: #e7e6e6;
+    border-radius: 0;
+    opacity: 1;
+  }
+
+  .swiper-container.swiper_kh .swiper-pagination-bullet:hover {
+    background: #d41d25;
+  }
+
+  .swiper-container.swiper_kh .swiper-pagination-bullet-active {
+    width: 36px;
+    height: 10px;
+    display: inline-block;
+    background: #d41d25;
+    border-radius: 0;
+    opacity: 1;
+  }
+
+  .swiper-slide ul li {
+    float: left;
+    width: 16.8%;
+    height: 55px;
+    margin-left: 4%;
+    margin-top: 3%;
+    overflow: hidden;
+    position: relative;
+  }
+
+  .swiper-slide ul li img {
+    margin: 0 auto;
+    width: 100%;
+    height: auto;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+  }
+
+  .swiper-slide ul li:nth-child(5n+1) {
+    margin-left: 0;
+  }
+
+}
+
+/*ipad*/
+@media (min-width: 768px) and (max-width: 991px) {
+  .M_txtcon {
+    width: 100%;
+    margin: 0 auto;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    -webkit-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+  }
+
+  .M_txtconTitle {
+    width: 85%;
+    margin: 0 auto;
+    font-family: "微软雅黑";
+    font-size: 2rem;
+    color: #fff;
+    text-align: center;
+  }
+
+  .M_txtconTxt {
+    width: 60%;
+    margin: 0 auto;
+    font-family: "微软雅黑";
+    font-size: 1.5rem;
+    color: #fff;
+    text-align: center;
+    padding-top: 17px;
+  }
+
+  .mbanner_left_btn {
+    position: absolute;
+    top: 0;
+    z-index: 9;
+    top: 41%;
+    left: 5%;
+  }
+
+  .mbanner_right_btn {
+    position: absolute;
+    top: 0;
+    z-index: 9;
+    top: 41%;
+    right: 5%;
+  }
+
+  .swiper-container-horizontal > .swiper-pagination.M_swiper-pagination {
+    bottom: 15%;
+    left: 0;
+    width: 100%;
+  }
+
+  .swiper-container-horizontal > .swiper-pagination.M_swiper-pagination .swiper-pagination-bullet {
+    width: 10px;
+    height: 10px;
+    display: inline-block;
+    border-radius: 100%;
+    background: none;
+    opacity: 1;
+    border: solid 1px #fff;
+  }
+
+  .swiper-container-horizontal > .swiper-pagination.M_swiper-pagination .swiper-pagination-bullet-active {
+    opacity: 1;
+    background: #ff3333;
+    border: solid 1px #ff3333;
+  }
+
+  .swiper_banner .swiper-slide img {
+    width: 100%;
+    height: 440px;
+  }
+
+  /*智能决策*/
+  .PolicyContent {
+    width: 100%;
+    margin: 0 auto;
+    padding-bottom: 2px;
+    padding: 0 20px;
+  }
+
+  .PolicyDescribe {
+    width: 70%;
+    margin: 0 auto;
+    text-align: center;
+    padding-top: 18px;
+    line-height: 2em;
+  }
+
+  .PolicyList, .BigDataList, .CognitionList, .SolveList, .CustomerList {
+    width: 100%;
+  }
+
+  .PolicyList {
+    margin-top: 55px;
+  }
+
+  .PolicyList li {
+    width: 100%;
+    cursor: pointer;
+    position: relative;
+    padding-top: 0px;
+    padding-bottom: 8px;
+  }
+
+  .PolicyList li:nth-child(1) {
+    border-top: none;
+  }
+
+  .PolicyList li:nth-child(4) {
+    margin-left: 0;
+  }
+
+  .imgcon1 {
+    width: 100px;
+    height: 90px;
+    margin-top: 10px;
+    float: left;
+    margin-right: 35px;
+    overflow: hidden;
+  }
+
+  .imgcon1 img {
+    max-width: 100%;
+    height: auto;
+    margin: 0 auto;
+  }
+
+  .PolicyList li a {
+    display: block;
+    text-align: left;
+    width: 45%;
+    margin: 0 auto;
+    text-decoration: none;
+    float: left;
+    padding-top: 10px;
+  }
+
+  .PolicyList li .M_policylia2 {
+    padding-top: 0;
+  }
+
+  .PolicyList li P {
+    width: 100%;
+    margin: 0 auto;
+    text-align: center;
+    padding-top: 50px;
+    line-height: 2em;
+    display: none;
+    padding-bottom: 40px;
+  }
+
+  .PolicyDescribe {
+    width: 100%;
+    margin: 0 auto;
+    text-align: center;
+    padding-top: 50px;
+    line-height: 22px;
+  }
+
+  .Tips_puls {
+    position: absolute;
+    right: 0;
+    top: 45px;
+    width: 28px;
+    z-index: 400;
+  }
+
+  .PolicyList li P {
+    width: 80%;
+    margin: 0 auto;
+    text-align: left;
+    padding-top: 20px;
+    line-height: 2em;
+    display: block;
+    padding-bottom: 40px;
+    float: left;
+    height: 104px;
+    overflow: hidden;
+  }
+
+  /*认知产品*/
+  .CognitionMain, .SolveMain {
+    width: 100%;
+    padding-bottom: 45px;
+    background: #f0f0f0;
+  }
+
+  .CognitionContent {
+    width: 100%;
+    padding: 0 20px;
+  }
+
+  .describeCognition {
+    width: 100%;
+    padding-bottom: 33px;
+  }
+
+  .CognitionList li {
+    width: 100%;
+    cursor: pointer;
+    margin-top: 0px;
+    position: relative;
+    padding: 10px 0;
+  }
+
+  .CognitionList li a {
+    display: block;
+    text-align: left;
+    width: 50%;
+    text-decoration: none;
+    float: left;
+    margin-top: 24px;
+  }
+
+  .CognitionList li p {
+    width: 80%;
+    text-align: left;
+    padding-top: 20px;
+    line-height: 2em;
+    display: block;
+    float: left;
+    height: 100px;
+    overflow: hidden;
+  }
+
+  .rz_imgcon {
+    width: 100px;
+    height: 90px;
+    margin-top: 25px;
+    float: left;
+    margin-right: 35px;
+    overflow: hidden;
+  }
+
+  .rz_imgcon img {
+    max-width: 100%;
+    height: auto;
+    margin: 0 auto;
+  }
+
+  .Tips_puls_rz {
+    position: absolute;
+    right: 0;
+    top: 40px;
+
+  }
+
+  /*大数据操作*/
+  .BigDataContent {
+    width: 100%;
+    margin: 0 auto;
+    padding: 0 20px;
+    padding-bottom: 55px;
+    padding-top: 6px;
+  }
+
+  .BigDataList {
+    margin-top: 22px;
+  }
+
+  .BigDataList li {
+    width: 45%;
+    margin-top: 40px;
+    cursor: pointer;
+    text-align: center;
+    padding-bottom: 0px;
+    position: relative;
+    float: left;
+    margin-left: 10%;
+  }
+
+  .BigDataList li .BigData_icoCon {
+    width: 250px;
+    height: 250px;
+    border-radius: 50% 50%;
+    border: solid 1px #a0a0a0;
+    position: relative;
+    margin: 0 auto;
+  }
+
+  .BigDataList li:nth-child(2n+1) {
+    margin-left: 0;
+  }
+
+  .sj_imgCon {
+    width: 102px;
+    height: 80px;
+    margin: 0 auto;
+    margin-top: 60px;
+
+  }
+
+  .sj_imgCon img {
+    -webkit-filter: grayscale(0);
+    -moz-filter: grayscale(0);
+    filter: grayscale(0);
+    margin: 0 auto;
+    max-width: 100%;
+    height: auto;
+  }
+
+  .BigDataList li a {
+    width: 100px;
+    display: block;
+    word-break: break-word;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    margin: 0 auto;
+    font-family: "微软雅黑";
+    font-size: 1.6rem;
+    color: #070707;
+    margin-top: 10px;
+    height: 44px;
+  }
+
+  /*解决方案*/
+  .SolveContent {
+    width: 100%;
+    margin: 0 auto;
+    padding: 0 20px;
+  }
+
+  .SolveList li {
+    width: 31%;
+    float: left;
+    margin-left: 1.5%;
+    position: relative;
+    margin-top: 2%;
+    height: 146px;
+    overflow: hidden;
+    cursor: pointer;
+  }
+
+  .SolveList li:nth-child(3n+1) {
+    margin-left: 0;
+  }
+
+  .SolveList li .M_SolveList_txt {
+    font-family: "微软雅黑";
+    font-size: 20px;
+    color: #fff;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    text-align: center;
+    width: 100%;
+    z-index: 4;
+    text-decoration: none;
+  }
+
+  .SolveListImg {
+    max-width: 100%;
+    height: auto;
+  }
+
+  .SolveListPack {
+    position: absolute;
+    width: 100%;
+    height: 0;
+    bottom: 0;
+    transition-duration: 300ms;
+    z-index: 7;
+  }
+
+  .SolveListPackTitle {
+    font-family: "微软雅黑";
+    font-size: 29px;
+    color: #fff;
+    width: 90%;
+    margin: 0 auto;
+    text-align: center;
+    padding-top: 42px;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
+  }
+
+  .SolveListPackImg {
+    margin: 0 auto;
+    margin-top: 10px;
+  }
+
+  .SolveListPack .in_details {
+    display: block;
+    font-family: "微软雅黑";
+    font-size: 16px;
+    color: #fff;
+    text-align: center;
+    text-decoration: none;
+    padding: 2px 10px;
+    border: solid 1px #fff;
+    width: 40%;
+    margin: 0 auto;
+    margin-top: 15px;
+  }
+
+  .SolveListTextPack {
+    position: absolute;
+    z-index: 3;
+    background: #000;
+    background-color: rgba(0, 0, 0, 0.4);
+    top: 0;
+    width: 100%;
+    height: 100%;
+    display: block;
+  }
+
+  /*客户*/
+  .CustomerContent {
+    width: 100%;
+    margin: 0 auto;
+    padding: 0 40px;
+    padding-bottom: 40px;
+  }
+
+  .CustomerList {
+    padding-top: 37px;
+    position: relative;
+  }
+
+  .CustomerList .swiper-wrapper {
+    padding-bottom: 30px;
+  }
+
+  .swiper-container.swiper_kh {
+    padding-bottom: 30px;
+  }
+
+  .swiper-container-horizontal > .swiper-pagination {
+    bottom: 0px;
+    left: 0;
+    width: 100%;
+  }
+
+  .swiper-pagination-bullet-active {
+    opacity: 1;
+    background: #000;
+  }
+
+  .CustomerList .swiper-pagination-bullet {
+    width: 36px;
+    height: 10px;
+    display: inline-block;
+    background: #e7e6e6;
+    border-radius: 0;
+    opacity: 1;
+  }
+
+  .CustomerList .swiper-pagination-bullet:hover {
+    background: #d41d25;
+  }
+
+  .CustomerList .swiper-pagination-bullet-active {
+    width: 36px;
+    height: 10px;
+    display: inline-block;
+    background: #d41d25;
+    border-radius: 0;
+    opacity: 1;
+  }
+
+  .swiper-slide ul li {
+    float: left;
+    width: 30%;
+    height: auto;
+    margin-left: 5%;
+    margin-top: 35px;
+    height: 55px;
+    overflow: hidden;
+    position: relative;
+  }
+
+  .swiper-slide ul li img {
+    margin: 0 auto;
+    max-width: 100%;
+    height: auto;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    -webkit-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+  }
+
+  .swiper-slide ul li:nth-child(3n+1) {
+    margin-left: 0;
+  }
+
+  .M_Customer_btn_left, .M_Customer_btn_right {
+    position: absolute;
+  }
+
+  .M_Customer_btn_left {
+    left: -25px;
+    top: 47%;
+    width: 10px;
+  }
+
+  .M_Customer_btn_right {
+    right: -25px;
+    top: 47%;
+    width: 10px;
+  }
+
+}
+
+/*移动端*/
+@media (max-width: 767px) {
+
+  /*banner*/
+  .M_txtcon {
+    width: 100%;
+    margin: 0 auto;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    -webkit-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+  }
+
+  .M_txtconTitle {
+    width: 71%;
+    margin: 0 auto;
+    font-family: "微软雅黑";
+    font-size: 34px;
+    color: #fff;
+    text-align: center;
+    overflow: hidden;
+  }
+
+  .M_txtconTxt {
+    width: 60%;
+    margin: 0 auto;
+    font-family: "微软雅黑";
+    font-size: 16px;
+    color: #fff;
+    text-align: center;
+    padding-top: 17px;
+  }
+
+  .mbanner_left_btn {
+    position: absolute;
+    top: 0;
+    z-index: 9;
+    top: 41%;
+    left: 5%;
+  }
+
+  .mbanner_right_btn {
+    position: absolute;
+    top: 0;
+    z-index: 9;
+    top: 41%;
+    right: 5%;
+  }
+
+  .swiper-container-horizontal > .swiper-pagination.M_swiper-pagination {
+    bottom: 8%;
+    left: 0;
+    width: 100%;
+  }
+
+  .swiper-container-horizontal > .swiper-pagination.M_swiper-pagination .swiper-pagination-bullet {
+    width: 10px;
+    height: 10px;
+    display: inline-block;
+    border-radius: 100%;
+    background: none;
+    opacity: 1;
+    border: solid 1px #fff;
+  }
+
+  .swiper-container-horizontal > .swiper-pagination.M_swiper-pagination .swiper-pagination-bullet-active {
+    opacity: 1;
+    background: #ff3333;
+    border: solid 1px #ff3333;
+  }
+
+  .swiper_banner .swiper-slide img {
+    min-width: 100%;
+    width: auto;
+    max-width: 10000%;
+    height: 400px;
+  }
+
+  /*智能决策*/
+  .PolicyContent {
+    width: 100%;
+    margin: 0 auto;
+    padding-bottom: 7px;
+    padding: 0 20px;
+  }
+
+  .PolicyDescribe {
+    width: 70%;
+    margin: 0 auto;
+    text-align: center;
+    padding-top: 18px;
+    line-height: 22px;
+  }
+
+  .PolicyList, .BigDataList, .CognitionList, .SolveList, .CustomerList {
+    width: 100%;
+  }
+
+  .PolicyList {
+    margin-top: 55px;
+  }
+
+  .PolicyList li {
+    width: 100%;
+    cursor: pointer;
+    border-top: solid 1px #bfbfbf;
+    position: relative;
+    padding-top: 15px;
+    padding-bottom: 15px;
+  }
+
+  .PolicyList li:nth-child(1) {
+    border-top: none;
+  }
+
+  .PolicyList li:nth-child(4) {
+    margin-left: 0;
+  }
+
+  .imgcon1 {
+    width: 100px;
+    height: 70px;
+    margin-top: 0px;
+    float: left;
+    position: relative;
+  }
+
+  .imgcon1 img {
+    max-width: 100%;
+    height: auto;
+    margin: 0 auto;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+  }
+
+  .PolicyList li a {
+    display: block;
+    text-align: left;
+    width: 45%;
+    margin: 0 auto;
+    text-decoration: none;
+    float: left;
+    margin-left: 10px;
+    padding-top: 15px;
+    font-size: 16px;
+  }
+
+  .PolicyList li .M_policylia2 {
+    padding-top: 0;
+  }
+
+  .PolicyList li P {
+    width: 100%;
+    margin: 0 auto;
+    text-align: left;
+    padding-top: 50px;
+    line-height: 2em;
+    display: none;
+    padding-bottom: 40px;
+  }
+
+  .PolicyDescribe {
+    width: 100%;
+    margin: 0 auto;
+    text-align: center;
+    padding-top: 50px;
+    line-height: 22px;
+  }
+
+  .Tips_puls {
+    position: absolute;
+    right: 0;
+    top: 45px;
+    width: 28px;
+    z-index: 400;
+
+  }
+
+  /*认知产品*/
+  .CognitionMain, .SolveMain {
+    width: 100%;
+    padding-bottom: 0px;
+    background: #f0f0f0;
+  }
+
+  .CognitionContent {
+    width: 100%;
+    padding: 0 20px;
+  }
+
+  .describeCognition {
+    width: 100%;
+    padding-bottom: 33px;
+  }
+
+  .CognitionList li {
+    width: 100%;
+    cursor: pointer;
+    margin-top: 0px;
+    border-top: solid 1px #bfbfbf;
+    position: relative;
+    padding: 15px 0;
+  }
+
+  .CognitionList li:nth-child(1) {
+    border-top: none;
+  }
+
+  .CognitionList li a {
+    display: block;
+    text-align: left;
+    width: 50%;
+    text-decoration: none;
+    float: left;
+    margin-left: 10px;
+    margin-top: 25px;
+    font-size: 16px;
+  }
+
+  .CognitionList li p {
+    width: 100%;
+    text-align: left;
+    padding-top: 50px;
+    line-height: 2em;
+    display: none;
+    padding-bottom: 40px;
+  }
+
+  .rz_imgcon {
+    width: 100px;
+    height: 70px;
+    margin-top: 0px;
+    float: left;
+    overflow: hidden;
+    position: relative;
+  }
+
+  .rz_imgcon img {
+    max-width: 100%;
+    height: auto;
+    margin: 0 auto;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+  }
+
+  .Tips_puls_rz {
+    position: absolute;
+    right: 0;
+    top: 40px;
+  }
+
+  /*大数据操作*/
+  .BigDataContent {
+    width: 100%;
+    margin: 0 auto;
+    padding: 0 20px;
+    padding-bottom: 50px;
+  }
+
+  .BigDataList {
+    margin-top: 22px;
+  }
+
+  .BigDataList li {
+    width: 45%;
+    margin-top: 40px;
+    cursor: pointer;
+    text-align: center;
+    padding-bottom: 0px;
+    position: relative;
+    float: left;
+    margin-left: 10%;
+    text-decoration: none;
+  }
+
+  .BigDataList li .BigData_icoCon {
+    width: 140px;
+    height: 140px;
+    border-radius: 50% 50%;
+    border: solid 1px #a0a0a0;
+    position: relative;
+    margin: 0 auto;
+  }
+
+  .BigDataList li:nth-child(2n+1) {
+    margin-left: 0;
+  }
+
+  .sj_imgCon {
+    width: 60px;
+    height: 55px;
+    margin: 0 auto;
+    margin-top: 15px;
+    margin-bottom: 10px;
+  }
+
+  .sj_imgCon img {
+    /*filter: grayscale(100%);*/
+    margin: 0 auto;
+    max-width: 100%;
+    height: auto;
+  }
+
+  .BigDataList li a {
+    width: 100px;
+    display: block;
+    word-break: break-word;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    margin: 0 auto;
+    font-family: "微软雅黑";
+    font-size: 1.4rem;
+    color: #ff0000;
+    height: 44px;
+    text-decoration: none;
+  }
+
+  /*解决方案*/
+  .SolveContent {
+    width: 100%;
+    margin: 0 auto;
+    padding: 0 20px;
+  }
+
+  .SolveList {
+    margin-bottom: 0;
+  }
+
+  .SolveMain {
+    padding-bottom: 43px;
+  }
+
+  .SolveList li {
+    width: 49%;
+    float: left;
+    margin-left: 2%;
+    position: relative;
+    margin-top: 2%;
+    max-height: 88px;
+    overflow: hidden;
+    cursor: pointer;
+    line-height: 50px;
+  }
+
+  .SolveList li:nth-child(2n+1) {
+    margin-left: 0;
+  }
+
+  .SolveList li .M_SolveList_txt {
+    font-family: "微软雅黑";
+    font-size: 1.6rem;
+    color: #fff;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    text-align: center;
+    width: 99%;
+    z-index: 4;
+    text-decoration: none;
+    height: 44px;
+    overflow: hidden;
+  }
+
+  .SolveListImg {
+    width: 100%;
+  }
+
+  .SolveListPack {
+    position: absolute;
+    width: 100%;
+    height: 0;
+    bottom: 0;
+    transition-duration: 300ms;
+    z-index: 7;
+  }
+
+  .SolveListPackTitle {
+    font-family: "微软雅黑";
+    font-size: 29px;
+    color: #fff;
+    width: 90%;
+    margin: 0 auto;
+    text-align: center;
+    padding-top: 42px;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
+  }
+
+  .SolveListPackImg {
+    margin: 0 auto;
+    margin-top: 10px;
+  }
+
+  .SolveListPack .in_details {
+    display: block;
+    font-family: "微软雅黑";
+    font-size: 16px;
+    color: #fff;
+    text-align: center;
+    text-decoration: none;
+    padding: 2px 10px;
+    border: solid 1px #fff;
+    width: 40%;
+    margin: 0 auto;
+    margin-top: 15px;
+  }
+
+  .SolveListTextPack {
+    position: absolute;
+    z-index: 3;
+    background: #000;
+    background-color: rgba(0, 0, 0, 0.4);
+    top: 0;
+    width: 100%;
+    height: 100%;
+    display: block;
+  }
+
+  /*客户*/
+  .CustomerContent {
+    width: 100%;
+    margin: 0 auto;
+    padding: 0 40px;
+    padding-bottom: 40px;
+  }
+
+  .CustomerList {
+    padding-top: 37px;
+    position: relative;
+  }
+
+  .swiper-container.swiper_kh {
+    padding-bottom: 30px;
+  }
+
+  .swiper-container-horizontal > .swiper-pagination {
+    bottom: 0px;
+    left: 0;
+    width: 100%;
+  }
+
+  .swiper-pagination-bullet-active {
+    opacity: 1;
+    background: #000;
+  }
+
+  .CustomerList .swiper-pagination-bullet {
+    width: 36px;
+    height: 10px;
+    display: inline-block;
+    background: #e7e6e6;
+    border-radius: 0;
+    opacity: 1;
+  }
+
+  .CustomerList .swiper-pagination-bullet:hover {
+    background: #d41d25;
+  }
+
+  .CustomerList .swiper-pagination-bullet-active {
+    width: 36px;
+    height: 10px;
+    display: inline-block;
+    background: #d41d25;
+    border-radius: 0;
+    opacity: 1;
+  }
+
+  .swiper-slide ul li {
+    float: left;
+    width: 30%;
+    height: 45px;
+    margin-left: 5%;
+    margin-top: 3%;
+    overflow: hidden;
+    position: relative;
+  }
+
+  .swiper-slide ul li img {
+    margin: 0 auto;
+    max-width: 100%;
+    height: auto;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    -webkit-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+  }
+
+  .swiper-slide ul li:nth-child(3n+1) {
+    margin-left: 0;
+  }
+
+  .M_Customer_btn_left, .M_Customer_btn_right {
+    position: absolute;
+  }
+
+  .M_Customer_btn_left {
+    left: -25px;
+    top: 47%;
+    width: 10px;
+  }
+
+  .M_Customer_btn_right {
+    right: -25px;
+    top: 47%;
+    width: 10px;
+  }
+
+  .ms_bj {
+    background: #080809;
+    border-bottom: solid 1px #080809;
+  }
+
+}
+
+.CustomerList .swiper-wrapper {
+  padding-bottom: 30px;
+}
+
+.BigDataList li a {
+  position: relative;
+  z-index: 2;
+}
+
+a:link {
+  color: #1f2021; /*连接默认的颜色变化*/
+}
+
+a:visited {
+  color: #1f2021; /*连接访问的颜色变化*/
+}
+
+

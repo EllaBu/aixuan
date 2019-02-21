@@ -1,0 +1,16 @@
+﻿@charset "utf-8";
+/* CSS Document */
+
+/*初始化*/
+		body,p,ul,li,ol,h1,h2,h3,h4,h5,h6,form,input,dl,dt,dd{ margin:0; padding:0;}
+		 body{ font-family: "微软雅黑"; font-size:12px; background:#ffffff; line-height:1.7;}
+		 ul{ list-style:none;}
+		 img{ display:block; border:none}
+		 a{ color:#666; text-decoration:none;}
+            
+		 .clear{ height:0; overflow:hidden; clear:both}
+		 input:focus{ outline:none;}/*谷歌浏览器去蓝边*/
+		 input { 
+              -webkit-tap-highlight-color:rgba(0,0,0,0);
+              } /*在手机浏览器里去蓝边*/
+textarea:focus{ outline:none}
