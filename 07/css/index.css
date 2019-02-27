@@ -176,7 +176,6 @@
   .PolicyList li a {
     display: block;
     text-align: center;
-    width: 45%;
     margin: 0 auto;
     text-decoration: none;
     padding-top: 11px;
@@ -725,7 +724,6 @@
   .PolicyList li a {
     display: block;
     text-align: center;
-    width: 50%;
     margin: 0 auto;
     text-decoration: none;
     padding-top: 11px;
@@ -1225,7 +1223,6 @@
   .PolicyList li a {
     display: block;
     text-align: left;
-    width: 45%;
     margin: 0 auto;
     text-decoration: none;
     float: left;
@@ -1743,7 +1740,6 @@
   .PolicyList li a {
     display: block;
     text-align: left;
-    width: 45%;
     margin: 0 auto;
     text-decoration: none;
     float: left;
