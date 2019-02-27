@@ -25,6 +25,11 @@
 
   <script type="text/javascript" src="http://api.map.baidu.com/api?v=1.3"></script>
   <title>联系我们</title>
+  <style>
+    .map-box {
+      margin-top: 10px;
+    }
+  </style>
 </head>
 <body>
 <div class="top" style="display: none;"></div>
@@ -49,7 +54,7 @@
           <div class="collapse navbar-collapse M_navss" id="example-navbar-collapse" style="height: 971px;">
             <ul class="nav navbar-nav nav_menu">
               <li class="nav_main li">
-                <a href="index.html" style="color: rgb(255, 0, 0);" class="li_color">首页</a>
+                <a href="index.html" class="li_color">首页</a>
               </li>
               <li class="groub_bj_white nav_main li">
                 <a href="JavaScript:;" class="li_color">产品</a>
@@ -91,12 +96,13 @@
               </li>
 
               <li class="groub_bj_white nav_main li">
-                <a href="JavaScript:;" class="li_color">关于我们</a>
+                <a href="JavaScript:;" style="color: rgb(255, 0, 0);" class="li_color">关于我们</a>
                 <div class="nav_tips">
                   <ul class="clearFloat L2">
                     <li>
                       <ul class="clearFloat L3">
                         <li><a href="aboutUs.html">公司介绍</a></li>
+                        <li><a href="contactUs.html">联系我们</a></li>
                       </ul>
 
                     </li>
@@ -211,29 +217,24 @@
       <p class="wz_txt">电话：010-65990927</p>
       <p class="wz_txt">邮箱：???info@aixbx.com</p>
       <p class="wz_txt">地址：北京市朝阳区景华南街1号旺座中心</p>
-      <div class="panel-body" id="allmap" style="height: 300px;">
 
+      <div class="map-box visible-lg-block" style="width: 100%">
+        <iframe src="map.html" width="1300" height="550" frameborder="0" scrolling="no"></iframe>
       </div>
 
-      <script type="text/javascript">
-        var map = new BMap.Map("allmap");    // 创建Map实例
-        map.centerAndZoom(new BMap.Point(result[0].longitude, result[0].latitude), 16);  // 初始化地图,设置中心点坐标和地图级别
-        map.addControl(new BMap.MapTypeControl());   //添加地图类型控件
-        map.setCurrentCity("浙江");          // 设置地图显示的城市 此项是必须设置的
-        var myIcon = new BMap.Icon("${context.ctx!}/resource/img/markers.png", new BMap.Size(23, 25), {
-          // 指定定位位置
-          offset: new BMap.Size(10, 25),
-          // 当需要从一幅较大的图片中截取某部分作为标注图标时，需要指定大图的偏移位置
-          imageOffset: new BMap.Size(0, 0 - 11 * 25) // 设置图片偏移
-        });
+      <div class="map-box visible-md-block" style="width: 100%">
+        <iframe src="map-md.html" width="952" height="550" frameborder="0" scrolling="no"></iframe>
+      </div>
 
-        var point = new BMap.Point(result[0].longitude, result[0].latitude);
-        // 创建标注对象并添加到地图
-        var marker = new BMap.Marker(point,{icon: myIcon});
+      <div class="map-box visible-sm-block" style="width: 100%">
+        <iframe src="map-sm.html" width="728" height="550" frameborder="0" scrolling="no"></iframe>
+      </div>
 
-        map.addOverlay(marker);
-        map.enableScrollWheelZoom(true);     //开启鼠标滚轮缩放
-      </script>
+      <div class="map-box visible-xs-block" style="width: 100%">
+        <iframe src="map-xs.html" width="335" height="300" frameborder="0" scrolling="no"></iframe>
+      </div>
+
+
     </div>
 
 
