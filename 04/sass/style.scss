@@ -1,5 +1,9 @@
 @charset "UTF-8";
 
+//$color-normal: green;
+//$color-abnormal: red;
+//$color-higher: #ffc801;
+
 $color-normal: green;
 $color-abnormal: red;
 $color-higher: #ffc801;
@@ -12,6 +16,22 @@ $color-higher: #ffc801;
 }
 .higher {
   color: $color-higher;
+}
+.td-normal {
+  background-color: lighten($color-normal,30%);
+  //color: #fff;
+}
+.td-abnormal {
+  background-color: lighten($color-abnormal,10%);
+  //color: #fff;
+}
+.td-higher {
+  background-color: lighten($color-higher,10%);
+  //color: #fff;
+}
+
+.td-normal {
+
 }
 
 /* 进度条 */
@@ -176,11 +196,14 @@ $color-higher: #ffc801;
     }
     td {
       border: 1px solid #ddd;
-      padding: .07rem .02rem;
+      padding: .1rem .02rem;
       text-align: center;
       vertical-align: middle;
+      line-height: .32rem;
       span {
-        color: #ec9a71;
+        padding: .04rem .08rem;
+        border-radius: .05rem;
+        font-size: .28rem;
       }
       &:first-of-type {
         text-align: left;
@@ -254,15 +277,19 @@ $color-higher: #ffc801;
     }
     dl {
       overflow: hidden;
-      margin-top: .04rem;
+      margin-bottom: .2rem;
+      font-size: .28rem;
+      line-height: .32rem;
       dt {
         float: left;
         font-weight: bold;
-        width: 14%;
+        width: 3%;
+        color: red;
+        font-size: .4rem;
       }
       dd {
         float: left;
-        width: 86%;
+        width: 96%;
       }
     }
   }

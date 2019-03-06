@@ -11,6 +11,18 @@
   color: #ffc801;
 }
 
+.td-normal {
+  background-color: #1aff1a;
+}
+
+.td-abnormal {
+  background-color: #ff3333;
+}
+
+.td-higher {
+  background-color: #ffd334;
+}
+
 /* 进度条 */
 .progress {
   width: 100%;
@@ -167,12 +179,15 @@
 }
 .result table td {
   border: 1px solid #ddd;
-  padding: .07rem .02rem;
+  padding: .1rem .02rem;
   text-align: center;
   vertical-align: middle;
+  line-height: .32rem;
 }
 .result table td span {
-  color: #ec9a71;
+  padding: .04rem .08rem;
+  border-radius: .05rem;
+  font-size: .28rem;
 }
 .result table td:first-of-type {
   text-align: left;
@@ -238,16 +253,20 @@
 }
 .result .total-warn dl {
   overflow: hidden;
-  margin-top: .04rem;
+  margin-bottom: .2rem;
+  font-size: .28rem;
+  line-height: .32rem;
 }
 .result .total-warn dl dt {
   float: left;
   font-weight: bold;
-  width: 14%;
+  width: 3%;
+  color: red;
+  font-size: .4rem;
 }
 .result .total-warn dl dd {
   float: left;
-  width: 86%;
+  width: 96%;
 }
 .result .again {
   text-align: center;
