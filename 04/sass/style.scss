@@ -1,5 +1,19 @@
 @charset "UTF-8";
 
+$color-normal: green;
+$color-abnormal: red;
+$color-higher: #ffc801;
+
+.normal {
+  color: $color-normal;
+}
+.abnormal {
+  color: $color-abnormal;
+}
+.higher {
+  color: $color-higher;
+}
+
 /* 进度条 */
 .progress{
   width: 100%;
@@ -36,8 +50,21 @@
   &>h3{
     color: #ec9a71;
     font-size: .4rem;
-    padding: .2rem 0;
+    margin: .2rem 0;
     font-weight: bold;
+    &.sub-title {
+      background-color: #eee;
+      height: .6rem;
+      line-height: .6rem;
+      padding-left: .04rem;
+      a {
+        float: right;
+        width: .6rem;
+        height: .6rem;
+        background: url("../img/icon-down.png") no-repeat center;
+        background-size: .4rem;
+      }
+    }
   }
 }
 
@@ -115,7 +142,7 @@
 }
 .indicator {
   ul {
-    padding-bottom: .3rem;
+    //padding-bottom: .01rem;
     li {
       margin-bottom: .2rem;
       h4 {
@@ -151,6 +178,7 @@
       border: 1px solid #ddd;
       padding: .07rem .02rem;
       text-align: center;
+      vertical-align: middle;
       span {
         color: #ec9a71;
       }
@@ -196,9 +224,6 @@
     &.total-tip {
       font-weight: bold;
       p{
-        span {
-          color: #4580f0;
-        }
         &.result-warn {
           color: #4580f0;
         }

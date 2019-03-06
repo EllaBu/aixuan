@@ -1,4 +1,16 @@
 @charset "UTF-8";
+.normal {
+  color: green;
+}
+
+.abnormal {
+  color: red;
+}
+
+.higher {
+  color: #ffc801;
+}
+
 /* 进度条 */
 .progress {
   width: 100%;
@@ -36,8 +48,21 @@
 .main > h3 {
   color: #ec9a71;
   font-size: .4rem;
-  padding: .2rem 0;
+  margin: .2rem 0;
   font-weight: bold;
+}
+.main > h3.sub-title {
+  background-color: #eee;
+  height: .6rem;
+  line-height: .6rem;
+  padding-left: .04rem;
+}
+.main > h3.sub-title a {
+  float: right;
+  width: .6rem;
+  height: .6rem;
+  background: url("../img/icon-down.png") no-repeat center;
+  background-size: .4rem;
 }
 
 .next {
@@ -111,9 +136,6 @@
   padding-left: .1rem;
 }
 
-.indicator ul {
-  padding-bottom: .3rem;
-}
 .indicator ul li {
   margin-bottom: .2rem;
 }
@@ -147,6 +169,7 @@
   border: 1px solid #ddd;
   padding: .07rem .02rem;
   text-align: center;
+  vertical-align: middle;
 }
 .result table td span {
   color: #ec9a71;
@@ -188,9 +211,6 @@
 }
 .result .result-total.total-tip {
   font-weight: bold;
-}
-.result .result-total.total-tip p span {
-  color: #4580f0;
 }
 .result .result-total.total-tip p.result-warn {
   color: #4580f0;
