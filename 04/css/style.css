@@ -189,9 +189,6 @@
   border-radius: .05rem;
   font-size: .28rem;
 }
-.result table td:first-of-type {
-  text-align: left;
-}
 .result .result-total {
   padding: .2rem .1rem;
   background-color: #eee;
