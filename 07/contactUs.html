@@ -23,11 +23,17 @@
   <script type="text/javascript" src="./js/bootstrap.min.js"></script>
   <script type="text/javascript" src="./js/public.js"></script>
 
-  <script type="text/javascript" src="http://api.map.baidu.com/api?v=1.3"></script>
+  <!--引用百度地图API-->
+  <script type="text/javascript" src="http://api.map.baidu.com/api?v=2.0&ak=fRAWNda2UhUDVE7vGnvp7Vo9ISYAS1IY"></script>
+  <script src="./js/map.js"></script>
   <title>联系我们</title>
   <style>
     .map-box {
       margin-top: 10px;
+      width: 100%;
+      height: 550px;
+      border: #ccc solid 1px;
+      font-size: 12px
     }
     .banner {
       background: url("img/connect.jpg") no-repeat top center;
@@ -38,7 +44,7 @@
 <body>
 <div class="top" style="display: none;"></div>
 <div id="wrap">
-
+  <!--电话： 010-65990927 <br/> 地址： 北京市朝阳区景华南街1号旺座中心-->
 
   <header class="sticky header_bj ms_bj">
     <div class="PublicHeader">
@@ -221,21 +227,7 @@
       <p class="wz_txt">邮箱：info@aixbx.com</p>
       <p class="wz_txt">地址：北京市朝阳区景华南街1号旺座中心</p>
 
-      <div class="map-box visible-lg-block" style="width: 100%">
-        <iframe src="map.html" width="1300" height="550" frameborder="0" scrolling="no"></iframe>
-      </div>
-
-      <div class="map-box visible-md-block" style="width: 100%">
-        <iframe src="map-md.html" width="952" height="550" frameborder="0" scrolling="no"></iframe>
-      </div>
-
-      <div class="map-box visible-sm-block" style="width: 100%">
-        <iframe src="map-sm.html" width="728" height="550" frameborder="0" scrolling="no"></iframe>
-      </div>
-
-      <div class="map-box visible-xs-block" style="width: 100%">
-        <iframe src="map-xs.html" width="335" height="300" frameborder="0" scrolling="no"></iframe>
-      </div>
+      <div id="map" class="map-box"></div>
 
 
     </div>
