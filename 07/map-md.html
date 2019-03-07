@@ -1,118 +1,77 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
-  <meta http-equiv="Content-Type" content="text/html; charset=gb2312" />
-  <meta name="keywords" content="°Ù¶ÈµØÍ¼,°Ù¶ÈµØÍ¼API£¬°Ù¶ÈµØÍ¼×Ô¶¨Òå¹¤¾ß£¬°Ù¶ÈµØÍ¼Ëù¼û¼´ËùµÃ¹¤¾ß" />
-  <meta name="description" content="°Ù¶ÈµØÍ¼API×Ô¶¨ÒåµØÍ¼£¬°ïÖúÓÃ»§ÔÚ¿ÉÊÓ»¯²Ù×÷ÏÂÉú³É°Ù¶ÈµØÍ¼" />
-  <title>°Ù¶ÈµØÍ¼API×Ô¶¨ÒåµØÍ¼</title>
-  <!--ÒıÓÃ°Ù¶ÈµØÍ¼API-->
-  <style type="text/css">
-    html,body{margin:0;padding:0;}
-    .iw_poi_title {color:#CC5522;font-size:14px;font-weight:bold;overflow:hidden;padding-right:13px;white-space:nowrap}
-    .iw_poi_content {font:12px arial,sans-serif;overflow:visible;padding-top:4px;white-space:-moz-pre-wrap;word-wrap:break-word}
-  </style>
-  <script type="text/javascript" src="http://api.map.baidu.com/api?key=&v=1.1&services=true"></script>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <meta name="keywords" content="ç™¾åº¦åœ°å›¾,ç™¾åº¦åœ°å›¾APIï¼Œç™¾åº¦åœ°å›¾è‡ªå®šä¹‰å·¥å…·ï¼Œç™¾åº¦åœ°å›¾æ‰€è§å³æ‰€å¾—å·¥å…·" />
+  <meta name="description" content="ç™¾åº¦åœ°å›¾APIè‡ªå®šä¹‰åœ°å›¾ï¼Œå¸®åŠ©ç”¨æˆ·åœ¨å¯è§†åŒ–æ“ä½œä¸‹ç”Ÿæˆç™¾åº¦åœ°å›¾" />
+  <title>ç™¾åº¦åœ°å›¾APIè‡ªå®šä¹‰åœ°å›¾</title>
+  <!--å¼•ç”¨ç™¾åº¦åœ°å›¾API-->
+  <script type="text/javascript" src="http://api.map.baidu.com/api?v=2.0&ak=fRAWNda2UhUDVE7vGnvp7Vo9ISYAS1IY"></script>
 </head>
 
 <body>
-<!--°Ù¶ÈµØÍ¼ÈİÆ÷-->
-<div style="width:952px;height:550px;border:#ccc solid 1px;" id="dituContent"></div>
+<!--ç™¾åº¦åœ°å›¾å®¹å™¨-->
+<div style="width:952px;height:550px;border:#ccc solid 1px;font-size:12px" id="map"></div>
+<p style="color:red;font-weight:600">åœ°å›¾ç”Ÿæˆå·¥å…·åŸºäºç™¾åº¦åœ°å›¾JS api v2.0ç‰ˆæœ¬å¼€å‘ï¼Œä½¿ç”¨è¯·ç”³è¯·å¯†åŒ™ã€‚
+  <a href="http://developer.baidu.com/map/index.php?title=jspopular/guide/introduction" style="color:#2f83c7" target="_blank">äº†è§£å¦‚ä½•ç”³è¯·å¯†åŒ™</a>
+  <a href="http://lbsyun.baidu.com/apiconsole/key?application=key" style="color:#2f83c7" target="_blank">ç”³è¯·å¯†åŒ™</a>
+</p>
 </body>
 <script type="text/javascript">
-  //´´½¨ºÍ³õÊ¼»¯µØÍ¼º¯Êı£º
+  //åˆ›å»ºå’Œåˆå§‹åŒ–åœ°å›¾å‡½æ•°ï¼š
   function initMap(){
-    createMap();//´´½¨µØÍ¼
-    setMapEvent();//ÉèÖÃµØÍ¼ÊÂ¼ş
-    addMapControl();//ÏòµØÍ¼Ìí¼Ó¿Ø¼ş
-    addMarker();//ÏòµØÍ¼ÖĞÌí¼Ómarker
+    createMap();//åˆ›å»ºåœ°å›¾
+    setMapEvent();//è®¾ç½®åœ°å›¾äº‹ä»¶
+    addMapControl();//å‘åœ°å›¾æ·»åŠ æ§ä»¶
+    addMapOverlay();//å‘åœ°å›¾æ·»åŠ è¦†ç›–ç‰©
   }
-
-  //´´½¨µØÍ¼º¯Êı£º
   function createMap(){
-    var map = new BMap.Map("dituContent");//ÔÚ°Ù¶ÈµØÍ¼ÈİÆ÷ÖĞ´´½¨Ò»¸öµØÍ¼
-    var point = new BMap.Point(116.464428,39.920639);//¶¨ÒåÒ»¸öÖĞĞÄµã×ø±ê
-    map.centerAndZoom(point,18);//Éè¶¨µØÍ¼µÄÖĞĞÄµãºÍ×ø±ê²¢½«µØÍ¼ÏÔÊ¾ÔÚµØÍ¼ÈİÆ÷ÖĞ
-    window.map = map;//½«map±äÁ¿´æ´¢ÔÚÈ«¾Ö
+    map = new BMap.Map("map");
+    map.centerAndZoom(new BMap.Point(116.465052,39.92085),19);
   }
-
-  //µØÍ¼ÊÂ¼şÉèÖÃº¯Êı£º
   function setMapEvent(){
-    map.enableDragging();//ÆôÓÃµØÍ¼ÍÏ×§ÊÂ¼ş£¬Ä¬ÈÏÆôÓÃ(¿É²»Ğ´)
-    map.enableScrollWheelZoom();//ÆôÓÃµØÍ¼¹öÂÖ·Å´óËõĞ¡
-    map.enableDoubleClickZoom();//ÆôÓÃÊó±êË«»÷·Å´ó£¬Ä¬ÈÏÆôÓÃ(¿É²»Ğ´)
-    map.enableKeyboard();//ÆôÓÃ¼üÅÌÉÏÏÂ×óÓÒ¼üÒÆ¶¯µØÍ¼
+    map.enableScrollWheelZoom();
+    map.enableKeyboard();
+    map.enableDragging();
+    map.enableDoubleClickZoom()
   }
-
-  //µØÍ¼¿Ø¼şÌí¼Óº¯Êı£º
-  function addMapControl(){
-    //ÏòµØÍ¼ÖĞÌí¼ÓËõ·Å¿Ø¼ş
-    var ctrl_nav = new BMap.NavigationControl({anchor:BMAP_ANCHOR_TOP_LEFT,type:BMAP_NAVIGATION_CONTROL_LARGE});
-    map.addControl(ctrl_nav);
-    //ÏòµØÍ¼ÖĞÌí¼ÓËõÂÔÍ¼¿Ø¼ş
-    var ctrl_ove = new BMap.OverviewMapControl({anchor:BMAP_ANCHOR_BOTTOM_RIGHT,isOpen:1});
-    map.addControl(ctrl_ove);
-    //ÏòµØÍ¼ÖĞÌí¼Ó±ÈÀı³ß¿Ø¼ş
-    var ctrl_sca = new BMap.ScaleControl({anchor:BMAP_ANCHOR_BOTTOM_LEFT});
-    map.addControl(ctrl_sca);
+  function addClickHandler(target,window){
+    target.addEventListener("click",function(){
+      target.openInfoWindow(window);
+    });
   }
-
-  //±ê×¢µãÊı×é
-  var markerArr = [{title:"¹«Ë¾µØÖ·",content:"±±¾©ÊĞ³¯ÑôÇø¾°»ªÄÏ½Ö1ºÅÍú×ùÖĞĞÄ",point:"116.465133|39.920708",isOpen:0,icon:{w:21,h:21,l:0,t:0,x:6,lb:5}}
-  ];
-  //´´½¨marker
-  function addMarker(){
-    for(var i=0;i<markerArr.length;i++){
-      var json = markerArr[i];
-      var p0 = json.point.split("|")[0];
-      var p1 = json.point.split("|")[1];
-      var point = new BMap.Point(p0,p1);
-      var iconImg = createIcon(json.icon);
-      var marker = new BMap.Marker(point,{icon:iconImg});
-      var iw = createInfoWindow(i);
-      var label = new BMap.Label(json.title,{"offset":new BMap.Size(json.icon.lb-json.icon.x+10,-20)});
+  function addMapOverlay(){
+    var markers = [
+      {content:"æœé˜³åŒºæ™¯åå—è¡—1å·æ—ºåº§ä¸­å¿ƒ",title:"åœ°å€",imageOffset: {width:0,height:3},position:{lat:39.920667,lng:116.464697}}
+    ];
+    for(var index = 0; index < markers.length; index++ ){
+      var point = new BMap.Point(markers[index].position.lng,markers[index].position.lat);
+      var marker = new BMap.Marker(point,{icon:new BMap.Icon("http://api.map.baidu.com/lbsapi/createmap/images/icon.png",new BMap.Size(20,25),{
+          imageOffset: new BMap.Size(markers[index].imageOffset.width,markers[index].imageOffset.height)
+        })});
+      var label = new BMap.Label(markers[index].title,{offset: new BMap.Size(25,5)});
+      var opts = {
+        width: 200,
+        title: markers[index].title,
+        enableMessage: false
+      };
+      var infoWindow = new BMap.InfoWindow(markers[index].content,opts);
       marker.setLabel(label);
+      addClickHandler(marker,infoWindow);
       map.addOverlay(marker);
-      label.setStyle({
-        borderColor:"#808080",
-        color:"#333",
-        cursor:"pointer"
-      });
-
-      (function(){
-        var index = i;
-        var _iw = createInfoWindow(i);
-        var _marker = marker;
-        _marker.addEventListener("click",function(){
-          this.openInfoWindow(_iw);
-        });
-        _iw.addEventListener("open",function(){
-          _marker.getLabel().hide();
-        })
-        _iw.addEventListener("close",function(){
-          _marker.getLabel().show();
-        })
-        label.addEventListener("click",function(){
-          _marker.openInfoWindow(_iw);
-        })
-        if(!!json.isOpen){
-          label.hide();
-          _marker.openInfoWindow(_iw);
-        }
-      })()
-    }
+    };
   }
-  //´´½¨InfoWindow
-  function createInfoWindow(i){
-    var json = markerArr[i];
-    var iw = new BMap.InfoWindow("<b class='iw_poi_title' title='" + json.title + "'>" + json.title + "</b><div class='iw_poi_content'>"+json.content+"</div>");
-    return iw;
+  //å‘åœ°å›¾æ·»åŠ æ§ä»¶
+  function addMapControl(){
+    var scaleControl = new BMap.ScaleControl({anchor:BMAP_ANCHOR_BOTTOM_LEFT});
+    scaleControl.setUnit(BMAP_UNIT_IMPERIAL);
+    map.addControl(scaleControl);
+    var navControl = new BMap.NavigationControl({anchor:BMAP_ANCHOR_TOP_LEFT,type:BMAP_NAVIGATION_CONTROL_LARGE});
+    map.addControl(navControl);
+    var overviewControl = new BMap.OverviewMapControl({anchor:BMAP_ANCHOR_BOTTOM_RIGHT,isOpen:true});
+    map.addControl(overviewControl);
   }
-  //´´½¨Ò»¸öIcon
-  function createIcon(json){
-    var icon = new BMap.Icon("http://app.baidu.com/map/images/us_mk_icon.png", new BMap.Size(json.w,json.h),{imageOffset: new BMap.Size(-json.l,-json.t),infoWindowOffset:new BMap.Size(json.lb+5,1),offset:new BMap.Size(json.x,json.h)})
-    return icon;
-  }
-
-  initMap();//´´½¨ºÍ³õÊ¼»¯µØÍ¼
+  var map;
+  initMap();
 </script>
 </html>

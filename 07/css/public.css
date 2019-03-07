@@ -489,8 +489,7 @@ input:-ms-input-placeholder {
 
   .img_auto {
     display: block;
-    max-width: 100%;
-    height: auto;
+    height: 100%;
   }
 
   .clearFloat:after {
@@ -1161,8 +1160,7 @@ input:-ms-input-placeholder {
 
   .img_auto {
     display: block;
-    max-width: 100%;
-    height: auto;
+    height: 100%;
   }
 
   .clearFloat:after {
