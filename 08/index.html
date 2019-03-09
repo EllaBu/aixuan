@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="./css/style.css">
+</head>
+<body>
+<div class="data-source">
+    <h3>数据源（SQL脚本）</h3>
+    <div class="data-area">
+        <textarea name="" id=""></textarea>
+    </div>
+    <div class="data-footer">
+        <button>分析</button>
+    </div>
+</div>
+<div class="data-analysis">
+    <h3>分析结果</h3>
+    <div class="result-area">
+        <p>
+            <span>其他设置：</span>
+            <input type="text">
+        </p>
+        <p>
+            <span>其他设置：</span>
+            <input type="text">
+        </p>
+        <table>
+            <thead>
+            <tr>
+                <th>SN</th>
+                <th>字段名</th>
+                <th>备注</th>
+                <th>前端显示名</th>
+                <th>是否必填</th>
+                <th>输入方式</th>
+                <th>渲染数据源</th>
+                <th>操作</th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr>
+                <td>1</td>
+                <td>risk_sex</td>
+                <td>性别</td>
+                <td>
+                    <input type="text">
+                </td>
+                <td>
+                    <input type="checkbox">
+                </td>
+                <td>
+                    <select name="" id="">
+                        <option value="">文本框</option>
+                    </select>
+                </td>
+                <td>
+                    <input type="text">
+                </td>
+                <td>
+                    <a href="javascript:;" class="move-up">向上</a>
+                    <a href="javascript:;" class="move-down">向下</a>
+                </td>
+            </tr>
+            <tr>
+                <td>2</td>
+                <td>risk_sex</td>
+                <td>性别</td>
+                <td>
+                    <input type="text">
+                </td>
+                <td>
+                    <input type="checkbox">
+                </td>
+                <td>
+                    <select name="" id="">
+                        <option value="">文本框</option>
+                    </select>
+                </td>
+                <td>
+                    <input type="text">
+                </td>
+                <td>
+                    <a href="javascript:;" class="move-up">向上</a>
+                    <a href="javascript:;" class="move-down">向下</a>
+                </td>
+            </tr>
+            <tr>
+                <td>3</td>
+                <td>risk_sex</td>
+                <td>性别</td>
+                <td>
+                    <input type="text">
+                </td>
+                <td>
+                    <input type="checkbox">
+                </td>
+                <td>
+                    <select name="" id="">
+                        <option value="">文本框</option>
+                    </select>
+                </td>
+                <td>
+                    <input type="text">
+                </td>
+                <td>
+                    <a href="javascript:;" class="move-up">向上</a>
+                    <a href="javascript:;" class="move-down">向下</a>
+                </td>
+            </tr>
+            <tr>
+                <td>4</td>
+                <td>risk_sex</td>
+                <td>性别</td>
+                <td>
+                    <input type="text">
+                </td>
+                <td>
+                    <input type="checkbox">
+                </td>
+                <td>
+                    <select name="" id="">
+                        <option value="">文本框</option>
+                    </select>
+                </td>
+                <td>
+                    <input type="text">
+                </td>
+                <td>
+                    <a href="javascript:;" class="move-up">向上</a>
+                    <a href="javascript:;" class="move-down">向下</a>
+                </td>
+            </tr>
+            </tbody>
+        </table>
+    </div>
+    <div class="data-footer">
+        <button>生成HTML</button>
+    </div>
+</div>
+<div class="data-result">
+    <h3>生成结果</h3>
+    <div class="data-area">
+        <textarea name="" id=""></textarea>
+    </div>
+</div>
+<script src="./js/jquery-3.3.1.min.js"></script>
+<script>
+    $('.result-area').on('click', '.move-up', function () {
+        moveUp($(this));
+    })
+    $('.result-area').on('click', '.move-down', function () {
+        moveDown($(this));
+    })
+    // 上移
+    function moveUp(obj) {
+        var current = $(obj).parents('tr');
+        var prev = current.prev();
+        if (current.index() > 0) {
+            current.insertBefore(prev);
+        }
+    }
+    // 下移
+    function moveDown(obj) {
+        var current = $(obj).parents('tr');
+        var next = current.next();
+        if (next) {
+            current.insertAfter(next);
+        }
+    }
+</script>
+</body>
+</html>
