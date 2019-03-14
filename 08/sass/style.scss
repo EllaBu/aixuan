@@ -66,7 +66,7 @@ textarea {
     margin-bottom: 10px;
     input {
       width: 300px;
-      height: 24px;
+      height: 30px;
     }
   }
   table {
@@ -80,6 +80,7 @@ textarea {
       background-color: #ddd;
     }
     td {
+      vertical-align: middle;
       a {
         margin: 0 2px;
         &:hover {
@@ -88,11 +89,14 @@ textarea {
       }
       input[type=text] {
         width: 250px;
-        height: 22px;
+        height: 30px;
       }
       select {
         width: 160px;
-        height: 22px;
+        height: 30px;
+      }
+      input[type=checkbox] {
+        opacity: 1;
       }
     }
   }
