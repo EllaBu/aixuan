@@ -75,7 +75,7 @@ textarea {
 }
 .result-area p input {
   width: 300px;
-  height: 24px;
+  height: 30px;
 }
 .result-area table {
   width: 100%;
@@ -88,6 +88,9 @@ textarea {
 .result-area table th {
   background-color: #ddd;
 }
+.result-area table td {
+  vertical-align: middle;
+}
 .result-area table td a {
   margin: 0 2px;
 }
@@ -96,11 +99,14 @@ textarea {
 }
 .result-area table td input[type=text] {
   width: 250px;
-  height: 22px;
+  height: 30px;
 }
 .result-area table td select {
   width: 160px;
-  height: 22px;
+  height: 30px;
+}
+.result-area table td input[type=checkbox] {
+  opacity: 1;
 }
 
 .data-footer {
