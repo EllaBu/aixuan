@@ -20,3 +20,9 @@
     或者：
     var winHeight = $(window).height(); //获取当前页面高度
     $("body").height(winHeight);
+
+4、input，select 在同一容器内，设置相同的百分比宽度，浏览器显示不一致
+    解决方案：
+    box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
