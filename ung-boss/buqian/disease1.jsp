@@ -68,7 +68,7 @@
                         	</div>
                         	<div class="row-fluid  mar-t-15">
 	                            <div class="span3">
-	                                <label>拆分项：</label> 
+	                                <label>拆分项：</label>
 									<input type="text" class="form-control" id="" placeholder="请输入拆分项"> 
 	                            </div>
                             </div>

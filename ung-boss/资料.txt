@@ -1,0 +1,6 @@
+http://192.168.50.63/fastEvaluation.jsp?channel_no=aixuan
+http://192.168.50.231/index.jsp?channel_no=aixuan
+
+
+http://sso-aikang.boss.aixbx.com/backstage/     BOSS登录
+http://sso.boss.aixbx.com/backstage/   核心系统

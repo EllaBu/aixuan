@@ -104,12 +104,12 @@
 </html>
 <script type="text/javascript" src="/js/My97DatePicker/WdatePicker.js"></script>
 <script type="text/javascript">
-    
-    
+
+
     XCOTemplate.pretreatment(['datalist']);  //// 模板预处理
 	var renderPage = true;
 	xdoRequest(0,10);
-	
+
 	function xdoRequest(start,pagesize) {
 		var xco = new XCO();
 		xco.setIntegerValue("start", start);
@@ -125,24 +125,24 @@
 		};
 		$.doXcoRequest(options);
 	}
-	
+
 	function doRequestCallBack(data){
 		//var xco=new XCO();
 		//xco.fromXML(data);
 		//var data = xco.getData();
-		
+
 		if(0 != data.getCode()){
 			// TODO 错误提示
 			return;
 		}
-		
+
 		data = data.getData();
 		total = data.getIntegerValue("count");
 		$("#total").text(total);
 		$("#size").text(10);
 		var dataList=data.get('list');
 		if(!dataList){
-			dataList=new Array();	
+			dataList=new Array();
 		}
 	    var html = '';
 	    var ext = {
@@ -172,18 +172,18 @@
 				}
 			}
 	    };
-	    
+
 	    for (var i = 0; i < dataList.length; i++) {
         	html += XCOTemplate.execute("datalist", dataList[i], ext);  // 填充模板, data为XCO对象
     	}
    		document.getElementById("datalist").innerHTML = html;  // 渲染页面
-   		
+
    		if (renderPage) {
 			renderPage = false;
 			pageUtil('pagination_1', parseInt(total), xdoRequest, pageSize);
-		}		  
+		}
 	}
-	
+
 	function deleteStd(opt){
 		xco.setIntegerValue("std_id", opt);
 		var options = {
@@ -192,9 +192,9 @@
 			success : doDeleteCallBack
 		};
 		$.doXcoRequest(options);
-	
+
 	}
-	
+
 	function doDeleteCallBack(data){
 		if(data.getCode()==0){
 			window.location.reload();
@@ -203,12 +203,12 @@
 			return;
 		}
 	}
-	  
+
     $("#search").click(function(){
 		renderPage = true;
 		xdoRequest(0,pageSize);
 	});
-    
+
 	function formatdate(time){
 		var date = new Date(time);
 	    var year =  date.getFullYear(),
@@ -217,13 +217,13 @@
 			        hour = date.getHours(),
 			        min = date.getMinutes(),
 			        sec = date.getSeconds();
-			        if(day<10) day='0'+day;	
+			        if(day<10) day='0'+day;
 			        if(month<10) month='0'+month;
 			        if(hour<10) hour= '0'+hour;
 			        if(min<10) min= '0'+min;
 			        if(sec<10) sec= '0'+sec;
 		var newTime = year + '-' +  month + '-' +day + ' ' +
 				                hour + ':' +min + ':' +sec;
-	    return newTime;         
+	    return newTime;
 	}
 </script>
