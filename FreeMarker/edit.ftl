@@ -121,6 +121,35 @@ String pageName = "医学标准项";
 </div>
 <script>
 
+    doGetInfo();
+    function doGetInfo() {
+        var xco = new XCO();
+        // xco.setLongValue("std_id",1);
+        var options = {
+            url: "",
+            // url: "/standard/selectStdDetail.xco",
+            data: xco,
+            success: function (data) {
+                if(data.getCode()==0) {
+                    var xco=data.getData();
+                    <#list list as item>
+                    $("#${item.code}").val(xco.get("${item.code}"));
+                    <#if (item.type=="radio")>
+                    $("input[name=${item.code}]").each(function () {
+                        if($(this).val()==xco.get("${item.code}")){
+                            $(this).prop("checked",true);
+                        }
+                    })
+                    </#if>
+                    </#list>
+                } else {
+                    axError("服务异常");
+                }
+            }
+        };
+        $.doXcoRequest(options);
+    }
+
     $("#save").click(function () {
         var xco = new XCO();
         <#list list as item>
@@ -162,9 +191,6 @@ String pageName = "医学标准项";
             return;
         }
         </#if>
-
-
-
         </#if>
 
         xco.set${item.dataType}Value("${item.code}", ${item.code});
