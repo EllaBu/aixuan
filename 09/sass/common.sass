@@ -6,15 +6,19 @@
   -webkit-box-sizing: border-box
   -moz-box-sizing: border-box
 body
-  color: #888
+  color: #666
   background-color: #f1f2f7
 ul, li
   list-style: none
 a
   text-decoration: none
-  color: #888
+  color: #666
 a:hover
   text-decoration: none
+input[type="text"]
+  height: 30px
+  border: 1px solid #eee
+  padding-left: 3px
 
 .treeview
   .list-group-item
@@ -33,6 +37,7 @@ a:hover
 .header
   background-color: #fff
   border: none
+  margin-bottom: 15px
   .logo
     img
       height: 45px
@@ -43,20 +48,35 @@ a:hover
   padding: 0 15px
   .side-bar
     position: absolute
-    top: 70px
+    top: 65px
     left: 15px
     width: 215px
-    .panel
+    .side-panel
       background-color: #fff
-      border: 1px solid #ddd
-      .panel-heading
-        border-color: #eff2f7
+      //border: 1px solid #ddd
+      .side-header
+        line-height: 40px
+        border-bottom: 1px solid #e6e6e6
         font-size: 16px
         font-weight: 300
+        padding: 0 15px
   .main-part
-    margin-left: 235px
+    margin-left: 215px
     section
       background-color: #fff
+      .table-header
+        padding: 10px 15px
+        b
+          line-height: 30px
+          font-size: 16px
+          font-weight: bold
+      .search-box
+        background-color: #f3f3f3
+        //border: 1px solid #ddd
+        padding: 15px 25px
+        margin-bottom: 10px
+        .search-item
+          padding: 5px
       table
         th
           text-align: center
@@ -69,6 +89,18 @@ a:hover
           &.delete
             background: url("../img/delete.png") no-repeat center
             background-size: 16px
+
+.breadcrumb
+  background-color: #fff
+  margin-bottom: 0
+  border-bottom: 1px solid #e6e6e6
+  line-height: 25px
+  //height: 40px
+  &>li+li:before
+    content: "> "
+    color: #999
+  span
+    font-size: 12px
 
 .modal
   label

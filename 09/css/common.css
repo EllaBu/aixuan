@@ -7,7 +7,7 @@
 }
 
 body {
-  color: #888;
+  color: #666;
   background-color: #f1f2f7;
 }
 
@@ -17,11 +17,17 @@ ul, li {
 
 a {
   text-decoration: none;
-  color: #888;
+  color: #666;
 }
 
 a:hover {
   text-decoration: none;
+}
+
+input[type="text"] {
+  height: 30px;
+  border: 1px solid #eee;
+  padding-left: 3px;
 }
 
 .treeview .list-group-item {
@@ -43,6 +49,7 @@ a:hover {
 .header {
   background-color: #fff;
   border: none;
+  margin-bottom: 15px;
 }
 .header .logo img {
   height: 45px;
@@ -55,24 +62,41 @@ a:hover {
 }
 .content .side-bar {
   position: absolute;
-  top: 70px;
+  top: 65px;
   left: 15px;
   width: 215px;
 }
-.content .side-bar .panel {
+.content .side-bar .side-panel {
   background-color: #fff;
-  border: 1px solid #ddd;
 }
-.content .side-bar .panel .panel-heading {
-  border-color: #eff2f7;
+.content .side-bar .side-panel .side-header {
+  line-height: 40px;
+  border-bottom: 1px solid #e6e6e6;
   font-size: 16px;
   font-weight: 300;
+  padding: 0 15px;
 }
 .content .main-part {
-  margin-left: 235px;
+  margin-left: 215px;
 }
 .content .main-part section {
   background-color: #fff;
+}
+.content .main-part section .table-header {
+  padding: 10px 15px;
+}
+.content .main-part section .table-header b {
+  line-height: 30px;
+  font-size: 16px;
+  font-weight: bold;
+}
+.content .main-part section .search-box {
+  background-color: #f3f3f3;
+  padding: 15px 25px;
+  margin-bottom: 10px;
+}
+.content .main-part section .search-box .search-item {
+  padding: 5px;
 }
 .content .main-part section table th {
   text-align: center;
@@ -88,6 +112,20 @@ a:hover {
 .content .main-part section table a.delete {
   background: url("../img/delete.png") no-repeat center;
   background-size: 16px;
+}
+
+.breadcrumb {
+  background-color: #fff;
+  margin-bottom: 0;
+  border-bottom: 1px solid #e6e6e6;
+  line-height: 25px;
+}
+.breadcrumb > li + li:before {
+  content: "> ";
+  color: #999;
+}
+.breadcrumb span {
+  font-size: 12px;
 }
 
 .modal label {

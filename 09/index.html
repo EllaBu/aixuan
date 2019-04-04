@@ -60,10 +60,9 @@
 <div class="content">
   <div class="side-bar">
 
-    <section class="panel">
-      <div class="panel-heading">
+    <section class="side-panel">
+      <div class="side-header">
         环境列表
-        <span class="pull-right" data-tooltip="tooltip" data-placement="bottom" data-original-title="哈哈"></span>
       </div>
       <div id="treeView"></div>
       <!--<ul class="tree-view">-->
@@ -84,20 +83,44 @@
     </section>
 
   </div>
-  <div class="main-part">
+  <div class="main-part container-fluid">
+    <ol class="breadcrumb">
+      <li><a href="#"><span class="glyphicon glyphicon-home"></span> 首页</a></li>
+      <li><a href="#">导航</a></li>
+      <li class="active">列表页</li>
+    </ol>
     <section>
-      <header class="panel-heading">
+      <header class="table-header">
         <div class="row">
           <div class="col-md-6 col-sm-6">
-            <b>标题</b>
+            <b>表格标题</b>
           </div>
           <div class="col-md-6 col-sm-6 text-right">
             <button class="btn btn-default btn-sm">发布</button>
             <button class="btn btn-success btn-sm">添加</button>
           </div>
-
         </div>
       </header>
+      <div class="search-box">
+        <div class="row">
+          <div class="search-item col-lg-3 col-md-4 col-sm-6">
+            <label for="">产品编号</label>
+            <input type="text">
+          </div>
+          <div class="search-item col-lg-3 col-md-4 col-sm-6">
+            <label for="">产品编号</label>
+            <input type="text">
+          </div>
+          <div class="search-item col-lg-3 col-md-4 col-sm-6">
+            <label for="">产品编号</label>
+            <input type="text">
+          </div>
+          <div class="search-item col-lg-3 col-md-4 col-sm-6">
+            <label for="">产品编号</label>
+            <input type="text">
+          </div>
+        </div>
+      </div>
       <table class="table table-bordered table-striped table-hover">
         <thead>
         <tr>
@@ -197,7 +220,7 @@
     <div class="modal-content">
       <div class="modal-header">
         <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-        <h4 class="modal-title">编辑项</h4>
+        <h4 class="modal-title">删除提示</h4>
       </div>
       <div class="modal-body">
         <p>您确定要删除？？？</p>
@@ -223,7 +246,10 @@
           {
             text: 'Child 1',
             href: '#child1',
-            tags: ['2']
+            tags: ['2'],
+            state: {
+              selected: true
+            }
           },
           {
             text: 'Child 2',
@@ -240,11 +266,12 @@
 
     $('#treeView').treeview({
       data: viewData,
-      levels: 1,
+      // levels: 1,
       expandIcon: 'glyphicon glyphicon-th',
       collapseIcon: 'glyphicon glyphicon-list',
       showTags: true,
-      enableLinks: true
+      enableLinks: true,
+      showBorder: false
     });
 
 
