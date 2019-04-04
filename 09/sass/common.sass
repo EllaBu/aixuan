@@ -1,0 +1,93 @@
+//reset
+*
+  margin: 0
+  padding: 0
+  box-sizing: border-box
+  -webkit-box-sizing: border-box
+  -moz-box-sizing: border-box
+body
+  color: #888
+  background-color: #f1f2f7
+ul, li
+  list-style: none
+a
+  text-decoration: none
+  color: #888
+a:hover
+  text-decoration: none
+
+.treeview
+  .list-group-item
+    cursor: pointer
+  span.indent
+    margin-left: 10px
+    margin-right: 10px
+  span.icon
+    width: 12px
+    margin-right: 5px
+  .node-disabled
+    color: silver
+    cursor: not-allowed
+
+//header
+.header
+  background-color: #fff
+  border: none
+  .logo
+    img
+      height: 45px
+      margin-top: -13px
+
+.content
+  overflow: hidden
+  padding: 0 15px
+  .side-bar
+    position: absolute
+    top: 70px
+    left: 15px
+    width: 215px
+    .panel
+      background-color: #fff
+      border: 1px solid #ddd
+      .panel-heading
+        border-color: #eff2f7
+        font-size: 16px
+        font-weight: 300
+  .main-part
+    margin-left: 235px
+    section
+      background-color: #fff
+      table
+        th
+          text-align: center
+        a
+          margin: 0 8px
+          padding: 8px
+          &.edit
+            background: url("../img/edit.png") no-repeat center
+            background-size: 16px
+          &.delete
+            background: url("../img/delete.png") no-repeat center
+            background-size: 16px
+
+.modal
+  label
+    text-align: right
+  .form-group
+    overflow: hidden
+
+.tree-view
+  line-height: 40px
+  text-indent: 15px
+  a
+    display: block
+    border-bottom: 1px solid #eee
+  .second-tree
+    text-indent: 30px
+  .third-tree
+    text-indent: 45px
+
+
+
+
+
