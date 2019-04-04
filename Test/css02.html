@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport"
+        content="width=device-width,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no,viewport-fit=cover"/>
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black">
+  <meta name="format-detection" content="telephone=no">
+  <title>Title</title>
+  <style>
+    .wrapper {
+      width: 340px;
+      height: 80px;
+      overflow: hidden;
+    }
+
+    .wrapper ul {
+      height: 96px;
+      width: 100%;
+      white-space: nowrap;
+      overflow-x: scroll;
+      padding: 0;
+      margin: 0;
+    }
+
+    .wrapper li {
+      display: inline-block;
+      width: 80px;
+      height: 80px;
+      background-color: #ddd;
+      line-height: 80px;
+      text-align: center;
+      font-size: 20px;
+      margin-right: 10px;
+    }
+
+  </style>
+</head>
+<body>
+<h3>移动端的横向滚动条</h3>
+<!--移动端的界面，寸土寸金。有时为了控制屏幕的滚动长度，会将一些模块横向排列。但是，横向排列会产生一些布局问题。
+比如，移动端的滚动条样式，依赖与手机浏览器，各不相同。一种解决方案是：把滚动轴隐藏掉，但不能 overflow-x:hidden;，不然就滚不动了。
+然后算好每一个横向的块的宽度，让最右侧的块露出一部分，这样用户就知道右侧的屏幕之外还有内容，可以横向滑动。
+又如果横向滚动的宽度是未知的，因为可能会随着业务的需要，改变横向模块的个数，那么横向排布就没法用 float 了。
+因为用了浮动，就得知道整个横向滚动的宽度，整个的宽度要比浮动块累加起来的宽度更宽，才能保证浮动不换行。-->
+<div class="wrapper">
+  <ul>
+    <li>1</li>
+    <li>2</li>
+    <li>3</li>
+    <li>4</li>
+    <li>5</li>
+    <li>6</li>
+  </ul>
+</div>
+<!--它的思路是：ul 设置 white-space:nowrap;，li 设置 display:inline-block;。最外层的 div 利用高度差，把横向滚动条藏起来。-->
+
+</body>
+</html>

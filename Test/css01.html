@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport"
+        content="width=device-width,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no,viewport-fit=cover"/>
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black">
+  <meta name="format-detection" content="telephone=no">
+  <title>Title</title>
+  <style>
+    .img-ratio {
+      width: 100%;
+      position: relative;
+      padding-top: 75%;
+    }
+
+    .img-ratio > img {
+      width: 100%;
+      height: 100%;
+      position: absolute;
+      top: 0;
+      left: 0;
+    }
+  </style>
+</head>
+<body>
+<!--在商城中展示商品图片时，如果图片较多，一种比较好的体验是：会先有一个占位图，目的是为了让页面无抖动，也就是所谓的图片懒加载效果。
+但是，当遇到适配时就比较头痛，特别是手机的横竖屏切换。如果是通过 JavaScript 计算的话，就可能会出现抖动现象。-->
+<div class="img-ratio">
+  <img src="http://via.placeholder.com/640x384">
+</div>
+<!--不同宽高，但比例相同的 2 张图，都能完美地居中显示 4:3
+原理:
+1.根据容器的宽度，按照宽高比例，自动计算出容器的实际大小，并且让容器内的如 img 等子元素自适应宽高。
+2.图片父容器宽度 100%，父容器的高度百分比为：100 * 3 / 4 = 75%。
+3.图片 absolute 并且完全铺满父容器。-->
+
+
+</body>
+</html>

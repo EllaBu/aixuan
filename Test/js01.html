@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport"
+        content="width=device-width,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no,viewport-fit=cover"/>
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black">
+  <meta name="format-detection" content="telephone=no">
+  <title>是否到达页面底部或者顶部</title>
+  <link rel="stylesheet" href="../common/reset.css">
+  <style>
+    .content {
+      background: #74c8ec;
+    }
+    .content p {
+      height: 100px;
+      margin-bottom: 40px;
+      background: #00be67;
+    }
+  </style>
+</head>
+<body>
+<div class="content">
+  <p>1</p>
+  <p>2</p>
+  <p>3</p>
+  <p>4</p>
+  <p>5</p>
+  <p>6</p>
+</div>
+<script src="../common/jquery-3.3.1.min.js"></script>
+<script>
+  <!--判断是否到达了顶部-->
+  const topVisible = () => window.scrollY == 0
+
+
+
+  // 该源码来自于 https://30secondsofcode.org
+  const bottomVisible = () =>
+    document.documentElement.clientHeight + window.scrollY >=
+    (document.documentElement.scrollHeight || document.documentElement.clientHeight);
+  // 窗口可见区域的高度 和 窗口已经滚动的距离高度 得到当前页面所处的位置：
+  // document.documentElement.clientHeight + window.scrollY
+  // 再与 整个页面的高度 作比较来判断是否已经到达了页面底部，如果 整个页面的高度 不存在则使用 窗口可见区域的高度 做代替：
+  // ... >= (document.documentElement.scrollHeight || document.documentElement.clientHeight)
+  // 小技巧：利用 || 技巧来初始化数据
+
+  // 使用场景
+  // 做一个无限加载数据项的分页功能，当页面到达底部时进行数据加载。
+
+
+  // 监听页面滚动
+  document.addEventListener('scroll', () => {
+    // 如果到达页面底部
+    if(bottomVisible()) {
+      // 1.发送网络请求获取数据
+      // 2.插入数据到页面
+      $('.content').append('<p>1</p>\n' +
+        '  <p>2</p>\n' +
+        '  <p>3</p>\n' +
+        '  <p>4</p>\n' +
+        '  <p>5</p>\n' +
+        '  <p>6</p>')
+      alert(123)
+    }
+    if(topVisible()) {
+      alert('到达顶部了，没有数据了！！！')
+    }
+  });
+
+
+</script>
+</body>
+</html>

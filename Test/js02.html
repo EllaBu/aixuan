@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport"
+        content="width=device-width,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no,viewport-fit=cover"/>
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black">
+  <meta name="format-detection" content="telephone=no">
+  <title>函数参数操作</title>
+</head>
+<body>
+<script>
+  // 1.常用
+  function area(width, height) {
+    return width * height;
+  }
+
+  //  如果参数比较多，类似这样
+  function infomation(name, sex, height, birthday, color, likes, follow, age) {
+    // ...
+  }
+
+
+  // 方法1：
+  // 传递对象而不是参数列表
+  function infomation1(user) {
+    // user.name
+  }
+
+  infomation1({name: 'xiaoer', age: 18})
+
+  //  方法2：使用解构赋值
+  function infomation2({name, age, height}) {
+
+  }
+
+
+  //  方法3：使用默认值
+  function infomation3({name = 'anonymous', age = 0, height = 160}) {
+    // ...
+  }
+
+  // 方法4：参数变为可选参数
+  function infomation4({name = 'anonymous', age = 0, height = 160} = {}) {
+    // ...
+  }
+
+  //  方法5：重命名
+  function infomation5({name: username = 'anonymous', age = 0, height = 160} = {}) {
+    // ...
+  }
+
+
+</script>
+</body>
+</html>

@@ -1,0 +1,40 @@
+//1、margin & padding
+
+$footer-height: 30px;
+html, body {
+  height: 100%;
+}
+
+#content {
+  min-height: 100%;
+  margin-bottom: -$footer-height;
+  padding-bottom: $footer-height;
+}
+
+#footer {
+  line-height: $footer-height;
+  text-align: center;
+}
+
+//2、flex 布局
+/*$footer-height: 30px;
+
+html {
+  height: 100%;
+}
+
+body {
+  min-height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+#content {
+  flex: 1;
+}
+
+#footer {
+  line-height: $footer-height;
+  text-align: center;
+}*/
+
