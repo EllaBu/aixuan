@@ -1,3 +1,5 @@
+@charset "UTF-8"
+$common-color: #2679b5
 //reset
 *
   margin: 0
@@ -6,6 +8,7 @@
   -webkit-box-sizing: border-box
   -moz-box-sizing: border-box
 body
+  font-size: 14px
   color: #666
   background-color: #f1f2f7
 ul, li
@@ -15,111 +18,302 @@ a
   color: #666
 a:hover
   text-decoration: none
-input[type="text"]
+  color: $common-color
+input[type="text"],
+select,
+textarea
   height: 30px
-  border: 1px solid #eee
+  border: 1px solid #ddd
   padding-left: 3px
+textarea
+  resize: none
+.text-center
+  text-align: center
 
-.treeview
-  .list-group-item
-    cursor: pointer
-  span.indent
-    margin-left: 10px
-    margin-right: 10px
-  span.icon
-    width: 12px
-    margin-right: 5px
-  .node-disabled
-    color: silver
-    cursor: not-allowed
-
-//header
-.header
+.btn
+  display: inline-block
+  padding: 6px 12px
+  margin-bottom: 0
+  font-size: 14px
+  font-weight: 400
+  line-height: 1.42857143
+  text-align: center
+  white-space: nowrap
+  vertical-align: middle
+  -ms-touch-action: manipulation
+  touch-action: manipulation
+  cursor: pointer
+  -webkit-user-select: none
+  -moz-user-select: none
+  -ms-user-select: none
+  user-select: none
+  border: 1px solid #ccc
+  border-radius: 4px
+  color: #333
   background-color: #fff
-  border: none
-  margin-bottom: 15px
+  &:hover
+    color: #333
+    background-color: #e6e6e6
+    border-color: #adadad
+.btn-add
+  color: #fff
+  background-color: #5cb85c
+  border-color: #4cae4c
+  &:hover
+    color: #fff
+    background-color: #398439
+    border-color: #255625
+.btn-blue
+  color: #fff
+  background-color: #337ab7
+  border-color: #2e6da4
+  &:hover
+    color: #fff
+    background-color: #286090
+    border-color: #204d74
+
+.btn-lg
+  padding: 8px 18px
+
+
+
+
+
+.header
+  height: 50px
+  background-color: #fff
+  padding: 0 10px
   .logo
+    float: left
     img
       height: 45px
-      margin-top: -13px
+      margin-top: 2px
+  .tool
+    float: right
+    .tool-item
+      &>li
+        position: relative
+        float: left
+        .drop-title
+          display: block
+          line-height: 20px
+          padding: 15px 20px
+          span
+            font-size: 12px
+        .drop-menu
+          position: absolute
+          top: 50px
+          right: 0
+          width: 160px
+          background-color: #fff
+          border: 1px solid #ddd
+          box-shadow: 0 2px 8px #ddd
+          display: none
+          li
+            line-height: 40px
+            padding-left: 14px
+        &.open
+          .drop-title
+            background-color: #eee
+
+
+.side
+  position: absolute
+  top: 65px
+  left: 15px
+  width: 215px
+  border: 1px solid #ddd
+  background-color: #fff
+  .side-list
+    a
+      display: block
+      font-size: 16px
+      line-height: 40px
+      padding-left: 15px
+      border-bottom: 1px solid #eee
+      span
+        float: right
+        font-size: 12px
+        margin: 14px
+    ul
+      display: none
+      a
+        padding-left: 30px
+        font-size: 14px
+      li.active
+        a
+          color: $common-color
+    &.open
+      >a
+        background-color: $common-color
+        color: #fff
+
 
 .content
-  overflow: hidden
-  padding: 0 15px
-  .side-bar
-    position: absolute
-    top: 65px
-    left: 15px
-    width: 215px
-    .side-panel
-      background-color: #fff
-      //border: 1px solid #ddd
-      .side-header
-        line-height: 40px
-        border-bottom: 1px solid #e6e6e6
-        font-size: 16px
-        font-weight: 300
-        padding: 0 15px
-  .main-part
-    margin-left: 215px
-    section
-      background-color: #fff
-      .table-header
-        padding: 10px 15px
-        b
-          line-height: 30px
-          font-size: 16px
-          font-weight: bold
-      .search-box
-        background-color: #f3f3f3
-        //border: 1px solid #ddd
-        padding: 15px 25px
-        margin-bottom: 10px
-        .search-item
-          padding: 5px
-      table
-        th
-          text-align: center
-        a
-          margin: 0 8px
-          padding: 8px
-          &.edit
-            background: url("../img/edit.png") no-repeat center
-            background-size: 16px
-          &.delete
-            background: url("../img/delete.png") no-repeat center
-            background-size: 16px
-
-.breadcrumb
+  margin: 15px 15px 0 245px
+  padding: 0
+  border: 1px solid #ddd
   background-color: #fff
-  margin-bottom: 0
-  border-bottom: 1px solid #e6e6e6
-  line-height: 25px
-  //height: 40px
-  &>li+li:before
-    content: "> "
-    color: #999
+.breadcrumb
+  height: 40px
+  line-height: 40px
+  padding: 0 10px
+  border-bottom: 1px solid #ddd
   span
-    font-size: 12px
+    font-size: 14px
+  >li
+    float: left
+    &+li:before
+      padding: 0 5px
+      color: #aaa
+      content: ">"
+
+.common-header
+  padding: 5px 10px
+  overflow: hidden
+  .common-title
+    float: left
+    font-size: 18px
+    font-weight: bold
+    line-height: 34px
+    span,
+    b
+      vertical-align: middle
+  .common-tool
+    float: right
+
+.search-box
+  background-color: #f3f3f3
+  //border: 1px solid #ddd
+  padding: 15px 25px 5px
+  margin-bottom: 10px
+  .search-row
+    overflow: hidden
+    margin-bottom: 10px
+  .search-item
+    float: left
+    width: 25%
+  input,select
+    width: 70%
+
+.search-result
+  width: 100%
+  border-collapse: collapse
+  th,
+  td
+    border: 1px solid #ddd
+    padding: 8px
+  tr:hover
+    background-color: #f5f5f5
+  >tbody
+    >tr:nth-of-type(odd)
+      background-color: #f9f9f9
+  a
+    display: inline-block
+    width: 20px
+    height: 20px
+    margin: 0 4px
+    &.edit
+      background: url("../img/edit.png") no-repeat center
+      background-size: 16px
+    &.delete
+      background: url("../img/delete.png") no-repeat center
+      background-size: 16px
+
+
+.pagination
+  padding: 20px 10px
+  line-height: 30px
+  ul
+    float: right
+    li
+      float: left
+      height: 30px
+      line-height: 30px
+      background: #dedede
+      cursor: pointer
+      border-radius: 4px
+      display: inline-block
+      vertical-align: top
+      text-align: center
+      margin: 0 3px
+      padding: 0 10px
+      &:hover
+        color: $common-color
+      &.active
+        background-color: $common-color
+        color: #fff
+
+
+.form-body
+  padding: 30px 10px 10px
+  background-color: #f3f3f3
+  .form-group
+    padding: 10px
+    line-height: 32px
+  label
+    display: inline-block
+    width: 100px
+    text-align: right
+    vertical-align: middle
+    span
+      color: red
+      margin-right: 2px
+      font-weight: bold
+  input,textarea,select
+    width: 35%
+    vertical-align: middle
+  textarea
+    width: 80%
+    height: 120px
+    padding: 3px
+  input[type="checkbox"],
+  input[type="radio"]
+    width: 14px
+    height: 14px
+    vertical-align: middle
+    margin-left: 16px
+    &:nth-of-type(1)
+      margin-left: 0
+  button
+    margin-right: 20px
 
 .modal
-  label
+  position: absolute
+  top: 0
+  left: 0
+  width: 100%
+  height: 100%
+  background-color: rgba(0, 0, 0, .4)
+  display: none
+  .modal-box
+    position: relative
+    top: 50%
+    left: 50%
+    background-color: #fff
+    -webkit-box-shadow: 0 5px 15px rgba(0, 0, 0, .5)
+    box-shadow: 0 5px 15px rgba(0, 0, 0, .5)
+    width: 600px
+    border-radius: 5px
+    transform: translate(-50%,-50%)
+  .modal-header
+    padding: 20px 10px
+    line-height: 20px
+    font-size: 16px
+    h4
+      font-weight: bold
+    span
+      float: right
+      margin-top: -20px
+      cursor: pointer
+  .modal-body
+    padding: 20px
+    text-align: center
+    font-size: 20px
+    border-top: 1px solid #ddd
+    border-bottom: 1px solid #ddd
+  .modal-footer
+    padding: 15px 20px
     text-align: right
-  .form-group
-    overflow: hidden
-
-.tree-view
-  line-height: 40px
-  text-indent: 15px
-  a
-    display: block
-    border-bottom: 1px solid #eee
-  .second-tree
-    text-indent: 30px
-  .third-tree
-    text-indent: 45px
-
-
-
-
-
+    button
+      margin-left: 10px
