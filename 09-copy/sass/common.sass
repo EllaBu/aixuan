@@ -1,0 +1,175 @@
+@charset "UTF-8"
+//reset
+*
+  margin: 0
+  padding: 0
+  box-sizing: border-box
+  -webkit-box-sizing: border-box
+  -moz-box-sizing: border-box
+body
+  color: #666
+  background-color: #f1f2f7
+ul, li
+  list-style: none
+a
+  text-decoration: none
+  color: #666
+a:hover
+  text-decoration: none
+input[type="text"],
+select,
+textarea
+  height: 30px
+  border: 1px solid #ddd
+  padding-left: 3px
+textarea
+  resize: none
+
+.treeview
+  .list-group-item
+    cursor: pointer
+  span.indent
+    margin-left: 10px
+    margin-right: 10px
+  span.icon
+    width: 12px
+    margin-right: 5px
+  .node-disabled
+    color: silver
+    cursor: not-allowed
+
+//header导航部分
+.header
+  background-color: #fff
+  border: none
+  margin-bottom: 15px
+  .logo
+    img
+      height: 45px
+      margin-top: -13px
+
+//左侧菜单部分
+.side-bar
+  position: absolute
+  top: 65px
+  left: 15px
+  width: 215px
+  border: 1px solid #ddd
+  .side-panel
+    background-color: #fff
+    //border: 1px solid #ddd
+    .side-header
+      line-height: 40px
+      border-bottom: 1px solid #e6e6e6
+      font-size: 16px
+      font-weight: 300
+      padding: 0 15px
+
+//右侧内容部分
+.main-part
+  margin-left: 245px
+  margin-right: 15px
+  padding: 0
+  border: 1px solid #ddd
+  section
+    background-color: #fff
+    padding-bottom: 20px
+    .table-header
+      padding: 10px 15px
+      b
+        line-height: 30px
+        font-size: 16px
+        font-weight: bold
+    .search-box
+      background-color: #f3f3f3
+      //border: 1px solid #ddd
+      padding: 15px 25px 5px
+      margin-bottom: 10px
+      .row
+        margin: 0 0 15px 0
+      .search-item
+        float: left
+        width: 25%
+      input,select
+        width: 70%
+    table
+      th
+        text-align: center
+      a
+        margin: 0 8px
+        padding: 8px
+        &.edit
+          background: url("../img/edit.png") no-repeat center
+          background-size: 16px
+        &.delete
+          background: url("../img/delete.png") no-repeat center
+          background-size: 16px
+
+  section.form-part
+    padding: 0 15px 20px
+    .form-header
+      font-size: 16px
+      font-weight: bold
+      padding: 15px 0
+    .form-body
+      padding: 30px 10px 10px
+      //border: 1px solid #ddd
+      background-color: #f1f1f1
+      .form-group
+        padding: 5px
+      label
+        display: inline-block
+        width: 100px
+        text-align: right
+      .form-control
+        display: inline-block
+        width: 35%
+        vertical-align: middle
+      textarea.form-control
+        border: 1px solid #ddd
+        padding-left: 3px
+        width: 80%
+        height: 150px
+      select
+        border: 1px solid #ddd
+      input[type="checkbox"],
+      input[type="radio"]
+        width: 14px
+        height: 14px
+        vertical-align: top
+        margin-left: 8px
+        &:nth-of-type(1)
+          margin-left: 0
+
+//路径导航部分
+.breadcrumb
+  background-color: #fff
+  margin-bottom: 0
+  border-bottom: 1px solid #e6e6e6
+  line-height: 25px
+  //height: 40px
+  &>li+li:before
+    content: "> "
+    color: #999
+  span
+    font-size: 12px
+
+
+
+
+
+.tree-view
+  line-height: 40px
+  text-indent: 15px
+  a
+    display: block
+    border-bottom: 1px solid #eee
+  .second-tree
+    text-indent: 30px
+  .third-tree
+    text-indent: 45px
+
+
+
+
+

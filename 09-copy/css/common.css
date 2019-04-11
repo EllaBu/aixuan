@@ -1,0 +1,204 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+}
+
+body {
+  color: #666;
+  background-color: #f1f2f7;
+}
+
+ul, li {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+  color: #666;
+}
+
+a:hover {
+  text-decoration: none;
+}
+
+input[type="text"],
+select,
+textarea {
+  height: 30px;
+  border: 1px solid #ddd;
+  padding-left: 3px;
+}
+
+textarea {
+  resize: none;
+}
+
+.treeview .list-group-item {
+  cursor: pointer;
+}
+.treeview span.indent {
+  margin-left: 10px;
+  margin-right: 10px;
+}
+.treeview span.icon {
+  width: 12px;
+  margin-right: 5px;
+}
+.treeview .node-disabled {
+  color: silver;
+  cursor: not-allowed;
+}
+
+.header {
+  background-color: #fff;
+  border: none;
+  margin-bottom: 15px;
+}
+.header .logo img {
+  height: 45px;
+  margin-top: -13px;
+}
+
+.side-bar {
+  position: absolute;
+  top: 65px;
+  left: 15px;
+  width: 215px;
+  border: 1px solid #ddd;
+}
+.side-bar .side-panel {
+  background-color: #fff;
+}
+.side-bar .side-panel .side-header {
+  line-height: 40px;
+  border-bottom: 1px solid #e6e6e6;
+  font-size: 16px;
+  font-weight: 300;
+  padding: 0 15px;
+}
+
+.main-part {
+  margin-left: 245px;
+  margin-right: 15px;
+  padding: 0;
+  border: 1px solid #ddd;
+}
+.main-part section {
+  background-color: #fff;
+  padding-bottom: 20px;
+}
+.main-part section .table-header {
+  padding: 10px 15px;
+}
+.main-part section .table-header b {
+  line-height: 30px;
+  font-size: 16px;
+  font-weight: bold;
+}
+.main-part section .search-box {
+  background-color: #f3f3f3;
+  padding: 15px 25px 5px;
+  margin-bottom: 10px;
+}
+.main-part section .search-box .row {
+  margin: 0 0 15px 0;
+}
+.main-part section .search-box .search-item {
+  float: left;
+  width: 25%;
+}
+.main-part section .search-box input, .main-part section .search-box select {
+  width: 70%;
+}
+.main-part section table th {
+  text-align: center;
+}
+.main-part section table a {
+  margin: 0 8px;
+  padding: 8px;
+}
+.main-part section table a.edit {
+  background: url("../img/edit.png") no-repeat center;
+  background-size: 16px;
+}
+.main-part section table a.delete {
+  background: url("../img/delete.png") no-repeat center;
+  background-size: 16px;
+}
+.main-part section.form-part {
+  padding: 0 15px 20px;
+}
+.main-part section.form-part .form-header {
+  font-size: 16px;
+  font-weight: bold;
+  padding: 15px 0;
+}
+.main-part section.form-part .form-body {
+  padding: 30px 10px 10px;
+  background-color: #f1f1f1;
+}
+.main-part section.form-part .form-body .form-group {
+  padding: 5px;
+}
+.main-part section.form-part .form-body label {
+  display: inline-block;
+  width: 100px;
+  text-align: right;
+}
+.main-part section.form-part .form-body .form-control {
+  display: inline-block;
+  width: 35%;
+  vertical-align: middle;
+}
+.main-part section.form-part .form-body textarea.form-control {
+  border: 1px solid #ddd;
+  padding-left: 3px;
+  width: 80%;
+  height: 150px;
+}
+.main-part section.form-part .form-body select {
+  border: 1px solid #ddd;
+}
+.main-part section.form-part .form-body input[type="checkbox"],
+.main-part section.form-part .form-body input[type="radio"] {
+  width: 14px;
+  height: 14px;
+  vertical-align: top;
+  margin-left: 8px;
+}
+.main-part section.form-part .form-body input[type="checkbox"]:nth-of-type(1),
+.main-part section.form-part .form-body input[type="radio"]:nth-of-type(1) {
+  margin-left: 0;
+}
+
+.breadcrumb {
+  background-color: #fff;
+  margin-bottom: 0;
+  border-bottom: 1px solid #e6e6e6;
+  line-height: 25px;
+}
+.breadcrumb > li + li:before {
+  content: "> ";
+  color: #999;
+}
+.breadcrumb span {
+  font-size: 12px;
+}
+
+.tree-view {
+  line-height: 40px;
+  text-indent: 15px;
+}
+.tree-view a {
+  display: block;
+  border-bottom: 1px solid #eee;
+}
+.tree-view .second-tree {
+  text-indent: 30px;
+}
+.tree-view .third-tree {
+  text-indent: 45px;
+}
