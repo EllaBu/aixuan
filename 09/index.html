@@ -90,7 +90,7 @@
         </div>
         <div class="search-item">
           <label for="">产品编号</label>
-          <input type="text">
+          <input type="text" class="Wdate" onclick="WdatePicker()">
         </div>
         <div class="search-item">
           <label for="">产品编号</label>
@@ -142,7 +142,10 @@
         <td>内容部分</td>
         <td>内容部分</td>
         <td>内容部分</td>
-        <td>内容部分</td>
+        <td class="text-center">
+          <a href="edit.html">编辑</a>
+          <a href="javascript:;">删除</a>
+        </td>
       </tr>
       <tr>
         <td>内容部分</td>
@@ -178,58 +181,44 @@
       </tr>
       </tbody>
     </table>
-    <div class="pagination">
-      <b>查询结果总条数：300条</b>
-      <ul>
-        <li><span>上一页</span></li>
-        <li class="active"><span>1</span></li>
-        <li><span>2</span></li>
-        <li><span>3</span></li>
-        <li><span>4</span></li>
-        <li><span>5</span></li>
-        <li><span>6</span></li>
-        <li><span>...</span></li>
-        <li><span>下一页</span></li>
-      </ul>
-    </div>
 
-    <!--<div class="pagination"></div>-->
+
+
+    <div class="pagination-box">
+      <b>查询结果总数：100条</b>
+      <div class="pagination"></div>
+    </div>
   </section>
 </div>
 
-<div class="modal">
-  <div class="modal-box">
-    <header class="modal-header">
-      <h4>删除提示</h4>
-      <span class="glyphicon glyphicon-remove"></span>
-    </header>
-    <section class="modal-body">
-      <p>您确定要删除此项？？？</p>
-    </section>
-    <footer class="modal-footer">
-      <button class="btn cancel">取消</button>
-      <button class="btn btn-blue">删除</button>
-    </footer>
-  </div>
-</div>
+<!--<div class="modal">-->
+  <!--<div class="modal-box">-->
+    <!--<header class="modal-header">-->
+      <!--<h4>删除提示</h4>-->
+      <!--<span class="glyphicon glyphicon-remove"></span>-->
+    <!--</header>-->
+    <!--<section class="modal-body">-->
+      <!--<p>您确定要删除此项？？？</p>-->
+    <!--</section>-->
+    <!--<footer class="modal-footer">-->
+      <!--<button class="btn cancel">取消</button>-->
+      <!--<button class="btn btn-blue">删除</button>-->
+    <!--</footer>-->
+  <!--</div>-->
+<!--</div>-->
 
 <script src="./js/jquery-3.3.1.min.js"></script>
-<script src="./js/underscore.js"></script>
-<script src="./js/pagination.js"></script>
+<script src="./js/messageBox.js"></script>
+<script src="./js/My97DatePicker/WdatePicker.js"></script>
+<script src="./js/jquery.pagination.js"></script>
 <script>
   $(function () {
-    // new pagination({
-    //   pagination: $('.pagination'),
-    //   maxPage: 7, //最大页码数,支持奇数，左右对称
-    //   startPage: 1,    //默认第一页
-    //   currentPage: 2,          //当前页码
-    //   totalItemCount: 10,    //项目总数,大于0，显示页码总数
-    //   totalPageCount: 20,        //总页数
-    //   callback:function(pageNum){
-    //     console.info(pageNum);
-    //     // alert(pageNum)
-    //   }
-    // });
+    $(".pagination").pagination(56, {
+      num_edge_entries: 2,
+      num_display_entries: 4,
+      callback: '',
+      items_per_page:1
+    });
     $(".drop-title").bind('click', function () {
       event.stopPropagation();
       $(this).parent().toggleClass('open')
@@ -249,10 +238,11 @@
       $(this).siblings('ul').slideToggle()
     })
     $('a.delete').bind('click', function () {
-      $('.modal').show()
-    })
-    $('.modal-header span,button.cancel').bind('click', function () {
-      $('.modal').hide()
+      $('body').messageBox({
+        backFun: function () {
+          alert('删除成功！')
+        }
+      })
     })
   })
 </script>

@@ -237,7 +237,8 @@ textarea {
 }
 
 .search-result {
-  width: 100%;
+  width: 98%;
+  margin: 0 auto;
   border-collapse: collapse;
 }
 .search-result th,
@@ -266,40 +267,12 @@ textarea {
   background-size: 16px;
 }
 
-.pagination {
+.pagination-box {
   padding: 20px 10px;
-  line-height: 30px;
   overflow: hidden;
 }
-.pagination b {
-  float: right;
-  margin-left: 10px;
-  font-weight: normal;
-  vertical-align: bottom;
-}
-.pagination ul {
-  float: right;
-  vertical-align: bottom;
-}
-.pagination ul li {
-  float: left;
-  height: 30px;
-  line-height: 30px;
-  background: #dedede;
-  cursor: pointer;
-  border-radius: 4px;
-  display: inline-block;
-  vertical-align: top;
-  text-align: center;
-  margin: 0 3px;
-  padding: 0 10px;
-}
-.pagination ul li:hover {
-  color: #2679b5;
-}
-.pagination ul li.active {
-  background-color: #2679b5;
-  color: #fff;
+.pagination-box b {
+  line-height: 32px;
 }
 
 .form-body {
@@ -352,7 +325,6 @@ textarea {
   width: 100%;
   height: 100%;
   background-color: rgba(0, 0, 0, 0.4);
-  display: none;
 }
 .modal .modal-box {
   position: relative;
@@ -391,4 +363,26 @@ textarea {
 }
 .modal .modal-footer button {
   margin-left: 10px;
+}
+
+.message {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  display: inline-block;
+  background-color: #fff;
+  -webkit-box-shadow: 0 0 8px rgba(0, 0, 0, 0.5);
+  box-shadow: 0 0 8px rgba(0, 0, 0, 0.5);
+  max-width: 600px;
+  border-radius: 1px;
+  transform: translate(-50%, -50%);
+  padding: 8px 20px;
+}
+.message.warn {
+  color: #f41b4e;
+  background-color: #fee8ed;
+}
+.message.success {
+  color: #1bf43c;
+  background-color: #e8feec;
 }
