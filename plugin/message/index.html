@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport"
+        content="width=device-width,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no,viewport-fit=cover"/>
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black">
+  <meta name="format-detection" content="telephone=no">
+  <title>Title</title>
+  <link rel="stylesheet" href="./css/message.css">
+</head>
+<body>
+
+<p>123</p>
+<p>123</p>
+<p>123</p>
+<p>123</p>
+
+<script src="../../common/jquery-3.3.1.min.js"></script>
+<script src="js/01.js"></script>
+<script>
+  $(function() {
+    $('body').message({
+      'message': '这是一条错误提示信息！',
+      'type': 'error'
+    })
+  })
+</script>
+</body>
+</html>

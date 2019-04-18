@@ -1,0 +1,35 @@
+.message
+  position: absolute
+  top: 50%
+  left: 50%
+  display: inline-block
+  min-width: 200px
+  background-color: #fff
+  border-radius: 2px
+  transform: translate(-50%,-50%)
+  padding: 0 20px
+  line-height: 40px
+  z-index: 11112
+  i
+    display: inline-block
+    width: 16px
+    height: 16px
+    border-radius: 8px
+    vertical-align: middle
+  span
+    vertical-align: middle
+    margin-left: 7px
+  &.error
+    color: #f41b4e
+    background-color: #fee8ed
+    border: 1px solid #fde2e2
+    i
+      background: #f56c6c url("../img/icon-error.png") no-repeat center
+      background-size: 10px 10px
+  &.success
+    color: #67c23a
+    background-color: #f0f9eb
+    border: 1px solid #e1f3d8
+    i
+      background: #67c23a url("../img/icon-true.png") no-repeat center
+      background-size: 10px 10px
