@@ -3,33 +3,36 @@
     var defaults = {
       titleText: '提示',
       tipText: '您确定要删除此项？',
-      backFun: function () {
+      callback: function () {
       }
     };
 
     var endOptions = $.extend(defaults, options);
-    zp.init(this, endOptions)
+    oMb.init(this, endOptions)
 
   };
-  var zp = {
+  var oMb = {
     init: function (obj, options) {
       return (function () {
-        zp.addText(obj, options)
-        zp.bindEvent(obj, options)
+        oMb.addText(obj, options)
+        oMb.bindEvent(obj, options)
       }())
     },
     addText: function (obj, options) {
       return (function () {
-        // obj.find($('.modal')).remove()
+        obj.find('.modal').remove()
 
         var html = '<div class="modal">\n' +
           '  <div class="modal-box">\n' +
           '    <header class="modal-header">\n' +
           '      <h4>'+options.titleText+'</h4>\n' +
-          '      <span class="delete glyphicon glyphicon-remove"></span>\n' +
+          '      <span class="glyphicon glyphicon-remove"></span>\n' +
           '    </header>\n' +
           '    <section class="modal-body">\n' +
-          '      <p>'+options.tipText+'</p>\n' +
+          '      <p>\n' +
+          '        <i class="icon-tip"></i>\n' +
+          '        <span>'+options.tipText+'</span>\n' +
+          '      </p>\n' +
           '    </section>\n' +
           '    <footer class="modal-footer">\n' +
           '      <button class="btn cancel">取消</button>\n' +
@@ -43,12 +46,12 @@
     },
     bindEvent: function (obj, options) {
       return (function () {
-        obj.on('click', 'span.delete, button.cancel', function () {
+        obj.find('.modal').on('click', 'span.delete, button.cancel', function () {
           obj.find('.modal').remove()
         })
-        obj.on('click', 'button.sure', function () {
-          obj.find('.modal').remove()
-          options.backFun()
+        obj.find('.modal').on('click', 'button.sure', function () {
+          obj.find('.modal').fadeOut()
+          options.callback()
         })
       }())
     }

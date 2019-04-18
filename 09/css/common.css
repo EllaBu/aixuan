@@ -29,9 +29,10 @@ a:hover {
 input[type="text"],
 select,
 textarea {
-  height: 30px;
+  height: 32px;
+  line-height: 32px;
   border: 1px solid #ddd;
-  padding-left: 3px;
+  padding: 0 3px;
 }
 
 textarea {
@@ -136,6 +137,10 @@ textarea {
 .header .tool .tool-item > li .drop-menu li {
   line-height: 40px;
   padding-left: 14px;
+  cursor: pointer;
+}
+.header .tool .tool-item > li .drop-menu li:hover {
+  background-color: #f1f1f1;
 }
 .header .tool .tool-item > li.open .drop-title {
   background-color: #eee;
@@ -177,7 +182,7 @@ textarea {
 }
 
 .content {
-  margin: 15px 15px 0 245px;
+  margin: 15px 15px 0 240px;
   padding: 0;
   border: 1px solid #ddd;
   background-color: #fff;
@@ -237,14 +242,19 @@ textarea {
 }
 
 .search-result {
-  width: 98%;
-  margin: 0 auto;
+  padding: 0 10px;
+}
+.search-result table {
+  width: 100%;
   border-collapse: collapse;
 }
 .search-result th,
 .search-result td {
   border: 1px solid #ddd;
   padding: 8px;
+}
+.search-result th {
+  background-color: #eee;
 }
 .search-result tr:hover {
   background-color: #f5f5f5;
@@ -254,17 +264,20 @@ textarea {
 }
 .search-result a {
   display: inline-block;
-  width: 20px;
-  height: 20px;
   margin: 0 4px;
+  color: #2679b5;
 }
 .search-result a.edit {
+  width: 18px;
+  height: 18px;
   background: url("../img/edit.png") no-repeat center;
-  background-size: 16px;
+  background-size: 14px;
 }
 .search-result a.delete {
+  width: 18px;
+  height: 18px;
   background: url("../img/delete.png") no-repeat center;
-  background-size: 16px;
+  background-size: 14px;
 }
 
 .pagination-box {
@@ -273,6 +286,10 @@ textarea {
 }
 .pagination-box b {
   line-height: 32px;
+}
+.pagination-box .pagination {
+  float: right;
+  margin: 0;
 }
 
 .form-body {
@@ -325,6 +342,7 @@ textarea {
   width: 100%;
   height: 100%;
   background-color: rgba(0, 0, 0, 0.4);
+  z-index: 11111;
 }
 .modal .modal-box {
   position: relative;
@@ -333,13 +351,15 @@ textarea {
   background-color: #fff;
   -webkit-box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5);
   box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5);
-  width: 600px;
+  display: inline-block;
+  min-width: 300px;
   border-radius: 5px;
   transform: translate(-50%, -50%);
 }
 .modal .modal-header {
-  padding: 20px 10px;
-  line-height: 20px;
+  padding-left: 10px;
+  height: 46px;
+  line-height: 46px;
   font-size: 16px;
 }
 .modal .modal-header h4 {
@@ -347,8 +367,13 @@ textarea {
 }
 .modal .modal-header span {
   float: right;
-  margin-top: -20px;
+  width: 46px;
+  height: 46px;
+  line-height: 46px;
+  margin-top: -46px;
   cursor: pointer;
+  text-align: center;
+  font-size: 16px;
 }
 .modal .modal-body {
   padding: 20px;
@@ -356,9 +381,22 @@ textarea {
   font-size: 20px;
   border-top: 1px solid #ddd;
   border-bottom: 1px solid #ddd;
+  line-height: 20px;
+}
+.modal .modal-body .icon-tip {
+  display: inline-block;
+  width: 40px;
+  height: 40px;
+  background: url("../img/icon-doubt.png") no-repeat center;
+  background-size: 40px;
+  vertical-align: middle;
+}
+.modal .modal-body span {
+  vertical-align: middle;
+  margin-left: 4px;
 }
 .modal .modal-footer {
-  padding: 15px 20px;
+  padding: 6px 10px;
   text-align: right;
 }
 .modal .modal-footer button {
@@ -370,19 +408,40 @@ textarea {
   top: 50%;
   left: 50%;
   display: inline-block;
+  min-width: 200px;
   background-color: #fff;
-  -webkit-box-shadow: 0 0 8px rgba(0, 0, 0, 0.5);
-  box-shadow: 0 0 8px rgba(0, 0, 0, 0.5);
-  max-width: 600px;
-  border-radius: 1px;
+  border-radius: 2px;
   transform: translate(-50%, -50%);
-  padding: 8px 20px;
+  padding: 0 20px;
+  line-height: 40px;
+  z-index: 11112;
 }
-.message.warn {
+.message i {
+  display: inline-block;
+  width: 16px;
+  height: 16px;
+  border-radius: 8px;
+  vertical-align: middle;
+}
+.message span {
+  vertical-align: middle;
+  margin-left: 7px;
+}
+.message.error {
   color: #f41b4e;
   background-color: #fee8ed;
+  border: 1px solid #fde2e2;
+}
+.message.error i {
+  background: #f56c6c url("../img/icon-error.png") no-repeat center;
+  background-size: 10px 10px;
 }
 .message.success {
-  color: #1bf43c;
-  background-color: #e8feec;
+  color: #67c23a;
+  background-color: #f0f9eb;
+  border: 1px solid #e1f3d8;
+}
+.message.success i {
+  background: #67c23a url("../img/icon-true.png") no-repeat center;
+  background-size: 10px 10px;
 }

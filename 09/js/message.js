@@ -1,28 +1,28 @@
 (function ($) {
   $.fn.message = function (options) {
     var defaults = {
-      text: '这是一条提示信息',
+      message: '这是一条提示信息',
       type: 'default'
     };
 
     var endOptions = $.extend(defaults, options);
-    zp.init(this, endOptions)
+    oM.init(this, endOptions)
 
   };
-  var zp = {
+  var oM = {
     init: function (obj, options) {
       return (function () {
-        zp.addText(obj, options)
+        oM.addText(obj, options)
       }())
     },
     addText: function (obj, options) {
       return (function () {
-        var $message = obj.find($('.message'))
+        var $message = obj.find('.message')
         $message.remove()
         var oType = ''
         switch (options.type) {
-          case 'warn':
-            oType = 'warn'
+          case 'error':
+            oType = 'error'
             break
           case 'success':
             oType = 'success'
@@ -31,21 +31,16 @@
             oType = ''
         }
 
-        var html = '<div class="message '+ oType +'">\n' +
-          '  <p>' + options.text + '</p>\n' +
+        var html = '<div class="message '+oType+'">\n' +
+          '  <i></i><span>'+options.message+'</span>\n' +
           '</div>'
 
-        // setTimeout(function () {
-          obj.append(html)
-        // }, 500);
+        obj.append(html)
+        obj.find('.message').delay(3000).slideUp()
 
         setTimeout(function () {
-          obj.find($('.message')).slideUp();
-        }, 2500);
-
-
-
-
+          obj.find('.message').remove()
+        }, 3500);
       }())
     }
   }

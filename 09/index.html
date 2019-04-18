@@ -3,6 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <title>后台管理</title>
+  <!--<link rel="stylesheet" href="./css/bootstrap.min.css">-->
   <link rel="stylesheet" href="./css/common.css">
   <link rel="stylesheet" href="./css/font.css">
   <link rel="stylesheet" href="./css/pagination.css">
@@ -26,6 +27,7 @@
       <li>
         <a href="javascript:;" class="drop-title">用户管理 <span class="glyphicon glyphicon-triangle-bottom"></span></a>
         <ul class="drop-menu">
+          <li><a href="javascript:;">修改密码</a></li>
           <li><a href="javascript:;">退出</a></li>
         </ul>
       </li>
@@ -113,112 +115,159 @@
         <button class="btn btn-blue">搜索</button>
       </div>
     </div>
-    <table class="search-result">
-      <thead>
-      <tr>
-        <th>标题</th>
-        <th>标题</th>
-        <th>标题</th>
-        <th>标题</th>
-        <th>标题</th>
-        <th>标题</th>
-      </tr>
-      </thead>
-      <tbody>
-      <tr>
-        <td>内容部分</td>
-        <td>内容部分</td>
-        <td>内容部分</td>
-        <td>内容部分</td>
-        <td>内容部分</td>
-        <td class="text-center">
-          <a class="edit" href="edit.html" title="编辑"></a>
-          <a class="delete" href="javascript:;" title="删除"></a>
-        </td>
-      </tr>
-      <tr>
-        <td>内容部分</td>
-        <td>内容部分</td>
-        <td>内容部分</td>
-        <td>内容部分</td>
-        <td>内容部分</td>
-        <td class="text-center">
-          <a href="edit.html">编辑</a>
-          <a href="javascript:;">删除</a>
-        </td>
-      </tr>
-      <tr>
-        <td>内容部分</td>
-        <td>内容部分</td>
-        <td>内容部分</td>
-        <td>内容部分</td>
-        <td>内容部分</td>
-        <td>内容部分</td>
-      </tr>
-      <tr>
-        <td>内容部分</td>
-        <td>内容部分</td>
-        <td>内容部分</td>
-        <td>内容部分</td>
-        <td>内容部分</td>
-        <td>内容部分</td>
-      </tr>
-      <tr>
-        <td>内容部分</td>
-        <td>内容部分</td>
-        <td>内容部分</td>
-        <td>内容部分</td>
-        <td>内容部分</td>
-        <td>内容部分</td>
-      </tr>
-      <tr>
-        <td>内容部分</td>
-        <td>内容部分</td>
-        <td>内容部分</td>
-        <td>内容部分</td>
-        <td>内容部分</td>
-        <td>内容部分</td>
-      </tr>
-      </tbody>
-    </table>
-
-
+    <div class="search-result">
+      <table>
+        <thead>
+        <tr>
+          <th>标题</th>
+          <th>标题</th>
+          <th>标题</th>
+          <th>标题</th>
+          <th>标题</th>
+          <th>标题</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr>
+          <td>内容部分</td>
+          <td>内容部分</td>
+          <td>内容部分</td>
+          <td>内容部分</td>
+          <td>内容部分</td>
+          <td class="text-center">
+            <a class="edit" href="edit.html" title="编辑"></a>
+            <a class="delete" href="javascript:;" title="删除" onclick="deleteItem()"></a>
+          </td>
+        </tr>
+        <tr>
+          <td>内容部分</td>
+          <td>内容部分</td>
+          <td>内容部分</td>
+          <td>内容部分</td>
+          <td>内容部分</td>
+          <td class="text-center">
+            <a href="edit.html">编辑</a>
+            <a href="javascript:;" onclick="deleteItem()">删除</a>
+          </td>
+        </tr>
+        <tr>
+          <td>内容部分</td>
+          <td>内容部分</td>
+          <td>内容部分</td>
+          <td>内容部分</td>
+          <td>内容部分</td>
+          <td class="text-center">
+            <a href="edit.html">编辑</a>
+            <a href="javascript:;" onclick="deleteItem()">删除</a>
+          </td>
+        </tr>
+        <tr>
+          <td>内容部分</td>
+          <td>内容部分</td>
+          <td>内容部分</td>
+          <td>内容部分</td>
+          <td>内容部分</td>
+          <td class="text-center">
+            <a href="edit.html">编辑</a>
+            <a href="javascript:;" onclick="deleteItem()">删除</a>
+          </td>
+        </tr>
+        <tr>
+          <td>内容部分</td>
+          <td>内容部分</td>
+          <td>内容部分</td>
+          <td>内容部分</td>
+          <td>内容部分</td>
+          <td class="text-center">
+            <a href="edit.html">编辑</a>
+            <a href="javascript:;" onclick="deleteItem()">删除</a>
+          </td>
+        </tr>
+        <tr>
+          <td>内容部分</td>
+          <td>内容部分</td>
+          <td>内容部分</td>
+          <td>内容部分</td>
+          <td>内容部分</td>
+          <td class="text-center">
+            <a href="edit.html">编辑</a>
+            <a href="javascript:;" onclick="deleteItem()">删除</a>
+          </td>
+        </tr>
+        <tr>
+          <td>内容部分</td>
+          <td>内容部分</td>
+          <td>内容部分</td>
+          <td>内容部分</td>
+          <td>内容部分</td>
+          <td class="text-center">
+            <a href="edit.html">编辑</a>
+            <a href="javascript:;" onclick="deleteItem()">删除</a>
+          </td>
+        </tr>
+        <tr>
+          <td>内容部分</td>
+          <td>内容部分</td>
+          <td>内容部分</td>
+          <td>内容部分</td>
+          <td>内容部分</td>
+          <td class="text-center">
+            <a href="edit.html">编辑</a>
+            <a href="javascript:;" onclick="deleteItem()">删除</a>
+          </td>
+        </tr>
+        </tbody>
+      </table>
+    </div>
 
     <div class="pagination-box">
       <b>查询结果总数：100条</b>
-      <div class="pagination"></div>
+      <!--分页start-->
+      <ul class="pagination">
+        <li class="first disabled"><a href="javascript:;">首页</a></li>
+        <li class="prev disabled"><a href="javascript:;">上一页</a></li>
+        <li class="active"><a href="javascript:;">1</a></li>
+        <li><a href="javascript:;">2</a></li>
+        <li><a href="javascript:;">3</a></li>
+        <li><a href="javascript:;">4</a></li>
+        <li><a href="javascript:;">5</a></li>
+        <li class="next"><a href="javascript:;">下一页</a></li>
+        <li class="last"><a href="javascript:;">末页</a></li>
+      </ul>
+      <!--分页end-->
     </div>
   </section>
 </div>
 
-<!--<div class="modal">-->
-  <!--<div class="modal-box">-->
-    <!--<header class="modal-header">-->
-      <!--<h4>删除提示</h4>-->
-      <!--<span class="glyphicon glyphicon-remove"></span>-->
-    <!--</header>-->
-    <!--<section class="modal-body">-->
-      <!--<p>您确定要删除此项？？？</p>-->
-    <!--</section>-->
-    <!--<footer class="modal-footer">-->
-      <!--<button class="btn cancel">取消</button>-->
-      <!--<button class="btn btn-blue">删除</button>-->
-    <!--</footer>-->
-  <!--</div>-->
-<!--</div>-->
+<!--<div class="message warn">
+  <i></i><span>这是一条成功提示信息这是一条成功提示信息</span>
+</div>-->
+
+<!--<div class="modal">
+  <div class="modal-box">
+    <header class="modal-header">
+      <h4>删除提示</h4>
+      <span class="glyphicon glyphicon-remove"></span>
+    </header>
+    <section class="modal-body">
+      <p>
+        <i class="icon-tip"></i>
+        <span>您确定要删除此项？？？</span>
+      </p>
+    </section>
+    <footer class="modal-footer">
+      <button class="btn cancel">取消</button>
+      <button class="btn btn-blue">删除</button>
+    </footer>
+  </div>
+</div>-->
 
 <script src="./js/jquery-3.3.1.min.js"></script>
+<script src="./js/message.js"></script>
 <script src="./js/messageBox.js"></script>
 <script src="./js/My97DatePicker/WdatePicker.js"></script>
-<script src="./js/jquery.pagination.js"></script>
 <script>
   $(function () {
-    $(".pagination").pagination(56, {
-      num_edge_entries: 2,
-      num_display_entries: 4,
-      callback: '',
-      items_per_page:1
-    });
     $(".drop-title").bind('click', function () {
       event.stopPropagation();
       $(this).parent().toggleClass('open')
@@ -226,9 +275,9 @@
       $(this).siblings('.drop-menu').slideToggle()
       $(this).parents('li').siblings().find('.drop-menu').hide()
     })
-    $(document).click(function(event){
+    $(document).click(function (event) {
       var _con = $('.drop-menu');
-      if(!_con.is(event.target) && _con.has(event.target).length === 0){
+      if (!_con.is(event.target) && _con.has(event.target).length === 0) {
         $('.drop-menu').slideUp();
       }
     });
@@ -237,14 +286,19 @@
       $(this).parent().siblings().removeClass('open')
       $(this).siblings('ul').slideToggle()
     })
-    $('a.delete').bind('click', function () {
-      $('body').messageBox({
-        backFun: function () {
-          alert('删除成功！')
-        }
-      })
-    })
+
   })
+
+  function deleteItem() {
+    $('body').messageBox({
+      callback: function () {
+        $('body').message({
+          message: '删除成功',
+          type: 'success'
+        })
+      }
+    })
+  }
 </script>
 </body>
 </html>
