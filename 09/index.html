@@ -223,17 +223,7 @@
     <div class="pagination-box">
       <b>查询结果总数：100条</b>
       <!--分页start-->
-      <ul class="pagination">
-        <li class="first disabled"><a href="javascript:;">首页</a></li>
-        <li class="prev disabled"><a href="javascript:;">上一页</a></li>
-        <li class="active"><a href="javascript:;">1</a></li>
-        <li><a href="javascript:;">2</a></li>
-        <li><a href="javascript:;">3</a></li>
-        <li><a href="javascript:;">4</a></li>
-        <li><a href="javascript:;">5</a></li>
-        <li class="next"><a href="javascript:;">下一页</a></li>
-        <li class="last"><a href="javascript:;">末页</a></li>
-      </ul>
+      <ul class="pagination" id="pagination"></ul>
       <!--分页end-->
     </div>
   </section>
@@ -266,8 +256,12 @@
 <script src="./js/message.js"></script>
 <script src="./js/messageBox.js"></script>
 <script src="./js/My97DatePicker/WdatePicker.js"></script>
+<script src="./js/jqPaginator.js"></script>
 <script>
   $(function () {
+
+    pageUtil('pagination', 65, function () {}, 10);
+
     $(".drop-title").bind('click', function () {
       event.stopPropagation();
       $(this).parent().toggleClass('open')
