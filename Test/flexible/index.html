@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black">
+  <meta name="format-detection" content="telephone=no">
+  <title>flexible</title>
+  <link rel="stylesheet" href="./css/style.css">
+<!--  <style>
+
+a{
+  display: block;
+  width: 10rem;
+  background-color: #74c8ec;
+  font-size: .2rem;
+}
+    /*iphone6*/
+
+    [data-dpr='2'] a{
+
+      /*font-size: 32px;*/
+      color: gold;
+
+    }
+
+    /*iphone6plus*/
+
+    [data-dpr='3'] a{
+
+      /*font-size: 32px;*/
+      color: red;
+
+    }
+  </style>-->
+  <script src="flexible.js"></script>
+  <!--<script>
+    !function (e, t) {
+      var n = t.documentElement, d = e.devicePixelRatio || 1;
+
+      function i() {
+        var e = n.clientWidth / 3.75;
+        n.style.fontSize = e + "px"
+      }
+
+      if (function e() {
+        t.body ? t.body.style.fontSize = "16px" : t.addEventListener("DOMContentLoaded", e)
+      }(), i(), e.addEventListener("resize", i), e.addEventListener("pageshow", function (e) {
+        e.persisted && i()
+      }), 2 <= d) {
+        var o = t.createElement("body"), a = t.createElement("div");
+        a.style.border = ".5px solid transparent", o.appendChild(a), n.appendChild(o), 1 === a.offsetHeight && n.classList.add("hairlines"), n.removeChild(o)
+      }
+    }(window, document)
+  </script>-->
+</head>
+<body>
+<header>
+  <p>测试</p>
+  <a href="#">和</a>
+  <a href="#">he</a>
+</header>
+<footer>
+  <p>footer</p>
+</footer>
+
+</body>
+</html>
