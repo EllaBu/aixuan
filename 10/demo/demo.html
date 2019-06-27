@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+  <title>个性化海报</title>
+  <meta charset="utf-8"/>
+
+  <meta name="viewport" content="width=device-width,inital-scale=1.0,maximum-scale=1.0,user-scalable=no">
+  <link rel="stylesheet" href="css/reset.css">
+  <link rel="stylesheet" href="css/swiper.min.css">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<div class="page-one">
+  <div class="area-box">
+    <div class="area">
+      <div id="area" class="area-target">
+        <div id="back" class="back">
+          <img src="./img/bgimage.png" alt="">
+        </div>
+        <img id="targetObj" class="target" src="" alt="">
+        <div id="qrCode" class="qr-code"></div>
+        <div id="qrCodeBox" class="qr-code" style="display: none"></div>
+      </div>
+    </div>
+  </div>
+  <div class="create">
+    <div class="wrapper">
+      <div class="footer">
+        <div class="choose-img" id="chooseImg">
+          <span>重新选图</span>
+          <!--<input type="file" onchange="selectFileImage(this)" accept="image/*;capture=camera"/>-->
+        </div>
+        <div id="creatImg" class="create-img">生成在保凭证</div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="page-one">
+  <div class="area-box">
+    <div class="area">
+      <div id="area1" class="area-target">
+        <div id="back1" class="back">
+          <img src="./img/bgimage.png" alt="">
+        </div>
+        <img id="targetObj1" class="target" src="" alt="">
+        <div id="qrCode1" class="qr-code"></div>
+        <div id="qrCodeBox1" class="qr-code" style="display: none"></div>
+      </div>
+    </div>
+  </div>
+  <div class="create">
+    <div class="wrapper">
+      <div class="footer">
+        <div class="choose-img" id="chooseImg1">
+          <span>重新选图</span>
+          <!--<input type="file" onchange="selectFileImage(this)" accept="image/*;capture=camera"/>-->
+        </div>
+        <div id="creatImg1" class="create-img">生成在保凭证</div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!--截取图-->
+<div class="page-two">
+  <div class="area-box">
+    <!--<img src="" alt="">-->
+  </div>
+  <!--<div class="double">-->
+  <!--<a href="#">再来一张</a>-->
+  <!--</div>-->
+  <img src="./img/transmit.png" alt="">
+</div>
+
+<div class="choose-box">
+  <p>选择图片<input type="file" onchange="selectFileImage(this)" accept="image/*;capture=camera"></p>
+  <p>取消</p>
+</div>
+
+<script type="text/javascript" src="js/jquery-1.10.2.min.js"></script>
+<script type="text/javascript" src="js/touch.min.js"></script>
+<script type="text/javascript" src="js/cat.touchjs.js"></script>
+<script type="text/javascript" src="js/canvas2image.js"></script>
+<script type="application/javascript" src="js/html2canvas.js"></script>
+<script type="application/javascript" src="js/uploadImage.js"></script>
+<script type="application/javascript" src="js/exif.js"></script>
+
+<script src="js/swiper.min.js"></script>
+<script src="js/qrcode.js"></script>
+<script src="js/demo.js"></script>
+<!--<script src="js/vconsole.min.js"></script>-->
+<script type="text/javascript">
+  $(function () {
+
+    var $targetObj = $('.area-target');
+    //初始化设置
+    cat.touchjs.init($targetObj, function (left, top, scale, rotate) {
+      // alert(JSON.stringify($targetObj))
+      $('#left').text(left);
+      $('#top').text(top);
+      $('#scale').text(scale);
+      $('#rotate').text(rotate);
+      $('#targetObj').css({
+        left: left,
+        top: top,
+        'transform': 'scale(' + scale + ') rotate(' + rotate + 'deg)',
+        '-webkit-transform': 'scale(' + scale + ') rotate(' + rotate + 'deg)'
+      });
+    });
+    //初始化拖动手势（不需要就注释掉）
+    cat.touchjs.drag($targetObj, function (left, top) {
+      $('#left').text(left);
+      $('#top').text(top);
+    });
+    //初始化缩放手势（不需要就注释掉）
+    cat.touchjs.scale($targetObj, function (scale) {
+      if (scale <= 0.4) {
+        scale = 0.4
+      }
+      $('#scale').text(scale);
+    });
+  })
+</script>
+</body>
+</html>
