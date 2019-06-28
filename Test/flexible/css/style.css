@@ -1,3 +1,4 @@
+@charset "UTF-8";
 * {
   margin: 0;
   padding: 0;
@@ -22,4 +23,19 @@ a {
 }
 [data-dpr="3"] a {
   font-size: 48px;
+}
+
+/*$size 建议取双数*/
+.circle {
+  width: 40px;
+  height: 40px;
+  background-color: red;
+}
+[data-dpr="1"] .circle {
+  width: 20px;
+  height: 20px;
+}
+[data-dpr="3"] .circle {
+  width: 60px;
+  height: 60px;
 }
