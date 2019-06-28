@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+  <title>个性化海报</title>
+  <meta charset="utf-8"/>
+
+  <meta name="viewport" content="width=device-width,inital-scale=1.0,maximum-scale=1.0,user-scalable=no">
+  <link rel="stylesheet" href="css/reset.css">
+  <link rel="stylesheet" href="css/swiper.min.css">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<div class="page-one">
+
+  <div class="area-box">
+    <div class="area">
+      <div id="area" class="area-target">
+        <div id="back" class="back">
+          <img src="./img/haibao03.png" alt="">
+        </div>
+        <img id="targetObj" class="target" src="" alt="">
+        <div id="qrCode" class="qr-code"></div>
+        <div id="qrCodeBox" class="qr-code" style="display: none"></div>
+      </div>
+    </div>
+  </div>
+  <div class="create">
+    <div class="wrapper">
+      <div class="choose">
+        <div class="swiper-container">
+          <div class="swiper-wrapper">
+            <div class="swiper-slide">
+              <img src="./img/haibao03.png" alt="">
+            </div>
+            <div class="swiper-slide">
+              <img src="./img/haibao01.png" alt="">
+            </div>
+            <div class="swiper-slide">
+              <img src="./img/haibao04.png" alt="">
+            </div>
+            <div class="swiper-slide">
+              <img src="./img/haibao02.png" alt="">
+            </div>
+            <div class="swiper-slide select">
+              <img src="./img/haibao05.png" alt="">
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="footer">
+        <div class="choose-img" id="chooseImg">
+          <span>重新选图</span>
+          <!--<input type="file" onchange="selectFileImage(this)" accept="image/*;capture=camera"/>-->
+        </div>
+        <div id="creatImg" class="create-img">生成海报</div>
+      </div>
+    </div>
+  </div>
+</div>
+<!--截取图-->
+<div class="page-two">
+  <div class="area-box">
+    <!--<image src="" alt="">-->
+  </div>
+  <!--<div class="double">-->
+    <!--<a href="#">再来一张</a>-->
+  <!--</div>-->
+  <img src="./img/transmit.png" alt="">
+</div>
+
+<div class="choose-box">
+  <p>选择图片<input type="file" onchange="selectFileImage(this)" accept="image/*;capture=camera"></p>
+  <p>取消</p>
+</div>
+
+<script type="text/javascript" src="js/jquery-1.10.2.min.js"></script>
+<script type="text/javascript" src="js/touch.min.js"></script>
+<script type="text/javascript" src="js/cat.touchjs.js"></script>
+<script type="text/javascript" src="js/canvas2image.js"></script>
+<script type="application/javascript" src="js/html2canvas.js"></script>
+<script type="application/javascript" src="js/uploadImage.js"></script>
+<script type="application/javascript" src="js/exif.js"></script>
+
+<script src="js/swiper.min.js"></script>
+<script src="js/qrcode.js"></script>
+<script src="js/index.js"></script>
+<script src="http://res.wx.qq.com/open/js/jweixin-1.2.0.js"></script>
+<!--<script src="js/vconsole.min.js"></script>-->
+<script type="text/javascript">
+
+  /* begin禁用微信分享功能 */
+  function onBridgeReady() {
+    WeixinJSBridge.call('hideOptionMenu');
+  }
+
+  if (typeof WeixinJSBridge == "undefined") {
+    if (document.addEventListener) {
+      document.addEventListener('WeixinJSBridgeReady', onBridgeReady, false);
+    } else if (document.attachEvent) {
+      document.attachEvent('WeixinJSBridgeReady', onBridgeReady);
+      document.attachEvent('onWeixinJSBridgeReady', onBridgeReady);
+    }
+  } else {
+    onBridgeReady();
+  }
+  /* end禁用微信分享功能 */
+
+  // document.querySelector('body').addEventListener('touchstart', function (ev) {
+  //     event.preventDefault();
+  // });
+  $(function () {
+
+    var $targetObj = $('.area-target');
+    //初始化设置
+    cat.touchjs.init($targetObj, function (left, top, scale, rotate) {
+      // alert(JSON.stringify($targetObj))
+      $('#left').text(left);
+      $('#top').text(top);
+      $('#scale').text(scale);
+      $('#rotate').text(rotate);
+      $('#targetObj').css({
+        left: left,
+        top: top,
+        'transform': 'scale(' + scale + ') rotate(' + rotate + 'deg)',
+        '-webkit-transform': 'scale(' + scale + ') rotate(' + rotate + 'deg)'
+      });
+    });
+    //初始化拖动手势（不需要就注释掉）
+    cat.touchjs.drag($targetObj, function (left, top) {
+      $('#left').text(left);
+      $('#top').text(top);
+    });
+    //初始化缩放手势（不需要就注释掉）
+    cat.touchjs.scale($targetObj, function (scale) {
+      if (scale <= 0.4) {
+        scale = 0.4
+      }
+      $('#scale').text(scale);
+    });
+  })
+</script>
+</body>
+</html>
