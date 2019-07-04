@@ -95,12 +95,12 @@
         <p>产品列表的说明文字，产品列表的说明文字，产品列表的说明文字，产品列表的说明文字，产品列表的说明文字，产品列表的说明文字，产品列表的说明文字，产品列表的说明文字，产品列表的说明文字，产品列表的说明文字，产品列表的说明文字，产品列表的说明文字</p>
     </div>
     <div class="lists">
-        <table>
+        <table id="listTable">
             <thead>
             <tr>
-                <th>病种编号</th>
-                <th>分类</th>
-                <th>病种名</th>
+                <th style="width: 20%">病种编号</th>
+                <th style="width: 20%">分类</th>
+                <th style="width: 60%">病种名</th>
             </tr>
             </thead>
             <tbody>
@@ -155,6 +155,25 @@
         $(this).parents("li").siblings("li").find("li").removeClass("li-active")
         $(this).parents("li").addClass("active").siblings("li").removeClass("active open")
       })
+
+      // var backgroundColors = ["#F2DCDB", "#FDE9D9", "#F2DCDB"]
+      var tableClass = ["class1", "class2", "class3", "class4", "class5", "class6"]
+      var table = document.getElementById("listTable");
+      var table_rows = table.rows;
+      console.log(table_rows)
+      var k = 1
+      for(var i = 1; i < table_rows.length-1; i++) {
+        console.log(table_rows[i].cells[1])
+        console.log(table_rows[i])
+        $(table_rows[i]).addClass(tableClass[k-1])
+        // $(table_rows[i]).css("background-color", backgroundColors[k-1])
+
+        if($(table_rows[k].cells[1]).text() != $(table_rows[i+1].cells[1]).text()) {
+          k = i+1
+          console.log("k==="+k)
+        }
+
+      }
     })
 </script>
 
