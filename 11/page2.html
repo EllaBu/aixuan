@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>责任项列表</title>
+    <link rel="stylesheet" href="./css/reset.css">
+    <link rel="stylesheet" href="./css/style.css">
+</head>
+<body>
+<div class="header">
+    <div class="logo">
+        <a href="javascript:;">
+            <img src="./img/logo.png" alt="">
+        </a>
+    </div>
+    <div class="tool">
+        <ul>
+            <li><a href="javascript:;">登录</a></li>
+            <li><a href="javascript:;">退出</a></li>
+        </ul>
+    </div>
+</div>
+<div class="aside">
+    <ul class="menu">
+        <li class="open active">
+            <a href="javascript:;">
+                <span>标准数据说明</span>
+                <b></b>
+            </a>
+            <ul class="submenu">
+                <li class="li-active">产品列表</li>
+                <li>责任项列表</li>
+                <li>病种列表</li>
+                <li>产品分类及说明</li>
+            </ul>
+        </li>
+        <li>
+            <a href="javascript:;">
+                <span>一级目录</span>
+                <b></b>
+            </a>
+            <ul class="submenu">
+                <li>二级目录</li>
+                <li>二级目录</li>
+                <li>二级目录</li>
+                <li>二级目录</li>
+            </ul>
+        </li>
+        <li>
+            <a href="javascript:;">
+                <span>一级目录</span>
+                <b></b>
+            </a>
+            <ul class="submenu">
+                <li>二级目录</li>
+                <li>二级目录</li>
+                <li>二级目录</li>
+                <li>二级目录</li>
+            </ul>
+        </li>
+        <li>
+            <a href="javascript:;">
+                <span>一级目录</span>
+                <b></b>
+            </a>
+            <ul class="submenu">
+                <li>二级目录</li>
+                <li>二级目录</li>
+                <li>二级目录</li>
+                <li>二级目录</li>
+            </ul>
+        </li>
+        <li>
+            <a href="javascript:;">
+                <span>一级目录</span>
+                <b></b>
+            </a>
+            <ul class="submenu">
+                <li>二级目录</li>
+                <li>二级目录</li>
+                <li>二级目录</li>
+                <li>二级目录</li>
+            </ul>
+        </li>
+    </ul>
+</div>
+<div class="content">
+    <ul class="crumbs">
+        <li>一级目录</li>
+        <li>二级目录</li>
+    </ul>
+    <div class="tips">
+        <h3>责任项列表说明</h3>
+        <p>产品列表的说明文字，产品列表的说明文字，产品列表的说明文字，产品列表的说明文字，产品列表的说明文字，产品列表的说明文字，产品列表的说明文字，产品列表的说明文字，产品列表的说明文字，产品列表的说明文字</p>
+        <p>产品列表的说明文字，产品列表的说明文字，产品列表的说明文字，产品列表的说明文字，产品列表的说明文字，产品列表的说明文字，产品列表的说明文字，产品列表的说明文字，产品列表的说明文字，产品列表的说明文字，产品列表的说明文字，产品列表的说明文字</p>
+    </div>
+    <div class="lists">
+        <table id="listTable">
+            <thead>
+            <tr>
+                <th style="width: 80px">序号</th>
+                <th>一级责任项</th>
+                <th>二级责任项</th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr>
+                <td>1</td>
+                <td>基本信息</td>
+                <td>投保年龄</td>
+            </tr>
+            <tr>
+                <td>2</td>
+                <td>基本信息</td>
+                <td>保险期间</td>
+            </tr>
+            <tr>
+                <td>3</td>
+                <td>基本信息</td>
+                <td>犹豫期</td>
+            </tr>
+            <tr>
+                <td>4</td>
+                <td>身故责任</td>
+                <td>身故</td>
+            </tr>
+            <tr>
+                <td>5</td>
+                <td>身故责任</td>
+                <td>疾病身故</td>
+            </tr>
+            <tr>
+                <td>6</td>
+                <td>身故责任</td>
+                <td>意外身故</td>
+            </tr>
+            <tr>
+                <td>7</td>
+                <td>身故责任</td>
+                <td>意外身故</td>
+            </tr>
+            <tr>
+                <td>8</td>
+                <td>基本信息</td>
+                <td>投保年龄</td>
+            </tr>
+            <tr>
+                <td>9</td>
+                <td>基本信息</td>
+                <td>保险期间</td>
+            </tr>
+            <tr>
+                <td>10</td>
+                <td>基本信息</td>
+                <td>犹豫期</td>
+            </tr>
+            <tr>
+                <td>11</td>
+                <td>身故责任</td>
+                <td>身故</td>
+            </tr>
+            <tr>
+                <td>12</td>
+                <td>身故责任</td>
+                <td>疾病身故</td>
+            </tr>
+            <tr>
+                <td>13</td>
+                <td>身故责任</td>
+                <td>意外身故</td>
+            </tr>
+            </tbody>
+        </table>
+
+    </div>
+
+</div>
+</body>
+
+<script src="./js/jquery-3.3.1.min.js"></script>
+<script src="./js/merge-table.js"></script>
+<script>
+    $(function () {
+      mergeCell('listTable', [1]);
+      // $(".aside").height($(document).height() - 80)
+      $(".menu li a").click(function () {
+        $(this).parents("li").toggleClass("open").siblings("li:not(.active)").removeClass("open")
+      })
+      $(".submenu li").click(function () {
+        $(this).addClass("li-active").siblings("li").removeClass("li-active")
+        $(this).parents("li").siblings("li").find("li").removeClass("li-active")
+        $(this).parents("li").addClass("active").siblings("li").removeClass("active open")
+      })
+    })
+</script>
+
+</html>
