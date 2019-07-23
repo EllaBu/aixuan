@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport"
+        content="width=device-width,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no,viewport-fit=cover"/>
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black">
+  <meta name="format-detection" content="telephone=no">
+  <title>我的</title>
+  <link rel="stylesheet" href="./css/reset.css">
+  <link rel="stylesheet" href="./css/style.css">
+</head>
+<body>
+<div class="my-info">
+  <div class="info">
+    <div class="photo">
+      <img src="./img/photo.png" alt="">
+    </div>
+    <div class="detail">
+      <h3>李易峰</h3>
+      <p>VIP用户</p>
+      <p>有效期至2019.8.1</p>
+    </div>
+  </div>
+  <ul class="my-list">
+    <li>
+      <span>续费VIP会员</span>
+      <i>申请免费VIP</i>
+    </li>
+    <li>
+      <span>我的认证信息</span>
+      <i>认证获30天VIP权限</i>
+    </li>
+    <li>
+      <span>购买记录</span>
+    </li>
+  </ul>
+  <div class="footer">
+    <div class="contrast">
+      <i></i>
+      <span>对比工具</span>
+    </div>
+    <div class="my-tab active">
+      <i></i>
+      <span>我的</span>
+    </div>
+  </div>
+</div>
+<script src="./js/jquery-3.3.1.min.js"></script>
+<script>
+  $('.footer div').bind('click', function () {
+    $(this).addClass('active').siblings().removeClass('active')
+  })
+</script>
+</body>
+</html>
