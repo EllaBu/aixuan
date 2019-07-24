@@ -6,10 +6,19 @@ $color-border: #c4c4c4
   border-bottom: 1px solid $color-border
   padding: .32rem 0
   line-height: .48rem
-  input
+  overflow: hidden
+  input,
+  select
+    float: right
+    width: 55%
     height: .48rem
     line-height: .48rem
-  i
+    text-align: right
+  select
+    direction: rtl
+    background: url("../img/icon-down.png") no-repeat center right
+    padding-right: .4rem
+  i.delete
     float: right
     display: inline-block
     width: .48rem
@@ -19,7 +28,7 @@ $color-border: #c4c4c4
 .btn
   background-color: #d9d9d9
   color: #fff
-  border-radius: .32rem
+  border-radius: .48rem
   height: .8rem
   font-weight: bold
   font-size: .32rem
@@ -79,8 +88,10 @@ $color-border: #c4c4c4
       font-size: .32rem
       color: #5d5d5d
       font-weight: normal
-
-
+  .item
+    input
+      float: left
+      text-align: left
 
 .attestation
   padding: 0 .64rem 2rem
@@ -163,6 +174,7 @@ $color-border: #c4c4c4
           b
             font-size: .84rem
             margin-right: .1rem
+            font-weight: normal
           button
             width: 2.88rem
 
@@ -239,7 +251,6 @@ $color-border: #c4c4c4
       border-bottom: 1px solid $color-border
       i
         float: right
-        font-style: normal
         font-size: .24rem
         padding: 0 .16rem
         border: 2px solid $color-common
@@ -285,5 +296,58 @@ $color-border: #c4c4c4
             background-size: .48rem
 
 
+.header
+  height: .96rem
+  line-height: .96rem
+  text-align: center
+  background: #f9f9f9 url("../img/icon-left.png") no-repeat .32rem center
+  h2
+    font-size: .36rem
+    color: #000
+  a
+    float: right
+    font-size: .28rem
+    color: #0059d1
+    font-weight: bold
+    margin: -.96rem .32rem 0 0
+
+.authentication
+  .item
+    margin: 0 .64rem
+    input, select
+      float: right
+  .handle
+    a
+      width: 100%
 
 
+.order-list
+  .details
+    padding: 0 .32rem
+    li
+      padding: .32rem 0
+      border-bottom: 1px solid $color-border
+      p
+        line-height: .48rem
+        font-size: .24rem
+        overflow: hidden
+        i
+          float: right
+      dl
+        margin-top: .16rem
+        overflow: hidden
+        dt
+          float: left
+          width: 70%
+        dd
+          float: right
+          width: 30%
+          font-size: .48rem
+          font-weight: bold
+          text-align: right
+        h5
+          font-size: .32rem
+          margin-bottom: .08rem
+        i
+          color: #bababa
+          font-size: .24rem

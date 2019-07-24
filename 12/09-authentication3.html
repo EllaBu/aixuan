@@ -7,35 +7,39 @@
   <meta name="apple-mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-status-bar-style" content="black">
   <meta name="format-detection" content="telephone=no">
-  <title>登录成功</title>
+  <title>修改认证信息</title>
   <link rel="stylesheet" href="./css/reset.css">
   <link rel="stylesheet" href="./css/style.css">
 </head>
 <body>
-<div class="attestation">
-  <div class="title">
-    <p>您已登录成功</p>
-    <span>可进一步完善资料成为认证用户可享受30天VIP权限</span>
+<div class="authentication">
+  <div class="header">
+    <h2>修改认证信息</h2>
+    <a href="javascript:;">确认变更</a>
   </div>
   <div class="item">
     <label for="">姓名：</label>
-    <input type="text" placeholder="请输入您的真实姓名">
+    <input type="text" value="李易峰">
+  </div>
+  <div class="item">
+    <label for="">手机号：</label>
+    <input type="text" value="18601272215">
   </div>
   <div class="item">
     <label for="">身份证号：</label>
-    <input type="text" placeholder="请输入身份证号">
+    <input type="text" value="2234354676756854">
   </div>
   <div class="item">
     <label for="">执业类型：</label>
     <select name="" id="">
-      <option value="">请选择</option>
+      <option value="">保险代理服务</option>
       <option value="">请选择11</option>
     </select>
   </div>
   <div class="item">
     <label for="">执业机构：</label>
     <select name="" id="">
-      <option value="">请选择</option>
+      <option value="">太平洋保险</option>
       <option value="">请选择11</option>
     </select>
   </div>
@@ -59,11 +63,6 @@
     <label for="">执业资格证编号：</label>
     <input type="text" placeholder="请输入执业资格证编号">
   </div>
-  <div class="handle">
-    <a href="javascript:;">跳过</a>
-    <a href="javascript:;">确定</a>
-  </div>
-
 </div>
 
 <script src="./js/jquery-3.3.1.min.js"></script>

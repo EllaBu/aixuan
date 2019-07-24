@@ -2,12 +2,22 @@
   border-bottom: 1px solid #c4c4c4;
   padding: 0.32rem 0;
   line-height: 0.48rem;
+  overflow: hidden;
 }
-.item input {
+.item input,
+.item select {
+  float: right;
+  width: 55%;
   height: 0.48rem;
   line-height: 0.48rem;
+  text-align: right;
 }
-.item i {
+.item select {
+  direction: rtl;
+  background: url("../img/icon-down.png") no-repeat center right;
+  padding-right: 0.4rem;
+}
+.item i.delete {
   float: right;
   display: inline-block;
   width: 0.48rem;
@@ -18,7 +28,7 @@
 .btn {
   background-color: #d9d9d9;
   color: #fff;
-  border-radius: 0.32rem;
+  border-radius: 0.48rem;
   height: 0.8rem;
   font-weight: bold;
   font-size: 0.32rem;
@@ -85,6 +95,10 @@
   font-size: 0.32rem;
   color: #5d5d5d;
   font-weight: normal;
+}
+.login-box .item input {
+  float: left;
+  text-align: left;
 }
 
 .attestation {
@@ -184,6 +198,7 @@
 .vip .get-vip ul li div b {
   font-size: 0.84rem;
   margin-right: 0.1rem;
+  font-weight: normal;
 }
 .vip .get-vip ul li div button {
   width: 2.88rem;
@@ -275,7 +290,6 @@
 }
 .my-info .my-list li i {
   float: right;
-  font-style: normal;
   font-size: 0.24rem;
   padding: 0 0.16rem;
   border: 2px solid #4988fe;
@@ -323,4 +337,71 @@
 .my-info .footer div.my-tab.active i {
   background: url("../img/my-a.png") no-repeat center;
   background-size: 0.48rem;
+}
+
+.header {
+  height: 0.96rem;
+  line-height: 0.96rem;
+  text-align: center;
+  background: #f9f9f9 url("../img/icon-left.png") no-repeat 0.32rem center;
+}
+.header h2 {
+  font-size: 0.36rem;
+  color: #000;
+}
+.header a {
+  float: right;
+  font-size: 0.28rem;
+  color: #0059d1;
+  font-weight: bold;
+  margin: -0.96rem 0.32rem 0 0;
+}
+
+.authentication .item {
+  margin: 0 0.64rem;
+}
+.authentication .item input, .authentication .item select {
+  float: right;
+}
+.authentication .handle a {
+  width: 100%;
+}
+
+.order-list .details {
+  padding: 0 0.32rem;
+}
+.order-list .details li {
+  padding: 0.32rem 0;
+  border-bottom: 1px solid #c4c4c4;
+}
+.order-list .details li p {
+  line-height: 0.48rem;
+  font-size: 0.24rem;
+  overflow: hidden;
+}
+.order-list .details li p i {
+  float: right;
+}
+.order-list .details li dl {
+  margin-top: 0.16rem;
+  overflow: hidden;
+}
+.order-list .details li dl dt {
+  float: left;
+  width: 70%;
+}
+.order-list .details li dl dd {
+  float: right;
+  width: 30%;
+  font-size: 0.48rem;
+  font-weight: bold;
+  text-align: right;
+}
+.order-list .details li dl h5 {
+  font-size: 0.32rem;
+  margin-bottom: 0.08rem;
+}
+.order-list .details li dl i {
+  color: #bababa;
+  font-size: 0.24rem;
 }
