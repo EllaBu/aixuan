@@ -10,7 +10,7 @@
     box-sizing: border-box;
     -webkit-box-sizing: border-box;
     -webkit-tap-highlight-color: transparent;
-    font-family: arial,"Hiragino Sans GB","Microsoft Yahei",sans-serif;
+    font-family: -apple-system,arial, Helvetica, sans-serif;
 }
 
 html {

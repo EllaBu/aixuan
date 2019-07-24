@@ -409,12 +409,10 @@
   float: right;
   width: 30%;
   font-size: 0.48rem;
-  font-weight: bold;
   text-align: right;
 }
 .order-list .details li dl h5 {
   font-size: 0.32rem;
-  margin-bottom: 0.08rem;
 }
 .order-list .details li dl i {
   color: #bababa;
