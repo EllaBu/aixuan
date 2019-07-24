@@ -22,8 +22,24 @@
     <i class="delete"></i>
   </div>
 
-  <button class="btn btn-common">获取验证码</button>
+  <button class="btn">获取验证码</button>
+  <!--<button class="btn btn-common">获取验证码</button>-->
 </div>
+<script src="./js/jquery-3.3.1.min.js"></script>
+<script>
+  $(function () {
 
+    $('.item input').on('input propertychange', function () {
+      let phoneText = $(this).val()
+      if ( phoneText ) {
+        $(this).siblings('i').show()
+      }
+    })
+
+    $('.item i').bind('click', function () {
+      $(this).hide().siblings('input').val('')
+    })
+  })
+</script>
 </body>
 </html>

@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport"
+        content="width=device-width,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no,viewport-fit=cover"/>
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black">
+  <meta name="format-detection" content="telephone=no">
+  <title>添加收藏</title>
+  <link rel="stylesheet" href="./css/reset.css">
+  <link rel="stylesheet" href="./css/style.css">
+</head>
+<body class="plan-body">
+<div class="plan">
+
+  <div class="header">
+    <i></i>
+    <h2>添加收藏</h2>
+  </div>
+
+  <div class="collect-input collect-add-input">
+    <input type="text" placeholder="输入您想关注的保险名称">
+    <i></i>
+  </div>
+
+  <!--搜索历史记录 start-->
+  <ul class="collect-history">
+    <li>太平洋重疾险</li>
+    <li>友邦幸福一生年金一号</li>
+    <li>保险员营销责任险</li>
+  </ul>
+  <!--搜索历史记录 end-->
+
+  <!--搜索结果列表 start-->
+  <ul class="collect-search">
+    <li>
+      <img src="./img/collect.png" alt="">
+      <span>太平洋重疾险</span>
+      <i class="active"></i>
+    </li>
+    <li>
+      <img src="./img/collect.png" alt="">
+      <span>太平洋重疾险</span>
+      <i></i>
+    </li>
+    <li>
+      <img src="./img/collect.png" alt="">
+      <span>太平洋重疾险</span>
+      <i></i>
+    </li>
+    <li>
+      <img src="./img/collect.png" alt="">
+      <span>太平洋重疾险</span>
+      <i></i>
+    </li>
+  </ul>
+  <!--搜索结果列表 end-->
+
+
+
+
+
+  <div class="footer">
+    <div class="contrast">
+      <i></i>
+      <span>对比工具</span>
+    </div>
+    <div class="my-tab active">
+      <i></i>
+      <span>我的</span>
+    </div>
+  </div>
+
+</div>
+<script src="./js/jquery-3.3.1.min.js"></script>
+<script>
+  $('.collect-search').on('click', 'i', function () {
+    $(this).toggleClass('active')
+  })
+  $('.collect-input input').on('input propertychange', function () {
+    let searchWord = $(this).val()
+    if ( searchWord ) {
+      $(this).siblings('i').show()
+      $('.collect-search').show()
+    }
+  })
+  $('.collect-input i').on('click', function () {
+    $(this).siblings('input').val()
+    $('.collect-search').hide()
+  })
+</script>
+</body>
+</html>

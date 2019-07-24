@@ -23,6 +23,8 @@
   width: 0.48rem;
   height: 0.48rem;
   background: url("../img/icon-delete.png") no-repeat center;
+  background-size: 0.32rem;
+  display: none;
 }
 
 .btn {
@@ -69,6 +71,70 @@
 .switch.active i {
   left: 0.4rem;
   box-shadow: none;
+}
+
+.header {
+  height: 0.96rem;
+  line-height: 0.96rem;
+  background-color: #f9f9f9;
+}
+.header h2 {
+  width: 100%;
+  font-size: 0.36rem;
+  color: #000;
+  text-align: center;
+}
+.header a {
+  float: right;
+  font-size: 0.28rem;
+  color: #0059d1;
+  font-weight: bold;
+  margin: -0.96rem 0.32rem 0 0;
+}
+.header i {
+  float: left;
+  width: 0.88rem;
+  height: 0.96rem;
+  background: url("../img/icon-left.png") no-repeat center;
+  background-size: 0.24rem 0.42rem;
+}
+
+.footer {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 1.4rem;
+  padding-top: 0.3rem;
+  background-color: #f8f8f8;
+  font-size: 0.2rem;
+}
+.footer div {
+  float: left;
+  text-align: center;
+  width: 50%;
+}
+.footer div i {
+  display: block;
+  width: 0.48rem;
+  height: 0.48rem;
+  margin: 0 auto 0.1rem;
+}
+.footer div.contrast i {
+  background: url("../img/contrast.png") no-repeat center;
+  background-size: 0.48rem;
+}
+.footer div.contrast.active i {
+  background: url("../img/contrast-a.png") no-repeat center;
+  background-size: 0.48rem;
+}
+.footer div.my-tab i {
+  background: url("../img/my.png") no-repeat center;
+  background-size: 0.48rem;
+}
+.footer div.my-tab.active i {
+  background: url("../img/my-a.png") no-repeat center;
+  background-size: 0.48rem;
 }
 
 .login-box {
@@ -219,7 +285,7 @@
   color: #fff;
 }
 .vip .order .vip-card p b {
-  font-size: 0.48rem;
+  font-size: 0.84rem;
   margin-right: 0.1rem;
 }
 .vip .order .vip-card p:first-of-type {
@@ -301,61 +367,6 @@
 .my-info .my-list li span {
   vertical-align: middle;
 }
-.my-info .footer {
-  position: fixed;
-  bottom: 0;
-  left: 0;
-  width: 100%;
-  height: 1.4rem;
-  padding-top: 0.3rem;
-  background-color: #f8f8f8;
-  font-size: 0.2rem;
-}
-.my-info .footer div {
-  float: left;
-  text-align: center;
-  width: 50%;
-}
-.my-info .footer div i {
-  display: block;
-  width: 0.48rem;
-  height: 0.48rem;
-  margin: 0 auto 0.1rem;
-}
-.my-info .footer div.contrast i {
-  background: url("../img/contrast.png") no-repeat center;
-  background-size: 0.48rem;
-}
-.my-info .footer div.contrast.active i {
-  background: url("../img/contrast-a.png") no-repeat center;
-  background-size: 0.48rem;
-}
-.my-info .footer div.my-tab i {
-  background: url("../img/my.png") no-repeat center;
-  background-size: 0.48rem;
-}
-.my-info .footer div.my-tab.active i {
-  background: url("../img/my-a.png") no-repeat center;
-  background-size: 0.48rem;
-}
-
-.header {
-  height: 0.96rem;
-  line-height: 0.96rem;
-  text-align: center;
-  background: #f9f9f9 url("../img/icon-left.png") no-repeat 0.32rem center;
-}
-.header h2 {
-  font-size: 0.36rem;
-  color: #000;
-}
-.header a {
-  float: right;
-  font-size: 0.28rem;
-  color: #0059d1;
-  font-weight: bold;
-  margin: -0.96rem 0.32rem 0 0;
-}
 
 .authentication .item {
   margin: 0 0.64rem;
@@ -404,4 +415,254 @@
 .order-list .details li dl i {
   color: #bababa;
   font-size: 0.24rem;
+}
+
+.plan-body {
+  background-color: #ebebeb;
+}
+
+.plan {
+  padding-bottom: 1.4rem;
+}
+.plan input::-webkit-input-placeholder {
+  font-size: 0.3rem;
+}
+.plan .header {
+  background-color: #f2f2f2;
+}
+.plan .title {
+  background-color: #f2f2f2;
+  height: 1.1rem;
+}
+.plan .title a {
+  display: inline-block;
+  text-align: center;
+  color: #7e7e7e;
+  margin: 0 0.32rem;
+  line-height: 1.08rem;
+}
+.plan .title a.active {
+  font-size: 0.44rem;
+  color: #000;
+  font-weight: bold;
+  border-bottom: 2px solid #4988fe;
+}
+.plan .plan-btn {
+  padding: 0.48rem 0;
+}
+.plan .plan-btn button {
+  display: block;
+  width: 4.8rem;
+  margin: 0 auto;
+}
+.plan .plan-list {
+  padding: 0 0.2rem;
+  min-height: 100%;
+}
+.plan .plan-list li {
+  padding: 0.32rem 0.2rem;
+  background-color: #fff;
+  border-radius: 0.2rem;
+  margin-bottom: 0.32rem;
+}
+.plan .plan-list li h3 {
+  color: #0b5fbd;
+  font-size: 0.32rem;
+  font-weight: normal;
+  margin-bottom: 0.24rem;
+}
+.plan .plan-list li p {
+  padding-left: 0.6rem;
+  margin-top: 0.16rem;
+}
+.plan .plan-list li p:first-of-type {
+  background: url("../img/icon-a.png") no-repeat left center;
+}
+.plan .plan-list li p:last-of-type {
+  background: url("../img/icon-b.png") no-repeat left center;
+}
+.plan .collect-input {
+  position: relative;
+  padding: 0.32rem;
+}
+.plan .collect-input input {
+  width: 100%;
+  height: 0.8rem;
+  line-height: 0.8rem;
+  border-radius: 0.48rem;
+  padding: 0 0 0 0.96rem;
+  background: #e2e2e2 url("../img/icon-search.png") no-repeat 0.32rem center;
+}
+.plan .collect-input.collect-add-input {
+  background-color: #f2f2f2;
+}
+.plan .collect-input.collect-add-input input {
+  border-radius: 0;
+  background-color: #f2f2f2;
+  background-position: 0.16rem center;
+  padding-left: 0.8rem;
+}
+.plan .collect-input i {
+  position: absolute;
+  right: 0;
+  top: 0.32rem;
+  width: 0.8rem;
+  height: 0.8rem;
+  background: url("../img/icon-delete.png") no-repeat center;
+  display: none;
+}
+.plan .collect-list {
+  padding: 0 0.2rem;
+}
+.plan .collect-list li {
+  padding: 0.32rem 0.2rem;
+  background-color: #fff;
+  border-radius: 0.2rem;
+  margin-bottom: 0.32rem;
+  line-height: 0.96rem;
+}
+.plan .collect-list li img {
+  width: 0.96rem;
+  height: 0.96rem;
+  vertical-align: middle;
+}
+.plan .collect-list li span {
+  display: inline-block;
+  width: 4rem;
+  line-height: 0.4rem;
+  vertical-align: middle;
+}
+.plan .collect-list li a {
+  float: right;
+  display: inline-block;
+  width: 0.96rem;
+  height: 0.96rem;
+  border-radius: 0.48rem;
+  background-color: #4988fe;
+  color: #fff;
+  font-size: 0.3rem;
+  font-weight: bold;
+  vertical-align: middle;
+  text-align: center;
+}
+.plan .collect-none {
+  text-align: center;
+}
+.plan .collect-none p {
+  color: #bababa;
+  margin-top: 0.48rem;
+}
+.plan .collect-history {
+  padding: 0 0.32rem;
+}
+.plan .collect-history li {
+  padding: 0.32rem 0.8rem;
+  background: url("../img/icon-history.png") no-repeat 0.16rem center;
+  border-bottom: 1px solid #c4c4c4;
+  font-size: 0.3rem;
+  color: #000;
+}
+.plan .collect-search {
+  background-color: #fff;
+  padding: 0 0.32rem 0.32rem;
+  position: absolute;
+  top: 2.4rem;
+  left: 0;
+  width: 100%;
+  display: none;
+}
+.plan .collect-search li {
+  line-height: 0.64rem;
+  padding: 0.32rem 0;
+  border-bottom: 1px solid #c4c4c4;
+}
+.plan .collect-search li img {
+  width: 0.64rem;
+  height: 0.64rem;
+  vertical-align: middle;
+}
+.plan .collect-search li span {
+  display: inline-block;
+  width: 5rem;
+  font-size: 0.3rem;
+  color: #000;
+}
+.plan .collect-search li i {
+  float: right;
+  width: 0.64rem;
+  height: 0.64rem;
+  background: url("../img/icon-collect.png") no-repeat center;
+}
+.plan .collect-search li i.active {
+  background: url("../img/icon-collected.png") no-repeat center;
+}
+.plan .compare {
+  position: relative;
+  background: url("../img/compare-line.png") no-repeat 0.64rem 1.12rem;
+  background-size: 0.02rem 1.08rem;
+}
+.plan .compare input {
+  width: 5.44rem;
+  line-height: 0.96rem;
+  padding-right: 0.48rem;
+  border-bottom: 1px solid #c4c4c4;
+}
+.plan .compare .plan-compare {
+  position: relative;
+  padding: 0.32rem 0.64rem 0.32rem 1.28rem;
+}
+.plan .compare .plan-compare:nth-child(1) {
+  background: url("../img/plan-a.png") no-repeat 0.32rem center;
+  background-size: 0.64rem;
+}
+.plan .compare .plan-compare:nth-child(2) {
+  background: url("../img/plan-b.png") no-repeat 0.32rem center;
+  background-size: 0.64rem;
+}
+.plan .compare .plan-compare a {
+  position: absolute;
+  right: 0.64rem;
+  top: 0.56rem;
+  width: 0.48rem;
+  height: 0.48rem;
+  background: url("../img/icon-delete.png") no-repeat center;
+  background-size: 0.32rem;
+  display: none;
+}
+.plan .compare .plan-compare ul {
+  position: absolute;
+  top: 1.36rem;
+  left: 0;
+  width: 100%;
+  background-color: #fff;
+  padding-top: 0.16rem;
+  z-index: 1111;
+  display: none;
+}
+.plan .compare .plan-compare ul li {
+  padding: 0.32rem 0.32rem 0.32rem 1.28rem;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.plan .compare .compare-switch {
+  position: absolute;
+  top: 1.4rem;
+  left: 0.4rem;
+  width: 0.48rem;
+  height: 0.48rem;
+  background: url("../img/icon-vs.png") no-repeat center;
+  background-size: 0.32rem;
+}
+.plan .compare .compare-switch i {
+  display: block;
+  width: 100%;
+  height: 100%;
+  background: url("../img/icon-rotate.png") no-repeat center;
+  background-size: 0.48rem;
+  transition: transform 2s;
+  -webkit-transition: transform 2s;
+}
+.plan .compare .compare-switch i.active {
+  transform: rotate(180deg);
 }

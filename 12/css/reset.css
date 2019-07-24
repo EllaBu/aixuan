@@ -44,8 +44,12 @@ table {
     border-spacing: 0;
 }
 
-i, b {
+i {
     font-style: normal;
+}
+
+b {
+    font-weight: normal;
 }
 
 /* custom */

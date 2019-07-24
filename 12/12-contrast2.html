@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport"
+        content="width=device-width,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no,viewport-fit=cover"/>
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black">
+  <meta name="format-detection" content="telephone=no">
+  <title>我的收藏</title>
+  <link rel="stylesheet" href="./css/reset.css">
+  <link rel="stylesheet" href="./css/style.css">
+</head>
+<body class="plan-body">
+<div class="plan">
+
+  <div class="header">
+    <h2>对比工具</h2>
+  </div>
+
+  <div class="title">
+    <a href="javascript:;">我的方案</a>
+    <a href="javascript:;" class="active">我的收藏</a>
+  </div>
+
+  <div class="collect-input">
+    <input type="text" placeholder="输入您想关注的保险名称">
+  </div>
+  <!-- 有收藏列表显示 start-->
+  <ul class="collect-list">
+    <li>
+      <img src="./img/collect.png" alt="">
+      <span>哆啦A宝重大疾病险哆啦A宝重大疾病险</span>
+      <a href="javascript:;">对比</a>
+    </li>
+    <li>
+      <img src="./img/collect.png" alt="">
+      <span>哆啦A宝重大疾病险</span>
+      <a href="javascript:;">对比</a>
+    </li>
+    <li>
+      <img src="./img/collect.png" alt="">
+      <span>哆啦A宝重大疾病险</span>
+      <a href="javascript:;">对比</a>
+    </li>
+  </ul>
+  <!-- 有收藏列表显示 end-->
+
+  <!-- 无收藏列表显示 start-->
+  <div class="collect-none">
+    <img src="" alt="">
+    <p>暂无收藏信息</p>
+    <div class="plan-btn">
+      <button class="btn btn-common">去收藏</button>
+    </div>
+  </div>
+  <!-- 无收藏列表显示 end-->
+
+
+  <div class="footer">
+    <div class="contrast">
+      <i></i>
+      <span>对比工具</span>
+    </div>
+    <div class="my-tab active">
+      <i></i>
+      <span>我的</span>
+    </div>
+  </div>
+
+</div>
+<script src="./js/jquery-3.3.1.min.js"></script>
+<script>
+  $('.title a').bind('click', function () {
+    $(this).addClass('active').siblings().removeClass('active')
+  })
+  $('.footer div').bind('click', function () {
+    $(this).addClass('active').siblings().removeClass('active')
+  })
+</script>
+</body>
+</html>

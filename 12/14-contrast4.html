@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport"
+        content="width=device-width,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no,viewport-fit=cover"/>
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black">
+  <meta name="format-detection" content="telephone=no">
+  <title>对比</title>
+  <link rel="stylesheet" href="./css/reset.css">
+  <link rel="stylesheet" href="./css/style.css">
+</head>
+<body>
+<div class="plan">
+
+  <div class="header">
+    <h2>对比工具</h2>
+  </div>
+
+  <div class="compare">
+    <div class="plan-compare">
+      <input type="text" placeholder="请输入A款保险">
+      <a href="javascript:;"></a>
+      <ul>
+        <li>哆拉A保重大疾病险1</li>
+        <li>哆拉A保重大疾病险2</li>
+        <li>哆拉A保重大疾病险3</li>
+        <li>哆拉A保重大疾病险哆拉A保重大疾病险哆拉A保重大疾病险</li>
+      </ul>
+    </div>
+    <div class="plan-compare">
+      <input type="text" placeholder="请输入A款保险">
+      <a href="javascript:;"></a>
+      <ul>
+        <li>哆拉A保重大疾病险1</li>
+        <li>哆拉A保重大疾病险2</li>
+        <li>哆拉A保重大疾病险3</li>
+        <li>哆拉A保重大疾病险哆拉A保重大疾病险哆拉A保重大疾病险</li>
+      </ul>
+    </div>
+    <div class="compare-switch">
+      <i></i>
+    </div>
+  </div>
+
+  <div class="plan-btn">
+    <button class="btn btn-common">去对比</button>
+  </div>
+
+  <div class="footer">
+    <div class="contrast">
+      <i></i>
+      <span>对比工具</span>
+    </div>
+    <div class="my-tab active">
+      <i></i>
+      <span>我的</span>
+    </div>
+  </div>
+
+</div>
+<script src="./js/jquery-3.3.1.min.js"></script>
+<script>
+  $(function () {
+    $('.compare-switch i').bind('click', function () {
+      $(this).toggleClass('active')
+    })
+
+    $('.plan-compare input').on('input propertychange', function () {
+      let searchWord = $(this).val()
+      if ( searchWord ) {
+        $(this).siblings('a').show()
+        $(this).siblings('ul').show()
+      }
+    })
+
+    $('.plan-compare a').bind('click', function () {
+      $(this).hide().siblings('input').val('')
+      $(this).siblings('ul').hide()
+    })
+
+    $('.plan-compare').on('click', 'li', function () {
+      console.log($(this).text())
+      $(this).parents('ul').hide().siblings('input').val($(this).text())
+    })
+  })
+</script>
+</body>
+</html>
