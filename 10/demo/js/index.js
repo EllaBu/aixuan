@@ -34,9 +34,9 @@ $(function () {
     },
   });
   $(".swiper-slide").click(function () {
-    var imgSrc = $(this).children('img').attr('src');
+    var imgSrc = $(this).children('image').attr('src');
     console.log(imgSrc);
-    $('#back').children('img').attr('src', imgSrc)
+    $('#back').children('image').attr('src', imgSrc)
     $(this).addClass("select")
     $(this).siblings().removeClass("select")
   })
@@ -173,8 +173,8 @@ function get() {
   //   // 获取网页中的canvas对象
   // var mycanvas1=document.getElementsByTagName('canvas')[0];
   // //将转换后的img标签插入到html中
-  // var img=convertCanvasToImage(mycanvas1);
-  // $('#qrCode').append(img);//imagQrDiv表示你要插入的容器id
+  // var image=convertCanvasToImage(mycanvas1);
+  // $('#qrCode').append(image);//imagQrDiv表示你要插入的容器id
 
   var timer = setTimeout(function () {
     var shareContent = document.getElementById('area');// 需要绘制的部分的 (原生）dom 对象 ，注意容器的宽度不要使用百分比，使用固定宽度，避免缩放问题

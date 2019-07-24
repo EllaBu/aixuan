@@ -115,16 +115,16 @@ function selectFileImage(fileObj) {
 
 //对图片旋转处理 added by lzk www.bcty365.com
 function rotateImg(img, direction,canvas) {
-  //alert(img);
+  //alert(image);
   //最小与最大旋转方向，图片旋转4次后回到原方向
   var min_step = 0;
   var max_step = 3;
-  //var img = document.getElementById(pid);
+  //var image = document.getElementById(pid);
   if (img == null)return;
   //img的高度和宽度不能在img元素隐藏后获取，否则会出错
   var height = img.height;
   var width = img.width;
-  //var step = img.getAttribute('step');
+  //var step = image.getAttribute('step');
   var step = 2;
   if (step == null) {
     step = min_step;
@@ -137,13 +137,13 @@ function rotateImg(img, direction,canvas) {
     step--;
     step < min_step && (step = max_step);
   }
-  //img.setAttribute('step', step);
+  //image.setAttribute('step', step);
   /*var canvas = document.getElementById('pic_' + pid);
   if (canvas == null) {
-      img.style.display = 'none';
+      image.style.display = 'none';
       canvas = document.createElement('canvas');
       canvas.setAttribute('id', 'pic_' + pid);
-      img.parentNode.appendChild(canvas);
+      image.parentNode.appendChild(canvas);
   }  */
   //旋转角度以弧度值为参数
   var degree = step * 90 * Math.PI / 180;

@@ -34,9 +34,9 @@ $(function () {
     },
   });
   $(".swiper-slide").click(function () {
-    var imgSrc = $(this).children('img').attr('src');
+    var imgSrc = $(this).children('image').attr('src');
     console.log(imgSrc);
-    $('#back').children('img').attr('src', imgSrc)
+    $('#back').children('image').attr('src', imgSrc)
     $(this).addClass("select")
     $(this).siblings().removeClass("select")
   })

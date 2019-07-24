@@ -1,0 +1,146 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>canvas声波-jq22.com</title>
+    <script src="https://libs.baidu.com/jquery/1.11.3/jquery.min.js"></script>
+    <style>
+        body {
+            color:white;
+            background-color:#333;
+            font-size:16px;
+        }
+        controlDiv {
+            margin:40px auto;
+        }
+        label {
+            /* 变为block之后后面的元素才会换行排列 */
+            display:block;
+        }
+        input[type=range] {
+            display:block;
+        }
+        #canvas {
+            display:block;
+            margin:0 auto;
+        }
+    </style>
+</head>
+<body>
+<p id="controlDiv">
+    <label id="attenuationCoefficientLabel">衰减系数: 2</label>
+    <label>(越大, 边缘衰减的就越多, 震动宽度相应也越窄)</label>
+    <input id="attenuationCoefficientRange" max="10" min="1" step="1" type="range" value="2">
+    <label id="halfWaveCountLabel">半波长个数-1: 3</label>
+    <input id="halfWaveCountRange" max="10" min="0" step="1" type="range" value="3">
+    <label id="amplitudePercentageLabel">振幅: 90%</label>
+    <input id="amplitudePercentageRange" max="100" min="0" step="1" type="range" value="90">
+    <label id="radianStepLabel">角速度: 0.05</label>
+    <label>(速度开始从右到左,先加快后减慢,最后变成左到右)</label>
+    <input id="radianStepRange" max="3.15" min="0" step="0.01" type="range" value="0.05">
+</p>
+<canvas id="canvas">Your browser can not support canvas</canvas>
+
+<script>
+    var doublePI = Math.PI * 2;
+    var canvas;
+    var ctx;
+
+    //画布的高度的一半
+    var halfCanvasHeight = 100;
+    //水平边距
+    var horizontalMargin = 150;
+
+    //衰减系数(越大, 边缘衰减的就越多, 震动宽度相应也越窄)
+    var attenuationCoefficient = 2;
+    //半波长个数-1
+    var halfWaveCount = 3;
+    //振幅是画布高度的一般的百分比[0,1]
+    var amplitudePercentage = 0.9;
+    //每帧增加的弧度[0,2PI](作用于sin曲线, 正值相当于原点右移, 曲线左移)
+    var radianStep = -0.05;
+
+    //当前弧度的偏移
+    var radianOffset = 0;
+    //画布宽度
+    var canvasWidth;
+
+    function init() {
+        canvas = document.getElementById("canvas");
+        ctx = canvas.getContext("2d");
+
+        var attenuationCoefficientLabel = document.getElementById("attenuationCoefficientLabel");
+        var attenuationCoefficientRange = document.getElementById("attenuationCoefficientRange");
+        var halfWaveCountLabel = document.getElementById("halfWaveCountLabel");
+        var halfWaveCountRange = document.getElementById("halfWaveCountRange");
+        var amplitudePercentageRangeLabel = document.getElementById("amplitudePercentageRangeLabel");
+        var amplitudePercentageRangeRange = document.getElementById("amplitudePercentageRangeRange");
+        var radianStepLabel = document.getElementById("radianStepLabel");
+        var radianStepRange = document.getElementById("radianStepRange");
+
+        attenuationCoefficientRange.addEventListener("change", function() {
+            attenuationCoefficient = parseInt(event.target.value);
+            attenuationCoefficientLabel.innerHTML = "衰减系数AC: " + attenuationCoefficient;
+        });
+        halfWaveCountRange.addEventListener("change", function() {
+            halfWaveCount = parseInt(event.target.value);
+            halfWaveCountLabel.innerHTML = "半波长个数-1: " + halfWaveCount;
+        });
+        amplitudePercentageRange.addEventListener("change", function() {
+            amplitudePercentage = parseInt(event.target.value) / 100;
+            amplitudePercentageLabel.innerHTML = "振幅: " + event.target.value + "%";
+        });
+        radianStepRange.addEventListener("change", function() {
+            radianStep = parseFloat(event.target.value);
+            radianStepLabel.innerHTML = "角速度: " + radianStep;
+        });
+
+        window.addEventListener("resize", onResize);
+
+        canvas.height = halfCanvasHeight * 2;
+        onResize();
+        loop();
+    }
+
+    function onResize() {
+        //元素的大小不能加单位, 单位默认就是像素, 而style中的长度要加单位
+        canvasWidth = canvas.width = window.innerWidth - horizontalMargin;
+    }
+
+    //设K=attenuationCoefficient, 计算信号衰减 (4K/(4K+x^4))^2K<=1 (x belong [-K,K])
+    function calcAttenuation(x) {
+        return Math.pow(4 * attenuationCoefficient / (4 * attenuationCoefficient + Math.pow(x, 4)),
+            2 * attenuationCoefficient);
+    }
+
+    //heightPercentage为振幅的显示比例
+    function drawAcousticWave(heightPercentage, alpha, lineWidth) {
+        ctx.strokeStyle = "white";
+        ctx.globalAlpha = alpha;
+        ctx.lineWidth = lineWidth || 1;
+        ctx.beginPath();
+        ctx.moveTo(0, halfCanvasHeight);
+        var x, y;
+        for (var i = -attenuationCoefficient; i <= attenuationCoefficient; i += 0.01) {
+            //i是当前位置相对于整个长度的比率( x=width*(i+K)/(2*K))
+            x = canvasWidth * (i + attenuationCoefficient) / (2 * attenuationCoefficient);
+            //加offset相当于把sin曲线向右平移
+            y = halfCanvasHeight + halfCanvasHeight * amplitudePercentage * calcAttenuation(i) * heightPercentage *
+                Math.sin(halfWaveCount * i + radianOffset);
+            ctx.lineTo(x, y);
+        }
+        ctx.stroke();
+    }
+
+    function loop() {
+        radianOffset = (radianOffset + radianStep) % doublePI;
+        ctx.clearRect(0, 0, canvas.width, canvas.height);
+        drawAcousticWave(1, 1, 2);
+        requestAnimationFrame(loop);
+    }
+
+    init();
+</script>
+
+</body>
+</html>

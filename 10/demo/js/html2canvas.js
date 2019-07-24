@@ -1708,7 +1708,7 @@
           var node = document.createElement('div');
           node.style.backgroundImage = 'url(' + greenImageSrc + ')';
           node.style.height = size + 'px';
-          // Firefox 55 does not render inline <img /> tags
+          // Firefox 55 does not render inline <image /> tags
           return isGreenPixel(data) ? (0, _ForeignObjectRenderer.loadSerializedSVG)((0, _ForeignObjectRenderer.createForeignObjectSVG)(size, size, 0, 0, node)) : Promise.reject(false);
         }).then(function (img) {
           ctx.drawImage(img, 0, 0);

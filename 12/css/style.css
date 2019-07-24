@@ -1,0 +1,326 @@
+.item {
+  border-bottom: 1px solid #c4c4c4;
+  padding: 0.32rem 0;
+  line-height: 0.48rem;
+}
+.item input {
+  height: 0.48rem;
+  line-height: 0.48rem;
+}
+.item i {
+  float: right;
+  display: inline-block;
+  width: 0.48rem;
+  height: 0.48rem;
+  background: url("../img/icon-delete.png") no-repeat center;
+}
+
+.btn {
+  background-color: #d9d9d9;
+  color: #fff;
+  border-radius: 0.32rem;
+  height: 0.8rem;
+  font-weight: bold;
+  font-size: 0.32rem;
+}
+
+.btn-common {
+  background-color: #4988fe;
+}
+
+.btn-hollow {
+  background-color: #fff;
+  border: 2px solid #4988fe;
+  color: #4988fe;
+}
+
+.switch {
+  position: relative;
+  float: right;
+  width: 1rem;
+  height: 0.58rem;
+  border: 0.02rem solid #e5e5e5;
+  border-radius: 0.3rem;
+}
+.switch i {
+  position: absolute;
+  left: 0.01rem;
+  display: block;
+  width: 0.54rem;
+  height: 0.54rem;
+  border-radius: 0.27rem;
+  background-color: #fff;
+  box-shadow: 0 0 0.03rem #333;
+}
+.switch.active {
+  background-color: #4988fe;
+  border: 0.02rem solid #4988fe;
+}
+.switch.active i {
+  left: 0.4rem;
+  box-shadow: none;
+}
+
+.login-box {
+  padding: 0 0.64rem;
+}
+.login-box .btn {
+  margin-top: 0.6rem;
+  width: 100%;
+}
+.login-box .tip {
+  margin-top: 0.32rem;
+  font-size: 0.22rem;
+}
+.login-box .tip a {
+  color: #4988fe;
+}
+.login-box .title {
+  font-size: 0.48rem;
+  color: #4988fe;
+  padding: 1.4rem 0;
+  font-weight: bold;
+}
+.login-box .title span {
+  font-size: 0.32rem;
+  color: #5d5d5d;
+  font-weight: normal;
+}
+
+.attestation {
+  padding: 0 0.64rem 2rem;
+}
+.attestation .title {
+  padding: 1.28rem 0 0.64rem 1.12rem;
+  background: url("../img/icon-ensure.png") no-repeat 0 1.28rem;
+  background-size: 0.8rem;
+}
+.attestation .title p {
+  font-size: 0.48rem;
+  color: #4988fe;
+  font-weight: bold;
+  margin-bottom: 0.32rem;
+}
+.attestation input,
+.attestation select {
+  float: right;
+  width: 55%;
+  text-align: right;
+}
+.attestation select {
+  direction: rtl;
+  background: url("../img/icon-down.png") no-repeat center right;
+  padding-right: 0.4rem;
+}
+
+.handle {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 1.2rem;
+  padding: 0.4rem 0;
+  background-color: #f8f8f8;
+}
+.handle a {
+  display: inline-block;
+  width: 50%;
+  float: left;
+  font-size: 0.4rem;
+  line-height: 0.4rem;
+  text-align: center;
+}
+.handle a:first-of-type {
+  border-right: 1px solid #c4c4c4;
+}
+.handle a:last-of-type {
+  color: #4988fe;
+}
+
+.vip {
+  padding: 0 0.64rem 0.6rem;
+}
+.vip .title {
+  color: #4988fe;
+  font-size: 0.48rem;
+  margin: 1.28rem 0 0.66rem;
+}
+.vip .equities h4 {
+  font-size: 0.4rem;
+  margin-bottom: 0.2rem;
+}
+.vip .equities p {
+  font-size: 0.28rem;
+  line-height: 0.46rem;
+}
+.vip .get-vip {
+  margin-top: 1rem;
+}
+.vip .get-vip h4 {
+  font-size: 0.4rem;
+  padding-bottom: 0.32rem;
+  border-bottom: 1px solid #d8d8d8;
+}
+.vip .get-vip ul li {
+  border-bottom: 1px solid #d8d8d8;
+  padding: 0.48rem 0;
+  overflow: hidden;
+  font-size: 0.36rem;
+}
+.vip .get-vip ul li span {
+  float: left;
+  font-family: Osaka;
+  font-size: 0.6rem;
+  color: #bababa;
+  width: 0.8rem;
+}
+.vip .get-vip ul li div {
+  float: left;
+  width: 5.3rem;
+}
+.vip .get-vip ul li div p {
+  margin-bottom: 0.32rem;
+}
+.vip .get-vip ul li div b {
+  font-size: 0.84rem;
+  margin-right: 0.1rem;
+}
+.vip .get-vip ul li div button {
+  width: 2.88rem;
+}
+.vip .order {
+  padding: 0.48rem 0;
+  font-size: 0.28rem;
+  text-align: center;
+}
+.vip .order .vip-card {
+  margin-top: 0.48rem;
+  height: 3.62rem;
+  background: url("../img/vipcard.png") no-repeat center;
+  background-size: 100%;
+  padding-top: 1.28rem;
+}
+.vip .order .vip-card p {
+  color: #fff;
+}
+.vip .order .vip-card p b {
+  font-size: 0.48rem;
+  margin-right: 0.1rem;
+}
+.vip .order .vip-card p:first-of-type {
+  font-size: 0.4rem;
+}
+.vip .order-style ul {
+  margin-top: 0.16rem;
+}
+.vip .order-style li {
+  border-bottom: 1px solid #c4c4c4;
+  padding: 0.32rem 0;
+  line-height: 0.32rem;
+  background: url("../img/icon-right.png") no-repeat center right;
+}
+.vip .order-style li img {
+  vertical-align: middle;
+}
+.vip .order-style li span {
+  vertical-align: middle;
+  margin-left: 0.32rem;
+}
+.vip .order-style button {
+  width: 100%;
+  margin-top: 1.28rem;
+}
+
+.my-info .info {
+  height: 4.68rem;
+  background: url("../img/info-bg.png") no-repeat center;
+  background-size: 100%;
+  color: #fff;
+  padding: 1.76rem 0.32rem 0;
+}
+.my-info .info .photo {
+  float: left;
+  width: 1.6rem;
+  height: 1.6rem;
+  border-radius: 0.8rem;
+  background-color: #fff;
+}
+.my-info .info .detail {
+  float: left;
+  margin-left: 0.32rem;
+}
+.my-info .info .detail h3 {
+  font-size: 0.52rem;
+  margin-bottom: 0.16rem;
+}
+.my-info .info .detail p {
+  font-size: 0.28rem;
+}
+.my-info .info .detail p:last-of-type {
+  font-size: 0.2rem;
+}
+.my-info .my-list {
+  height: 4rem;
+  background-color: #fff;
+  margin-top: -0.88rem;
+  border-radius: 0.32rem;
+  font-size: 0.36rem;
+  line-height: 0.48rem;
+  padding: 0 0.48rem;
+}
+.my-info .my-list li {
+  padding: 0.64rem 0.64rem 0.64rem 0.16rem;
+  background: url("../img/icon-right.png") no-repeat center right;
+  border-bottom: 1px solid #c4c4c4;
+}
+.my-info .my-list li i {
+  float: right;
+  font-style: normal;
+  font-size: 0.24rem;
+  padding: 0 0.16rem;
+  border: 2px solid #4988fe;
+  border-radius: 0.16rem;
+  vertical-align: middle;
+  color: #4988fe;
+  font-weight: bold;
+}
+.my-info .my-list li span {
+  vertical-align: middle;
+}
+.my-info .footer {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 1.4rem;
+  padding-top: 0.3rem;
+  background-color: #f8f8f8;
+  font-size: 0.2rem;
+}
+.my-info .footer div {
+  float: left;
+  text-align: center;
+  width: 50%;
+}
+.my-info .footer div i {
+  display: block;
+  width: 0.48rem;
+  height: 0.48rem;
+  margin: 0 auto 0.1rem;
+}
+.my-info .footer div.contrast i {
+  background: url("../img/contrast.png") no-repeat center;
+  background-size: 0.48rem;
+}
+.my-info .footer div.contrast.active i {
+  background: url("../img/contrast-a.png") no-repeat center;
+  background-size: 0.48rem;
+}
+.my-info .footer div.my-tab i {
+  background: url("../img/my.png") no-repeat center;
+  background-size: 0.48rem;
+}
+.my-info .footer div.my-tab.active i {
+  background: url("../img/my-a.png") no-repeat center;
+  background-size: 0.48rem;
+}

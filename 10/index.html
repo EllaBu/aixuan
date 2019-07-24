@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no,viewport-fit=cover"/>
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="format-detection" content="telephone=no">
+    <title>Title</title>
+    <link rel="stylesheet" href="./css/reset.css">
+    <link rel="stylesheet" href="./css/style.css">
+</head>
+<body>
+<section class="ripple" onselectstart="return false"></section>
+<footer onselectstart="return false">
+    <div class="voice"></div>
+</footer>
+<script src="./js/jquery-3.3.1.min.js"></script>
+<script>
+    $(".voice").bind("touchstart", function () {
+        $(this).addClass("down")
+        $(".ripple").show()
+    }).bind("touchend", function () {
+        $(this).removeClass("down")
+        $(".ripple").hide();
+    })
+</script>
+</body>
+</html>

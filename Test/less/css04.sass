@@ -1,0 +1,16 @@
+@charset "UTF-8"
+/*$size 建议取双数*/
+@mixin circle($size, $backgroundColor)
+  width: $size
+  height: $size
+  background-color: $backgroundColor
+  [data-dpr="1"] &
+    width: $size * 0.5
+    height: $size * 0.5
+
+  [data-dpr="3"] &
+    width: $size * 1.5
+    height: $size * 1.5
+
+.circle
+  @include circle(40px, red)
