@@ -74,6 +74,7 @@
 }
 
 .header {
+  position: relative;
   height: 0.96rem;
   line-height: 0.96rem;
   background-color: #f9f9f9;
@@ -85,14 +86,17 @@
   text-align: center;
 }
 .header a {
-  float: right;
+  position: absolute;
+  top: 0;
+  right: 0.32rem;
   font-size: 0.28rem;
   color: #0059d1;
   font-weight: bold;
-  margin: -0.96rem 0.32rem 0 0;
 }
 .header i {
-  float: left;
+  position: absolute;
+  top: 0;
+  left: 0;
   width: 0.88rem;
   height: 0.96rem;
   background: url("../img/icon-left.png") no-repeat center;

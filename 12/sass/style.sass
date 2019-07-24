@@ -67,6 +67,7 @@ $color-border: #c4c4c4
       box-shadow: none
 
 .header
+  position: relative
   height: .96rem
   line-height: .96rem
   background-color: #f9f9f9
@@ -76,13 +77,16 @@ $color-border: #c4c4c4
     color: #000
     text-align: center
   a
-    float: right
+    position: absolute
+    top: 0
+    right: .32rem
     font-size: .28rem
     color: #0059d1
     font-weight: bold
-    margin: -.96rem .32rem 0 0
   i
-    float: left
+    position: absolute
+    top: 0
+    left: 0
     width: .88rem
     height: .96rem
     background: url("../img/icon-left.png") no-repeat center
