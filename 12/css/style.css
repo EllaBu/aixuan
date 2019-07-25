@@ -324,6 +324,9 @@
   margin-top: 1.28rem;
 }
 
+.my-info {
+  padding-bottom: 1.36rem;
+}
 .my-info .info {
   height: 4.68rem;
   background: url("../img/info-bg.png") no-repeat center;
@@ -358,21 +361,21 @@
   font-size: 0.2rem;
 }
 .my-info .my-list {
-  height: 4rem;
   background-color: #fff;
   margin-top: -0.88rem;
   border-radius: 0.32rem;
   font-size: 0.36rem;
   line-height: 0.48rem;
-  padding: 0 0.48rem;
+  padding: 0 0.48rem 0.32rem;
 }
 .my-info .my-list li {
-  padding: 0.64rem 0.64rem 0.64rem 0.16rem;
   background: url("../img/icon-right.png") no-repeat center right;
   border-bottom: 1px solid #c4c4c4;
+  overflow: hidden;
 }
 .my-info .my-list li a {
   display: block;
+  padding: 0.64rem 0.64rem 0.64rem 0.16rem;
 }
 .my-info .my-list li i {
   float: right;
