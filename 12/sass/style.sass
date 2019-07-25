@@ -401,12 +401,32 @@ $color-border: #c4c4c4
         font-weight: bold
         border-bottom: 2px solid $color-common
 
-  .plan-btn
-    padding: .48rem 0
-    button
+  .add-btn
       display: block
       width: 4.8rem
-      margin: 0 auto
+      margin: .48rem auto
+
+  .list-none
+    text-align: center
+    padding-top: 1.2rem
+    img
+      width: 4rem
+
+  .list-header
+    position: relative
+    height: 2.72rem
+    img
+      position: absolute
+      left: .8rem
+      bottom: .32rem
+      width: 2.4rem
+      z-index: 10000
+    .btn
+      position: absolute
+      width: 4rem
+      right: .96rem
+      bottom: .8rem
+      z-index: 9999
 
   .plan-list
     padding: 0 .2rem
@@ -486,11 +506,6 @@ $color-border: #c4c4c4
         font-weight: bold
         vertical-align: middle
         text-align: center
-  .collect-none
-    text-align: center
-    p
-      color: #bababa
-      margin-top: .48rem
 
   .collect-history
     padding: 0 .32rem

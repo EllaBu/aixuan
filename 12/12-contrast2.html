@@ -19,13 +19,22 @@
   </div>
 
   <div class="title">
-    <a href="javascript:;">我的方案</a>
-    <a href="javascript:;" class="active">我的收藏</a>
+    <a href="11-contrast1.html">我的方案</a>
+    <a href="12-contrast2.html" class="active">我的收藏</a>
   </div>
 
   <div class="collect-input">
     <input type="text" placeholder="输入您想关注的保险名称">
   </div>
+  <!-- 无收藏列表显示 start-->
+  <div class="list-none">
+    <img src="./img/collect-img.png" alt="">
+    <button class="btn btn-common add-btn">去收藏</button>
+
+  </div>
+  <!-- 无收藏列表显示 end-->
+
+
   <!-- 有收藏列表显示 start-->
   <ul class="collect-list">
     <li>
@@ -46,16 +55,6 @@
   </ul>
   <!-- 有收藏列表显示 end-->
 
-  <!-- 无收藏列表显示 start-->
-  <div class="collect-none">
-    <img src="" alt="">
-    <p>暂无收藏信息</p>
-    <div class="plan-btn">
-      <button class="btn btn-common">去收藏</button>
-    </div>
-  </div>
-  <!-- 无收藏列表显示 end-->
-
 
   <div class="footer">
     <div class="contrast">
@@ -69,14 +68,6 @@
   </div>
 
 </div>
-<script src="./js/jquery-3.3.1.min.js"></script>
-<script>
-  $('.title a').bind('click', function () {
-    $(this).addClass('active').siblings().removeClass('active')
-  })
-  $('.footer div').bind('click', function () {
-    $(this).addClass('active').siblings().removeClass('active')
-  })
-</script>
+
 </body>
 </html>
