@@ -1,0 +1,89 @@
+@charset "UTF-8"
+$color-common: #4988fe
+
+.btn
+  background-color: #d9d9d9
+  color: #fff
+  border-radius: .48rem
+  width: 2.4rem
+  height: .8rem
+  font-weight: bold
+  font-size: .32rem
+
+.btn-ok
+  float: right
+  background-color: #4988fe
+
+.btn-cancel
+  float: left
+  background-color: #fff
+  border: 2px solid $color-common
+  color: $color-common
+
+.message-box
+  position: fixed
+  top: 0
+  left: 0
+  width: 100%
+  height: 100%
+  z-index: 10001
+.message-box-shade
+  position: absolute
+  top: 0
+  left: 0
+  width: 100%
+  height: 100%
+  background-color: #000
+  opacity: 0
+  z-index: 10002
+.message-box-content
+  position: relative
+  top: 50%
+  left: 50%
+  background-color: #fff
+  -webkit-box-shadow: 0 5px 12px rgba(0, 0, 0, .5)
+  box-shadow: 0 5px 12px rgba(0, 0, 0, .5)
+  width: 6.8rem
+  border-radius: .1rem
+  z-index: 10003
+  opacity: 0
+  -webkit-transform: translate3d(-50%, -50%, 0) scale3d(0.9, 0.9, 0.9)
+  transform: translate3d(-50%, -50%, 0) scale3d(0.9, 0.9, 0.9)
+  -webkit-transition: all ease-in-out .2s
+  transition: all ease-in-out .2s
+  .message-box-header
+    height: .96rem
+    line-height: .96rem
+    font-size: .34rem
+    text-align: center
+    h4
+      font-weight: normal
+      color: #2f2f2f
+    span
+      float: left
+      width: .96rem
+      height: .96rem
+      line-height: .96rem
+      margin-top: -.96rem
+      cursor: pointer
+      background: url("../img/icon-close.png") no-repeat center
+      background-size: .36rem
+  .message-box-body
+    padding: .32rem .64rem
+    font-size: .36rem
+    color: #3c3c3c
+  .message-box-footer
+    padding: .32rem .64rem .64rem
+    overflow: hidden
+
+
+
+.message-box-show
+  .message-box-shade
+    opacity: .5
+  .message-box-content
+    opacity: 1
+    -webkit-transform: translate3d(-50%, -50%, 0) scale3d(1, 1, 1)
+    transform: translate3d(-50%, -50%, 0) scale3d(1, 1, 1)
+
+

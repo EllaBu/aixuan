@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport"
+        content="width=device-width,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no,viewport-fit=cover"/>
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black">
+  <meta name="format-detection" content="telephone=no">
+  <title>messageBox插件测试</title>
+  <link rel="stylesheet" href="./css/reset.css">
+  <link rel="stylesheet" href="./css/message.css">
+  <style>
+    .show-msgbox{
+      display: block;
+      width: 4rem;
+      height: 1rem;
+      background-color: #74c8ec;
+      color: #fff;
+      margin: 3rem auto;
+      font-size: .4rem;
+      font-weight: bold;
+    }
+  </style>
+</head>
+<body>
+<button class="show-msgbox">显示对话弹窗</button>
+
+<!--<div class="msgbox">
+  <div class="msgbox-content">
+    <header class="msgbox-header">
+      <h4>VIP功能提醒</h4>
+      <span></span>
+    </header>
+    <section class="msgbox-body">
+      <p>该服务是VIP专属，您确定要了解么？</p>
+    </section>
+    <footer class="msgbox-footer">
+      <button class="btn btn-hollow">返回</button>
+      <button class="btn btn-common">去了解</button>
+    </footer>
+  </div>
+</div>-->
+
+
+<script src="js/jquery-3.3.1.min.js"></script>
+<script src="js/messageBox.js"></script>
+<script>
+  $(function () {
+    $('.show-msgbox').click(function () {
+      // 默认调用
+      // $.messageBox()
+
+
+      // 有参数调用
+      $.messageBox({
+        title: 'VIP功能提醒',                          // 标题内容
+        message: '您的VIP使用期限已到期，您想继续使用么？',  // 提示内容
+
+        cancelBtn: '返回',    // 返回按钮显示文字
+        okBtn: '确定',        // 确定按钮显示文字
+
+        okFun () {      // 点击确定按钮触发函数
+          window.location.href = './04-vip1.html'
+        },
+        cancelFun: function () {  // 点击取消按钮触发函数
+          alert('cancel')
+        }
+      })
+    })
+  })
+</script>
+</body>
+</html>
