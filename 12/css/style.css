@@ -222,12 +222,15 @@
 }
 
 .vip {
-  padding: 0 0.64rem 0.6rem;
+  padding-bottom: 0.6rem;
 }
 .vip .title {
   color: #4988fe;
   font-size: 0.48rem;
-  margin: 1.28rem 0 0.66rem;
+  padding: 0.66rem 0.64rem;
+}
+.vip .equities {
+  padding: 0 0.64rem;
 }
 .vip .equities h4 {
   font-size: 0.4rem;
@@ -238,6 +241,7 @@
   line-height: 0.46rem;
 }
 .vip .get-vip {
+  padding: 0 0.64rem;
   margin-top: 1rem;
 }
 .vip .get-vip h4 {
@@ -274,12 +278,11 @@
   width: 2.88rem;
 }
 .vip .order {
-  padding: 0.48rem 0;
+  padding: 0.48rem 0.64rem;
   font-size: 0.28rem;
   text-align: center;
 }
 .vip .order .vip-card {
-  margin-top: 0.48rem;
   height: 3.62rem;
   background: url("../img/vipcard.png") no-repeat center;
   background-size: 100%;
@@ -294,6 +297,9 @@
 }
 .vip .order .vip-card p:first-of-type {
   font-size: 0.4rem;
+}
+.vip .order-style {
+  padding: 0 0.64rem;
 }
 .vip .order-style ul {
   margin-top: 0.16rem;
