@@ -20,7 +20,6 @@ $color-border: #c4c4c4
     padding-right: .4rem
   i.delete
     float: right
-    display: inline-block
     width: .48rem
     height: .48rem
     background: url("../img/icon-delete.png") no-repeat center
@@ -28,12 +27,15 @@ $color-border: #c4c4c4
     display: none
 
 .btn
+  display: inline-block
   background-color: #d9d9d9
   color: #fff
   border-radius: .48rem
   height: .8rem
+  line-height: .8rem
   font-weight: bold
   font-size: .32rem
+  text-align: center
 
 .btn-common
   background-color: #4988fe
@@ -240,7 +242,7 @@ $color-border: #c4c4c4
             font-size: .84rem
             margin-right: .1rem
             font-weight: normal
-          button
+          .btn
             width: 2.88rem
 
   .order
@@ -600,8 +602,8 @@ $color-border: #c4c4c4
         height: 100%
         background: url("../img/icon-rotate.png") no-repeat center
         background-size: .48rem
-        transition: transform 2s
-        -webkit-transition: transform 2s
+        transition: transform 1s
+        -webkit-transition: transform 1s
         &.active
           transform: rotate(180deg)
 
