@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport"
+        content="width=device-width,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no,viewport-fit=cover"/>
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black">
+  <meta name="format-detection" content="telephone=no">
+  <title>个性化定制</title>
+  <link rel="stylesheet" href="./css/reset.css">
+  <link rel="stylesheet" href="./css/style.css">
+  <link rel="stylesheet" href="./css/mobileSelect.css">
+</head>
+<body>
+<div class="custom">
+  <!--<div class="header">-->
+    <!--<i></i>-->
+    <!--<h2>个性化定制</h2>-->
+  <!--</div>-->
+
+  <div class="custom-item">
+    <h3>客户信息（选填）</h3>
+    <div class="item">
+      <label for="">姓名：</label>
+      <input type="text" placeholder="请输入客户的姓名">
+    </div>
+    <div class="item">
+      <label for="">性别：</label>
+      <span class="m-select" id="sex">请选择</span>
+      <!--<select name="" id="">-->
+        <!--<option value="">请选择</option>-->
+        <!--<option value="">男</option>-->
+        <!--<option value="">女</option>-->
+      <!--</select>-->
+    </div>
+    <div class="item">
+      <label for="">年龄：</label>
+      <span class="m-select" id="age">请选择</span>
+    </div>
+  </div>
+
+  <div class="custom-item">
+    <h3>缴费信息（选填）</h3>
+    <div class="item">
+      <label for="">缴费信息： </label>
+      <span class="m-select">请选择</span>
+    </div>
+    <div class="item">
+      <label for="">保额：</label>
+      <span class="m-select">请选择</span>
+    </div>
+  </div>
+
+  <div class="custom-item">
+    <h3>营销员信息（选填）</h3>
+    <div class="item">
+      <label for="">姓名：</label>
+      <input type="text" placeholder="请输入营销员的姓名">
+    </div>
+    <div class="item">
+      <label for="">保险公司：</label>
+      <span class="m-select">请选择</span>
+    </div>
+    <div class="item">
+      <label for="">执业年限：</label>
+      <span class="m-select">请选择</span>
+    </div>
+  </div>
+
+  <div class="handle">
+    <button class="btn btn-common">确定</button>
+  </div>
+
+
+
+
+</div>
+
+<!--<script src="./js/jquery-3.3.1.min.js"></script>-->
+<script src="./js/mobileSelect.min.js"></script>
+<script>
+  var sexArr=['男','女'];
+  var ageArr = ['20', '21', '22', '23', '24', '25', '26', '27']
+  var sexSelect = new MobileSelect({
+    trigger: '#sex',
+    title: '选择性别',
+    wheels: [
+      {data: sexArr}
+    ],
+    position:[0], //初始化定位 打开时默认选中的哪个 如果不填默认为0
+    transitionEnd:function(indexArr, data){
+      console.log(data);
+    },
+    callback:function(indexArr, data){
+      console.log(data);
+    }
+  });
+
+  var ageSelect = new MobileSelect({
+    trigger: '#age',
+    title: '选择年龄',
+    wheels: [
+      {data: ageArr}
+    ],
+    position:[2]
+  });
+
+
+</script>
+</body>
+</html>
