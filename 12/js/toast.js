@@ -2,7 +2,7 @@
   let settings, cancelBtn, okBtn, closeBtn, timer
 
   let _renderDOM = function() {
-    if( $('.message-box').length > 0){
+    if( $('.toast').length > 0){
       return
     }
 
