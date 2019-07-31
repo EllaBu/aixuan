@@ -654,7 +654,42 @@ $color-border: #c4c4c4
     text-align: center
     padding: .2rem 0
 
+
+.gray-bg
+  background-color: #ebebeb
+
 //产品详情
+.product-detail
+  .table-box
+    position: relative
+    border: 1px solid $color-border
+    border-radius: .08rem
+    overflow: hidden
+    margin-bottom: .48rem
+    padding-bottom: .16rem
+    p
+      height: .4rem
+    span
+      position: absolute
+      left: 50%
+      bottom: -.2rem
+      width: 2rem
+      height: .4rem
+      margin-left: -1rem
+      z-index: 9999
+      background: #fff url("../img/more-item.png") no-repeat center
+  table
+    font-size: .28rem
+  th,td
+    padding: .16rem
+    border: 1px solid $color-border
+    text-align: center
+  th
+    background-color: #f8f8f8
+    font-size: .24rem
+    font-weight: bold
+  td
+    vertical-align: top
 .product-name
   position: fixed
   top: 0
@@ -663,6 +698,7 @@ $color-border: #c4c4c4
   height: 1.92rem
   padding: .32rem
   background-color: #fff
+  z-index: 10000
   .p-logo
     float: left
     width: 1.6rem
@@ -681,13 +717,13 @@ $color-border: #c4c4c4
   margin-top: 1.92rem
   font-size: .24rem
   text-align: center
-  table
-    width: 100%
   tr
     &:first-of-type
       background-color: #eff6ff
-      color: #4988fe
+      color: $color-common
       font-weight: bold
+      td
+        border: none
     &:last-of-type
       background-color: #6caaff
       color: #fff
@@ -696,3 +732,185 @@ $color-border: #c4c4c4
   td
     padding: .16rem
     vertical-align: middle
+.product-title
+  padding: .32rem 0
+  h3
+    text-align: center
+    font-size: .32rem
+    &:before,
+    &:after
+      content: '-'
+      padding: 0 .16rem
+      color: $color-common
+      font-weight: bold
+  span
+    float: right
+    width: 1.44rem
+    height: .48rem
+    line-height: .48rem
+    text-align: center
+    color: $color-common
+    border: 1px solid $color-common
+    border-radius: .2rem
+    font-size: .26rem
+    margin-top: -.44rem
+  p
+    font-size: .24rem
+    color: #c4c4c4
+    text-align: center
+    margin-top: .08rem
+    i
+      color: #dd0800
+      margin-right: .08rem
+
+
+.product-item
+  margin-top: .16rem
+  padding: 0 .32rem .32rem
+  background-color: #fff
+
+.product-list
+  position: relative
+  span.more-item
+    position: absolute
+    left: 50%
+    bottom: -.14rem
+    width: 1.72rem
+    height: .4rem
+    margin-left: -.86rem
+    background: url("../img/more-item.png") no-repeat center bottom
+    background-size: 1.72rem .16rem
+    margin-top: .16rem
+    i
+      display: block
+      width: 100%
+      height: 100%
+      background: url("../img/icon-down-d.png") no-repeat center
+      background-size: .22rem
+    &.fold
+      i
+        transform: rotate(180deg)
+.duty
+  margin-top: .16rem
+  padding: 0 .32rem .32rem
+  background-color: #fff
+  h4
+    font-size: .3rem
+    margin-bottom: .24rem
+    a
+      float: right
+      font-size: .26rem
+      color: $color-common
+      font-weight: normal
+  th,td
+    text-align: left
+    border: none
+  .item-tip
+    color: #c4c4c4
+    font-size: .24rem
+
+.clause
+  a
+    color: $color-common
+    padding-left: .48rem
+    background: url("../img/icon-clause.png") no-repeat left center
+    background-size: .32rem
+    font-size: .26rem
+
+.page-tip
+  font-size: .24rem
+  text-align: center
+  padding: .48rem 0
+  a
+    color: $color-common
+  i
+    color: #dd0800
+    font-weight: bold
+.page-handle
+  position: fixed
+  right: .32rem
+  bottom: 1rem
+  z-index: 10000
+  a
+    display: block
+    width: 1rem
+    height: 1rem
+    border: 1px solid #aecdf7
+    border-radius: .5rem
+    margin-bottom: .16rem
+    background-color: #fff
+    background-repeat: no-repeat
+    background-position: center
+    &:nth-of-type(1)
+      background-image: url("../img/icon-star.png")
+      background-size: .44rem
+    &:nth-of-type(2)
+      background-image: url("../img/icon-vsb.png")
+      background-size: .48rem .36rem
+    &:nth-of-type(3)
+      background-image: url("../img/icon-forward.png")
+      background-size: .38rem .34rem
+
+//病种对比
+.disease-name
+  position: fixed
+  top: 0
+  left: 0
+  width: 100%
+  padding: 0 .32rem
+  background-color: #eff6ff
+  z-index: 10000
+  p
+    height: .7rem
+    line-height: .7rem
+    font-size: .26rem
+    b
+      font-weight: bold
+    &:first-of-type
+      border-bottom: 1px dotted $color-border
+      color: #ff7f12
+    &:last-of-type
+      color: $color-common
+
+.disease-list
+  margin-top: 1.56rem
+  .table-box
+    border: 1px solid $color-border
+    border-radius: .08rem
+    margin-top: .08rem
+  th,td
+    padding: .16rem
+    text-align: center
+  th
+    border-bottom: 1px solid $color-border
+  td
+    padding: .24rem .16rem
+    border-right: 1px solid $color-border
+  tr
+    td
+      &:first-of-type
+        text-align: left
+      &:last-of-type
+        background-color: #f8f8f8
+.disease-item
+  margin-top: .16rem
+  background-color: #fff
+  font-size: .26rem
+  padding: .16rem .32rem
+  h3
+    font-size: .3rem
+    height: .8rem
+    line-height: .8rem
+    font-weight: normal
+    i
+      float: right
+      width: .8rem
+      height: .8rem
+      background: url("../img/icon-up.png") no-repeat center
+      background-size: .22rem .12rem
+  &.fold
+    i
+      background: url("../img/icon-down.png") no-repeat center
+      background-size: .22rem .12rem
+    .table-box
+      display: none
