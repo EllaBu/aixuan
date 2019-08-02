@@ -12,9 +12,26 @@
   <link rel="stylesheet" href="./css/toast.css">
 </head>
 <body>
-<div class="toast toast-show">
-  <i></i>
-  <p>加载中...</p>
-</div>
+<!--<div class="toast loading">-->
+  <!--<i></i>-->
+  <!--<span>信息获取中，请稍候……</span>-->
+<!--</div>-->
+
+<script src="js/jquery-3.3.1.min.js"></script>
+<script src="js/toast.js"></script>
+<script>
+  $(function () {
+    $.toast({
+      /*type: 'loading',
+      message: '信息获取中，请稍候……'*/
+
+      /*type: 'fail',
+      message: '支付信息获取失败，稍侯重试'*/
+
+      type: 'success',
+      message: '支付已成功，您已升级为VIP客户'
+    })
+  })
+</script>
 </body>
 </html>

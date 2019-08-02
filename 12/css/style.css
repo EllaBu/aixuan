@@ -776,19 +776,6 @@
   margin-bottom: 0.48rem;
   padding-bottom: 0.16rem;
 }
-.product-detail .table-box p {
-  height: 0.4rem;
-}
-.product-detail .table-box span {
-  position: absolute;
-  left: 50%;
-  bottom: -0.2rem;
-  width: 2rem;
-  height: 0.4rem;
-  margin-left: -1rem;
-  z-index: 9999;
-  background: #fff url("../img/more-item.png") no-repeat center;
-}
 .product-detail table {
   font-size: 0.28rem;
 }
@@ -836,26 +823,42 @@
 .product-intro {
   margin-top: 1.92rem;
   font-size: 0.24rem;
-  text-align: center;
+  background-color: #fff;
 }
-.product-intro tr:first-of-type {
-  background-color: #eff6ff;
-  color: #4988fe;
+.product-intro ul {
+  overflow: hidden;
+  padding: 0 0.32rem;
+}
+.product-intro li {
+  float: left;
+  height: 0.56rem;
+  line-height: 0.56rem;
+  padding: 0 0.32rem;
+  border-radius: 0.32rem;
+  margin: 0 0.32rem 0.24rem 0;
+}
+.product-intro li b {
   font-weight: bold;
 }
-.product-intro tr:first-of-type td {
-  border: none;
+.product-intro li:nth-of-type(1), .product-intro li:nth-of-type(5) {
+  border: 1px solid #4988fe;
+  background-color: #f2f7ff;
+  color: #4988fe;
 }
-.product-intro tr:last-of-type {
-  background-color: #6caaff;
-  color: #fff;
+.product-intro li:nth-of-type(2) {
+  border: 1px solid #ff9124;
+  background-color: #fff8f0;
+  color: #ff9124;
 }
-.product-intro tr:last-of-type td {
-  border: 1px solid #c6deff;
+.product-intro li:nth-of-type(3) {
+  border: 1px solid #ff7171;
+  background-color: #fffcfc;
+  color: #ff7171;
 }
-.product-intro td {
-  padding: 0.16rem;
-  vertical-align: middle;
+.product-intro li:nth-of-type(4) {
+  border: 1px solid #2fb2a3;
+  background-color: #f2fcff;
+  color: #2fb2a3;
 }
 
 .product-title {
@@ -877,9 +880,9 @@
   height: 0.48rem;
   line-height: 0.48rem;
   text-align: center;
-  color: #4988fe;
-  border: 1px solid #4988fe;
-  border-radius: 0.2rem;
+  background-color: #4988fe;
+  color: #fff;
+  border-radius: 0.24rem;
   font-size: 0.26rem;
   margin-top: -0.44rem;
 }
@@ -987,17 +990,18 @@
   background-repeat: no-repeat;
   background-position: center;
 }
-.page-handle a:nth-of-type(1) {
-  background-image: url("../img/icon-star.png");
-  background-size: 0.44rem;
-}
-.page-handle a:nth-of-type(2) {
-  background-image: url("../img/icon-vsb.png");
-  background-size: 0.48rem 0.36rem;
-}
 .page-handle a:nth-of-type(3) {
   background-image: url("../img/icon-forward.png");
   background-size: 0.38rem 0.34rem;
+}
+
+.product-detail .page-handle a:nth-of-type(1) {
+  background-image: url("../img/icon-star.png");
+  background-size: 0.44rem;
+}
+.product-detail .page-handle a:nth-of-type(2) {
+  background-image: url("../img/icon-vsb.png");
+  background-size: 0.48rem 0.36rem;
 }
 
 .disease-name {
@@ -1076,4 +1080,121 @@
 }
 .disease-item.fold .table-box {
   display: none;
+}
+
+.head-bg {
+  background-color: #6caaff;
+  height: 2.4rem;
+}
+
+.contrast-product {
+  position: absolute;
+  top: 0.5rem;
+  left: 0.32rem;
+  width: 6.86rem;
+  height: 2.56rem;
+  background: #fff url("../img/product-vs.png") no-repeat center;
+  background-size: 1rem 2.56rem;
+  border-radius: 0.24rem 0.24rem 0 0;
+  box-shadow: 0 0 16px #c4c4c4;
+}
+.contrast-product .contrast-sign {
+  position: absolute;
+  top: -0.32rem;
+  right: -0.16rem;
+  width: 1.36rem;
+  height: 1.36rem;
+  background: url("../img/icon-sign.png") no-repeat center;
+  background-size: 1.36rem;
+}
+.contrast-product .product {
+  float: left;
+  width: 50%;
+  padding: 0.24rem 0.8rem;
+  text-align: center;
+}
+.contrast-product .product img {
+  width: 1.28rem;
+  height: 1.28rem;
+}
+.contrast-product .product p {
+  font-size: 0.28rem;
+}
+
+.contrast-box {
+  padding: 0 0.32rem 0.32rem;
+  background-color: #fff;
+  margin-bottom: 0.16rem;
+}
+.contrast-box h4 {
+  font-size: 0.3rem;
+  margin-bottom: 0.24rem;
+}
+.contrast-box h4 a {
+  float: right;
+  font-size: 0.26rem;
+  color: #4988fe;
+  font-weight: normal;
+}
+.contrast-box .table-box {
+  position: relative;
+  overflow: hidden;
+  margin-bottom: 0.24rem;
+  padding-bottom: 0.16rem;
+  font-size: 0.26rem;
+}
+.contrast-box .table-box td {
+  width: 50%;
+  padding: 0.14rem;
+  text-align: center;
+  vertical-align: top;
+  border: 1px solid #c4c4c4;
+}
+.contrast-box .table-box td:first-of-type {
+  border-radius: 0.08rem 0 0 0.08rem;
+}
+.contrast-box .table-box td.light {
+  border: 1px solid #ff9124;
+  background-color: #fff8f0;
+  color: #ff9124;
+}
+.contrast-box .table-box td:last-of-type {
+  border-radius: 0 0.08rem 0.08rem 0;
+  background-color: #f8f8f8;
+}
+.contrast-box .table-box.table-left td {
+  text-align: left;
+}
+
+.contrast-info {
+  padding-top: 0.64rem;
+}
+
+.choose-term,
+.custom-edit {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #fff;
+  padding: 0 0.32rem;
+  display: none;
+}
+.choose-term .btn,
+.custom-edit .btn {
+  position: absolute;
+  width: 4rem;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.contrast-detail .page-handle a:nth-of-type(1) {
+  background-image: url("../img/icon-mine.png");
+  background-size: 0.44rem;
+}
+.contrast-detail .page-handle a:nth-of-type(2) {
+  background-image: url("../img/icon-product.png");
+  background-size: 0.44rem;
 }

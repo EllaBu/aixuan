@@ -667,17 +667,6 @@ $color-border: #c4c4c4
     overflow: hidden
     margin-bottom: .48rem
     padding-bottom: .16rem
-    p
-      height: .4rem
-    span
-      position: absolute
-      left: 50%
-      bottom: -.2rem
-      width: 2rem
-      height: .4rem
-      margin-left: -1rem
-      z-index: 9999
-      background: #fff url("../img/more-item.png") no-repeat center
   table
     font-size: .28rem
   th,td
@@ -716,22 +705,37 @@ $color-border: #c4c4c4
 .product-intro
   margin-top: 1.92rem
   font-size: .24rem
-  text-align: center
-  tr
-    &:first-of-type
-      background-color: #eff6ff
-      color: $color-common
+  background-color: #fff
+  ul
+    overflow: hidden
+    padding: 0 .32rem
+  li
+    float: left
+    height: .56rem
+    line-height: .56rem
+    padding: 0 .32rem
+    border-radius: .32rem
+    margin: 0 .32rem .24rem 0
+    b
       font-weight: bold
-      td
-        border: none
-    &:last-of-type
-      background-color: #6caaff
-      color: #fff
-      td
-        border: 1px solid #c6deff
-  td
-    padding: .16rem
-    vertical-align: middle
+    &:nth-of-type(1),
+    &:nth-of-type(5)
+      border: 1px solid #4988fe
+      background-color: #f2f7ff
+      color: #4988fe
+    &:nth-of-type(2)
+      border: 1px solid #ff9124
+      background-color: #fff8f0
+      color: #ff9124
+    &:nth-of-type(3)
+      border: 1px solid #ff7171
+      background-color: #fffcfc
+      color: #ff7171
+    &:nth-of-type(4)
+      border: 1px solid #2fb2a3
+      background-color: #f2fcff
+      color: #2fb2a3
+
 .product-title
   padding: .32rem 0
   h3
@@ -749,9 +753,9 @@ $color-border: #c4c4c4
     height: .48rem
     line-height: .48rem
     text-align: center
-    color: $color-common
-    border: 1px solid $color-common
-    border-radius: .2rem
+    background-color: $color-common
+    color: #fff
+    border-radius: .24rem
     font-size: .26rem
     margin-top: -.44rem
   p
@@ -841,15 +845,21 @@ $color-border: #c4c4c4
     background-color: #fff
     background-repeat: no-repeat
     background-position: center
-    &:nth-of-type(1)
-      background-image: url("../img/icon-star.png")
-      background-size: .44rem
-    &:nth-of-type(2)
-      background-image: url("../img/icon-vsb.png")
-      background-size: .48rem .36rem
+
     &:nth-of-type(3)
       background-image: url("../img/icon-forward.png")
       background-size: .38rem .34rem
+
+.product-detail
+  .page-handle
+    a
+      &:nth-of-type(1)
+        background-image: url("../img/icon-star.png")
+        background-size: .44rem
+      &:nth-of-type(2)
+        background-image: url("../img/icon-vsb.png")
+        background-size: .48rem .36rem
+
 
 //病种对比
 .disease-name
@@ -914,3 +924,109 @@ $color-border: #c4c4c4
       background-size: .22rem .12rem
     .table-box
       display: none
+
+
+//对比详情
+.head-bg
+  background-color: #6caaff
+  height: 2.4rem
+
+.contrast-product
+  position: absolute
+  top: .5rem
+  left: .32rem
+  width: 6.86rem
+  height: 2.56rem
+  background: #fff url("../img/product-vs.png") no-repeat center
+  background-size: 1rem 2.56rem
+  border-radius: .24rem .24rem 0 0
+  box-shadow: 0 0 16px $color-border
+  .contrast-sign
+    position: absolute
+    top: -.32rem
+    right: -.16rem
+    width: 1.36rem
+    height: 1.36rem
+    background: url("../img/icon-sign.png") no-repeat center
+    background-size: 1.36rem
+  .product
+    float: left
+    width: 50%
+    padding: .24rem .8rem
+    text-align: center
+    img
+      width: 1.28rem
+      height: 1.28rem
+    p
+      font-size: .28rem
+
+
+.contrast-box
+  padding: 0 .32rem .32rem
+  background-color: #fff
+  margin-bottom: .16rem
+  h4
+    font-size: .3rem
+    margin-bottom: .24rem
+    a
+      float: right
+      font-size: .26rem
+      color: $color-common
+      font-weight: normal
+  .table-box
+    position: relative
+    overflow: hidden
+    margin-bottom: .24rem
+    padding-bottom: .16rem
+    font-size: .26rem
+    td
+      width: 50%
+      padding: .14rem
+      text-align: center
+      vertical-align: top
+      border: 1px solid $color-border
+      &:first-of-type
+        border-radius: .08rem 0 0 .08rem
+      &.light
+        border: 1px solid #ff9124
+        background-color: #fff8f0
+        color: #ff9124
+      &:last-of-type
+        border-radius: 0 .08rem .08rem 0
+        background-color: #f8f8f8
+    &.table-left
+      td
+        text-align: left
+
+
+
+.contrast-info
+  padding-top: .64rem
+
+//选择条件
+.choose-term,
+.custom-edit
+  position: absolute
+  top: 0
+  left: 0
+  right: 0
+  bottom: 0
+  background-color: #fff
+  padding: 0 .32rem
+  display: none
+  .btn
+    position: absolute
+    width: 4rem
+    top: 50%
+    left: 50%
+    transform: translate(-50%, -50%)
+.contrast-detail
+  .page-handle
+    a
+      &:nth-of-type(1)
+        background-image: url("../img/icon-mine.png")
+        background-size: .44rem
+      &:nth-of-type(2)
+        background-image: url("../img/icon-product.png")
+        background-size: .44rem
+
