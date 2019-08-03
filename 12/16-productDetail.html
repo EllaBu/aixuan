@@ -213,6 +213,12 @@
 <div class="choose-term">
   <div class="item">
     <label for="">性别</label>
+    <!--新增-->
+    <div class="item-choose">
+      <span class="active">男</span>
+      <span>女</span>
+    </div>
+    <!--新增-->
   </div>
   <div class="item">
     <label for="">出生日期</label>
@@ -236,6 +242,7 @@
 </div>
 <script src="./js/jquery-3.3.1.min.js"></script>
 <script>
+  // 修改 start
   $(function () {
     $('.product-list table').each(function () {
       if ($(this).find('tr').length <= 3) {
@@ -244,16 +251,23 @@
         $(this).find('tr:gt(2)').hide()
       }
     })
-  })
-  $('.more-item').bind('click', function () {
-    $(this).toggleClass('fold')
-    if($(this).hasClass('fold')) {
-      $(this).siblings('.table-box').find('tr').show()
-    } else {
-      $(this).siblings('.table-box').find('tr:gt(2)').hide()
-    }
 
+    $('.more-item').bind('click', function () {
+      $(this).toggleClass('fold')
+      if($(this).hasClass('fold')) {
+        $(this).siblings('.table-box').find('tr').show()
+      } else {
+        $(this).siblings('.table-box').find('tr:gt(2)').hide()
+      }
+    })
+
+    $('.item-choose span').bind('click', function () {
+      $(this).addClass('active').siblings().removeClass('active')
+    })
   })
+
+  // 修改 end
+
 </script>
 </body>
 </html>

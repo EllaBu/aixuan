@@ -11,7 +11,8 @@ $color-border: #c4c4c4
   overflow: hidden
   input,
   select,
-  .m-select
+  .m-select,
+  .item-choose
     float: right
     width: 55%
     height: .48rem
@@ -31,6 +32,23 @@ $color-border: #c4c4c4
     background: url("../img/icon-delete.png") no-repeat center
     background-size: .32rem
     display: none
+  .item-choose
+    margin-top: -.08rem
+    span
+      display: inline-block
+      width: 1.44rem
+      height: .64rem
+      line-height: .64rem
+      background: #efefef
+      border-radius: .16rem
+      text-align: center
+      margin-left: .32rem
+      &.active
+        border: 1px solid $color-common
+        color: $color-common
+        background: #fff url("../img/icon-choosed.png") no-repeat right bottom
+        background-size: .4rem .36rem
+
 
 .btn
   display: inline-block
@@ -718,20 +736,19 @@ $color-border: #c4c4c4
     margin: 0 .32rem .24rem 0
     b
       font-weight: bold
-    &:nth-of-type(1),
-    &:nth-of-type(5)
+    &:nth-of-type(4n+1)
       border: 1px solid #4988fe
       background-color: #f2f7ff
       color: #4988fe
-    &:nth-of-type(2)
+    &:nth-of-type(4n+2)
       border: 1px solid #ff9124
       background-color: #fff8f0
       color: #ff9124
-    &:nth-of-type(3)
+    &:nth-of-type(4n+3)
       border: 1px solid #ff7171
       background-color: #fffcfc
       color: #ff7171
-    &:nth-of-type(4)
+    &:nth-of-type(4n)
       border: 1px solid #2fb2a3
       background-color: #f2fcff
       color: #2fb2a3
@@ -951,12 +968,27 @@ $color-border: #c4c4c4
     background-size: 1.36rem
   .contrast-tip
     position: absolute
-    top: .64rem
-    right: .68rem
-    background-color: #0e90d2
+    top: .32rem
+    right: .32rem
+    width: 6.2rem
+    height: 2.2rem
+    background: url("../img/contrast-tip.png") no-repeat center
+    background-size: 6.2rem 2.2rem
     color: #fff
-    padding: .32rem
     border-radius: .16rem
+    padding: .32rem .32rem
+    font-size: .26rem
+    p
+      padding: .4rem 0 0 .96rem
+      background: url("../img/icon-switch.png") no-repeat .24rem .56rem
+      background-size: .56rem
+      line-height: .48rem
+    i
+      float: left
+      width: .48rem
+      height: .48rem
+      background: url("../img/icon-close-w.png") no-repeat center
+      background-size: .22rem
 
   .product
     float: left
@@ -1040,14 +1072,17 @@ $color-border: #c4c4c4
       &:nth-of-type(2)
         background-image: url("../img/icon-product.png")
         background-size: .44rem
-    i
+    i.a-tip
       position: absolute
-      top: .5rem
-      right: .8rem
-      background-color: #0e90d2
+      top: 0
+      right: .64rem
+      width: 3.08rem
+      height: 1rem
+      background: url("../img/contrast-mine.png") no-repeat center
+      background-size: 3.08rem 1rem
+      font-size: .26rem
       color: #fff
-      padding: .16rem .32rem
-      border-radius: .16rem
+      padding: .24rem .32rem
 
 
 @-webkit-keyframes bounce
@@ -1118,6 +1153,32 @@ $color-border: #c4c4c4
   animation-name: bounce
   -webkit-transform-origin: center bottom
   transform-origin: center bottom
+
+.animated
+  -webkit-animation-duration: 1s
+  animation-duration: 1s
+  -webkit-animation-fill-mode: both
+  animation-fill-mode: both
+
+.rate-star
+  display: inline-block /*内联元素转换成块元素，并不换行*/
+  width: 1.5rem /*5个星星的宽度*/
+  height: .3rem /*1个星星的高度*/
+  overflow: hidden
+  vertical-align: middle
+  background: url("../img/stargray.png") repeat-x
+  background-size: .3rem
+  text-align: left
+
+  i
+    display: inline-block /*内联元素转换成块元素，并不换行*/
+    height: .3rem /*1个星星的高度*/
+    background: url("../img/staryellow.png") repeat-x 0 0
+    background-size: .3rem
+  &.black-star
+    i
+      background: url("../img/starblack.png") repeat-x
+      background-size: .3rem
 
 
 

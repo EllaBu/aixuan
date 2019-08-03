@@ -19,7 +19,7 @@
     <div class="contrast-sign bounce animated"></div>
     <div class="contrast-tip">
       <i></i>
-      <p>这是一个提示信息，请注意</p>
+      <p>点击左右对比项，可“点亮/取消”该项，别忘了保存到【我的方案】哦=^.^=</p>
     </div>
     <div class="product">
       <img src="./img/collect.png" alt="">
@@ -34,13 +34,63 @@
     <div class="product-title">
       <h3>公司信息</h3>
     </div>
-    <h4>风控评级</h4>
-    <dl>
-      <dt></dt>
-      <dt></dt>
-    </dl>
-    <h4>服务评级</h4>
-    <h4>满意度评级</h4>
+    <div class="contrast-item">
+      <h4>风控评级</h4>
+      <div class="table-box">
+        <table>
+          <tr>
+            <td>
+              <span class="rate-star">
+                <i style="width:90%"></i>
+              </span>
+            </td>
+            <td>
+              <span class="rate-star black-star">
+                <i style="width:70%"></i>
+              </span>
+            </td>
+          </tr>
+        </table>
+      </div>
+    </div>
+    <div class="contrast-item">
+      <h4>服务评级</h4>
+      <div class="table-box">
+        <table>
+          <tr>
+            <td>
+              <span class="rate-star">
+                <i style="width:90%"></i>
+              </span>
+            </td>
+            <td>
+              <span class="rate-star">
+                <i style="width:70%"></i>
+              </span>
+            </td>
+          </tr>
+        </table>
+      </div>
+    </div>
+    <div class="contrast-item">
+      <h4>满意度评级</h4>
+      <div class="table-box">
+        <table>
+          <tr>
+            <td>
+              <span class="rate-star black-star">
+                <i style="width:90%"></i>
+              </span>
+            </td>
+            <td>
+              <span class="rate-star">
+                <i style="width:70%"></i>
+              </span>
+            </td>
+          </tr>
+        </table>
+      </div>
+    </div>
   </div>
   <div class="contrast-box premium-info">
     <div class="product-title">
@@ -58,7 +108,6 @@
           </tr>
         </table>
       </div>
-
     </div>
     <div class="contrast-item">
       <h4>保险期间</h4>
@@ -246,13 +295,17 @@
     <a href="javascript:;"></a>
     <a href="javascript:;"></a>
     <a href="javascript:;"></a>
-    <i class="a-tip">tishixinxi</i>
+    <i class="a-tip">保存到【我的方案】</i>
   </div>
 </div>
 <!--选择条件-->
-<div class="choose-term">
+<div class="choose-term" style="display: block">
   <div class="item">
     <label for="">性别</label>
+    <div class="item-choose">
+      <span class="active">男</span>
+      <span>女</span>
+    </div>
   </div>
   <div class="item">
     <label for="">出生日期</label>
@@ -300,6 +353,29 @@
     <button class="btn btn-common">确定</button>
   </div>
 </div>
+<script src="./js/jquery-3.3.1.min.js"></script>
+<script>
+  $(function () {
+    $('.contrast-tip i').bind('click', function () {
+      console.log(111)
+      $('.contrast-tip').hide()
+      $('.a-tip').hide()
+    })
 
+    $('.contrast-tip').bind('touchstart', function (e) {
+      e.stopPropagation()
+    })
+
+    $(document).bind('touchstart', function (e) {
+      $('.contrast-tip').hide()
+      $('.a-tip').hide()
+      e.stopPropagation()
+    })
+
+    $('.item-choose span').bind('click', function () {
+      $(this).addClass('active').siblings().removeClass('active')
+    })
+  })
+</script>
 </body>
 </html>
