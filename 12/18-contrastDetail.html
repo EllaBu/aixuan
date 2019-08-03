@@ -209,8 +209,12 @@
             <td>等待期内重疾，给付已交保费；18周岁前，意外或等待期后身故，给付已交保费、现金价值两金取大；18周岁后，意外或等待后身故，给付基本保额</td>
             <td>18周岁前或等待期后身故，给付已交保费；18周岁后，意外或等待后身故，给付基本保额</td>
           </tr>
+
         </table>
       </div>
+      <span class="more-item">
+        <i></i>
+      </span>
     </div>
   </div>
 
@@ -228,6 +232,9 @@
           </tr>
         </table>
       </div>
+      <span class="more-item">
+        <i></i>
+      </span>
     </div>
     <div class="contrast-item">
       <h4>重疾/癌症</h4>
@@ -237,8 +244,23 @@
             <td>等待期内重疾，给付已交保费；18周岁前，意外或等待期后重疾，给付基本保额</td>
             <td>等待期内重疾，给付已交保费；18周岁前，意外或等待期后重疾，给付基本保额</td>
           </tr>
+          <tr>
+            <td>等待期内重疾，给付已交保费；18周岁前，意外或等待期后重疾，给付基本保额</td>
+            <td>等待期内重疾，给付已交保费；18周岁前，意外或等待期后重疾，给付基本保额</td>
+          </tr>
+          <tr>
+            <td>等待期内重疾，给付已交保费；18周岁前，意外或等待期后重疾，给付基本保额</td>
+            <td>等待期内重疾，给付已交保费；18周岁前，意外或等待期后重疾，给付基本保额</td>
+          </tr>
+          <tr>
+            <td>等待期内重疾，给付已交保费；18周岁前，意外或等待期后重疾，给付基本保额</td>
+            <td>等待期内重疾，给付已交保费；18周岁前，意外或等待期后重疾，给付基本保额</td>
+          </tr>
         </table>
       </div>
+      <span class="more-item">
+        <i></i>
+      </span>
     </div>
   </div>
 
@@ -257,6 +279,9 @@
           </tr>
         </table>
       </div>
+      <span class="more-item">
+        <i></i>
+      </span>
     </div>
   </div>
 
@@ -274,6 +299,9 @@
           </tr>
         </table>
       </div>
+      <span class="more-item">
+        <i></i>
+      </span>
     </div>
     <div class="contrast-item">
       <h4>身故免责数量</h4>
@@ -283,8 +311,23 @@
             <td>7条</td>
             <td>7条</td>
           </tr>
+          <tr>
+            <td>7条</td>
+            <td>7条</td>
+          </tr>
+          <tr>
+            <td>7条</td>
+            <td>7条</td>
+          </tr>
+          <tr>
+            <td>7条</td>
+            <td>7条</td>
+          </tr>
         </table>
       </div>
+      <span class="more-item">
+        <i></i>
+      </span>
     </div>
   </div>
   <div class="page-tip">
@@ -392,6 +435,23 @@
 
     $('.plan-header i').bind('click', function () {
       $('.plan-box').hide()
+    })
+
+    $('.contrast-item table').each(function () {
+      if ($(this).find('tr').length <= 3) {
+        $(this).parents('.contrast-item').find('.more-item').hide()
+      } else {
+        $(this).find('tr:gt(2)').hide()
+      }
+    })
+
+    $('.more-item').bind('click', function () {
+      $(this).toggleClass('fold')
+      if($(this).hasClass('fold')) {
+        $(this).siblings('.table-box').find('tr').show()
+      } else {
+        $(this).siblings('.table-box').find('tr:gt(2)').hide()
+      }
     })
   })
 </script>
