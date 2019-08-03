@@ -1074,6 +1074,9 @@
 .disease-list tr td:last-of-type {
   background-color: #f8f8f8;
 }
+.disease-list.disease-info {
+  margin-top: 0;
+}
 
 .disease-item {
   margin-top: 0.16rem;
@@ -1404,4 +1407,73 @@ to {
 .rate-star.black-star i {
   background: url("../img/starblack.png") repeat-x;
   background-size: 0.3rem;
+}
+
+.wechat-share .head-bg {
+  height: 4.2rem;
+}
+.wechat-share .contrast-product {
+  top: 2.28rem;
+}
+.wechat-share .contrast-person {
+  position: absolute;
+  left: 0.32rem;
+  top: 0.24rem;
+}
+.wechat-share .contrast-person .person-img {
+  position: relative;
+  float: left;
+}
+.wechat-share .contrast-person .person-img .img-box {
+  width: 1.44rem;
+  height: 1.44rem;
+  border-radius: 0.72rem;
+  overflow: hidden;
+  border: 3px solid #ff7703;
+}
+.wechat-share .contrast-person .person-img .img-box img {
+  width: 1.44rem;
+}
+.wechat-share .contrast-person .person-img .img-intro {
+  position: absolute;
+  width: 1.66rem;
+  height: 0.38rem;
+  background: url("../img/person-intro.png") no-repeat center;
+  background-size: 1.66rem 0.38rem;
+  text-align: center;
+  font-size: 0.24rem;
+  color: #fff;
+  margin: -0.11rem 0 0 -0.11rem;
+}
+.wechat-share .contrast-person .person-info {
+  float: left;
+  color: #fff;
+  padding-left: 0.32rem;
+}
+.wechat-share .contrast-person .person-info span {
+  font-size: 0.26rem;
+}
+.wechat-share .contrast-person .person-info p {
+  font-size: 0.28rem;
+  margin: 0.08rem 0 0.16rem;
+}
+.wechat-share .contrast-person .person-info b {
+  font-size: 0.48rem;
+  font-weight: bold;
+  margin-right: 0.16rem;
+}
+.wechat-share .contrast-person .person-info .person-phone {
+  width: 100%;
+  height: 0.58rem;
+  line-height: 0.58rem;
+  background-color: rgba(21, 105, 221, 0.3);
+  text-align: center;
+  font-size: 0.36rem;
+  border-radius: 0.48rem;
+}
+.wechat-share .contrast-person .person-info .person-phone i {
+  padding: 0.15rem 0.14rem;
+  background: url("../img/icon-phone.png") no-repeat center;
+  background-size: 0.22rem 0.3rem;
+  margin-right: 0.24rem;
 }
