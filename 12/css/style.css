@@ -1077,6 +1077,9 @@
 .disease-list.disease-info {
   margin-top: 0;
 }
+.disease-list.disease-info .disease-item:nth-of-type(1) {
+  margin-top: 0;
+}
 
 .disease-item {
   margin-top: 0.16rem;
