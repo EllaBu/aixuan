@@ -212,9 +212,6 @@
 
         </table>
       </div>
-      <span class="more-item">
-        <i></i>
-      </span>
     </div>
   </div>
 
@@ -232,9 +229,6 @@
           </tr>
         </table>
       </div>
-      <span class="more-item">
-        <i></i>
-      </span>
     </div>
     <div class="contrast-item">
       <h4>重疾/癌症</h4>
@@ -244,23 +238,8 @@
             <td>等待期内重疾，给付已交保费；18周岁前，意外或等待期后重疾，给付基本保额</td>
             <td>等待期内重疾，给付已交保费；18周岁前，意外或等待期后重疾，给付基本保额</td>
           </tr>
-          <tr>
-            <td>等待期内重疾，给付已交保费；18周岁前，意外或等待期后重疾，给付基本保额</td>
-            <td>等待期内重疾，给付已交保费；18周岁前，意外或等待期后重疾，给付基本保额</td>
-          </tr>
-          <tr>
-            <td>等待期内重疾，给付已交保费；18周岁前，意外或等待期后重疾，给付基本保额</td>
-            <td>等待期内重疾，给付已交保费；18周岁前，意外或等待期后重疾，给付基本保额</td>
-          </tr>
-          <tr>
-            <td>等待期内重疾，给付已交保费；18周岁前，意外或等待期后重疾，给付基本保额</td>
-            <td>等待期内重疾，给付已交保费；18周岁前，意外或等待期后重疾，给付基本保额</td>
-          </tr>
         </table>
       </div>
-      <span class="more-item">
-        <i></i>
-      </span>
     </div>
   </div>
 
@@ -279,9 +258,6 @@
           </tr>
         </table>
       </div>
-      <span class="more-item">
-        <i></i>
-      </span>
     </div>
   </div>
 
@@ -299,9 +275,17 @@
           </tr>
         </table>
       </div>
-      <span class="more-item">
-        <i></i>
-      </span>
+    </div>
+    <div class="contrast-item">
+      <h4>其它具全免责条款</h4>
+      <div class="table-box">
+        <table>
+          <tr>
+            <td>-</td>
+            <td>-</td>
+          </tr>
+        </table>
+      </div>
     </div>
     <div class="contrast-item">
       <h4>身故免责数量</h4>
@@ -325,9 +309,6 @@
           </tr>
         </table>
       </div>
-      <span class="more-item">
-        <i></i>
-      </span>
     </div>
   </div>
   <div class="page-tip">
@@ -437,20 +418,21 @@
       $('.plan-box').hide()
     })
 
-    $('.contrast-item table').each(function () {
-      if ($(this).find('tr').length <= 3) {
-        $(this).parents('.contrast-item').find('.more-item').hide()
-      } else {
-        $(this).find('tr:gt(2)').hide()
+    $('.contrast-box').each(function () {
+      if ($(this).find('.contrast-item').length > 2) {
+        $(this).append('<span class="more-item">\n' +
+          '        <i></i>\n' +
+          '      </span>')
+        $(this).find('.contrast-item:gt(1)').hide()
       }
     })
 
-    $('.more-item').bind('click', function () {
+    $('.contrast-box').on('click', '.more-item', function () {
       $(this).toggleClass('fold')
       if($(this).hasClass('fold')) {
-        $(this).siblings('.table-box').find('tr').show()
+        $(this).siblings('.contrast-item').show()
       } else {
-        $(this).siblings('.table-box').find('tr:gt(2)').hide()
+        $(this).siblings('.contrast-item:gt(1)').hide()
       }
     })
   })

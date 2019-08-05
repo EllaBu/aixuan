@@ -160,11 +160,11 @@
   background-size: 0.48rem;
 }
 .footer div.my-tab i {
-  background: url("../img/my.png") no-repeat center;
+  background: url("../img/my.svg") no-repeat center;
   background-size: 0.48rem;
 }
 .footer div.my-tab.active i {
-  background: url("../img/my-a.png") no-repeat center;
+  background: url("../img/my-a.svg") no-repeat center;
   background-size: 0.48rem;
 }
 
@@ -850,33 +850,59 @@
   padding: 0 0.32rem;
 }
 .product-intro li {
+  position: relative;
   float: left;
-  padding: 0.1rem 0.32rem;
+  height: 0.52rem;
   border-radius: 0.32rem;
   margin: 0 0.32rem 0.24rem 0;
+  overflow: hidden;
+}
+.product-intro li p {
+  line-height: 0.36rem;
+  padding: 0.1rem 0.32rem;
+}
+.product-intro li.liShow {
+  height: auto;
 }
 .product-intro li b {
   font-weight: bold;
 }
+.product-intro li i {
+  position: absolute;
+  right: 0.18rem;
+  top: 0.2rem;
+  float: left;
+  width: 0;
+  height: 0;
+  border: 0.12rem solid;
+}
 .product-intro li:nth-of-type(4n+1) {
-  border: 1px solid #4988fe;
   background-color: #f2f7ff;
   color: #4988fe;
 }
+.product-intro li:nth-of-type(4n+1) i {
+  border-color: #4988fe transparent transparent;
+}
 .product-intro li:nth-of-type(4n+2) {
-  border: 1px solid #ff9124;
   background-color: #fff8f0;
   color: #ff9124;
 }
+.product-intro li:nth-of-type(4n+2) i {
+  border-color: #ff9124 transparent transparent;
+}
 .product-intro li:nth-of-type(4n+3) {
-  border: 1px solid #ff7171;
-  background-color: #fffcfc;
+  background-color: #fff7f7;
   color: #ff7171;
 }
+.product-intro li:nth-of-type(4n+3) i {
+  border-color: #ff7171 transparent transparent;
+}
 .product-intro li:nth-of-type(4n) {
-  border: 1px solid #2fb2a3;
   background-color: #f2fcff;
-  color: #2fb2a3;
+  color: #ff7171;
+}
+.product-intro li:nth-of-type(4n) i {
+  border-color: #ff7171 transparent transparent;
 }
 
 .product-title {
@@ -922,11 +948,11 @@
 }
 
 .product-list,
-.contrast-item {
+.contrast-box {
   position: relative;
 }
 .product-list span.more-item,
-.contrast-item span.more-item {
+.contrast-box span.more-item {
   position: absolute;
   left: 50%;
   bottom: -0.14rem;
@@ -938,7 +964,7 @@
   margin-top: 0.16rem;
 }
 .product-list span.more-item i,
-.contrast-item span.more-item i {
+.contrast-box span.more-item i {
   display: block;
   width: 100%;
   height: 100%;
@@ -946,7 +972,7 @@
   background-size: 0.22rem;
 }
 .product-list span.more-item.fold i,
-.contrast-item span.more-item.fold i {
+.contrast-box span.more-item.fold i {
   transform: rotate(180deg);
 }
 
@@ -1125,6 +1151,7 @@
   background-size: 1rem 2.56rem;
   border-radius: 0.24rem 0.24rem 0 0;
   box-shadow: 0 0 16px #c4c4c4;
+  z-index: 1000;
 }
 .contrast-product .contrast-sign {
   position: absolute;
@@ -1176,9 +1203,10 @@
 }
 
 .contrast-box {
-  padding: 0 0.32rem;
+  padding: 0 0.32rem 0.16rem;
   background-color: #fff;
   margin-bottom: 0.24rem;
+  z-index: 999;
 }
 .contrast-box h4 {
   font-size: 0.3rem;

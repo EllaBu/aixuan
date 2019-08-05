@@ -27,11 +27,21 @@
 
   <div class="product-intro">
     <ul>
-      <li><b>投保年龄：</b>28天—65周岁</li>
-      <li><b>保险期间：</b>终身</li>
-      <li><b>缴费期：</b>趸交，5/10/15/20年交，至终身</li>
-      <li><b>等待期：</b>90天</li>
-      <li><b>犹豫期：</b>30天</li>
+      <li>
+        <p><b>投保年龄：</b>28天—65周岁28天—65周岁28天—65周岁28天—65周岁28天—65周岁</p>
+      </li>
+      <li>
+        <p><b>保险期间：</b>终身</p>
+      </li>
+      <li>
+        <p><b>缴费期：</b>趸交，5/10/15/20年交，至终身5/10/15/20年交，至终身</p>
+      </li>
+      <li>
+        <p><b>等待期：</b>90天</p>
+      </li>
+      <li>
+        <p><b>犹豫期：</b>30天</p>
+      </li>
     </ul>
   </div>
 
@@ -244,6 +254,17 @@
 <script>
   // 修改 start
   $(function () {
+    var fontSize=$('html').css('font-size')
+    let liHeight = parseInt(fontSize) * 0.52
+    $('.product-intro li p').each(function () {
+      if($(this).innerHeight() > liHeight + 6) {
+        $(this).parent().append('<i></i>')
+        $(this).parent().bind('click', function () {
+          $(this).toggleClass('liShow')
+        })
+      }
+    })
+
     $('.product-list table').each(function () {
       if ($(this).find('tr').length <= 3) {
         $(this).parents('.product-list').find('.more-item').hide()

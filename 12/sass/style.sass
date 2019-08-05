@@ -146,11 +146,11 @@ $color-border: #c4c4c4
           background-size: .48rem
     &.my-tab
       i
-        background: url("../img/my.png") no-repeat center
+        background: url("../img/my.svg") no-repeat center
         background-size: .48rem
       &.active
         i
-          background: url("../img/my-a.png") no-repeat center
+          background: url("../img/my-a.svg") no-repeat center
           background-size: .48rem
 
 
@@ -728,28 +728,49 @@ $color-border: #c4c4c4
     overflow: hidden
     padding: 0 .32rem
   li
+    position: relative
     float: left
-    padding: .1rem .32rem
+    height: .52rem
     border-radius: .32rem
     margin: 0 .32rem .24rem 0
+    overflow: hidden
+    p
+      line-height: .36rem
+      padding: .1rem .32rem
+
+    &.liShow
+      height: auto
+
     b
       font-weight: bold
+    i
+      position: absolute
+      right: .18rem
+      top: .2rem
+      float: left
+      width: 0
+      height: 0
+      border: .12rem solid
     &:nth-of-type(4n+1)
-      border: 1px solid #4988fe
       background-color: #f2f7ff
       color: #4988fe
+      i
+        border-color: #4988fe transparent transparent
     &:nth-of-type(4n+2)
-      border: 1px solid #ff9124
       background-color: #fff8f0
       color: #ff9124
+      i
+        border-color: #ff9124 transparent transparent
     &:nth-of-type(4n+3)
-      border: 1px solid #ff7171
-      background-color: #fffcfc
+      background-color: #fff7f7
       color: #ff7171
+      i
+        border-color: #ff7171 transparent transparent
     &:nth-of-type(4n)
-      border: 1px solid #2fb2a3
       background-color: #f2fcff
-      color: #2fb2a3
+      color: #ff7171
+      i
+        border-color: #ff7171 transparent transparent
 
 .product-title
   padding: .32rem 0
@@ -789,7 +810,7 @@ $color-border: #c4c4c4
   background-color: #fff
 
 .product-list,
-.contrast-item
+.contrast-box
   position: relative
   span.more-item
     position: absolute
@@ -961,6 +982,7 @@ $color-border: #c4c4c4
   background-size: 1rem 2.56rem
   border-radius: .24rem .24rem 0 0
   box-shadow: 0 0 16px $color-border
+  z-index: 1000
   .contrast-sign
     position: absolute
     top: -.32rem
@@ -1006,9 +1028,10 @@ $color-border: #c4c4c4
 
 
 .contrast-box
-  padding: 0 .32rem
+  padding: 0 .32rem .16rem
   background-color: #fff
   margin-bottom: .24rem
+  z-index: 999
   h4
     font-size: .3rem
     margin-bottom: .24rem
