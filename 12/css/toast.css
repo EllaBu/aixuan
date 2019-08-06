@@ -40,9 +40,3 @@
 .toast.success i {
   background-image: url("../img/toast-success.png");
 }
-
-.toast-show {
-  opacity: 1;
-  -webkit-transform: translate3d(-50%, -50%, 0) scale3d(1, 1, 1);
-  transform: translate3d(-50%, -50%, 0) scale3d(1, 1, 1);
-}
