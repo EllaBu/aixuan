@@ -45,7 +45,7 @@
     </ul>
   </div>
 
-  <div class="product-item">
+  <div class="product-item premium-item">
     <div class="product-title">
       <h3>保费信息</h3>
       <span>选择条件</span>
@@ -97,9 +97,6 @@
           </tr>
         </table>
       </div>
-      <span class="more-item">
-      <i></i>
-    </span>
     </div>
 
   </div>
@@ -123,9 +120,6 @@
           </tr>
         </table>
       </div>
-      <span class="more-item">
-        <i></i>
-      </span>
     </div>
 
     <div class="product-list">
@@ -146,9 +140,6 @@
           </tr>
         </table>
       </div>
-      <span class="more-item">
-        <i></i>
-      </span>
     </div>
 
     <div class="product-list">
@@ -165,9 +156,6 @@
           </tr>
         </table>
       </div>
-      <span class="more-item">
-        <i></i>
-      </span>
     </div>
     <div class="product-list">
       <h4>责任免除</h4>
@@ -191,9 +179,6 @@
           </tr>
         </table>
       </div>
-      <span class="more-item">
-        <i></i>
-      </span>
     </div>
 
 
@@ -213,7 +198,7 @@
   </div>
 
   <div class="page-handle">
-    <a href="javascript:;"></a>
+    <a href="javascript:;" class="active"></a>
     <a href="javascript:;"></a>
     <a href="javascript:;"></a>
   </div>
@@ -242,9 +227,13 @@
     <label for="">缴费期</label>
     <span class="m-select" id="">请选择缴费期</span>
   </div>
-  <div class="item">
+  <div class="item item-term">
     <label for="">保额（千元）</label>
+    <b>*1000元</b>
     <input type="text" placeholder="请填写份额">
+  </div>
+  <div class="item item-change">
+    <a href="javascript:;" class="item-change">重置信息</a>
   </div>
   <div class="handle">
     <button class="btn btn-common">确定</button>
@@ -265,10 +254,17 @@
       }
     })
 
+    // $('.product-list table').each(function () {
+    //   if ($(this).find('tr').length <= 3) {
+    //     $(this).parents('.product-list').find('.more-item').hide()
+    //   } else {
+    //     $(this).find('tr:gt(2)').hide()
+    //   }
+    // })
+
     $('.product-list table').each(function () {
-      if ($(this).find('tr').length <= 3) {
-        $(this).parents('.product-list').find('.more-item').hide()
-      } else {
+      if ($(this).find('tr').length > 3) {
+        $(this).parents('.product-list').append('<span class="more-item"></span>')
         $(this).find('tr:gt(2)').hide()
       }
     })

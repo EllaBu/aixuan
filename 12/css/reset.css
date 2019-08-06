@@ -60,6 +60,10 @@ a {
     -webkit-backface-visibility: hidden;
 }
 
+h1, h2, h3, h4, h5, h6 {
+    font-weight: 500;
+}
+
 input, select, textarea {
     border: none;
     outline: none;
@@ -73,17 +77,17 @@ input, select, textarea {
 
 input::-webkit-input-placeholder { /* WebKit browsers */
     color: #bababa;
-    font-size: .36rem;
+    font-size: .32rem;
 }
 
 input::-moz-placeholder { /* Mozilla Firefox 19+ */
     color: #bababa;
-    font-size: .36rem;
+    font-size: .32rem;
 }
 
 input:-ms-input-placeholder { /* Internet Explorer 10+ */
     color: #bababa;
-    font-size: .36rem;
+    font-size: .32rem;
 }
 
 .clearfix:after {

@@ -26,17 +26,17 @@
   background-color: #848484;
 }
 .toast.loading i {
-  background-image: url("../img/toast-loading.png");
+  background-image: url("../img/toast-loading.svg");
 }
 .toast.fail {
   background-color: #fc6e22;
 }
 .toast.fail i {
-  background-image: url("../img/toast-fail.png");
+  background-image: url("../img/toast-fail.svg");
 }
 .toast.success {
   background-color: #4988fe;
 }
 .toast.success i {
-  background-image: url("../img/toast-success.png");
+  background-image: url("../img/toast-success.svg");
 }

@@ -1,0 +1,60 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="67.755" height="67.755" viewBox="0 0 67.755 67.755">
+  <defs>
+    <linearGradient id="linear-gradient" x1="-0.398" y1="-1.091" x2="0.966" y2="0.898" gradientUnits="objectBoundingBox">
+      <stop offset="0" stop-color="#ff980b"/>
+      <stop offset="1" stop-color="#0a2bb5"/>
+    </linearGradient>
+    <filter id="椭圆_35" x="0" y="0" width="67.755" height="67.755" filterUnits="userSpaceOnUse">
+      <feOffset dy="3" input="SourceAlpha"/>
+      <feGaussianBlur stdDeviation="3" result="blur"/>
+      <feFlood flood-color="#003f89" flood-opacity="0.235"/>
+      <feComposite operator="in" in2="blur"/>
+      <feComposite in="SourceGraphic"/>
+    </filter>
+    <linearGradient id="linear-gradient-2" x1="0.065" y1="-0.062" x2="0.893" y2="1.008" gradientUnits="objectBoundingBox">
+      <stop offset="0" stop-color="#f9ffaa"/>
+      <stop offset="1" stop-color="#ffb53f"/>
+    </linearGradient>
+    <linearGradient id="linear-gradient-3" x1="1.142" y1="-0.405" x2="0.13" y2="0.988" gradientUnits="objectBoundingBox">
+      <stop offset="0" stop-color="#ff5d07"/>
+      <stop offset="1" stop-color="#483ca8"/>
+    </linearGradient>
+    <linearGradient id="linear-gradient-4" x1="0.227" y1="-0.002" x2="0.576" y2="0.639" gradientUnits="objectBoundingBox">
+      <stop offset="0" stop-color="#f9deaa"/>
+      <stop offset="1" stop-color="#ffb53f"/>
+    </linearGradient>
+    <linearGradient id="linear-gradient-5" x1="0.752" y1="0.333" x2="1.101" y2="0.975" gradientUnits="objectBoundingBox">
+      <stop offset="0.157" stop-color="#f9ffe2"/>
+      <stop offset="1" stop-color="#ffcc3f"/>
+    </linearGradient>
+    <filter id="路径_184" x="13.904" y="2.723" width="10.472" height="10.056" filterUnits="userSpaceOnUse">
+      <feOffset dy="0.3" input="SourceAlpha"/>
+      <feGaussianBlur result="blur-2"/>
+      <feFlood flood-color="#915b1b" flood-opacity="0.255"/>
+      <feComposite operator="in" in2="blur-2"/>
+      <feComposite in="SourceGraphic"/>
+    </filter>
+    <linearGradient id="linear-gradient-6" x1="0.5" y1="0.229" x2="0.288" y2="0.811" gradientUnits="objectBoundingBox">
+      <stop offset="0" stop-color="#fff"/>
+      <stop offset="1" stop-color="#deefff"/>
+    </linearGradient>
+  </defs>
+  <g id="组_167" data-name="组 167" transform="translate(-300.125 -94.281)">
+    <g transform="matrix(1, 0, 0, 1, 300.13, 94.28)" filter="url(#椭圆_35)">
+      <circle id="椭圆_35-2" data-name="椭圆 35" cx="24.878" cy="24.878" r="24.878" transform="translate(9 6)" fill="url(#linear-gradient)"/>
+    </g>
+    <rect id="矩形_302" data-name="矩形 302" width="33.899" height="44.834" rx="4" transform="translate(314.046 97)" fill="url(#linear-gradient-2)"/>
+    <rect id="矩形_304" data-name="矩形 304" width="26" height="7" rx="1" transform="translate(318 118)" fill="#fff" opacity="0.6"/>
+    <rect id="矩形_305" data-name="矩形 305" width="26" height="7" rx="1" transform="translate(318 128)" fill="#fff" opacity="0.6"/>
+    <path id="路径_181" data-name="路径 181" d="M352.33,403.842a1.831,1.831,0,0,1,1.757-1.712,2.49,2.49,0,0,1,2.19,1.354c.219.406.549.958.975.782a.813.813,0,0,0,.36-.413c.382-.734.978-1.626,1.785-1.443.681.154.055,1.505,1.583,1.535l1.3-2.258a.848.848,0,0,1,.425-.217c.4-.041.654.4.875.74a2.506,2.506,0,0,0,1.573,1.1,1.943,1.943,0,0,0,1.8-.566" transform="translate(-32.636 -272.046)" fill="none" stroke="#ff9c1a" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" stroke-width="1"/>
+    <rect id="矩形_303" data-name="矩形 303" width="23.035" height="8.334" transform="translate(337.819 121.654) rotate(-45.001)" fill="url(#linear-gradient-3)"/>
+    <path id="路径_182" data-name="路径 182" d="M385.289,404.969" transform="translate(-47.574 -274.634)" fill="#333"/>
+    <path id="路径_183" data-name="路径 183" d="M352.472,344h-6.254A4.217,4.217,0,0,0,342,348.217v5.539C344.914,351.089,348.95,347.4,352.472,344Z" transform="translate(-27.954 -247)" fill="url(#linear-gradient-4)"/>
+    <text id="标记" transform="translate(319.266 113.35)" fill="#bf8400" font-size="12" font-family="Tensentype-TieShanKaiShuJ, Tensentype TieShanKaiShuJ"><tspan x="0" y="0">标记</tspan></text>
+    <g transform="matrix(1, 0, 0, 1, 300.13, 94.28)" filter="url(#路径_184)">
+      <path id="路径_184-2" data-name="路径 184" d="M341.969,353.763h6.255a4.217,4.217,0,0,0,4.217-4.217v-5.539C349.859,346.5,345.475,350.545,341.969,353.763Z" transform="translate(-328.07 -341.28)" fill="url(#linear-gradient-5)"/>
+    </g>
+    <path id="路径_185" data-name="路径 185" d="M381.456,396.338l8.114-2.232,1.066-1.1-1.587-.193.181-1.293-1.463-.068.045-1.417-1.565-.057.068-1.429-1.519.17-.079-1.587-1.046,1.038Z" transform="translate(-45.837 -266.549)" fill="url(#linear-gradient-6)"/>
+    <path id="减去_8" data-name="减去 8" d="M-4517.5,3029.5v0l1.1-4.063,2.917,2.959-4.018,1.1Z" transform="translate(4853.117 -2899.713)" fill="#f48300" stroke="rgba(0,0,0,0)" stroke-width="1"/>
+  </g>
+</svg>

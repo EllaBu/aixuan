@@ -1,7 +1,7 @@
 @charset "UTF-8"
 
 $color-common: #4988fe
-$color-border: #c4c4c4
+$color-border: #e5e5e5
 
 // 通用样式 start
 .item
@@ -20,18 +20,24 @@ $color-border: #c4c4c4
     text-align: right
   .m-select
     padding-right: .4rem
-    background: url("../img/icon-down.png") no-repeat center right
+    background: url("../img/icon-down.svg") no-repeat center right
   select
     direction: rtl
-    background: url("../img/icon-down.png") no-repeat center right
+    background: url("../img/icon-down.svg") no-repeat center right
     padding-right: .4rem
   i.delete
     float: right
     width: .48rem
     height: .48rem
-    background: url("../img/icon-delete.png") no-repeat center
+    background: url("../img/icon-delete.svg") no-repeat center
     background-size: .32rem
     display: none
+  &.item-term
+    b
+      float: right
+      margin-left: .16rem
+    input
+      width: 40%
   .item-choose
     margin-top: -.08rem
     span
@@ -46,8 +52,15 @@ $color-border: #c4c4c4
       &.active
         border: 1px solid $color-common
         color: $color-common
-        background: #fff url("../img/icon-choosed.png") no-repeat right bottom
+        background: #fff url("../img/icon-choosed.svg") no-repeat right bottom
         background-size: .4rem .36rem
+  &.item-change
+    border: none
+    a
+      float: right
+      color: $color-common
+      font-weight: 500
+
 
 
 .btn
@@ -57,7 +70,7 @@ $color-border: #c4c4c4
   border-radius: .48rem
   height: .8rem
   line-height: .8rem
-  font-weight: bold
+  font-weight: 500
   font-size: .32rem
   text-align: center
 
@@ -89,34 +102,8 @@ $color-border: #c4c4c4
     background-color: $color-common
     border: .02rem solid $color-common
     i
-      left: .4rem
+      left: .42rem
       box-shadow: none
-
-.header
-  position: relative
-  height: .96rem
-  line-height: .96rem
-  background-color: #f9f9f9
-  h2
-    width: 100%
-    font-size: .36rem
-    color: #000
-    text-align: center
-  a
-    position: absolute
-    top: 0
-    right: .32rem
-    font-size: .28rem
-    color: #0059d1
-    font-weight: bold
-  i
-    position: absolute
-    top: 0
-    left: 0
-    width: .88rem
-    height: .96rem
-    background: url("../img/icon-left.png") no-repeat center
-    background-size: .24rem .42rem
 
 .footer
   position: fixed
@@ -138,11 +125,11 @@ $color-border: #c4c4c4
       margin: 0 auto .1rem
     &.contrast
       i
-        background: url("../img/contrast.png") no-repeat center
+        background: url("../img/contrast.svg") no-repeat center
         background-size: .48rem
       &.active
         i
-          background: url("../img/contrast-a.png") no-repeat center
+          background: url("../img/contrast-a.svg") no-repeat center
           background-size: .48rem
     &.my-tab
       i
@@ -166,17 +153,17 @@ $color-border: #c4c4c4
   .tip
     margin-top: .32rem
     font-size: .22rem
+    font-weight: 300
     a
       color: $color-common
   .title
     font-size: .48rem
     color: $color-common
-    padding: 1.4rem 0
-    font-weight: bold
+    padding: 0.8rem 0 1.4rem
+    font-weight: 500
     span
       font-size: .32rem
       color: #5d5d5d
-      font-weight: normal
   .item
     input
       float: left
@@ -185,13 +172,13 @@ $color-border: #c4c4c4
 .attestation
   padding: 0 .64rem 2rem
   .title
-    padding: 1.28rem 0 .64rem 1.12rem
-    background: url("../img/icon-ensure.png") no-repeat 0 1.28rem
+    padding: .8rem 0 .64rem 1.12rem
+    background: url("../img/icon-ensure.svg") no-repeat 0 .8rem
     background-size: .8rem
     p
       font-size: .48rem
       color: $color-common
-      font-weight: bold
+      font-weight: 500
       margin-bottom: .32rem
   input,
   select
@@ -200,7 +187,7 @@ $color-border: #c4c4c4
     text-align: right
   select
     direction: rtl
-    background: url("../img/icon-down.png") no-repeat center right
+    background: url("../img/icon-down.svg") no-repeat center right
     padding-right: .4rem
 
 
@@ -225,11 +212,11 @@ $color-border: #c4c4c4
       color: $color-common
 
 .vip
-  padding-bottom: .6rem
+  padding-bottom: .48rem
   .title
     color: $color-common
     font-size: .48rem
-    padding: .66rem .64rem
+    padding: .56rem .64rem
   .equities
     padding: 0 .64rem
     h4
@@ -238,9 +225,10 @@ $color-border: #c4c4c4
     p
       font-size: .28rem
       line-height: .46rem
+      font-weight: 300
   .get-vip
     padding: 0 .64rem
-    margin-top: 1rem
+    margin-top: .56rem
     h4
       font-size: .4rem
       padding-bottom: .32rem
@@ -248,9 +236,11 @@ $color-border: #c4c4c4
     ul
       li
         border-bottom: 1px solid #d8d8d8
-        padding: .48rem 0
+        padding: .32rem 0
         overflow: hidden
         font-size: .36rem
+        &:last-of-type
+          border: none
         span
           float: left
           font-family: Osaka
@@ -261,7 +251,9 @@ $color-border: #c4c4c4
           float: left
           width: 5.3rem
           p
-            margin-bottom: .32rem
+            margin-bottom: .24rem
+            a
+              color: $color-common
           b
             font-size: .84rem
             margin-right: .1rem
@@ -278,7 +270,7 @@ $color-border: #c4c4c4
       height: 3.62rem
       background: url("../img/vipcard.png") no-repeat center
       background-size: 100%
-      padding-top: 1.28rem
+      padding-top: .96rem
       p
         color: #fff
         b
@@ -294,7 +286,7 @@ $color-border: #c4c4c4
       border-bottom: 1px solid $color-border
       padding: .32rem 0
       line-height: .32rem
-      background: url("../img/icon-right.png") no-repeat center right
+      background: url("../img/icon-right.svg") no-repeat center right
       img
         vertical-align: middle
       span
@@ -302,27 +294,43 @@ $color-border: #c4c4c4
         margin-left: .32rem
     button
       width: 100%
-      margin-top: 1.28rem
+      margin-top: .64rem
 
 
 .my-info
   padding-bottom: 1.36rem
   .info
-    height: 4.68rem
+    height: 3.6rem
     background: url("../img/info-bg.png") no-repeat center
     background-size: 100%
     color: #fff
-    padding: 1.76rem .32rem 0
+    padding: .8rem .32rem 0
     .photo
+      position: relative
       float: left
       width: 1.6rem
       height: 1.6rem
-      border-radius: .8rem
-      background-color: #fff
-      overflow: hidden
+
+      .photo-box
+        width: 100%
+        height: 100%
+        border-radius: .8rem
+        overflow: hidden
       img
         width: 1.6rem
         height: 1.6rem
+      .identity
+        position: absolute
+        right: 0
+        bottom: 0
+        width: .4rem
+        height: .44rem
+        &.vip
+          background: url("../img/person-vip.svg") no-repeat center
+          background-size: .4rem .44rem
+        &.attestate
+          background: url("../img/person-attestation.svg") no-repeat center
+          background-size: .4rem .44rem
     .detail
       float: left
       margin-left: .32rem
@@ -330,9 +338,20 @@ $color-border: #c4c4c4
         font-size: .52rem
         margin-bottom: .16rem
       p
-        font-size: .28rem
-        &:last-of-type
-          font-size: .2rem
+        line-height: .32rem
+      b
+        color: #3d8ce3
+        vertical-align: middle
+        font-weight: 500
+      span
+        font-size: .22rem
+        color: #fff
+        padding: .08rem .16rem
+        background-color: #3d8ce3
+        border-radius: .32rem
+        vertical-align: middle
+        margin-left: .16rem
+        font-weight: 300
 
   .my-list
     background-color: #fff
@@ -342,7 +361,7 @@ $color-border: #c4c4c4
     line-height: .48rem
     padding: 0 .48rem .32rem
     li
-      background: url("../img/icon-right.png") no-repeat center right
+      background: url("../img/icon-right.svg") no-repeat center right
       border-bottom: 1px solid $color-border
       overflow: hidden
       a
@@ -352,11 +371,11 @@ $color-border: #c4c4c4
         float: right
         font-size: .24rem
         padding: 0 .16rem
-        border: 2px solid $color-common
-        border-radius: .16rem
+        border: 1px solid $color-common
+        border-radius: .32rem
         vertical-align: middle
         color: $color-common
-        font-weight: bold
+        font-weight: 500
       span
         vertical-align: middle
 
@@ -400,6 +419,7 @@ $color-border: #c4c4c4
 .order-list
   .details
     padding: 0 .32rem
+    font-weight: 300
     li
       padding: .32rem 0
       border-bottom: 1px solid $color-border
@@ -448,7 +468,7 @@ $color-border: #c4c4c4
       &.active
         font-size: .44rem
         color: #000
-        font-weight: bold
+        font-weight: 500
         border-bottom: 2px solid $color-common
 
   .add-btn
@@ -458,9 +478,12 @@ $color-border: #c4c4c4
 
   .list-none
     text-align: center
-    padding-top: 1.2rem
+    padding-top: .4rem
     img
       width: 4rem
+    &.product-list-none
+      padding-top: 1.68rem
+
 
   .list-header
     position: relative
@@ -482,34 +505,39 @@ $color-border: #c4c4c4
     padding: 0 .2rem
     min-height: 100%
     li
-      padding: .32rem .2rem
+      padding: .32rem .28rem
       background-color: #fff
       border-radius: .2rem
       margin-bottom: .32rem
       h3
-        color: #0b5fbd
         font-size: .32rem
         font-weight: normal
         margin-bottom: .24rem
       p
         padding-left: .6rem
         margin-top: .16rem
+        white-space: nowrap
+        overflow: hidden
+        text-overflow: ellipsis
+        font-weight: 300
         &:first-of-type
-          background: url("../img/icon-a.png") no-repeat left center
+          background: url("../img/icon-a.svg") no-repeat left center
+          background-size: .4rem
         &:last-of-type
-          background: url("../img/icon-b.png") no-repeat left center
+          background: url("../img/icon-b.svg") no-repeat left center
+          background-size: .4rem
 
 
   .collect-input
     position: relative
-    padding: .32rem
+    padding: .24rem
     input
       width: 100%
       height: .8rem
       line-height: .8rem
       border-radius: .48rem
       padding: 0 0 0 .96rem
-      background: #e2e2e2 url("../img/icon-search.png") no-repeat .32rem center
+      background: #e2e2e2 url("../img/icon-search.svg") no-repeat .32rem center
 
     &.collect-add-input
       background-color: #f2f2f2
@@ -520,11 +548,11 @@ $color-border: #c4c4c4
         padding-left: .8rem
     i
       position: absolute
-      right: 0
+      right: .26rem
       top: .32rem
       width: .8rem
       height: .8rem
-      background: url("../img/icon-delete.png") no-repeat center
+      background: url("../img/icon-delete.svg") no-repeat center
       display: none
 
   .collect-list
@@ -549,19 +577,21 @@ $color-border: #c4c4c4
         display: inline-block
         width: .96rem
         height: .96rem
+        line-height: .96rem
         border-radius: .48rem
         background-color: #4988fe
         color: #fff
         font-size: .3rem
-        font-weight: bold
+        font-weight: 500
         vertical-align: middle
         text-align: center
 
   .collect-history
     padding: 0 .32rem
+    font-weight: 300
     li
       padding: .32rem .8rem
-      background: url("../img/icon-history.png") no-repeat .16rem center
+      background: url("../img/icon-history.svg") no-repeat .1rem center
       border-bottom: 1px solid $color-border
       font-size: .3rem
       color: #000
@@ -569,11 +599,17 @@ $color-border: #c4c4c4
     background-color: #fff
     padding: 0 .32rem .32rem
     position: absolute
-    top: 2.4rem
+    top: 1.28rem
     left: 0
     width: 100%
     display: none
     margin-bottom: 1.2rem
+    font-weight: 300
+    .collect-search-none
+      font-size: .3rem
+      color: #bababa
+      text-align: center
+      padding: .64rem .32rem
     li
       line-height: .64rem
       padding: .32rem 0
@@ -591,14 +627,14 @@ $color-border: #c4c4c4
         float: right
         width: .64rem
         height: .64rem
-        background: url("../img/icon-collect.png") no-repeat center
+        background: url("../img/icon-collect.svg") no-repeat center
         &.active
-          background: url("../img/icon-collected.png") no-repeat center
+          background: url("../img/icon-collected.svg") no-repeat center
 
 
   .compare
     position: relative
-    background: url("../img/compare-line.png") no-repeat .64rem 1.12rem
+    background: url("../img/compare-line.svg") no-repeat .64rem 1.12rem
     background-size: .02rem 1.08rem
     input
       width: 5.44rem
@@ -620,7 +656,7 @@ $color-border: #c4c4c4
         top: .56rem
         width: .48rem
         height: .48rem
-        background: url("../img/icon-delete.png") no-repeat center
+        background: url("../img/icon-delete.svg") no-repeat center
         background-size: .32rem
         display: none
       ul
@@ -643,13 +679,13 @@ $color-border: #c4c4c4
       left: .4rem
       width: .48rem
       height: .48rem
-      background: url("../img/icon-vs.png") no-repeat center
+      background: url("../img/icon-vs.svg") no-repeat center
       background-size: .32rem
       i
         display: block
         width: 100%
         height: 100%
-        background: url("../img/icon-rotate.png") no-repeat center
+        background: url("../img/icon-rotate.svg") no-repeat center
         background-size: .48rem
         transition: transform 1s
         -webkit-transition: transform 1s
@@ -674,19 +710,19 @@ $color-border: #c4c4c4
 
 
 .gray-bg
-  background-color: #ebebeb
+  background-color: #f0f0f0
 
 //产品详情
 .product-detail
+  font-weight: 300
   .table-box
     position: relative
     border: 1px solid $color-border
-    border-radius: .08rem
     overflow: hidden
     margin-bottom: .48rem
     padding-bottom: .16rem
   table
-    font-size: .28rem
+    font-size: .26rem
   th,td
     padding: .16rem
     border: 1px solid $color-border
@@ -694,9 +730,12 @@ $color-border: #c4c4c4
   th
     background-color: #f8f8f8
     font-size: .24rem
-    font-weight: bold
+    font-weight: 500
   td
     vertical-align: top
+  .premium-item
+    td
+      vertical-align: middle
 .product-name
   position: fixed
   top: 0
@@ -732,8 +771,9 @@ $color-border: #c4c4c4
     float: left
     height: .52rem
     border-radius: .32rem
-    margin: 0 .32rem .24rem 0
+    margin: 0 0 .24rem 0
     overflow: hidden
+    padding-right: .24rem
     p
       line-height: .36rem
       padding: .1rem .32rem
@@ -742,11 +782,11 @@ $color-border: #c4c4c4
       height: auto
 
     b
-      font-weight: bold
+      font-weight: 500
     i
       position: absolute
       right: .18rem
-      top: .2rem
+      top: .22rem
       float: left
       width: 0
       height: 0
@@ -768,9 +808,9 @@ $color-border: #c4c4c4
         border-color: #ff7171 transparent transparent
     &:nth-of-type(4n)
       background-color: #f2fcff
-      color: #ff7171
+      color: #2fb2a3
       i
-        border-color: #ff7171 transparent transparent
+        border-color: #2fb2a3 transparent transparent
 
 .product-title
   padding: .32rem 0
@@ -782,7 +822,7 @@ $color-border: #c4c4c4
       content: '-'
       padding: 0 .16rem
       color: $color-common
-      font-weight: bold
+      font-weight: 500
   span
     float: right
     width: 1.44rem
@@ -820,23 +860,15 @@ $color-border: #c4c4c4
     height: .4rem
     margin-left: -.86rem
     background: url("../img/more-item.png") no-repeat center bottom
-    background-size: 1.72rem .16rem
+    background-size: 1.74rem .48rem
     margin-top: .16rem
-    i
-      display: block
-      width: 100%
-      height: 100%
-      background: url("../img/icon-down-d.png") no-repeat center
-      background-size: .22rem
-    &.fold
-      i
-        transform: rotate(180deg)
+
 .duty
   margin-top: .16rem
   padding: 0 .32rem .32rem
   background-color: #fff
   h4
-    font-size: .3rem
+    font-size: .3remf
     margin-bottom: .24rem
     a
       float: right
@@ -846,6 +878,9 @@ $color-border: #c4c4c4
   th,td
     text-align: left
     border: none
+  th
+    border-bottom: 1px solid $color-border
+    padding: .16rem .16rem .24rem
   .item-tip
     color: #c4c4c4
     font-size: .24rem
@@ -854,7 +889,7 @@ $color-border: #c4c4c4
   a
     color: $color-common
     padding-left: .48rem
-    background: url("../img/icon-clause.png") no-repeat left center
+    background: url("../img/icon-clause.svg") no-repeat left center
     background-size: .32rem
     font-size: .26rem
 
@@ -862,11 +897,12 @@ $color-border: #c4c4c4
   font-size: .24rem
   text-align: center
   padding: .48rem 0
+  font-weight: 300
   a
     color: $color-common
   i
     color: #dd0800
-    font-weight: bold
+    font-weight: 500
 .page-handle
   position: fixed
   right: .32rem
@@ -876,7 +912,8 @@ $color-border: #c4c4c4
     display: block
     width: 1rem
     height: 1rem
-    border: 1px solid #aecdf7
+    //border: 1px solid #aecdf7
+    box-shadow: 0 0 2px 2px #aecdf7
     border-radius: .5rem
     margin-bottom: .16rem
     background-color: #fff
@@ -884,17 +921,20 @@ $color-border: #c4c4c4
     background-position: center
 
     &:nth-of-type(3)
-      background-image: url("../img/icon-forward.png")
+      background-image: url("../img/icon-forward.svg")
       background-size: .38rem .34rem
 
 .product-detail
   .page-handle
     a
       &:nth-of-type(1)
-        background-image: url("../img/icon-star.png")
+        background-image: url("../img/icon-star.svg")
         background-size: .44rem
+        &.active
+          background-image: url("../img/icon-star-a.svg")
+          background-size: .44rem
       &:nth-of-type(2)
-        background-image: url("../img/icon-vsb.png")
+        background-image: url("../img/icon-vsb.svg")
         background-size: .48rem .36rem
 
 
@@ -912,7 +952,7 @@ $color-border: #c4c4c4
     line-height: .7rem
     font-size: .26rem
     b
-      font-weight: bold
+      font-weight: 500
     &:first-of-type
       border-bottom: 1px dotted $color-border
       color: #ff7f12
@@ -933,12 +973,14 @@ $color-border: #c4c4c4
   td
     padding: .24rem .16rem
     border-right: 1px solid $color-border
+    font-weight: 300
   tr
     td
       &:first-of-type
         text-align: left
       &:last-of-type
         background-color: #f8f8f8
+        border-right: none
   &.disease-info
     margin-top: 0
     .disease-item:nth-of-type(1)
@@ -957,68 +999,64 @@ $color-border: #c4c4c4
       float: right
       width: .8rem
       height: .8rem
-      background: url("../img/icon-up.png") no-repeat center
+      background: url("../img/icon-up.svg") no-repeat center
       background-size: .22rem .12rem
   &.fold
     i
-      background: url("../img/icon-down.png") no-repeat center
+      background: url("../img/icon-down.svg") no-repeat center
       background-size: .22rem .12rem
     .table-box
       display: none
 
 
 //对比详情
+.contrast-sign
+  position: fixed
+  top: .32rem
+  right: 0
+  width: 1.36rem
+  height: 1.36rem
+  background: url("../img/icon-sign.svg") no-repeat center
+  background-size: 1.36rem
+  z-index: 9999
+.contrast-tip
+  position: fixed
+  top: .64rem
+  right: .48rem
+  width: 6.2rem
+  height: 2.2rem
+  background: url("../img/contrast-tip.svg") no-repeat center
+  background-size: 6.2rem 2.2rem
+  color: #fff
+  border-radius: .16rem
+  padding: .32rem .32rem
+  font-size: .26rem
+  z-index: 9999
+  p
+    padding: .4rem 0 0 .96rem
+    background: url("../img/icon-switch.svg") no-repeat .24rem .56rem
+    background-size: .56rem
+    line-height: .48rem
+  i
+    float: left
+    width: .48rem
+    height: .48rem
+    background: url("../img/icon-close-w.svg") no-repeat center
+    background-size: .22rem
+
 .head-bg
   background-color: #6caaff
   height: 2.4rem
 
 .contrast-product
-  position: absolute
-  top: .5rem
-  left: .32rem
-  width: 6.86rem
-  height: 2.56rem
-  background: #fff url("../img/product-vs.png") no-repeat center
-  background-size: 1rem 2.56rem
-  border-radius: .24rem .24rem 0 0
-  box-shadow: 0 0 16px $color-border
-  z-index: 1000
-  .contrast-sign
-    position: absolute
-    top: -.32rem
-    right: -.16rem
-    width: 1.36rem
-    height: 1.36rem
-    background: url("../img/icon-sign.png") no-repeat center
-    background-size: 1.36rem
-  .contrast-tip
-    position: absolute
-    top: .32rem
-    right: .32rem
-    width: 6.2rem
-    height: 2.2rem
-    background: url("../img/contrast-tip.png") no-repeat center
-    background-size: 6.2rem 2.2rem
-    color: #fff
-    border-radius: .16rem
-    padding: .32rem .32rem
-    font-size: .26rem
-    p
-      padding: .4rem 0 0 .96rem
-      background: url("../img/icon-switch.png") no-repeat .24rem .56rem
-      background-size: .56rem
-      line-height: .48rem
-    i
-      float: left
-      width: .48rem
-      height: .48rem
-      background: url("../img/icon-close-w.png") no-repeat center
-      background-size: .22rem
-
+  height: 3.13rem
+  background: url("../img/contrast-head.png") no-repeat center
+  background-size: 7.5rem 3.13rem
+  padding-top: .52rem
   .product
     float: left
     width: 50%
-    padding: .24rem .32rem
+    padding: .24rem .48rem
     text-align: center
     img
       width: 1.28rem
@@ -1026,7 +1064,12 @@ $color-border: #c4c4c4
     p
       font-size: .28rem
 
-
+.contrast-none
+  padding: .64rem .32rem
+  text-align: center
+  font-size: .3rem
+  color: #bababa
+  background-color: #fff
 .contrast-box
   padding: 0 .32rem .16rem
   background-color: #fff
@@ -1046,35 +1089,35 @@ $color-border: #c4c4c4
     margin-bottom: .24rem
     padding-bottom: .16rem
     font-size: .26rem
+    tr.active
+      box-shadow: 0 2px 4px #ddd
     td
       width: 50%
       padding: .14rem
       text-align: center
       vertical-align: top
       border: 1px solid $color-border
+      font-weight: 300
       &:first-of-type
-        border-radius: .08rem 0 0 .08rem
-      &.light
-        border: 1px solid #ff9124
-        background-color: #fff8f0
-        color: #ff9124
+        &.light
+          border: 1px solid #ff9124
+          background-color: #fff8f0
+          color: #ff9124
       &:last-of-type
-        border-radius: 0 .08rem .08rem 0
         background-color: #f8f8f8
+        &.light
+          border: 1px solid #4988fe
+          background-color: #f2f7ff
+          color: #4988fe
     &.table-left
       td
         text-align: left
-
-
-
-.contrast-info
-  padding-top: .64rem
 
 //选择条件
 .choose-term,
 .custom-edit,
 .disease-contrast
-  position: absolute
+  position: fixed
   top: 0
   left: 0
   right: 0
@@ -1093,18 +1136,24 @@ $color-border: #c4c4c4
   .page-handle
     a
       &:nth-of-type(1)
-        background-image: url("../img/icon-mine.png")
+        background-image: url("../img/icon-mine.svg")
         background-size: .44rem
+        &.active
+          background-image: url("../img/icon-mine-a.svg")
+          background-size: .44rem
       &:nth-of-type(2)
-        background-image: url("../img/icon-product.png")
+        background-image: url("../img/icon-product.svg")
         background-size: .44rem
+        &.active
+          background-image: url("../img/icon-product-a.svg")
+          background-size: .44rem
     i.a-tip
       position: absolute
       top: 0
       right: .64rem
       width: 3.08rem
       height: 1rem
-      background: url("../img/contrast-mine.png") no-repeat center
+      background: url("../img/contrast-mine.svg") no-repeat center
       background-size: 3.08rem 1rem
       font-size: .26rem
       color: #fff
@@ -1141,7 +1190,7 @@ $color-border: #c4c4c4
       width: .64rem
       height: .64rem
       margin-top: -.64rem
-      background: url("../img/icon-close.png") no-repeat center
+      background: url("../img/icon-close.svg") no-repeat center
       background-size: .32rem
   .plan-input
     width: 5.32rem
@@ -1238,18 +1287,18 @@ $color-border: #c4c4c4
   height: .3rem /*1个星星的高度*/
   overflow: hidden
   vertical-align: middle
-  background: url("../img/stargray.png") repeat-x
+  background: url("../img/stargray.svg") repeat-x
   background-size: .3rem
   text-align: left
 
   i
     display: inline-block /*内联元素转换成块元素，并不换行*/
     height: .3rem /*1个星星的高度*/
-    background: url("../img/staryellow.png") repeat-x 0 0
+    background: url("../img/staryellow.svg") repeat-x 0 0
     background-size: .3rem
   &.black-star
     i
-      background: url("../img/starblack.png") repeat-x
+      background: url("../img/starblack.svg") repeat-x
       background-size: .3rem
 
 //微信分享
@@ -1259,9 +1308,9 @@ $color-border: #c4c4c4
   .contrast-product
     top: 2.28rem
   .contrast-person
-    position: absolute
-    left: .32rem
-    top: .24rem
+    height: 2rem
+    background-color: #6caaff
+    padding: .32rem .4rem
     .person-img
       position: relative
       float: left
@@ -1277,7 +1326,7 @@ $color-border: #c4c4c4
         position: absolute
         width: 1.66rem
         height: .38rem
-        background: url("../img/person-intro.png") no-repeat center
+        background: url("../img/person-intro.svg") no-repeat center
         background-size: 1.66rem .38rem
         text-align: center
         font-size: .24rem
@@ -1294,7 +1343,7 @@ $color-border: #c4c4c4
         margin: .08rem 0 .16rem
       b
         font-size: .48rem
-        font-weight: bold
+        font-weight: 500
         margin-right: .16rem
       .person-phone
         width: 100%
@@ -1306,7 +1355,7 @@ $color-border: #c4c4c4
         border-radius: .48rem
         i
           padding: .15rem .14rem
-          background: url("../img/icon-phone.png") no-repeat center
+          background: url("../img/icon-phone.svg") no-repeat center
           background-size: .22rem .3rem
           margin-right: .24rem
 
@@ -1371,8 +1420,8 @@ $color-border: #c4c4c4
       line-height: .96rem
       margin-top: -.96rem
       cursor: pointer
-      background: url("../img/icon-close.png") no-repeat center
-      background-size: .36rem
+      background: url("../img/icon-close.svg") no-repeat center
+      background-size: .28rem
   .message-box-body
     padding: .32rem .64rem
     font-size: .36rem
@@ -1418,14 +1467,14 @@ $color-border: #c4c4c4
   &.loading
     background-color: #848484
     i
-      background-image: url("../img/toast-loading.png")
+      background-image: url("../img/toast-loading.svg")
   &.fail
     background-color: #fc6e22
     i
-      background-image: url("../img/toast-fail.png")
+      background-image: url("../img/toast-fail.svg")
   &.success
     background-color: #4988fe
     i
-      background-image: url("../img/toast-success.png")
+      background-image: url("../img/toast-success.svg")
 
 
