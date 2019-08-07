@@ -451,6 +451,7 @@ $color-border: #e5e5e5
   background-color: #ebebeb
 
 .plan
+  padding-bottom: 1.2rem
   input::-webkit-input-placeholder
     font-size: .3rem
   .header
@@ -596,7 +597,11 @@ $color-border: #e5e5e5
       color: #000
   .collect-search
     background-color: #fff
-    padding: 0 .32rem .32rem
+    padding: 0 .32rem 1.2rem
+    position: absolute
+    top: 1.28rem
+    left: 0
+    width: 100%
     display: none
     font-weight: 300
     .collect-search-none
@@ -1169,8 +1174,9 @@ $color-border: #e5e5e5
   right: 0
   bottom: 0
   background-color: #fff
-  padding: 0 .32rem
+  padding: 0 .32rem 1.2rem
   z-index: 10001
+  overflow-y: auto
   display: none
   .btn
     position: absolute

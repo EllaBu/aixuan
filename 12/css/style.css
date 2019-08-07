@@ -526,6 +526,9 @@
   background-color: #ebebeb;
 }
 
+.plan {
+  padding-bottom: 1.2rem;
+}
 .plan input::-webkit-input-placeholder {
   font-size: 0.3rem;
 }
@@ -691,7 +694,11 @@
 }
 .plan .collect-search {
   background-color: #fff;
-  padding: 0 0.32rem 0.32rem;
+  padding: 0 0.32rem 1.2rem;
+  position: absolute;
+  top: 1.28rem;
+  left: 0;
+  width: 100%;
   display: none;
   font-weight: 300;
 }
@@ -1360,8 +1367,9 @@
   right: 0;
   bottom: 0;
   background-color: #fff;
-  padding: 0 0.32rem;
+  padding: 0 0.32rem 1.2rem;
   z-index: 10001;
+  overflow-y: auto;
   display: none;
 }
 .choose-term .btn,

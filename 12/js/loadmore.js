@@ -28,6 +28,9 @@ function getScrollHeight(){
 
 var loadmore = function (loadData){
   $(window).scroll(function(){
+    console.log(getScrollTop())
+    console.log(getClientHeight())
+    console.log(getScrollHeight())
     if(getScrollTop() + getClientHeight() == getScrollHeight()){
         loadData()
     }

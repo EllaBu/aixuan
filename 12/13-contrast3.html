@@ -10,6 +10,7 @@
   <title>添加收藏</title>
   <link rel="stylesheet" href="./css/reset.css">
   <link rel="stylesheet" href="./css/style.css">
+  <link rel="stylesheet" href="./css/mescroll.css">
 </head>
 <body class="plan-body">
 <div class="plan">
@@ -28,9 +29,9 @@
   <!--搜索历史记录 end-->
 
   <!--搜索结果列表 start-->
-  <div class="collect-search">
+  <div class="collect-search mescroll" id="mescroll">
     <!--无结果-->
-    <!--<p class="collect-search-none">暂无收录此产品</p>-->
+    <p class="collect-search-none">暂无收录此产品</p>
     <!--有结果-->
     <ul>
       <li>
@@ -106,7 +107,7 @@
 
 </div>
 <script src="./js/jquery-3.3.1.min.js"></script>
-<script src="./js/loadmore.js"></script>
+<script src="./js/mescroll.js"></script>
 <script>
   $('.collect-search').on('click', 'i', function () {
     $(this).toggleClass('active')
@@ -116,23 +117,28 @@
     if ( searchWord ) {
       $(this).siblings('i').show()
       $('.collect-search').show()
-      $('.collect-history').hide()
     }
   })
   $('.collect-input i').on('click', function () {
     $(this).siblings('input').val()
     $('.collect-search').hide()
-    $('.collect-history').show()
   })
 
-  loadmore(function () {
+  var mescroll = new MeScroll("mescroll", {
+    down: {
+      isLock: true
+    },
+    up: {
+      auto: false, //是否在初始化时以上拉加载的方式自动加载第一页数据; 默认false
+      isBounce: false, //此处禁止ios回弹,解析(务必认真阅读,特别是最后一点): http://www.mescroll.com/qa.html#q10
+      callback: upCallback, //上拉回调,此处可简写; 相当于 callback: function (page) { upCallback(page); }
+    }
+  });
+
+  /*下拉刷新的回调 */
+  function upCallback(){
     console.log(111)
-    $('.collect-search').append('<li>\n' +
-      '        <img src="./img/collect.png" alt="">\n' +
-      '        <span>太平洋重疾险</span>\n' +
-      '        <i></i>\n' +
-      '      </li>')
-  })
+  }
 
 
 </script>
