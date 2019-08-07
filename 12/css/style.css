@@ -1023,13 +1023,41 @@
   margin-top: 0.16rem;
 }
 
+.product-table-list .product-list span.more-item {
+  background: url("../img/more-item1.svg") no-repeat center bottom;
+  background-size: 0.22rem;
+  bottom: 0.08rem;
+}
+.product-table-list .product-list .table-box {
+  margin-top: 0.16rem;
+  border: none;
+  background-color: #f8f8f8;
+  padding-bottom: 0.32rem;
+}
+.product-table-list .product-list .table-box td {
+  border: none;
+  text-align: left;
+}
+.product-table-list .product-list:nth-child(4n+1) .table-box {
+  border-left: 1px solid #4988fe;
+}
+.product-table-list .product-list:nth-child(4n+2) .table-box {
+  border-left: 1px solid #ff9124;
+}
+.product-table-list .product-list:nth-child(4n+3) .table-box {
+  border-left: 1px solid #ff7171;
+}
+.product-table-list .product-list:nth-child(4n) .table-box {
+  border-left: 1px solid #2fb2a3;
+}
+
 .duty {
   margin-top: 0.16rem;
   padding: 0 0.32rem 0.32rem;
   background-color: #fff;
 }
 .duty h4 {
-  font-size: 0.3remf;
+  font-size: 0.3rem;
   margin-bottom: 0.24rem;
 }
 .duty h4 a {
@@ -1037,10 +1065,6 @@
   font-size: 0.26rem;
   color: #4988fe;
   font-weight: normal;
-}
-.duty th, .duty td {
-  text-align: left;
-  border: none;
 }
 .duty th {
   border-bottom: 1px solid #e5e5e5;

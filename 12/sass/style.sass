@@ -875,21 +875,46 @@ $color-border: #e5e5e5
     background-size: 1.74rem .48rem
     margin-top: .16rem
 
+.product-table-list
+  .product-list
+    span.more-item
+      background: url("../img/more-item1.svg") no-repeat center bottom
+      background-size: .22rem
+      bottom: .08rem
+    .table-box
+      margin-top: .16rem
+      border: none
+      background-color: #f8f8f8
+      padding-bottom: .32rem
+      td
+        border: none
+        text-align: left
+    &:nth-child(4n+1)
+      .table-box
+        border-left: 1px solid #4988fe
+    &:nth-child(4n+2)
+      .table-box
+        border-left: 1px solid #ff9124
+    &:nth-child(4n+3)
+      .table-box
+        border-left: 1px solid #ff7171
+    &:nth-child(4n)
+      .table-box
+        border-left: 1px solid #2fb2a3
+
+
 .duty
   margin-top: .16rem
   padding: 0 .32rem .32rem
   background-color: #fff
   h4
-    font-size: .3remf
+    font-size: .3rem
     margin-bottom: .24rem
     a
       float: right
       font-size: .26rem
       color: $color-common
       font-weight: normal
-  th,td
-    text-align: left
-    border: none
   th
     border-bottom: 1px solid $color-border
     padding: .16rem .16rem .24rem
