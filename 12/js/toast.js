@@ -18,7 +18,9 @@
   let _bindEvent = function() {
     timer = setTimeout(function(){
       toast.remove()
-    }, 5000);
+      settings.callback()
+    }, 2000);
+
   }
 
 
@@ -44,7 +46,8 @@
 
   $.fn.toast.defaults = {
     type: 'loading',
-    message: '信息获取中'
+    message: '信息获取中',
+    callback: function () {}
   }
 
 })(jQuery)

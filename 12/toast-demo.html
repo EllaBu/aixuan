@@ -29,7 +29,10 @@
       message: '支付信息获取失败，稍侯重试'*/
 
       type: 'success',
-      message: '支付已成功，您已升级为VIP客户'
+      message: '支付已成功，您已升级为VIP客户',
+      callback: function () {
+        console.log(2222)
+      }
     })
   })
 </script>
