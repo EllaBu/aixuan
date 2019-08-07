@@ -686,7 +686,7 @@
   font-weight: 300;
 }
 .plan .collect-history li {
-  padding: 0.32rem 0.8rem;
+  padding: 0.32rem 0.32rem 0.32rem 0.8rem;
   background: url("../img/icon-history.svg") no-repeat 0.1rem center;
   border-bottom: 1px solid #e5e5e5;
   font-size: 0.3rem;
@@ -710,7 +710,7 @@
   padding: 0.64rem 0.32rem;
 }
 .plan .collect-search li {
-  line-height: 0.64rem;
+  line-height: 0.36rem;
   padding: 0.32rem 0;
   border-bottom: 1px solid #e5e5e5;
 }
@@ -724,12 +724,14 @@
   width: 5rem;
   font-size: 0.3rem;
   color: #000;
+  vertical-align: middle;
 }
 .plan .collect-search li i {
   float: right;
   width: 0.64rem;
   height: 0.64rem;
   background: url("../img/icon-collect.svg") no-repeat center;
+  vertical-align: middle;
 }
 .plan .collect-search li i.active {
   background: url("../img/icon-collected.svg") no-repeat center;
@@ -884,6 +886,16 @@
   font-size: 0.26rem;
   color: #c4c4c4;
   text-align: right;
+}
+
+.product-info-none {
+  margin-top: 1.92rem;
+  padding: 0.64rem 0.32rem;
+  text-align: center;
+  font-size: 0.3rem;
+  color: #bababa;
+  background-color: #fff;
+  height: 100%;
 }
 
 .product-intro {
@@ -1675,6 +1687,7 @@ to {
   transform: translate(-50%, -50%);
   opacity: 0.5;
   font-size: 0.28rem;
+  z-index: 10003;
 }
 .toast i {
   display: inline-block;

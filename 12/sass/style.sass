@@ -590,7 +590,7 @@ $color-border: #e5e5e5
     padding: 0 .32rem
     font-weight: 300
     li
-      padding: .32rem .8rem
+      padding: .32rem .32rem .32rem .8rem
       background: url("../img/icon-history.svg") no-repeat .1rem center
       border-bottom: 1px solid $color-border
       font-size: .3rem
@@ -611,7 +611,7 @@ $color-border: #e5e5e5
       text-align: center
       padding: .64rem .32rem
     li
-      line-height: .64rem
+      line-height: .36rem
       padding: .32rem 0
       border-bottom: 1px solid $color-border
       img
@@ -623,11 +623,13 @@ $color-border: #e5e5e5
         width: 5rem
         font-size: .3rem
         color: #000
+        vertical-align: middle
       i
         float: right
         width: .64rem
         height: .64rem
         background: url("../img/icon-collect.svg") no-repeat center
+        vertical-align: middle
         &.active
           background: url("../img/icon-collected.svg") no-repeat center
 
@@ -758,6 +760,16 @@ $color-border: #e5e5e5
       font-size: .26rem
       color: #c4c4c4
       text-align: right
+
+.product-info-none
+  margin-top: 1.92rem
+  padding: .64rem .32rem
+  text-align: center
+  font-size: .3rem
+  color: #bababa
+  background-color: #fff
+  height: 100%
+
 
 .product-intro
   margin-top: 1.92rem
@@ -1454,6 +1466,7 @@ $color-border: #e5e5e5
   transform: translate(-50%, -50%)
   opacity: .5
   font-size: .28rem
+  z-index: 10003
   i
     display: inline-block
     width: .32rem

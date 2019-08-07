@@ -25,6 +25,8 @@
     </div>
   </div>
 
+  <div class="product-info-none">暂无信息</div>
+
   <div class="product-intro">
     <ul>
       <li>
@@ -253,14 +255,9 @@
         })
       }
     })
+    let headHeight = parseInt(fontSize) * 1.92
+    $('.product-info-none').height($(window).height() - headHeight)
 
-    // $('.product-list table').each(function () {
-    //   if ($(this).find('tr').length <= 3) {
-    //     $(this).parents('.product-list').find('.more-item').hide()
-    //   } else {
-    //     $(this).find('tr:gt(2)').hide()
-    //   }
-    // })
 
     $('.product-list table').each(function () {
       if ($(this).find('tr').length > 3) {
