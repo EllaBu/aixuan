@@ -1,0 +1,98 @@
+
+<!DOCTYPE html>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport"
+        content="width=device-width,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no,viewport-fit=cover"/>
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black">
+  <meta name="format-detection" content="telephone=no">
+  <title>PhotoClip</title>
+  <link rel="stylesheet" href="../../css/reset.css">
+  <link rel="stylesheet" href="../../css/style.css">
+
+</head>
+<body>
+<div class="edit-photo">
+  <div id="clipArea"></div>
+  <div class="photo-handle">
+    <div href="javascript:;" onclick="chooseImg()">
+      <i><input type="file" id="file" accept="image/*"></i>
+      <p>选择图片</p>
+    </div>
+    <div href="javascript:;" id="clipBtn">
+      <i></i>
+      <p>上传图片</p>
+    </div>
+  </div>
+</div>
+
+
+<script src="js/hammer.min.js"></script>
+<script src="js/iscroll-zoom-min.js"></script>
+<script src="js/lrz.all.bundle.js"></script>
+
+<script src="js/PhotoClip.js"></script>
+<script src="../js/jquery-3.3.1.min.js"></script>
+
+<script>
+	var img_base64 = "";
+	var pc = new PhotoClip('#clipArea', {
+		size: [260, 260],
+		outputSize: 640,
+		//adaptive: ['60%', '80%'],
+		file: '#file',
+		//view: '#view',
+		ok: '#clipBtn',
+		//img: 'img/mm.jpg',
+		loadStart: function() {
+			console.log('开始读取照片');
+		},
+		loadComplete: function() {
+			console.log('照片读取完成');
+		},
+		done: function(dataURL) {
+			console.log(dataURL);
+			img_base64 = dataURL;
+			uploadImg();
+		},
+		fail: function(msg) {
+			alert(msg);
+		}
+	});
+
+	// 加载的图片必须要与本程序同源，否则无法截图
+	pc.load('img/mm.jpg');
+	
+	//选择图片
+	function chooseImg() {
+		$("#file").click();
+	}
+	
+	//上传图片
+	function uploadImg() {
+      var req = new XCO();
+      if(img_base64){
+      	req.setStringValue("img_base64", img_base64);
+      }else{
+      	axError("请先截取图片");
+      }
+      req.setStringValue("user_id","10000026");
+      var options = {
+          url : "/uploadImage.xco",
+          data : req,
+          success : function (data) {
+              if(data.getCode()==0){
+                  axSuccess("上传成功");
+              }else{
+                  axError("上传失败");
+              }
+          }
+      };
+      $.doXcoRequest(options);
+	}
+
+</script>
+</body>
+</html>
+
