@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport"
+        content="width=device-width,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no,viewport-fit=cover"/>
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black">
+  <meta name="format-detection" content="telephone=no">
+  <title>Title</title>
+  <style>
+    p{
+      margin: 40px;
+      line-height: 40px;
+    }
+    footer{
+      position: fixed;
+
+      bottom: 0;
+      height: 40px;
+      width: 100%;
+      background-color: #eee;
+    }
+  </style>
+</head>
+<body style="padding-bottom: 60px">
+<div class="list">
+  <p>qwe</p>
+  <p>qwe</p>
+  <p>qwe</p>
+  <p>qwe</p>
+  <p>qwe</p>
+  <p>qwe</p>
+  <p>qwe</p>
+  <p>qwe</p>
+  <p>qwe</p>
+  <p>qwe</p>
+  <p>qwe</p>
+  <p>qwe</p>
+  <p>qwe</p>
+
+</div>
+<footer>footer</footer>
+
+<script src="../js/jquery-3.3.1.min.js"></script>
+<script src="../../common/vconsole.min.js"></script>
+<script src="./loadmore.js"></script>
+<script>
+
+  function loadData(){
+    console.log(111)
+    /*$.ajax({
+      //请求接口数据 参数传入currentpage
+    });*/
+    $('.list').append('<p>这是新数据</p><p>这是新数据</p><p>这是新数据</p><p>这是新数据</p><p>这是新数据</p><p>这是新数据</p><p>这是新数据</p><p>这是新数据</p><p>这是新数据</p><p>这是新数据</p>')
+  }
+
+  loadmore(loadData) //初始化loadmore
+</script>
+</body>
+</html>
