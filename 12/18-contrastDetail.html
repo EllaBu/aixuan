@@ -321,7 +321,7 @@
   <div class="page-handle">
     <a href="javascript:;" class="active"></a>
     <a href="javascript:;" class="active"></a>
-    <a href="javascript:;"></a>
+    <a href="javascript:;" class="share-btn"></a>
     <i class="a-tip">保存到【我的方案】</i>
   </div>
 </div>
@@ -398,6 +398,12 @@
     <button class="btn btn-common">存储到我的方案</button>
   </div>
 </div>
+
+<!--分享-->
+<div class="page-share">
+  <img src="./img/weChatshare.png" alt="">
+</div>
+
 <script src="./js/jquery-3.3.1.min.js"></script>
 <script>
   $(function () {
@@ -444,6 +450,14 @@
     $('.contrast-sign').on('click', function () {
       $('.contrast-tip').show()
       $('.a-tip').show()
+    })
+
+    //分享
+    $('.share-btn').bind('click', function () {
+      $('.page-share').show()
+    })
+    $('.page-share').bind('click', function () {
+      $(this).hide()
     })
   })
 </script>
