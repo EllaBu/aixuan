@@ -153,6 +153,13 @@
   background-size: 0.48rem;
 }
 
+.result-none {
+  font-size: 0.3rem;
+  color: #bababa;
+  text-align: center;
+  padding: 0.64rem 0.32rem;
+}
+
 .login-box {
   padding: 0 0.64rem;
 }
@@ -766,6 +773,15 @@
   height: 0.48rem;
   background: url("../img/icon-delete.svg") no-repeat center;
   background-size: 0.32rem;
+  display: none;
+}
+.plan .compare .plan-compare .result-none {
+  position: absolute;
+  top: 1.36rem;
+  left: 0;
+  width: 100%;
+  background-color: #fff;
+  z-index: 1111;
   display: none;
 }
 .plan .compare .plan-compare ul {
