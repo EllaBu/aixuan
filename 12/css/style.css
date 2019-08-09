@@ -1,3 +1,7 @@
+body {
+  background-color: #fff;
+}
+
 .item {
   border-bottom: 1px solid #e5e5e5;
   padding: 0.32rem 0;
@@ -559,7 +563,7 @@
   line-height: 1.08rem;
 }
 .plan .title a.active {
-  font-size: 0.44rem;
+  font-size: 0.4rem;
   color: #000;
   font-weight: 500;
   border-bottom: 2px solid #4988fe;
@@ -574,7 +578,7 @@
   padding-top: 0.4rem;
 }
 .plan .list-none img {
-  width: 4rem;
+  width: 4.8rem;
 }
 .plan .list-none.product-list-none {
   padding-top: 1.68rem;
@@ -633,23 +637,33 @@
 .plan .collect-input {
   position: relative;
   padding: 0.24rem;
+  overflow: hidden;
+}
+.plan .collect-input .collect-input-box {
+  background-color: #e2e2e2;
+  border-radius: 0.48rem;
+}
+.plan .collect-input span {
+  display: inline-block;
+  width: 1rem;
+  height: 0.8rem;
+  background: url("../img/icon-search.svg") no-repeat 0.6rem center;
+  background-size: 0.32rem;
+  margin-top: -1.24rem;
 }
 .plan .collect-input input {
-  width: 100%;
+  width: 6rem;
   height: 0.8rem;
   line-height: 0.8rem;
   border-radius: 0.48rem;
-  padding: 0 0 0 0.96rem;
-  background: #e2e2e2 url("../img/icon-search.svg") no-repeat 0.32rem center;
+  margin-left: 1rem;
 }
-.plan .collect-input.collect-add-input {
+.plan .collect-input.collect-add-input .collect-input-box {
   background-color: #f2f2f2;
 }
-.plan .collect-input.collect-add-input input {
-  border-radius: 0;
-  background-color: #f2f2f2;
-  background-position: 0.16rem center;
-  padding-left: 0.8rem;
+.plan .collect-input.contrast-add-input span {
+  background: url("../img/icon-back.svg") no-repeat 0.6rem center;
+  background-size: 0.16rem 0.28rem;
 }
 .plan .collect-input i {
   position: absolute;
@@ -914,7 +928,7 @@
 .product-name .p-info p {
   font-size: 0.26rem;
   color: #c4c4c4;
-  text-align: right;
+  margin-top: 0.04rem;
 }
 
 .product-info-none {
@@ -1045,16 +1059,16 @@
   left: 50%;
   bottom: -0.14rem;
   width: 1.72rem;
-  height: 0.4rem;
+  height: 0.48rem;
   margin-left: -0.86rem;
-  background: url("../img/more-item.png") no-repeat center bottom;
+  background: url("../img/more-item.svg") no-repeat center bottom;
   background-size: 1.74rem 0.48rem;
   margin-top: 0.16rem;
 }
 
 .product-table-list .product-list span.more-item {
-  background: url("../img/more-item1.svg") no-repeat center bottom;
-  background-size: 0.22rem;
+  background: url("../img/more-item2.svg") no-repeat center 0.14rem;
+  background-size: 1.76rem 0.48rem;
   bottom: 0.08rem;
 }
 .product-table-list .product-list .table-box {
