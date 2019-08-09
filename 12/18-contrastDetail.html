@@ -438,13 +438,18 @@
       }
     })
 
-    $('.contrast-box').on('click', '.more-item', function () {
+    /*$('.contrast-box').on('click', '.more-item', function () {
       $(this).toggleClass('fold')
       if($(this).hasClass('fold')) {
         $(this).siblings('.contrast-item').show()
       } else {
         $(this).siblings('.contrast-item:gt(1)').hide()
       }
+    })*/
+
+    $('.contrast-box').on('click', '.more-item', function () {
+      $(this).siblings('.contrast-item').show()
+      $(this).parents('.contrast-box').find('.more-item').remove()
     })
 
     $('.contrast-sign').on('click', function () {

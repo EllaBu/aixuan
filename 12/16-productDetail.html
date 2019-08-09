@@ -268,13 +268,17 @@
       }
     })
 
-    $('.more-item').bind('click', function () {
+    /*$('.more-item').bind('click', function () {
       $(this).toggleClass('fold')
       if($(this).hasClass('fold')) {
         $(this).siblings('.table-box').find('tr').show()
       } else {
         $(this).siblings('.table-box').find('tr:gt(2)').hide()
       }
+    })*/
+    $('.product-list').on('click', '.more-item', function () {
+      $(this).siblings('.table-box').find('tr').show()
+      $(this).parents('.product-list').find('.more-item').remove()
     })
 
     $('.item-choose span').bind('click', function () {
