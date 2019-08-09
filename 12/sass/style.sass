@@ -9,6 +9,11 @@ $color-border: #e5e5e5
   padding: .32rem 0
   line-height: .48rem
   overflow: hidden
+  label
+    i
+      color: red
+      font-weight: bold
+      margin-left: .08rem
   input,
   select,
   .m-select,
@@ -478,7 +483,7 @@ $color-border: #e5e5e5
 
   .add-btn
       display: block
-      width: 4.8rem
+      width: 4rem
       margin: .48rem auto
 
   .list-none
@@ -520,11 +525,13 @@ $color-border: #e5e5e5
         margin-bottom: .24rem
       p
         padding-left: .6rem
-        margin-top: .16rem
+        margin-top: .1rem
         white-space: nowrap
         overflow: hidden
         text-overflow: ellipsis
         font-weight: 300
+        height: .4rem
+        line-height: .4rem
         &:first-of-type
           background: url("../img/icon-a.svg") no-repeat left center
           background-size: .4rem
@@ -566,7 +573,7 @@ $color-border: #e5e5e5
       padding: .32rem .2rem
       background-color: #fff
       border-radius: .2rem
-      margin-bottom: .32rem
+      margin-bottom: .24rem
       line-height: .96rem
       img
         width: .96rem
@@ -577,6 +584,10 @@ $color-border: #e5e5e5
         width: 4rem
         line-height: .4rem
         vertical-align: middle
+        white-space: nowrap
+        overflow: hidden
+        text-overflow: ellipsis
+        margin-left: .2rem
       a
         float: right
         display: inline-block
@@ -647,6 +658,9 @@ $color-border: #e5e5e5
       line-height: .96rem
       padding-right: .48rem
       border-bottom: 1px solid $color-border
+      white-space: nowrap
+      overflow: hidden
+      text-overflow: ellipsis
     .plan-compare
       position: relative
       padding: .32rem .64rem .32rem 1.28rem
@@ -795,9 +809,9 @@ $color-border: #e5e5e5
     float: left
     height: .52rem
     border-radius: .32rem
-    margin: 0 0 .24rem 0
+    margin: 0 .16rem .24rem 0
     overflow: hidden
-    padding-right: .24rem
+    padding-right: .12rem
     p
       line-height: .36rem
       padding: .1rem .32rem
@@ -964,7 +978,7 @@ $color-border: #e5e5e5
     //border: 1px solid #aecdf7
     box-shadow: 0 0 2px 2px #aecdf7
     border-radius: .5rem
-    margin-bottom: .16rem
+    margin-bottom: .32rem
     background-color: #fff
     background-repeat: no-repeat
     background-position: center
@@ -1081,6 +1095,7 @@ $color-border: #e5e5e5
   padding: .32rem .32rem
   font-size: .26rem
   z-index: 9999
+  display: none
   p
     padding: .4rem 0 0 .96rem
     background: url("../img/icon-switch.svg") no-repeat .24rem .56rem
@@ -1105,13 +1120,14 @@ $color-border: #e5e5e5
   .product
     float: left
     width: 50%
-    padding: .24rem .48rem
+    padding: .16rem .36rem
     text-align: center
     img
       width: 1.28rem
       height: 1.28rem
     p
       font-size: .28rem
+      line-height: .32rem
 
 .contrast-none
   padding: .64rem .32rem
@@ -1267,7 +1283,7 @@ $color-border: #e5e5e5
       text-align: center
   .btn
     width: 4.2rem
-    margin-left: 1.14rem
+    margin-left: .98rem
 
 
 
@@ -1375,7 +1391,7 @@ $color-border: #e5e5e5
   .contrast-person
     height: 2rem
     background-color: #6caaff
-    padding: .32rem .4rem
+    padding: .32rem 0 .32rem .4rem
     .person-img
       position: relative
       float: left
@@ -1396,7 +1412,7 @@ $color-border: #e5e5e5
         text-align: center
         font-size: .24rem
         color: #fff
-        margin: -.11rem 0 0 -.11rem
+        margin: -.2rem 0 0 -.11rem
     .person-info
       float: left
       color: #fff

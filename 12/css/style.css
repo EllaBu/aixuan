@@ -4,6 +4,11 @@
   line-height: 0.48rem;
   overflow: hidden;
 }
+.item label i {
+  color: red;
+  font-weight: bold;
+  margin-left: 0.08rem;
+}
 .item input,
 .item select,
 .item .m-select,
@@ -561,7 +566,7 @@
 }
 .plan .add-btn {
   display: block;
-  width: 4.8rem;
+  width: 4rem;
   margin: 0.48rem auto;
 }
 .plan .list-none {
@@ -609,11 +614,13 @@
 }
 .plan .plan-list li p {
   padding-left: 0.6rem;
-  margin-top: 0.16rem;
+  margin-top: 0.1rem;
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
   font-weight: 300;
+  height: 0.4rem;
+  line-height: 0.4rem;
 }
 .plan .plan-list li p:first-of-type {
   background: url("../img/icon-a.svg") no-repeat left center;
@@ -660,7 +667,7 @@
   padding: 0.32rem 0.2rem;
   background-color: #fff;
   border-radius: 0.2rem;
-  margin-bottom: 0.32rem;
+  margin-bottom: 0.24rem;
   line-height: 0.96rem;
 }
 .plan .collect-list li img {
@@ -673,6 +680,10 @@
   width: 4rem;
   line-height: 0.4rem;
   vertical-align: middle;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  margin-left: 0.2rem;
 }
 .plan .collect-list li a {
   float: right;
@@ -752,6 +763,9 @@
   line-height: 0.96rem;
   padding-right: 0.48rem;
   border-bottom: 1px solid #e5e5e5;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 .plan .compare .plan-compare {
   position: relative;
@@ -927,9 +941,9 @@
   float: left;
   height: 0.52rem;
   border-radius: 0.32rem;
-  margin: 0 0 0.24rem 0;
+  margin: 0 0.16rem 0.24rem 0;
   overflow: hidden;
-  padding-right: 0.24rem;
+  padding-right: 0.12rem;
 }
 .product-intro li p {
   line-height: 0.36rem;
@@ -1124,7 +1138,7 @@
   height: 1rem;
   box-shadow: 0 0 2px 2px #aecdf7;
   border-radius: 0.5rem;
-  margin-bottom: 0.16rem;
+  margin-bottom: 0.32rem;
   background-color: #fff;
   background-repeat: no-repeat;
   background-position: center;
@@ -1257,6 +1271,7 @@
   padding: 0.32rem 0.32rem;
   font-size: 0.26rem;
   z-index: 9999;
+  display: none;
 }
 .contrast-tip p {
   padding: 0.4rem 0 0 0.96rem;
@@ -1286,7 +1301,7 @@
 .contrast-product .product {
   float: left;
   width: 50%;
-  padding: 0.24rem 0.48rem;
+  padding: 0.16rem 0.36rem;
   text-align: center;
 }
 .contrast-product .product img {
@@ -1295,6 +1310,7 @@
 }
 .contrast-product .product p {
   font-size: 0.28rem;
+  line-height: 0.32rem;
 }
 
 .contrast-none {
@@ -1477,7 +1493,7 @@
 }
 .plan-box .btn {
   width: 4.2rem;
-  margin-left: 1.14rem;
+  margin-left: 0.98rem;
 }
 
 @-webkit-keyframes bounce {
@@ -1582,7 +1598,7 @@ to {
 .wechat-share .contrast-person {
   height: 2rem;
   background-color: #6caaff;
-  padding: 0.32rem 0.4rem;
+  padding: 0.32rem 0 0.32rem 0.4rem;
 }
 .wechat-share .contrast-person .person-img {
   position: relative;
@@ -1607,7 +1623,7 @@ to {
   text-align: center;
   font-size: 0.24rem;
   color: #fff;
-  margin: -0.11rem 0 0 -0.11rem;
+  margin: -0.2rem 0 0 -0.11rem;
 }
 .wechat-share .contrast-person .person-info {
   float: left;
