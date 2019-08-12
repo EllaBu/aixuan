@@ -1167,14 +1167,16 @@ body
     margin-bottom: .24rem
     padding-bottom: .16rem
     font-size: .26rem
-    tr.active
+    tr
+      border: 1px solid $color-border
+      &.active
       box-shadow: 0 2px 4px #ddd
     td
       width: 50%
       padding: .14rem
       text-align: center
       vertical-align: top
-      border: 1px solid $color-border
+      border: none
       font-weight: 300
       &:first-of-type
         &.light
@@ -1375,36 +1377,16 @@ body
   -webkit-animation-fill-mode: both
   animation-fill-mode: both
 
-.rate-star
-  display: inline-block /*内联元素转换成块元素，并不换行*/
-  width: 1.5rem /*5个星星的宽度*/
-  height: .3rem /*1个星星的高度*/
-  overflow: hidden
-  vertical-align: middle
-  background: url("../img/stargray.svg") repeat-x
-  background-size: .3rem
-  text-align: left
-
-  i
-    display: inline-block /*内联元素转换成块元素，并不换行*/
-    height: .3rem /*1个星星的高度*/
-    background: url("../img/staryellow.svg") repeat-x 0 0
-    background-size: .3rem
-  &.black-star
-    i
-      background: url("../img/starblack.svg") repeat-x
-      background-size: .3rem
-
 //微信分享
 .wechat-share
   .head-bg
     height: 4.2rem
   .contrast-product
-    top: 2.28rem
+    top: 2.48rem
   .contrast-person
-    height: 2rem
+    height: 2.2rem
     background-color: #6caaff
-    padding: .32rem 0 .32rem .4rem
+    padding: .32rem 0 0 .4rem
     .person-img
       position: relative
       float: left
@@ -1427,9 +1409,9 @@ body
         color: #fff
         margin: -.2rem 0 0 -.11rem
     .person-info
-      float: left
       color: #fff
-      padding-left: .32rem
+      padding: 0 .32rem 0 1.76rem
+      height: 2rem
       span
         font-size: .26rem
       p
@@ -1448,7 +1430,7 @@ body
         font-size: .36rem
         border-radius: .48rem
         i
-          padding: .15rem .14rem
+          padding: .13rem .14rem
           background: url("../img/icon-phone.svg") no-repeat center
           background-size: .22rem .3rem
           margin-right: .24rem
@@ -1604,4 +1586,172 @@ body
         i
           background: url("../img/photo-ensure.svg") no-repeat top center
           background-size: 1.5rem 1.5rem
+
+.rate-star
+  position: relative
+  display: inline-block
+  width: 1.7rem
+  height: .3rem
+  vertical-align: middle
+  span
+    width: .3rem
+    height: .3rem
+    margin-right: .05rem
+    position: absolute
+    top: 0
+    left: .7rem
+    background-image: url('../img/stargray.svg')
+    background-repeat: no-repeat
+    background-size: .3rem
+
+//星星样式
+.rate-star
+  &::after,
+  &::before,
+  span::after,
+  span::before
+    display: inline-block
+    content: ""
+    position: absolute
+    top: 0
+    width: .3rem
+    height: .3rem
+    margin-right: .05rem
+    background-image: url('../img/stargray.svg')
+    background-repeat: no-repeat
+    background-size: .3rem
+  &::before
+    left: 0
+  &::after
+    right: 0
+    margin-right: 0
+  span::before
+    left: -.35rem
+  span::after
+    right: -.4rem
+
+@mixin star-half($img)
+  &::before
+    background-image: url("../img/" + $img)
+.rate-star.star-half
+  @include star-half('starblackHalf.svg')
+  &.star-yellow
+    @include star-half('staryellowHalf.svg')
+  &.star-blue
+    @include star-half('starblueHalf.svg')
+
+@mixin star-one($img)
+  &::before
+    background-image: url("../img/" + $img)
+.rate-star.star-one
+  @include star-one('starblack.svg')
+  &.star-yellow
+    @include star-one('staryellow.svg')
+  &.star-blue
+    @include star-one('starblue.svg')
+
+@mixin star-one-half($img, $imgHalf)
+  &::before
+    background-image: url("../img/" + $img)
+  span::before
+    background-image: url("../img/" + $imgHalf)
+.rate-star.star-one-half
+  @include star-one-half('starblack.svg', 'starblackHalf.svg')
+  &.star-yellow
+    @include star-one-half('staryellow.svg', 'staryellowHalf.svg')
+  &.star-blue
+    @include star-one-half('starblue.svg', 'starblueHalf.svg')
+
+
+@mixin star-two($img)
+  &::before,
+  span::before
+    background-image: url("../img/" + $img)
+.rate-star.star-two
+  @include star-two('starblack.svg')
+  &.star-yellow
+    @include star-two('staryellow.svg')
+  &.star-blue
+    @include star-two('starblue.svg')
+
+@mixin star-two-half($img, $imgHalf)
+  &::before,
+  span::before
+    background-image: url("../img/" + $img)
+  span
+    background-image: url("../img/" + $imgHalf)
+.rate-star.star-two-half
+  @include star-two-half('starblack.svg', 'starblackHalf.svg')
+  &.star-yellow
+    @include star-two-half('staryellow.svg', 'staryellowHalf.svg')
+  &.star-blue
+    @include star-two-half('starblue.svg', 'starblueHalf.svg')
+
+@mixin star-three($img)
+  &::before,
+  span::before,
+  span
+    background-image: url("../img/" + $img)
+.rate-star.star-three
+  @include star-three('starblack.svg')
+  &.star-yellow
+    @include star-three('staryellow.svg')
+  &.star-blue
+    @include star-three('starblue.svg')
+
+@mixin star-three-half($img, $imgHalf)
+  &::before,
+  span::before,
+  span
+    background-image: url("../img/" + $img)
+  span::after
+    background-image: url("../img/" + $imgHalf)
+.rate-star.star-three-half
+  @include star-three-half('starblack.svg', 'starblackHalf.svg')
+  &.star-yellow
+    @include star-three-half('staryellow.svg', 'staryellowHalf.svg')
+  &.star-blue
+    @include star-three-half('starblue.svg', 'starblueHalf.svg')
+
+@mixin star-four($img)
+  &::before,
+  span::before,
+  span,
+  span::after
+    background-image: url("../img/" + $img)
+.rate-star.star-four
+  @include star-four('starblack.svg')
+  &.star-yellow
+    @include star-four('staryellow.svg')
+  &.star-blue
+    @include star-four('starblue.svg')
+
+@mixin star-four-half($img, $imgHalf)
+  &::before,
+  span::before,
+  span,
+  span::after
+    background-image: url("../img/" + $img)
+  &::after
+    background-image: url("../img/" + $imgHalf)
+.rate-star.star-four-half
+  @include star-four-half('starblack.svg', 'starblackHalf.svg')
+  &.star-yellow
+    @include star-four-half('staryellow.svg', 'staryellowHalf.svg')
+  &.star-blue
+    @include star-four-half('starblue.svg', 'starblueHalf.svg')
+
+@mixin star-five($img)
+  &::before,
+  span::before,
+  span,
+  span::after,
+  &::after
+    background-image: url("../img/" + $img)
+.rate-star.star-five
+  @include star-five('starblack.svg')
+  &.star-yellow
+    @include star-five('staryellow.svg')
+  &.star-blue
+    @include star-five('starblue.svg')
 
