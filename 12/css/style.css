@@ -606,10 +606,35 @@ body {
   min-height: 100%;
 }
 .plan .plan-list li {
+  position: relative;
   padding: 0.32rem 0.28rem;
   background-color: #fff;
   border-radius: 0.2rem;
   margin-bottom: 0.32rem;
+  -webkit-user-select: none;
+  -webkit-touch-callout: none;
+  user-select: none;
+}
+.plan .plan-list li .delete-layer {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border-radius: 0.2rem;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 1000;
+}
+.plan .plan-list li .delete-layer .delete-item {
+  display: block;
+  width: 1rem;
+  height: 1rem;
+  border-radius: 0.5rem;
+  line-height: 1rem;
+  margin: 0.6rem auto;
+  background: linear-gradient(150deg, #f66c1a, #e11804);
+  color: #fff;
+  text-align: center;
 }
 .plan .plan-list li h3 {
   font-size: 0.32rem;
@@ -1423,6 +1448,14 @@ body {
   z-index: 10001;
   overflow-y: auto;
   display: none;
+}
+.choose-term select,
+.choose-term .m-select,
+.custom-edit select,
+.custom-edit .m-select,
+.disease-contrast select,
+.disease-contrast .m-select {
+  color: #bababa;
 }
 .choose-term .btn,
 .custom-edit .btn,

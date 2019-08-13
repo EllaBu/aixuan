@@ -35,14 +35,22 @@
     
     <ul class="plan-list">
       <li>
-        <h3>胡歌重疾100万方案</h3>
-        <p>哆啦A宝重大疾病险</p>
-        <p>哆啦A宝重大疾病险哆啦A宝重大疾病险</p>
+        <div class="plan-item">
+          <h3>胡歌重疾100万方案</h3>
+          <p>哆啦A宝重大疾病险</p>
+          <p>哆啦A宝重大疾病险哆啦A宝重大疾病险</p>
+        </div>
+        <!--<div class="delete-layer">
+          <span class="delete-item">删除</span>
+        </div>-->
+
       </li>
       <li>
-        <h3>胡歌重疾100万方案</h3>
-        <p>哆啦A宝重大疾病险</p>
-        <p>哆啦A宝重大疾病险哆啦A宝重大疾病险</p>
+        <div class="plan-item">
+          <h3>胡歌重疾100万方案</h3>
+          <p>哆啦A宝重大疾病险</p>
+          <p>哆啦A宝重大疾病险哆啦A宝重大疾病险</p>
+        </div>
       </li>
       <li>
         <h3>胡歌重疾100万方案</h3>
@@ -70,6 +78,32 @@
   </div>
 
 </div>
+<script src="./js/jquery-3.3.1.min.js"></script>
+<script src="./js/longPress.js"></script>
+<script>
+  $(function() {
+    $('.plan-item').longpress(function(){
+      console.log($(this))
+      //do something...
+      $(this).append('<div class="delete-layer">\n' +
+        '          <span class="delete-item">删除</span>\n' +
+        '        </div>')
+      console.log(111)
+    });
 
+
+    $(".plan-list li").on('click', '.delete-item', function (e) {
+      console.log(111)
+      $(this).parents('li').find('.delete-layer').remove()
+    })
+
+
+  })
+
+
+
+
+
+</script>
 </body>
 </html>
