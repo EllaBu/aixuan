@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport"
+        content="width=device-width,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no,viewport-fit=cover"/>
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black">
+  <meta name="format-detection" content="telephone=no">
+  <title>选择保险公司</title>
+  <link rel="stylesheet" href="./css/reset.css">
+  <link rel="stylesheet" href="./css/style.css">
+</head>
+<body class="gray-bg company-search">
+<div class="collect-input collect-add-input">
+  <div class="collect-input-box">
+    <span class="collect-search-icon"></span>
+    <input type="text" placeholder="请输入保险名称">
+    <i></i>
+  </div>
+</div>
+<ul class="company-search-list">
+  <li id="a">
+    <h5>A</h5>
+    <p>安邦人寿</p>
+    <p>安邦人寿</p>
+    <p>安邦人寿</p>
+  </li>
+  <li id="b">
+    <h5>B</h5>
+    <p>安邦人寿</p>
+    <p>安邦人寿</p>
+    <p>安邦人寿</p>
+  </li>
+  <li id="c">
+    <h5>C</h5>
+    <p>安邦人寿</p>
+    <p>安邦人寿</p>
+    <p>安邦人寿</p>
+  </li>
+  <li id="d">
+    <h5>D</h5>
+    <p>安邦人寿</p>
+    <p>安邦人寿</p>
+    <p>安邦人寿</p>
+  </li>
+  <li id="e">
+    <h5>E</h5>
+    <p>安邦人寿</p>
+    <p>安邦人寿</p>
+    <p>安邦人寿</p>
+  </li>
+  <li id="f">
+    <h5>F</h5>
+    <p>安邦人寿</p>
+    <p>安邦人寿</p>
+    <p>安邦人寿</p>
+  </li>
+</ul>
+<ul class="search-index">
+  <li>A</li>
+  <li>B</li>
+  <li>C</li>
+  <li>D</li>
+  <li>E</li>
+  <li>F</li>
+</ul>
+<script src="./js/jquery-3.3.1.min.js"></script>
+<script>
+  $(function () {
+    $('.collect-input input').bind('input propertychange', function() {
+      let searchWord = $(this).val()
+      if ( searchWord ) {
+        $(this).siblings('i').show()
+        // $('.collect-search').show()
+      }
+    })
+    $('.collect-input i').on('click', function () {
+      console.log(111)
+      console.log($(this).siblings('input').val())
+      $(this).siblings('input').val('')
+    })
+
+    var fontSize=$('html').css('font-size')
+    var inputHeight = 1.28 * parseInt(fontSize)
+
+    $(".search-index li").click(function(){
+      var _this=$(this)
+      var _index = _this.index()
+      if(_index==0){
+        $('html,body').animate({scrollTop: '0px'}, 300);//点击第一个滚到顶部
+      } else {
+        var letter = _this.text().toLowerCase();
+        console.log(letter)
+        if($('#'+letter).length>0){
+          var LetterTop = $('#'+letter).position().top;
+          $('html,body').animate({scrollTop: LetterTop - inputHeight+'px'}, 300);
+        }
+      }
+    })
+  })
+</script>
+</body>
+</html>

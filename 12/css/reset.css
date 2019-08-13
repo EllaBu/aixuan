@@ -75,7 +75,8 @@ input, select, textarea {
     background-color: transparent;
 }
 
-input::-webkit-input-placeholder { /* WebKit browsers */
+input::-webkit-input-placeholder,
+textarea::-webkit-input-placeholder{ /* WebKit browsers */
     color: #bababa;
     font-size: .32rem;
 }

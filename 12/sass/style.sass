@@ -25,6 +25,7 @@ body
     height: .48rem
     line-height: .48rem
     text-align: right
+    color: #bababa
   .m-select
     padding-right: .4rem
     background: url("../img/icon-down.svg") no-repeat center right
@@ -32,6 +33,8 @@ body
     direction: rtl
     background: url("../img/icon-down.svg") no-repeat center right
     padding-right: .4rem
+  p
+    margin-top: .2rem
   i.delete
     float: right
     width: .48rem
@@ -39,6 +42,17 @@ body
     background: url("../img/icon-delete.svg") no-repeat center
     background-size: .32rem
     display: none
+  i.m-radio
+    display: inline-block
+    width: .3rem
+    height: .3rem
+    background-color: #efefef
+    border-radius: 50%
+    vertical-align: middle
+    margin-top: -.04rem
+    &.active
+      border: .06rem solid $color-common
+      background-color: #fff
   &.item-term
     b
       float: right
@@ -154,6 +168,44 @@ body
   text-align: center
   padding: .64rem .32rem
 
+
+.collect-input
+  padding: .24rem
+  overflow: hidden
+  .collect-input-box
+    position: relative
+    background-color: #e2e2e2
+    border-radius: .48rem
+  span.collect-search-icon
+    position: absolute
+    top: 0
+    left: 0
+    display: inline-block
+    width: 1rem
+    height: .8rem
+    background: url("../img/icon-search.svg") no-repeat .4rem center
+    background-size: .32rem
+  input
+    width: 6rem
+    height: .8rem
+    line-height: .8rem
+    border-radius: .48rem
+    margin-left: 1rem
+  &.collect-add-input
+    .collect-input-box
+      background-color: #f2f2f2
+  &.contrast-add-input
+    span
+      background: url("../img/icon-back.svg") no-repeat .6rem center
+      background-size: .16rem .28rem
+  i
+    position: absolute
+    right: .26rem
+    top: 0
+    width: .8rem
+    height: .8rem
+    background: url("../img/icon-delete.svg") no-repeat center
+    display: none
 
 // 通用样式 end
 
@@ -564,45 +616,6 @@ body
         &:last-of-type
           background: url("../img/icon-b.svg") no-repeat left center
           background-size: .4rem
-
-
-  .collect-input
-    position: relative
-    padding: .24rem
-    overflow: hidden
-    .collect-input-box
-      background-color: #e2e2e2
-      border-radius: .48rem
-    span
-      display: inline-block
-      width: 1rem
-      height: .8rem
-      background: url("../img/icon-search.svg") no-repeat .6rem center
-      background-size: .32rem
-      margin-top: -1.24rem
-    input
-      width: 6rem
-      height: .8rem
-      line-height: .8rem
-      border-radius: .48rem
-      margin-left: 1rem
-
-
-    &.collect-add-input
-      .collect-input-box
-        background-color: #f2f2f2
-    &.contrast-add-input
-      span
-        background: url("../img/icon-back.svg") no-repeat .6rem center
-        background-size: .16rem .28rem
-    i
-      position: absolute
-      right: .26rem
-      top: .32rem
-      width: .8rem
-      height: .8rem
-      background: url("../img/icon-delete.svg") no-repeat center
-      display: none
 
   .collect-list
     padding: 0 .2rem
@@ -1251,9 +1264,6 @@ body
   z-index: 10001
   overflow-y: auto
   display: none
-  select,
-  .m-select
-    color: #bababa
   .btn
     position: absolute
     width: 4rem
@@ -1618,6 +1628,60 @@ body
         i
           background: url("../img/photo-ensure.svg") no-repeat top center
           background-size: 1.5rem 1.5rem
+
+//产品勘误
+.corrigendum
+  .fill-in
+    position: relative
+    height: 4rem
+    background-color: #fff
+    padding: .32rem .32rem .6rem
+    textarea
+      width: 100%
+      height: 100%
+    p
+      position: absolute
+      bottom: 0
+      right: 0
+      color: #bababa
+      padding: .16rem .32rem
+  .fill-person
+    margin-top: .32rem
+    background-color: #fff
+    padding: 0 .32rem
+  .fill-handle
+    text-align: center
+  .btn
+    width: 6rem
+    margin: .4rem
+
+//选择保险公司
+.company-search
+  .collect-input
+    position: fixed
+    top: 0
+    left: 0
+    background-color: #f0f0f0
+.company-search-list
+  padding-top: 1.28rem
+  li
+    background-color: #fff
+    padding: .16rem .32rem 0
+    margin-bottom: .24rem
+    p
+      line-height: 1rem
+      border-bottom: 1px solid $color-border
+      &:last-of-type
+        border: none
+.search-index
+  position: fixed
+  right: 0
+  top: 50%
+  margin-top: -3.5rem
+  width: .32rem
+  height: 7rem
+  font-size: .24rem
+
 
 .rate-star
   position: relative
