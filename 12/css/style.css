@@ -133,11 +133,12 @@ body {
   padding-top: 0.2rem;
   background-color: #f8f8f8;
   font-size: 0.2rem;
+  display: flex;
 }
 .footer div {
   float: left;
   text-align: center;
-  width: 50%;
+  flex: 1;
 }
 .footer div i {
   display: block;
