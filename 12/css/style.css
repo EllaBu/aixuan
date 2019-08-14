@@ -1915,16 +1915,21 @@ to {
 .company-search-list {
   padding-top: 1.28rem;
 }
-.company-search-list li {
+.company-search-list > div {
   background-color: #fff;
   padding: 0.16rem 0.32rem 0;
-  margin-bottom: 0.24rem;
 }
-.company-search-list li p {
-  line-height: 1rem;
+.company-search-list > div.sort-letter {
+  margin-top: 0.2rem;
+}
+.company-search-list > div.sort-letter:first-of-type {
+  margin-top: 0;
+}
+.company-search-list > div p {
+  line-height: 1.14rem;
   border-bottom: 1px solid #e5e5e5;
 }
-.company-search-list li p:last-of-type {
+.company-search-list > div:last-of-type {
   border: none;
 }
 
@@ -1932,10 +1937,11 @@ to {
   position: fixed;
   right: 0;
   top: 50%;
-  margin-top: -3.5rem;
   width: 0.32rem;
-  height: 7rem;
   font-size: 0.24rem;
+}
+.search-index li {
+  margin: 0.12rem 0;
 }
 
 .rate-star {

@@ -1671,23 +1671,28 @@ body
     background-color: #f0f0f0
 .company-search-list
   padding-top: 1.28rem
-  li
+  >div
     background-color: #fff
     padding: .16rem .32rem 0
-    margin-bottom: .24rem
+    &.sort-letter
+      margin-top: .2rem
+      &:first-of-type
+        margin-top: 0
     p
-      line-height: 1rem
+      line-height: 1.14rem
       border-bottom: 1px solid $color-border
-      &:last-of-type
-        border: none
+    &:last-of-type
+      border: none
+
+
 .search-index
   position: fixed
   right: 0
   top: 50%
-  margin-top: -3.5rem
   width: .32rem
-  height: 7rem
   font-size: .24rem
+  li
+    margin: .12rem 0
 
 
 .rate-star

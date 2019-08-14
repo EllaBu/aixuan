@@ -19,86 +19,50 @@
     <i></i>
   </div>
 </div>
-<ul class="company-search-list">
-  <li id="a">
-    <h5>A</h5>
+<div class="company-search-list">
+  <div>
     <p>安邦人寿</p>
+  </div>
+  <div>
     <p>安邦人寿</p>
-    <p>安邦人寿</p>
-  </li>
-  <li id="b">
-    <h5>B</h5>
-    <p>安邦人寿</p>
-    <p>安邦人寿</p>
-    <p>安邦人寿</p>
-  </li>
-  <li id="c">
-    <h5>C</h5>
-    <p>安邦人寿</p>
-    <p>安邦人寿</p>
-    <p>安邦人寿</p>
-  </li>
-  <li id="d">
-    <h5>D</h5>
-    <p>安邦人寿</p>
-    <p>安邦人寿</p>
-    <p>安邦人寿</p>
-  </li>
-  <li id="e">
-    <h5>E</h5>
-    <p>安邦人寿</p>
-    <p>安邦人寿</p>
-    <p>安邦人寿</p>
-  </li>
-  <li id="f">
-    <h5>F</h5>
-    <p>安邦人寿</p>
-    <p>安邦人寿</p>
-    <p>安邦人寿</p>
-  </li>
-</ul>
+  </div>
+  <div>
+    <p>买安邦人寿</p>
+  </div>
+  <div>
+    <p>了安邦人寿</p>
+  </div>
+  <div>
+    <p>故安邦人寿</p>
+  </div>
+  <div>
+    <p>0安邦人寿</p>
+  </div>
+  <div>
+    <p>偶安邦人寿</p>
+  </div>
+  <div>
+    <p>la安邦人寿</p>
+  </div>
+  <div>
+    <p>额安邦人寿</p>
+  </div>
+  <div>
+    <p>都安邦人寿</p>
+  </div>
+  <div>
+    <p>想安邦人寿</p>
+  </div>
+  <div>
+    <p>%安邦人寿</p>
+  </div>
+
+</div>
 <ul class="search-index">
-  <li>A</li>
-  <li>B</li>
-  <li>C</li>
-  <li>D</li>
-  <li>E</li>
-  <li>F</li>
+
 </ul>
 <script src="./js/jquery-3.3.1.min.js"></script>
-<script>
-  $(function () {
-    $('.collect-input input').bind('input propertychange', function() {
-      let searchWord = $(this).val()
-      if ( searchWord ) {
-        $(this).siblings('i').show()
-        // $('.collect-search').show()
-      }
-    })
-    $('.collect-input i').on('click', function () {
-      console.log(111)
-      console.log($(this).siblings('input').val())
-      $(this).siblings('input').val('')
-    })
-
-    var fontSize=$('html').css('font-size')
-    var inputHeight = 1.28 * parseInt(fontSize)
-
-    $(".search-index li").click(function(){
-      var _this=$(this)
-      var _index = _this.index()
-      if(_index==0){
-        $('html,body').animate({scrollTop: '0px'}, 300);//点击第一个滚到顶部
-      } else {
-        var letter = _this.text().toLowerCase();
-        console.log(letter)
-        if($('#'+letter).length>0){
-          var LetterTop = $('#'+letter).position().top;
-          $('html,body').animate({scrollTop: LetterTop - inputHeight+'px'}, 300);
-        }
-      }
-    })
-  })
-</script>
+<script src="./js/jquery.charfirst.pinyin.js"></script>
+<script src="./js/chooseCompany.js"></script>
 </body>
 </html>
