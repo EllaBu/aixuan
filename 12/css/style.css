@@ -1281,9 +1281,17 @@ body {
 .disease-list tr td:first-of-type {
   text-align: left;
 }
+.disease-list tr td:nth-of-type(2).active {
+  background-color: #fff8f0;
+  color: #ff9124;
+}
 .disease-list tr td:last-of-type {
   background-color: #f8f8f8;
   border-right: none;
+}
+.disease-list tr td:last-of-type.active {
+  background-color: #eaf2ff;
+  color: #4988fe;
 }
 .disease-list.disease-info {
   margin-top: 0;

@@ -1109,9 +1109,17 @@ body
     td
       &:first-of-type
         text-align: left
+
+      &:nth-of-type(2)
+        &.active
+          background-color: #fff8f0
+          color: #ff9124
       &:last-of-type
         background-color: #f8f8f8
         border-right: none
+        &.active
+          background-color: #eaf2ff
+          color: #4988fe
   &.disease-info
     margin-top: 0
     .disease-item:nth-of-type(1)
