@@ -39,11 +39,11 @@
   </div>
   <div>
     <img src="./img/plan-img.png" alt="">
-    <p>产品对比工具</p>
+    <p>保单管理工具</p>
   </div>
   <div>
     <img src="./img/plan-img.png" alt="">
-    <p>产品对比工具</p>
+    <p>预核保工具</p>
   </div>
 </div>
 
@@ -128,7 +128,11 @@
 <script src="./js/swiper.min.js"></script>
 <script>
   var swiper = new Swiper('.swiper-container', {
-    loop: true, // 循环模式选项
+    loop: true,
+    // autoplay: true,  // 默认3秒自动轮播
+    autoplay: {
+      delay: 2000   // 自定义轮播间隔时间
+    },
     pagination: {
       el: '.swiper-pagination',
     },
