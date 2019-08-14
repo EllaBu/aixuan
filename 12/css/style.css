@@ -1983,6 +1983,34 @@ to {
   margin: 0.12rem 0;
 }
 
+.news-detail {
+  padding: 0.32rem;
+}
+.news-detail .news-time {
+  font-size: 0.24rem;
+  font-weight: 300;
+}
+.news-detail .news-time span {
+  margin-left: 0.16rem;
+}
+.news-detail h2 {
+  font-size: 0.36rem;
+  padding: 0.16rem 0;
+}
+.news-detail .news-author {
+  text-align: right;
+  font-size: 0.24rem;
+  font-weight: 300;
+}
+.news-detail .news-content {
+  font-weight: 300;
+  font-size: 0.3rem;
+  margin-top: 0.24rem;
+}
+.news-detail .news-content p {
+  margin-bottom: 0.32rem;
+}
+
 .rate-star {
   position: relative;
   display: inline-block;
