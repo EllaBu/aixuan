@@ -2011,6 +2011,137 @@ to {
   margin-bottom: 0.32rem;
 }
 
+.swiper-container {
+  height: 3.2rem;
+}
+.swiper-container img {
+  width: 100%;
+}
+
+.home-tool {
+  display: flex;
+  padding: 0.32rem 0.16rem;
+  background-color: #fff;
+}
+.home-tool > div {
+  flex: 1;
+  margin: 0 0.16rem;
+  text-align: center;
+  padding: 0.08rem;
+  font-size: 0.28rem;
+  font-weight: 500;
+  border-radius: 0.16rem;
+}
+.home-tool > div img {
+  width: 100%;
+}
+.home-tool > div:nth-of-type(1) {
+  background-color: #E2F5FF;
+  color: #4988FE;
+}
+.home-tool > div:nth-of-type(2) {
+  background-color: #FFF6EB;
+  color: #FF9124;
+}
+.home-tool > div:nth-of-type(3) {
+  background-color: #FFF2F2;
+  color: #FF7171;
+}
+
+.home-item {
+  padding: 0.24rem;
+}
+.home-item.home-product-item {
+  padding-bottom: 0;
+}
+.home-item h2 {
+  height: 0.64rem;
+  line-height: 0.64rem;
+  font-size: 0.32rem;
+  margin: 0.16rem 0;
+}
+.home-item h2 a {
+  float: right;
+  color: #4988FE;
+  font-size: 0.26rem;
+  padding-right: 0.16rem;
+}
+
+.home-product-list {
+  overflow: hidden;
+}
+.home-product-list li {
+  float: left;
+  width: 3.4rem;
+  background-color: #fff;
+  margin-bottom: 0.16rem;
+  padding: 0.16rem;
+  border-radius: 0.16rem;
+}
+.home-product-list li h3 {
+  font-size: 0.28rem;
+  margin-bottom: 0.16rem;
+}
+.home-product-list li span {
+  padding: 0.08rem 0.16rem;
+  font-size: 0.24rem;
+  font-weight: 300;
+}
+.home-product-list li:nth-of-type(2n) {
+  float: right;
+}
+.home-product-list li:nth-of-type(1) span {
+  background-color: #FFF8F8;
+  color: #FF7171;
+}
+.home-product-list li:nth-of-type(2) span {
+  background-color: #F2FCFF;
+  color: #2FB2A3;
+}
+.home-product-list li:nth-of-type(3) span {
+  background-color: #FFF8F0;
+  color: #FF9124;
+}
+.home-product-list li:nth-of-type(4) span {
+  background-color: #F2F7FF;
+  color: #4988FE;
+}
+
+.information-list {
+  background-color: #fff;
+  padding: 0.16rem;
+  border-radius: 0.16rem;
+  margin-bottom: 0.2rem;
+  overflow: hidden;
+}
+.information-list .information-img {
+  float: left;
+  width: 1.66rem;
+}
+.information-list .information-img img {
+  width: 1.76rem;
+  height: 1.6rem;
+}
+.information-list .information-info {
+  padding-left: 2rem;
+}
+.information-list .information-info h3 {
+  font-size: 0.28rem;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+}
+.information-list .information-info p {
+  font-size: 0.24rem;
+  color: #bababa;
+  margin-top: 0.48rem;
+}
+.information-list .information-info p i {
+  float: right;
+}
+
 .rate-star {
   position: relative;
   display: inline-block;

@@ -1752,6 +1752,112 @@ body
     p
       margin-bottom: .32rem
 
+//首页
+.swiper-container
+  height: 3.2rem
+  img
+    width: 100%
+.home-tool
+  display: flex
+  padding: .32rem .16rem
+  background-color: #fff
+  &>div
+    flex: 1
+    margin: 0 .16rem
+    text-align: center
+    padding: .08rem
+    font-size: .28rem
+    font-weight: 500
+    border-radius: .16rem
+    img
+      width: 100%
+    &:nth-of-type(1)
+      background-color: #E2F5FF
+      color: #4988FE
+    &:nth-of-type(2)
+      background-color: #FFF6EB
+      color: #FF9124
+    &:nth-of-type(3)
+      background-color: #FFF2F2
+      color: #FF7171
+
+.home-item
+  padding: .24rem
+  &.home-product-item
+    padding-bottom: 0
+  h2
+    height: .64rem
+    line-height: .64rem
+    font-size: .32rem
+    margin: .16rem 0
+    a
+      float: right
+      color: #4988FE
+      font-size: .26rem
+      padding-right: .16rem
+.home-product-list
+  overflow: hidden
+  li
+    float: left
+    width: 3.4rem
+    background-color: #fff
+    margin-bottom: .16rem
+    padding: .16rem
+    border-radius: .16rem
+    h3
+      font-size: .28rem
+      margin-bottom: .16rem
+    span
+      padding: .08rem .16rem
+      font-size: .24rem
+      font-weight: 300
+    &:nth-of-type(2n)
+      float: right
+    &:nth-of-type(1)
+      span
+        background-color: #FFF8F8
+        color: #FF7171
+    &:nth-of-type(2)
+      span
+        background-color: #F2FCFF
+        color: #2FB2A3
+    &:nth-of-type(3)
+      span
+        background-color: #FFF8F0
+        color: #FF9124
+    &:nth-of-type(4)
+      span
+        background-color: #F2F7FF
+        color: #4988FE
+
+.information-list
+  background-color: #fff
+  padding: .16rem
+  border-radius: .16rem
+  margin-bottom: .2rem
+  overflow: hidden
+  .information-img
+    float: left
+    width: 1.66rem
+    img
+      width: 1.76rem
+      height: 1.6rem
+  .information-info
+    padding-left: 2rem
+    h3
+      font-size: .28rem
+      overflow: hidden
+      text-overflow: ellipsis
+      display: -webkit-box
+      -webkit-line-clamp: 2
+      -webkit-box-orient: vertical
+    p
+      font-size: .24rem
+      color: #bababa
+      margin-top: .48rem
+      i
+        float: right
+
 //星星样式
 .rate-star
   position: relative

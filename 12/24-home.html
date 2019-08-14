@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport"
+        content="width=device-width,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no,viewport-fit=cover"/>
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black">
+  <meta name="format-detection" content="telephone=no">
+  <title>首页</title>
+  <link rel="stylesheet" href="./css/reset.css">
+  <link rel="stylesheet" href="./css/style.css">
+  <link rel="stylesheet" href="./css/swiper.css">
+  <style>
+    .swiper-container {
+      width: 100%;
+      height: 3.2rem;
+      background-color: #74c8ec;
+    }
+  </style>
+</head>
+<body class="gray-bg">
+<div class="swiper-container">
+  <div class="swiper-wrapper">
+    <div class="swiper-slide">
+      <img src="./img/banner1.png" alt="">
+    </div>
+    <div class="swiper-slide">Slide 2</div>
+    <div class="swiper-slide">Slide 3</div>
+  </div>
+  <!-- 如果需要分页器 -->
+  <div class="swiper-pagination"></div>
+</div>
+
+<div class="home-tool">
+  <div>
+    <img src="./img/plan-img.png" alt="">
+    <p>产品对比工具</p>
+  </div>
+  <div>
+    <img src="./img/plan-img.png" alt="">
+    <p>产品对比工具</p>
+  </div>
+  <div>
+    <img src="./img/plan-img.png" alt="">
+    <p>产品对比工具</p>
+  </div>
+</div>
+
+<div class="home-item home-product-item">
+  <h2>热门产品</h2>
+  <ul class="home-product-list">
+    <li>
+      <h3>悦享人生综合意外险</h3>
+      <span>保终身返还型</span>
+    </li>
+    <li>
+      <h3>医保无忧百万医疗险</h3>
+      <span>每天7块钱 保额100万</span>
+    </li>
+    <li>
+      <h3>倍加尔保重大医病保险</h3>
+      <span>最高100万保额</span>
+    </li>
+    <li>
+      <h3>安康综合意外险</h3>
+      <span>10万意外医疗</span>
+    </li>
+  </ul>
+</div>
+
+<div class="home-item">
+  <h2>资讯动态 <a href="javascript:;">更多 ></a></h2>
+  <div class="information-list">
+    <div class="information-img">
+      <img src="./img/information.png" alt="">
+    </div>
+    <div class="information-info">
+      <h3>内地与香港保险比较研究——从保诚事件回头看香港保险的定位</h3>
+      <p>
+        <span>2019年8月2日</span>
+        <i>来源：爱选科技公众号</i>
+      </p>
+    </div>
+  </div>
+  <div class="information-list">
+    <div class="information-img">
+      <img src="./img/information.png" alt="">
+    </div>
+    <div class="information-info">
+      <h3>内地与香港保险比较研究——从保诚事件回头看香港保险的定位从保诚事件回头看香港保险的定位</h3>
+      <p>
+        <span>2019年8月2日</span>
+        <i>来源：爱选科技公众号</i>
+      </p>
+    </div>
+  </div>
+  <div class="information-list">
+    <div class="information-img">
+      <img src="./img/information.png" alt="">
+    </div>
+    <div class="information-info">
+      <h3>内地与香港保险比较研究——从保诚事件回头看香港保险的定位</h3>
+      <p>
+        <span>2019年8月2日</span>
+        <i>来源：爱选科技公众号</i>
+      </p>
+    </div>
+  </div>
+  <div class="information-list">
+    <div class="information-img">
+      <img src="./img/information.png" alt="">
+    </div>
+    <div class="information-info">
+      <h3>内地与香港保险比较研究——从保诚事件回头看香港保险的定位</h3>
+      <p>
+        <span>2019年8月2日</span>
+        <i>来源：爱选科技公众号</i>
+      </p>
+    </div>
+  </div>
+</div>
+
+<!--<p class="page-tip">没有更多了</p>-->
+
+
+<script src="./js/jquery-3.3.1.min.js"></script>
+<script src="./js/swiper.min.js"></script>
+<script>
+  var swiper = new Swiper('.swiper-container', {
+    loop: true, // 循环模式选项
+    pagination: {
+      el: '.swiper-pagination',
+    },
+  });
+</script>
+</body>
+</html>
