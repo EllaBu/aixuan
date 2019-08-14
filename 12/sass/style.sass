@@ -194,9 +194,9 @@ body
   &.collect-add-input
     .collect-input-box
       background-color: #f2f2f2
-  &.contrast-add-input
+  &.back-add-input
     span
-      background: url("../img/icon-back.svg") no-repeat .6rem center
+      background: url("../img/icon-back.svg") no-repeat .4rem center
       background-size: .16rem .28rem
   i
     position: absolute
@@ -668,6 +668,16 @@ body
       border-bottom: 1px solid $color-border
       font-size: .3rem
       color: #000
+
+  .hot-products
+    padding: 0 .32rem .32rem
+    li
+      line-height: 1.1rem
+      padding-left: .8rem
+      border-bottom: 1px solid $color-border
+      background: url("../img/icon-hot.svg") no-repeat .2rem .3rem
+      background-size: .38rem .44rem
+
   .collect-search
     background-color: #fff
     padding: 0 .32rem 1.2rem
@@ -776,6 +786,7 @@ body
         -webkit-transition: transform 1s
         &.active
           transform: rotate(180deg)
+
 
 // 个性化定制
 .custom

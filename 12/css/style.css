@@ -216,8 +216,8 @@ body {
 .collect-input.collect-add-input .collect-input-box {
   background-color: #f2f2f2;
 }
-.collect-input.contrast-add-input span {
-  background: url("../img/icon-back.svg") no-repeat 0.6rem center;
+.collect-input.back-add-input span {
+  background: url("../img/icon-back.svg") no-repeat 0.4rem center;
   background-size: 0.16rem 0.28rem;
 }
 .collect-input i {
@@ -771,6 +771,16 @@ body {
   border-bottom: 1px solid #e5e5e5;
   font-size: 0.3rem;
   color: #000;
+}
+.plan .hot-products {
+  padding: 0 0.32rem 0.32rem;
+}
+.plan .hot-products li {
+  line-height: 1.1rem;
+  padding-left: 0.8rem;
+  border-bottom: 1px solid #e5e5e5;
+  background: url("../img/icon-hot.svg") no-repeat 0.2rem 0.3rem;
+  background-size: 0.38rem 0.44rem;
 }
 .plan .collect-search {
   background-color: #fff;

@@ -12,7 +12,7 @@
   <link rel="stylesheet" href="./css/style.css">
 </head>
 <body>
-<div class="plan">
+<div class="plan" style="display: none">
 
   <div class="compare">
     <div class="plan-compare">
@@ -48,6 +48,39 @@
 
   <a href="javascript:;" class="btn btn-common add-btn" style="width: 5.6rem">去对比</a>
 
+</div>
+<div class="plan-body">
+  <div class="plan" style="padding-bottom: 0; background-color: #efefef">
+
+    <div class="collect-input back-add-input">
+      <div class="collect-input-box">
+        <span class="collect-search-icon" onclick="backCompare()"></span>
+        <input type="text" placeholder="输入保险名称">
+        <i></i>
+      </div>
+    </div>
+
+    <ul class="hot-products">
+      <li>热门搜索</li>
+      <li>热门搜索</li>
+      <li>热门搜索</li>
+    </ul>
+
+
+    <!--搜索结果列表 start-->
+    <div class="collect-search mescroll" id="mescroll">
+      <p class="collect-search-none" style="display: none">暂无收录此产品</p>
+
+      <ul id="products">
+        <!--<li id="#{product_no}" name="#{name}" img_url="#{img_url2}" sub_type_id="#{sub_type_id}" type_id="#{type_id}">
+          < img src="@{imgUrl}" alt="" onerror="errorImg(this)">
+          <span>#{name}</span>
+        </li>-->
+      </ul>
+    </div>
+    <!--搜索结果列表 end-->
+
+  </div>
 </div>
 <script src="./js/jquery-3.3.1.min.js"></script>
 <script>
