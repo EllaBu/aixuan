@@ -173,30 +173,38 @@ body {
   font-size: 0.2rem;
   display: flex;
 }
-.footer div {
+.footer a {
   float: left;
   text-align: center;
   flex: 1;
 }
-.footer div i {
+.footer a i {
   display: block;
   width: 0.48rem;
   height: 0.48rem;
   margin: 0 auto 0.1rem;
 }
-.footer div.contrast i {
+.footer a.home i {
+  background: url("../img/home.svg") no-repeat center;
+  background-size: 0.48rem;
+}
+.footer a.home.active i {
+  background: url("../img/home-a.svg") no-repeat center;
+  background-size: 0.48rem;
+}
+.footer a.contrast i {
   background: url("../img/contrast.svg") no-repeat center;
   background-size: 0.48rem;
 }
-.footer div.contrast.active i {
+.footer a.contrast.active i {
   background: url("../img/contrast-a.svg") no-repeat center;
   background-size: 0.48rem;
 }
-.footer div.my-tab i {
+.footer a.my-tab i {
   background: url("../img/my.svg") no-repeat center;
   background-size: 0.48rem;
 }
-.footer div.my-tab.active i {
+.footer a.my-tab.active i {
   background: url("../img/my-a.svg") no-repeat center;
   background-size: 0.48rem;
 }
