@@ -36,20 +36,23 @@
 
   <!-- 有收藏列表显示 start-->
   <ul class="collect-list">
-    <li>
+    <li onclick="window.location.href='01-login.html'">
       <img src="./img/collect.png" alt="">
       <span>哆啦A宝重大疾病险哆啦A宝重大疾病险</span>
       <a href="javascript:;">对比</a>
+      <div class="item-delete">删除</div>
     </li>
     <li>
       <img src="./img/collect.png" alt="">
       <span>哆啦A宝重大疾病险</span>
       <a href="javascript:;">对比</a>
+      <div class="item-delete">删除</div>
     </li>
     <li>
       <img src="./img/collect.png" alt="">
       <span>哆啦A宝重大疾病险</span>
       <a href="javascript:;">对比</a>
+      <div class="item-delete">删除</div>
     </li>
   </ul>
   <!-- 有收藏列表显示 end-->
@@ -67,6 +70,16 @@
   </div>
 
 </div>
-
+<script src="./js/jquery-3.3.1.min.js"></script>
+<script src="./js/toLeft.js"></script>
+<script>
+  $(function () {
+    $('.collect-list li').touchWipe({itemDelete: '.item-delete'});
+    $(".item-delete").bind('click', function (e) {
+      e.stopPropagation()
+      $(this).parents('li').remove()
+    })
+  })
+</script>
 </body>
 </html>

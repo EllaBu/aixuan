@@ -339,40 +339,6 @@ body {
   padding-bottom: 0.32rem;
   border-bottom: 1px solid #d8d8d8;
 }
-.vip .get-vip ul li {
-  border-bottom: 1px solid #d8d8d8;
-  padding: 0.32rem 0;
-  overflow: hidden;
-  font-size: 0.36rem;
-}
-.vip .get-vip ul li:last-of-type {
-  border: none;
-}
-.vip .get-vip ul li span {
-  float: left;
-  font-family: Osaka;
-  font-size: 0.6rem;
-  color: #bababa;
-  width: 0.8rem;
-}
-.vip .get-vip ul li div {
-  float: left;
-  width: 5.3rem;
-}
-.vip .get-vip ul li div p {
-  margin-bottom: 0.24rem;
-}
-.vip .get-vip ul li div p a {
-  color: #4988fe;
-}
-.vip .get-vip ul li div b {
-  font-size: 0.84rem;
-  margin-right: 0.1rem;
-  font-weight: normal;
-}
-.vip .get-vip ul li div .btn {
-  width: 2.88rem;
-}
 .vip .order {
   padding: 0.48rem 0.64rem;
   font-size: 0.28rem;
@@ -663,39 +629,29 @@ body {
   z-index: 9999;
 }
 .plan .plan-list {
-  padding: 0 0.2rem;
-  min-height: 100%;
+  width: 94%;
+  margin: 0 auto;
+  overflow: hidden;
 }
 .plan .plan-list li {
+  margin-bottom: 0.32rem;
   position: relative;
   padding: 0.32rem 0.28rem;
   background-color: #fff;
   border-radius: 0.2rem;
-  margin-bottom: 0.32rem;
-  -webkit-user-select: none;
-  -webkit-touch-callout: none;
-  user-select: none;
 }
-.plan .plan-list li .delete-layer {
+.plan .plan-list li .item-delete {
   position: absolute;
+  width: 2rem;
   top: 0;
-  left: 0;
-  width: 100%;
+  right: -2rem;
   height: 100%;
-  border-radius: 0.2rem;
-  background-color: rgba(0, 0, 0, 0.5);
-  z-index: 1000;
-}
-.plan .plan-list li .delete-layer .delete-item {
-  display: block;
-  width: 1rem;
-  height: 1rem;
-  border-radius: 0.5rem;
-  line-height: 1rem;
-  margin: 0.6rem auto;
-  background: linear-gradient(150deg, #f66c1a, #e11804);
-  color: #fff;
+  padding-top: 1.18rem;
   text-align: center;
+  color: #dd0800;
+  font-weight: 500;
+  background: url("../img/icon-delete-left.svg") no-repeat center 0.7rem;
+  background-size: 0.36rem 0.38rem;
 }
 .plan .plan-list li h3 {
   font-size: 0.32rem;
@@ -721,14 +677,30 @@ body {
   background-size: 0.4rem;
 }
 .plan .collect-list {
-  padding: 0 0.2rem;
+  width: 94%;
+  margin: 0 auto;
+  overflow: hidden;
 }
 .plan .collect-list li {
+  position: relative;
   padding: 0.32rem 0.2rem;
   background-color: #fff;
   border-radius: 0.2rem;
   margin-bottom: 0.24rem;
   line-height: 0.96rem;
+}
+.plan .collect-list li .item-delete {
+  position: absolute;
+  width: 2rem;
+  top: 0;
+  right: -2rem;
+  height: 100%;
+  text-align: center;
+  color: #dd0800;
+  font-weight: 500;
+  padding-top: 0.56rem;
+  background: url("../img/icon-delete-left.svg") no-repeat center 0.36rem;
+  background-size: 0.36rem 0.38rem;
 }
 .plan .collect-list li img {
   width: 0.96rem;

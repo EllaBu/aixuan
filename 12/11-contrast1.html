@@ -35,32 +35,29 @@
     
     <ul class="plan-list">
       <li>
-        <div class="plan-item">
-          <h3>胡歌重疾100万方案</h3>
-          <p>哆啦A宝重大疾病险</p>
-          <p>哆啦A宝重大疾病险哆啦A宝重大疾病险</p>
-        </div>
-        <!--<div class="delete-layer">
-          <span class="delete-item">删除</span>
-        </div>-->
+        <h3>胡歌重疾100万方案</h3>
+        <p>哆啦A宝重大疾病险</p>
+        <p>哆啦A宝重大疾病险哆啦A宝重大疾病险</p>
 
-      </li>
-      <li>
-        <div class="plan-item">
-          <h3>胡歌重疾100万方案</h3>
-          <p>哆啦A宝重大疾病险</p>
-          <p>哆啦A宝重大疾病险哆啦A宝重大疾病险</p>
-        </div>
+        <div class="item-delete">删除</div>
       </li>
       <li>
         <h3>胡歌重疾100万方案</h3>
         <p>哆啦A宝重大疾病险</p>
         <p>哆啦A宝重大疾病险哆啦A宝重大疾病险</p>
+        <div class="item-delete">删除</div>
       </li>
       <li>
         <h3>胡歌重疾100万方案</h3>
         <p>哆啦A宝重大疾病险</p>
         <p>哆啦A宝重大疾病险哆啦A宝重大疾病险</p>
+        <div class="item-delete">删除</div>
+      </li>
+      <li>
+        <h3>胡歌重疾100万方案</h3>
+        <p>哆啦A宝重大疾病险</p>
+        <p>哆啦A宝重大疾病险哆啦A宝重大疾病险</p>
+        <div class="item-delete">删除</div>
       </li>
     </ul>
   </div>
@@ -79,22 +76,24 @@
 
 </div>
 <script src="./js/jquery-3.3.1.min.js"></script>
-<script src="./js/longPress.js"></script>
+<script src="./js/toLeft.js"></script>
 <script>
   $(function() {
-    $('.plan-item').longpress(function(){
-      console.log($(this))
-      //do something...
-      $(this).append('<div class="delete-layer">\n' +
-        '          <span class="delete-item">删除</span>\n' +
-        '        </div>')
-      console.log(111)
-    });
+    // $('.plan-item').longpress(function(){
+    //   console.log($(this))
+    //   //do something...
+    //   $(this).append('<div class="delete-layer">\n' +
+    //     '          <span class="delete-item">删除</span>\n' +
+    //     '        </div>')
+    //   console.log(111)
+    // });
+
+    $('.plan-list li').touchWipe({itemDelete: '.item-delete'});
 
 
-    $(".plan-list li").on('click', '.delete-item', function (e) {
-      console.log(111)
-      $(this).parents('li').find('.delete-layer').remove()
+    $(".item-delete").bind('click', function (e) {
+      e.stopPropagation()
+      $(this).parents('li').remove()
     })
 
 
