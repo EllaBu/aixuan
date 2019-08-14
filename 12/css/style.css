@@ -310,35 +310,65 @@ body {
   color: #4988fe;
 }
 
-.vip {
-  padding-bottom: 0.48rem;
-}
-.vip .title {
-  color: #4988fe;
-  font-size: 0.48rem;
-  padding: 0.56rem 0.64rem;
-}
-.vip .equities {
-  padding: 0 0.64rem;
-}
-.vip .equities h4 {
-  font-size: 0.4rem;
-  margin-bottom: 0.2rem;
-}
-.vip .equities p {
-  font-size: 0.28rem;
-  line-height: 0.46rem;
-  font-weight: 300;
-}
-.vip .get-vip {
-  padding: 0 0.64rem;
+.get-vip {
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  padding: 0.32rem;
   margin-top: 0.56rem;
+  background-color: #e0e0e0;
 }
-.vip .get-vip h4 {
-  font-size: 0.4rem;
+.get-vip h4 {
+  font-size: 0.36rem;
   padding-bottom: 0.32rem;
-  border-bottom: 1px solid #d8d8d8;
 }
+.get-vip .vip-choose {
+  overflow: hidden;
+}
+.get-vip .vip-choose > div {
+  position: relative;
+  width: 3.2rem;
+  height: 1.2rem;
+  float: left;
+  background-color: #fff;
+  border-radius: 0.2rem;
+  text-align: center;
+  padding-top: 0.2rem;
+  font-size: 0.3rem;
+  border: 1px solid #fff;
+}
+.get-vip .vip-choose > div:last-of-type {
+  float: right;
+}
+.get-vip .vip-choose > div.active {
+  border: 1px solid #ff9124;
+  background: #fff url("../img/icon-vip-choose.svg") no-repeat top left;
+  background-size: 0.76rem 0.34rem;
+}
+.get-vip .vip-choose > div b {
+  font-size: 0.7rem;
+}
+.get-vip .vip-choose > div a {
+  color: #447fee;
+}
+.get-vip .vip-choose > div span {
+  color: #ff9124;
+}
+.get-vip .vip-btn {
+  margin: 0.48rem 0 0.32rem;
+}
+.get-vip .vip-btn .btn {
+  width: 100%;
+}
+.get-vip .vip-btn .btn:last-of-type {
+  display: none;
+}
+.get-vip p {
+  font-size: 0.24rem;
+  text-align: center;
+}
+
 .vip .order {
   padding: 0.48rem 0.64rem;
   font-size: 0.28rem;

@@ -276,31 +276,57 @@ body
     &:last-of-type
       color: $color-common
 
+//获取VIP方式页面
+
+.get-vip
+  position: fixed
+  left: 0
+  bottom: 0
+  width: 100%
+  padding: .32rem
+  margin-top: .56rem
+  background-color: #e0e0e0
+  h4
+    font-size: .36rem
+    padding-bottom: .32rem
+  .vip-choose
+    overflow: hidden
+    &>div
+      position: relative
+      width: 3.2rem
+      height: 1.2rem
+      float: left
+      background-color: #fff
+      border-radius: .2rem
+      text-align: center
+      padding-top: .2rem
+      font-size: .3rem
+      border: 1px solid #fff
+      &:last-of-type
+        float: right
+      &.active
+        border: 1px solid #ff9124
+        background: #fff url("../img/icon-vip-choose.svg") no-repeat top left
+        background-size: .76rem .34rem
+      b
+        font-size: .7rem
+      a
+        color: #447fee
+      span
+        color: #ff9124
+  .vip-btn
+    margin: .48rem 0 .32rem
+    .btn
+      width: 100%
+      &:last-of-type
+        display: none
+  p
+    font-size: .24rem
+    text-align: center
+
+
+//VIP支付页面
 .vip
-  padding-bottom: .48rem
-  .title
-    color: $color-common
-    font-size: .48rem
-    padding: .56rem .64rem
-  .equities
-    padding: 0 .64rem
-    h4
-      font-size: .4rem
-      margin-bottom: .2rem
-    p
-      font-size: .28rem
-      line-height: .46rem
-      font-weight: 300
-  .get-vip
-    padding: 0 .64rem
-    margin-top: .56rem
-    h4
-      font-size: .4rem
-      padding-bottom: .32rem
-      border-bottom: 1px solid #d8d8d8
-    .vip-choose
-
-
   .order
     padding: .48rem .64rem
     font-size: .28rem

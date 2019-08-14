@@ -13,30 +13,34 @@
 </head>
 <body>
   <div class="vip">
-    <h3 class="title">您想加入VIP会员？</h3>
-    <div class="equities">
-      <h4>VIP的权益</h4>
-      <p>VIP客户可享受保险营销员展业神器：对比工具—定制个性化方案权限，预核保工具—保存核保方案，保单管理工具—添加5个以前客户等，有效期内的使用权限。</p>
-    </div>
+    <!--<h3 class="title">您想加入VIP会员？</h3>-->
+    <!--<div class="equities">-->
+      <!--<h4>VIP的权益</h4>-->
+      <!--<p>VIP客户可享受保险营销员展业神器：对比工具—定制个性化方案权限，预核保工具—保存核保方案，保单管理工具—添加5个以前客户等，有效期内的使用权限。</p>-->
+    <!--</div>-->
     <div class="get-vip">
       <h4>怎样获得VIP</h4>
-      <ul>
-        <li>
-          <span>1</span>
-          <div>
-            <p><b>299</b>元/年</p>
-            <a href="05-vip2.html" class="btn btn-common">马上购买</a>
-          </div>
-        </li>
-        <li>
-          <span>2</span>
-          <div>
-            <p>购买 <a href="javascript:;">营销员责任险 </a>后，推荐3人成功购买可免费获得VIP资格</p>
-            <a href="javascript:;" class="btn btn-hollow">去申请</a>
-          </div>
-        </li>
-      </ul>
+      <div class="vip-choose">
+        <div class="active"><b>499</b>元/年</div>
+        <div>购买<a href="javascript:;">营销员责任险</a><br><span>免费</span>获得VIP资格</div>
+      </div>
+      <div class="vip-btn">
+        <button class="btn btn-common">马上购买</button>
+        <button class="btn btn-common">去申请VIP资格</button>
+      </div>
+      <p>我已阅读并同意<a href="javascript:;">《开通协议》</a> | <a href="javascript:;">《权益规则详情》</a></p>
     </div>
   </div>
+  <script src="./js/jquery-3.3.1.min.js"></script>
+  <script>
+    $(function () {
+      $('.vip-choose>div').bind('click', function () {
+        var index = $(this).index()
+        $(this).addClass('active').siblings().removeClass('active')
+        $('.vip-btn .btn').hide()
+        $('.vip-btn .btn').eq(index).show()
+      })
+    })
+  </script>
 </body>
 </html>
