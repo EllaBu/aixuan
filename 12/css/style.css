@@ -141,6 +141,27 @@ body {
   box-shadow: none;
 }
 
+.header {
+  position: relative;
+  height: 0.96rem;
+  line-height: 0.96rem;
+  text-align: center;
+  border-bottom: 1px solid #e5e5e5;
+}
+.header h4 {
+  font-size: 0.36rem;
+  color: #000;
+}
+.header i.header-back {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 0.96rem;
+  height: 0.96rem;
+  background: url("../img/icon-back.svg") no-repeat center;
+  background-size: 0.24rem 0.4rem;
+}
+
 .footer {
   position: fixed;
   bottom: 0;
