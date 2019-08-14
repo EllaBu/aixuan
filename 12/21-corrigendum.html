@@ -14,7 +14,7 @@
 <body class="gray-bg corrigendum">
 <div class="fill-in">
   <textarea name="" id="" placeholder="如您发现产品有任何的错误或问题，请在此填写后发给我们，感谢您的支持"></textarea>
-  <p>0/1000</p>
+  <p><span id="characterNum">0</span>/1000</p>
 </div>
 <div class="fill-person">
   <div class="item">
@@ -38,6 +38,27 @@
 <div class="fill-handle">
   <button class="btn btn-common">提交</button>
 </div>
+<script src="./js/jquery-3.3.1.min.js"></script>
+<script>
+  $(function () {
+    $("textarea").on('input propertychange', function() {
+      var len = getStrLength(this.value);
+      $("#characterNum").html(len);
+    })
 
+    function getStrLength(str) {
+      var len = str.length;
+      var reLen = 0;
+      for (var i = 0; i < len; i++) {
+        if (str.charCodeAt(i) < 27 || str.charCodeAt(i) > 126) {
+          reLen += 2;
+        } else {
+          reLen++;
+        }
+      }
+      return reLen;
+    }
+  })
+</script>
 </body>
 </html>
