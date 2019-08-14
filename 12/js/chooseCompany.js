@@ -120,6 +120,9 @@ function initials() {//公众号排序
       case "M":
         $('#M').after(SortList.eq(i));
         break;
+      case "N":
+        $('#N').after(SortList.eq(i));
+        break;
       case "O":
         $('#O').after(SortList.eq(i));
         break;
