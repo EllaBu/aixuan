@@ -14,12 +14,17 @@
 <body>
 <!--对比详情-->
 <div class="contrast-detail gray-bg">
+  <div class="header">
+    <i class="header-back"></i>
+    <h4>对比详情</h4>
+  </div>
+  <div class="contrast-sign bounce animated"></div>
+  <div class="contrast-tip">
+    <i></i>
+    <p>点击左右对比项，可“点亮/取消”该项，别忘了保存到【我的方案】哦=^.^=</p>
+  </div>
+  <div class="contrast-blank"></div>
   <div class="contrast-product">
-    <div class="contrast-sign bounce animated"></div>
-    <div class="contrast-tip">
-      <i></i>
-      <p>点击左右对比项，可“点亮/取消”该项，别忘了保存到【我的方案】哦=^.^=</p>
-    </div>
     <div class="product">
       <img src="./img/collect.png" alt="">
       <p>哆啦A宝重大疾病险</p>
@@ -29,8 +34,18 @@
       <p>友邦幸福一生年金一号</p>
     </div>
   </div>
+
+  <div class="contrast-title">
+    <a class="active">公司信息</a>
+    <a href="javascript:;">保费信息</a>
+    <a href="javascript:;">保费责任</a>
+    <a href="javascript:;">身故责任</a>
+    <a href="javascript:;">重疾责任</a>
+    <a href="javascript:;">豁免责任</a>
+    <a href="javascript:;">责任免除</a>
+  </div>
   <!--没有数据显示-->
-  <div class="contrast-none">抱歉暂未获取到数据</div>
+  <!--<div class="contrast-none">抱歉暂未获取到数据</div>-->
 
   <!--有数据显示-->
   <div class="contrast-box contrast-info">
@@ -38,11 +53,11 @@
       <h3>公司信息</h3>
     </div>
     <div class="contrast-item">
-      <h4>风控评级</h4>
+      <h4>风控评级<i>隐藏</i></h4>
       <div class="table-box">
         <table>
           <tr>
-            <td>
+            <td class="light">
               <span class="rate-star star-half"><span></span></span>
             </td>
             <td>
@@ -53,7 +68,7 @@
       </div>
     </div>
     <div class="contrast-item">
-      <h4>服务评级</h4>
+      <h4>服务评级<i>隐藏</i></h4>
       <div class="table-box">
         <table>
           <tr>
@@ -68,7 +83,7 @@
       </div>
     </div>
     <div class="contrast-item">
-      <h4>满意度评级</h4>
+      <h4>满意度评级<i>隐藏</i></h4>
       <div class="table-box">
         <table>
           <tr>
@@ -86,7 +101,8 @@
   <div class="contrast-box premium-info">
     <div class="product-title">
       <h3>保费信息</h3>
-      <span>选择条件</span>
+      <span>设置A保</span>
+      <span>设置B保</span>
     </div>
 
     <div class="contrast-item">
@@ -383,6 +399,7 @@
 <script src="./js/jquery-3.3.1.min.js"></script>
 <script>
   $(function () {
+
     $('.contrast-tip i').bind('click', function () {
       console.log(111)
       $('.contrast-tip').hide()
@@ -439,6 +456,44 @@
     })
     $('.page-share').bind('click', function () {
       $(this).hide()
+    })
+
+    // 隐藏
+    $('.contrast-item h4 i').bind('click', function () {
+      if($(this).hasClass('show')) {
+        $(this).removeClass('show')
+        $(this).html('隐藏')
+        $(this).parents('h4').siblings('.table-box').removeClass('table-hide')
+      } else {
+        $(this).addClass('show')
+        $(this).html('显示')
+        $(this).parents('h4').siblings('.table-box').addClass('table-hide')
+      }
+    })
+    // 导航条固定效果
+    /*var fontSize = $('html').css('font-size')
+    var topHeight = 2.96 * parseInt(fontSize)
+    var headerHeight = 0.96 * parseInt(fontSize)
+    $(window).scroll(function() {
+      console.log($(window).scrollTop())
+      if($(window).scrollTop() >= topHeight){
+        $(".contrast-title").css({
+          "position": "fixed",
+          "top": headerHeight,
+          "z-index": 1000
+        })
+      }else{
+        $(".contrast-title").css({"position": ""}); //清空菜单栏的固定属性
+      }
+    });*/
+    var fontSize = $('html').css('font-size')
+    var headerHeight = 0.96 * parseInt(fontSize)
+    $('.contrast-title a').on('click', function () {
+      $(this).addClass('active').siblings().removeClass('active')
+      var _this = $(this)
+      var _index = _this.index()
+      var scrollHeight = $('.contrast-box').eq(_index).position().top
+      $('html,body').animate({scrollTop: scrollHeight - headerHeight + 'px'}, 300);
     })
   })
 </script>
