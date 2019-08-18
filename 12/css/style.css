@@ -814,7 +814,7 @@ body {
   background-color: #fff;
   padding: 0 0.32rem 1.2rem;
   position: absolute;
-  top: 1.28rem;
+  top: 2.24rem;
   left: 0;
   width: 100%;
   display: none;
@@ -991,14 +991,10 @@ body {
 }
 
 .product-name {
-  position: fixed;
-  top: 0;
-  left: 0;
   width: 100%;
   height: 1.92rem;
   padding: 0.32rem;
   background-color: #fff;
-  z-index: 10000;
 }
 .product-name .p-logo {
   float: left;
@@ -1264,13 +1260,10 @@ body {
 }
 
 .disease-name {
-  position: fixed;
-  top: 0;
   left: 0;
   width: 100%;
   padding: 0 0.32rem;
   background-color: #eff6ff;
-  z-index: 10000;
 }
 .disease-name p {
   height: 0.7rem;
@@ -1288,9 +1281,6 @@ body {
   color: #4988fe;
 }
 
-.disease-list {
-  margin-top: 1.56rem;
-}
 .disease-list .table-box {
   border: 1px solid #e5e5e5;
   border-radius: 0.08rem;
@@ -1316,7 +1306,6 @@ body {
   color: #ff9124;
 }
 .disease-list tr td:last-of-type {
-  background-color: #f8f8f8;
   border-right: none;
 }
 .disease-list tr td:last-of-type.active {
@@ -1458,7 +1447,7 @@ body {
   margin-bottom: 0.24rem;
 }
 .contrast-box h4 {
-  font-size: 0.3rem;
+  font-size: 0.28rem;
   padding: 0 0.32rem;
 }
 .contrast-box h4 a, .contrast-box h4 i {
@@ -1558,6 +1547,12 @@ body {
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
+}
+.choose-term .btn.result-none-btn,
+.custom-edit .btn.result-none-btn,
+.disease-contrast .btn.result-none-btn {
+  position: relative;
+  margin-top: 0.4rem;
 }
 
 .contrast-detail .header {
@@ -2095,8 +2090,14 @@ to {
 .news-detail .news-content p {
   margin-bottom: 0.32rem;
 }
+.news-detail img,
+.news-detail video,
+.news-detail audio {
+  max-width: 100%;
+}
 
 .swiper-container {
+  width: 100%;
   height: 3.2rem;
 }
 .swiper-container img {

@@ -12,7 +12,10 @@
   <link rel="stylesheet" href="./css/style.css">
 </head>
 <body class="gray-bg">
-
+<div class="header">
+  <i class="header-back"></i>
+  <h3>病种对比</h3>
+</div>
 <div class="disease-name">
   <p><b>A</b>险：哆啦A宝重大疾病险</p>
   <p><b>B</b>险：友邦幸福一生重大疾病险</p>
@@ -156,6 +159,22 @@
     $('.disease-item h3 i').bind('click', function () {
       $(this).parents('.disease-item').toggleClass('fold')
     })
+    // 固定效果
+    var fontSize = $('html').css('font-size')
+    var topHeight = 2.96 * parseInt(fontSize)
+    var headerHeight = 0.96 * parseInt(fontSize)
+    $(window).scroll(function() {
+      console.log($(window).scrollTop())
+      if($(window).scrollTop() >= headerHeight){
+        $(".disease-name").css({
+          "position": "fixed",
+          "top": 0,
+          "z-index": 10000
+        })
+      }else{
+        $(".disease-name").css({"position": ""}); //清空菜单栏的固定属性
+      }
+    });
   })
 </script>
 </body>

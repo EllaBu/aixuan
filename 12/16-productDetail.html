@@ -14,7 +14,10 @@
 <body>
 <!--产品详情-->
 <div class="gray-bg product-detail">
-
+  <div class="header">
+    <i class="header-back"></i>
+    <h3>产品详情</h3>
+  </div>
   <div class="product-name">
     <div class="p-logo">
       <img src="./img/collect.png" alt="">
@@ -249,6 +252,22 @@
   $(function () {
     var fontSize=$('html').css('font-size')
     let liHeight = parseInt(fontSize) * 0.52
+
+    // 固定效果
+    var headerHeight = 0.96 * parseInt(fontSize)
+    $(window).scroll(function() {
+      console.log($(window).scrollTop())
+      if($(window).scrollTop() >= headerHeight){
+        $(".product-name").css({
+          "position": "fixed",
+          "top": 0,
+          "z-index": 10000
+        })
+      }else{
+        $(".product-name").css({"position": ""}); //清空菜单栏的固定属性
+      }
+    });
+
     $('.product-intro li p').each(function () {
       if($(this).innerHeight() > liHeight + 6) {
         $(this).parent().append('<i></i>')
@@ -284,6 +303,7 @@
     $('.item-choose span').bind('click', function () {
       $(this).addClass('active').siblings().removeClass('active')
     })
+
   })
 
   // 修改 end

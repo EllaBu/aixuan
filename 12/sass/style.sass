@@ -707,7 +707,7 @@ body
     background-color: #fff
     padding: 0 .32rem 1.2rem
     position: absolute
-    top: 1.28rem
+    top: 2.24rem
     left: 0
     width: 100%
     display: none
@@ -858,14 +858,10 @@ body
     td
       vertical-align: middle
 .product-name
-  position: fixed
-  top: 0
-  left: 0
   width: 100%
   height: 1.92rem
   padding: .32rem
   background-color: #fff
-  z-index: 10000
   .p-logo
     float: left
     width: 1.6rem
@@ -1096,13 +1092,10 @@ body
 
 //病种对比
 .disease-name
-  position: fixed
-  top: 0
   left: 0
   width: 100%
   padding: 0 .32rem
   background-color: #eff6ff
-  z-index: 10000
   p
     height: .7rem
     line-height: .7rem
@@ -1116,7 +1109,6 @@ body
       color: $color-common
 
 .disease-list
-  margin-top: 1.56rem
   .table-box
     border: 1px solid $color-border
     border-radius: .08rem
@@ -1140,7 +1132,6 @@ body
           background-color: #fff8f0
           color: #ff9124
       &:last-of-type
-        background-color: #f8f8f8
         border-right: none
         &.active
           background-color: #eaf2ff
@@ -1256,7 +1247,7 @@ body
   background-color: #fff
   margin-bottom: .24rem
   h4
-    font-size: .3rem
+    font-size: .28rem
     padding: 0 .32rem
     a, i
       float: right
@@ -1342,6 +1333,9 @@ body
     top: 50%
     left: 50%
     transform: translate(-50%, -50%)
+    &.result-none-btn
+      position: relative
+      margin-top: .4rem
 .contrast-detail
   .header
     position: fixed
@@ -1818,9 +1812,14 @@ body
     margin-top: .24rem
     p
       margin-bottom: .32rem
+  img,
+  video,
+  audio
+    max-width: 100%
 
 //首页
 .swiper-container
+  width: 100%
   height: 3.2rem
   img
     width: 100%
