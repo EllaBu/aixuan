@@ -276,6 +276,14 @@ body {
 .login-box .tip a {
   color: #4988fe;
 }
+.login-box .tip input[type="checkbox"] {
+  width: 0.28rem;
+  height: 0.28rem;
+  border: 1px solid #e5e5e5;
+  background-color: #fff;
+  margin-right: 0.04rem;
+  vertical-align: middle;
+}
 .login-box .title {
   font-size: 0.48rem;
   color: #4988fe;
@@ -398,6 +406,12 @@ body {
 .get-vip p {
   font-size: 0.24rem;
   text-align: center;
+  line-height: 0.24rem;
+}
+.get-vip p input[type="checkbox"] {
+  margin-right: 0.06rem;
+  vertical-align: middle;
+  margin-top: -0.1rem;
 }
 
 .vip .order {
@@ -1014,7 +1028,6 @@ body {
 }
 
 .product-info-none {
-  margin-top: 1.92rem;
   padding: 0.64rem 0.32rem;
   text-align: center;
   font-size: 0.3rem;
@@ -1024,7 +1037,6 @@ body {
 }
 
 .product-intro {
-  margin-top: 1.92rem;
   font-size: 0.24rem;
   background-color: #fff;
 }
