@@ -1834,6 +1834,7 @@ body
   height: 3.2rem
   img
     width: 100%
+    height: 3.2rem
 .home-tool
   display: flex
   padding: .32rem .16rem
@@ -1934,6 +1935,56 @@ body
       margin-top: .48rem
       i
         float: right
+
+
+//协议弹窗
+.agreement-pop
+  position: fixed
+  top: 0
+  left: 0
+  width: 100%
+  height: 100%
+  background-color: rgba(0, 0, 0, .5)
+.agreement-body
+  position: absolute
+  top: 50%
+  left: 50%
+  transform: translate(-50%, -50%)
+  background-color: #fff
+  width: 90%
+  border-radius: .16rem
+.agreement-header
+  position: relative
+  height: .8rem
+  line-height: .8rem
+  h4
+    text-align: center
+    color: #000
+  i
+    position: absolute
+    top: 0
+    left: 0
+    width: .8rem
+    height: .8rem
+    background: url("../img/icon-close.svg") no-repeat center
+    background-size: .26rem
+.agreement-content
+  padding: .32rem .32rem 1.6rem
+  height: 11rem
+  overflow-y: auto
+  font-weight: 300
+  font-size: .3rem
+.agreement-footer
+  position: absolute
+  left: 0
+  bottom: 0
+  width: 100%
+  background-color: #f8f8f8
+  padding: .32rem
+  border-radius: 0 0 .16rem .16rem
+  .btn
+    width: 100%
+
 
 //星星样式
 .rate-star

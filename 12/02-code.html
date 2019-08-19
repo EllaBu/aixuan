@@ -26,5 +26,35 @@
   <button class="btn btn-common">登录</button>
 </div>
 
+<div class="agreement-pop">
+  <div class="agreement-body">
+    <div class="agreement-header">
+      <i></i>
+      <h4>用户协议</h4>
+    </div>
+    <div class="agreement-content">
+      <p>协议内容，协议内容，协议内容，协议内容，协议内容，协议内容，协议内容，协议内容，协议内容，</p>
+      <p>协议内容，协议内容，协议内容，协议内容，协议内容，协议内容，协议内容，协议内容，协议内容，</p>
+      <p>协议内容，协议内容，协议内容，协议内容，协议内容，协议内容，协议内容，协议内容，协议内容，</p>
+      <p>协议内容，协议内容，协议内容，协议内容，协议内容，协议内容，协议内容，协议内容，协议内容，</p>
+      <p>协议内容，协议内容，协议内容，协议内容，协议内容，协议内容，协议内容，协议内容，协议内容，</p>
+      <p>协议内容，协议内容，协议内容，协议内容，协议内容，协议内容，协议内容，协议内容，协议内容，</p>
+      <p>协议内容，协议内容，协议内容，协议内容，协议内容，协议内容，协议内容，协议内容，协议内容，</p>
+      <p>协议内容，协议内容，协议内容，协议内容，协议内容，协议内容，协议内容，协议内容，协议内容，</p>
+      <p>协议内容，协议内容，协议内容，协议内容，协议内容，协议内容，协议内容，协议内容，协议内容，</p>
+    </div>
+    <div class="agreement-footer">
+      <button class="btn btn-common">我已阅读</button>
+    </div>
+  </div>
+</div>
+<script src="./js/jquery-3.3.1.min.js"></script>
+<script>
+  $(function () {
+    $('.agreement-header i').bind('click', function () {
+      $(this).parents('.agreement-pop').hide()
+    })
+  })
+</script>
 </body>
 </html>
