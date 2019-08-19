@@ -11,7 +11,7 @@
   <link rel="stylesheet" href="./css/reset.css">
   <link rel="stylesheet" href="./css/style.css">
 </head>
-<body class="gray-bg">
+<body class="gray-bg" style="padding-bottom: 1.6rem">
 <!--微信分享-->
 <div class="share-person">
   <div class="photo-box">
@@ -33,13 +33,15 @@
   </div>
 </div>
 <div class="contrast-title">
-  <a href="javascript:;" class="active">公司信息</a>
-  <a href="javascript:;">保费信息</a>
-  <a href="javascript:;">保费责任</a>
-  <a href="javascript:;">身故责任</a>
-  <a href="javascript:;">重疾责任</a>
-  <a href="javascript:;">豁免责任</a>
-  <a href="javascript:;">责任免除</a>
+  <div class="contrast-title-box">
+    <a class="active">公司信息</a>
+    <a href="javascript:;">保费信息</a>
+    <a href="javascript:;">保费责任</a>
+    <a href="javascript:;">身故责任</a>
+    <a href="javascript:;">重疾责任</a>
+    <a href="javascript:;">豁免责任</a>
+    <a href="javascript:;">责任免除</a>
+  </div>
 </div>
 <div class="contrast-box contrast-info">
   <div class="product-title">
@@ -310,7 +312,7 @@
     })
 
     // 导航条固定效果
-    /*var fontSize = $('html').css('font-size')
+    var fontSize = $('html').css('font-size')
     var topHeight = 2.96 * parseInt(fontSize)
     var headerHeight = 0.96 * parseInt(fontSize)
     $(window).scroll(function() {
@@ -324,14 +326,14 @@
       }else{
         $(".contrast-title").css({"position": ""}); //清空菜单栏的固定属性
       }
-    });*/
+    });
 
     $('.contrast-title a').on('click', function () {
       $(this).addClass('active').siblings().removeClass('active')
       var _this = $(this)
       var _index = _this.index()
       var scrollHeight = $('.contrast-box').eq(_index).position().top
-      $('html,body').animate({scrollTop: scrollHeight + 'px'}, 300);
+      $('html,body').animate({scrollTop: scrollHeight - headerHeight + 'px'}, 300);
     })
   })
 </script>

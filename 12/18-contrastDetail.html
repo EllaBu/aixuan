@@ -36,13 +36,16 @@
   </div>
 
   <div class="contrast-title">
-    <a class="active">公司信息</a>
-    <a href="javascript:;">保费信息</a>
-    <a href="javascript:;">保费责任</a>
-    <a href="javascript:;">身故责任</a>
-    <a href="javascript:;">重疾责任</a>
-    <a href="javascript:;">豁免责任</a>
-    <a href="javascript:;">责任免除</a>
+    <div class="contrast-title-box">
+      <a class="active">公司信息</a>
+      <a href="javascript:;">保费信息</a>
+      <a href="javascript:;">保费责任</a>
+      <a href="javascript:;">身故责任</a>
+      <a href="javascript:;">重疾责任</a>
+      <a href="javascript:;">豁免责任</a>
+      <a href="javascript:;">责任免除</a>
+    </div>
+
   </div>
   <!--没有数据显示-->
   <!--<div class="contrast-none">抱歉暂未获取到数据</div>-->
@@ -484,9 +487,11 @@
       }
     })
     // 导航条固定效果
-    /*var fontSize = $('html').css('font-size')
+    var fontSize = $('html').css('font-size')
     var topHeight = 2.96 * parseInt(fontSize)
     var headerHeight = 0.96 * parseInt(fontSize)
+
+
     $(window).scroll(function() {
       console.log($(window).scrollTop())
       if($(window).scrollTop() >= topHeight){
@@ -498,15 +503,14 @@
       }else{
         $(".contrast-title").css({"position": ""}); //清空菜单栏的固定属性
       }
-    });*/
+    });
     var fontSize = $('html').css('font-size')
-    var headerHeight = 0.96 * parseInt(fontSize)
     $('.contrast-title a').on('click', function () {
       $(this).addClass('active').siblings().removeClass('active')
       var _this = $(this)
       var _index = _this.index()
       var scrollHeight = $('.contrast-box').eq(_index).position().top
-      $('html,body').animate({scrollTop: scrollHeight - headerHeight + 'px'}, 300);
+      $('html,body').animate({scrollTop: scrollHeight - topHeight + 'px'}, 300);
     })
   })
 </script>
