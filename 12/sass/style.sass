@@ -1085,37 +1085,34 @@ body
     font-weight: 500
 .page-handle
   position: fixed
-  right: .32rem
+  right: 0
   bottom: .24rem
   z-index: 10000
   a
     display: block
-    width: 1rem
-    height: 1rem
+    width: 1.64rem
+    height: 1.64rem
     //border: 1px solid #aecdf7
-    box-shadow: 0 0 2px 2px #aecdf7
-    border-radius: .5rem
-    margin-bottom: .32rem
-    background-color: #fff
+    //box-shadow: 0 0 2px 2px #aecdf7
+    //border-radius: .5rem
+    //background-color: #fff
     background-repeat: no-repeat
     background-position: center
+    background-size: 1.36rem
 
     &:nth-of-type(3)
       background-image: url("../img/icon-forward.svg")
-      background-size: .38rem .34rem
+
 
 .product-detail
   .page-handle
     a
       &:nth-of-type(1)
         background-image: url("../img/icon-star.svg")
-        background-size: .44rem
         &.active
           background-image: url("../img/icon-star-a.svg")
-          background-size: .44rem
       &:nth-of-type(2)
         background-image: url("../img/icon-vsb.svg")
-        background-size: .48rem .36rem
 
 
 //病种对比
@@ -1373,16 +1370,12 @@ body
     a
       &:nth-of-type(1)
         background-image: url("../img/icon-mine.svg")
-        background-size: .44rem
         &.active
           background-image: url("../img/icon-mine-a.svg")
-          background-size: .44rem
       &:nth-of-type(2)
         background-image: url("../img/icon-product.svg")
-        background-size: .44rem
         &.active
           background-image: url("../img/icon-product-a.svg")
-          background-size: .44rem
     i.a-tip
       position: absolute
       top: 0

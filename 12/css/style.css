@@ -1258,37 +1258,30 @@ body {
 
 .page-handle {
   position: fixed;
-  right: 0.32rem;
+  right: 0;
   bottom: 0.24rem;
   z-index: 10000;
 }
 .page-handle a {
   display: block;
-  width: 1rem;
-  height: 1rem;
-  box-shadow: 0 0 2px 2px #aecdf7;
-  border-radius: 0.5rem;
-  margin-bottom: 0.32rem;
-  background-color: #fff;
+  width: 1.64rem;
+  height: 1.64rem;
   background-repeat: no-repeat;
   background-position: center;
+  background-size: 1.36rem;
 }
 .page-handle a:nth-of-type(3) {
   background-image: url("../img/icon-forward.svg");
-  background-size: 0.38rem 0.34rem;
 }
 
 .product-detail .page-handle a:nth-of-type(1) {
   background-image: url("../img/icon-star.svg");
-  background-size: 0.44rem;
 }
 .product-detail .page-handle a:nth-of-type(1).active {
   background-image: url("../img/icon-star-a.svg");
-  background-size: 0.44rem;
 }
 .product-detail .page-handle a:nth-of-type(2) {
   background-image: url("../img/icon-vsb.svg");
-  background-size: 0.48rem 0.36rem;
 }
 
 .disease-name {
@@ -1595,19 +1588,15 @@ body {
 }
 .contrast-detail .page-handle a:nth-of-type(1) {
   background-image: url("../img/icon-mine.svg");
-  background-size: 0.44rem;
 }
 .contrast-detail .page-handle a:nth-of-type(1).active {
   background-image: url("../img/icon-mine-a.svg");
-  background-size: 0.44rem;
 }
 .contrast-detail .page-handle a:nth-of-type(2) {
   background-image: url("../img/icon-product.svg");
-  background-size: 0.44rem;
 }
 .contrast-detail .page-handle a:nth-of-type(2).active {
   background-image: url("../img/icon-product-a.svg");
-  background-size: 0.44rem;
 }
 .contrast-detail .page-handle i.a-tip {
   position: absolute;
