@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport"
+        content="width=device-width,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no,viewport-fit=cover"/>
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black">
+  <meta name="format-detection" content="telephone=no">
+  <title>我的收藏</title>
+  <link rel="stylesheet" href="./css/reset.css">
+  <link rel="stylesheet" href="./css/style11.css">
+  <link rel="stylesheet" href="./css/mescroll.css">
+
+</head>
+<body class="plan-body">
+<div class="plan">
+
+  <div class="title">
+    <a href="11-contrast1.html">我的方案</a>
+    <a href="12-contrast2.html" class="active">我的收藏</a>
+  </div>
+
+  <div class="collect-input">
+    <div class="collect-input-box">
+      <span class="collect-search-icon"></span>
+      <input type="text" placeholder="输入您想关注的保险名称">
+    </div>
+  </div>
+  <!-- 无收藏列表显示 start-->
+  <!--<div class="list-none">
+    <img src="./img/collect-img.png" alt="">
+    <a href="13-contrast3.html" class="btn btn-common add-btn">去收藏</a>
+
+  </div>-->
+  <!-- 无收藏列表显示 end-->
+
+
+  <!-- 有收藏列表显示 start-->
+  <div id="mescroll" class="mescroll">
+    <div class="collect-list">
+      <div class="li-box">
+        <img src="./img/collect.png" alt="">
+        <span>哆啦A宝重大疾病险哆啦A宝重大疾病险</span>
+        <a href="javascript:;">对比</a>
+      </div>
+    </div>
+  </div>
+  <!-- 有收藏列表显示 end-->
+
+
+  <div class="footer">
+    <div class="contrast">
+      <i></i>
+      <span>对比工具</span>
+    </div>
+    <div class="my-tab active">
+      <i></i>
+      <span>我的</span>
+    </div>
+  </div>
+
+</div>
+<script src="./js/jquery-3.3.1.min.js"></script>
+<script src="./js/mescroll.js"></script>
+<script src="../common/vconsole.min.js"></script>
+<script>
+  $(function () {
+
+    //创建MeScroll对象,内部已默认开启下拉刷新,自动执行up.callback,重置列表数据;
+    var mescroll = new MeScroll("mescroll", {
+      down: {
+        isLock: true
+      },
+      up: {
+        auto: false,
+        isBounce: true,
+        callback: getListData //上拉回调,此处可简写; 相当于 callback: function (page) { getListData(page); }
+      }
+    });
+
+    function getListData() {
+      $('.collect-list').append('<div class="li-box">\n' +
+        '        <img src="./img/collect.png" alt="">\n' +
+        '        <span>哆啦A宝重大疾病险哆啦A宝重大疾病险</span>\n' +
+        '        <a href="javascript:;">对比</a>\n' +
+        '      </div>')
+      mescroll.endSuccess()
+    }
+
+  })
+</script>
+</body>
+</html>
