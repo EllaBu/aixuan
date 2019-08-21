@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport"
+        content="width=device-width,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no,viewport-fit=cover"/>
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black">
+  <meta name="format-detection" content="telephone=no">
+  <title>热门产品</title>
+  <link rel="stylesheet" href="./css/reset.css">
+  <link rel="stylesheet" href="./css/style.css">
+</head>
+<body class="gray-bg">
+<div class="header">
+  <i class="header-back"></i>
+  <h4>热门产品</h4>
+</div>
+<div class="hot-title">
+  <div class="hot-title-box">
+    <a href="javascript:;" class="active">重大疾病</a>
+    <a href="javascript:;">终身寿险</a>
+    <a href="javascript:;">定期寿险</a>
+    <a href="javascript:;">医疗报销</a>
+    <a href="javascript:;">储蓄投资</a>
+    <a href="javascript:;">意外保险</a>
+  </div>
+</div>
+<ul class="hot-products-list">
+  <li>
+    <div class="product-img">
+      <img src="./img/collect.png" alt="">
+    </div>
+    <div class="product-info">
+      <h4>友邦幸福一生年金一号</h4>
+      <span class="hot-tip1">保终身返还型</span>
+    </div>
+  </li>
+  <li>
+    <div class="product-img">
+      <img src="./img/collect.png" alt="">
+    </div>
+    <div class="product-info">
+      <h4>友邦幸福一生年金一号友邦幸福一生年金一号</h4>
+      <span class="hot-tip2">保终身返还型</span>
+    </div>
+  </li>
+  <li>
+    <div class="product-img">
+      <img src="./img/collect.png" alt="">
+    </div>
+    <div class="product-info">
+      <h4>友邦幸福一生年金一号</h4>
+      <span class="hot-tip3">保终身返还型</span>
+    </div>
+  </li>
+  <li>
+    <div class="product-img">
+      <img src="./img/collect.png" alt="">
+    </div>
+    <div class="product-info">
+      <h4>友邦幸福一生年金一号</h4>
+      <span class="hot-tip4">保终身返还型</span>
+    </div>
+  </li>
+  <li>
+    <div class="product-img">
+      <img src="./img/collect.png" alt="">
+    </div>
+    <div class="product-info">
+      <h4>友邦幸福一生年金一号</h4>
+      <span class="hot-tip5">保终身返还型</span>
+    </div>
+  </li>
+</ul>
+
+
+<script src="./js/jquery-3.3.1.min.js"></script>
+<script>
+  $(function () {
+    $('.hot-title a').bind('click', function () {
+      $(this).addClass('active').siblings().removeClass('active')
+    })
+  })
+</script>
+</body>
+</html>

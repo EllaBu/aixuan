@@ -1019,7 +1019,7 @@ body {
 .product-name {
   width: 100%;
   height: 1.92rem;
-  padding: 0.32rem;
+  padding: 0.32rem 0.32rem 0.16rem;
   background-color: #fff;
 }
 .product-name .p-logo {
@@ -1029,11 +1029,20 @@ body {
 }
 .product-name .p-logo img {
   width: 1.14rem;
+  height: 1.14rem;
+}
+.product-name .p-info {
+  position: relative;
+  padding-left: 1.68rem;
+  height: 1.14rem;
 }
 .product-name .p-info h2 {
   font-size: 0.32rem;
+  line-height: 0.36rem;
 }
 .product-name .p-info p {
+  position: absolute;
+  bottom: 0;
   font-size: 0.26rem;
   color: #c4c4c4;
   margin-top: 0.04rem;
@@ -1250,7 +1259,7 @@ body {
 .page-handle {
   position: fixed;
   right: 0.32rem;
-  bottom: 1rem;
+  bottom: 0.24rem;
   z-index: 10000;
 }
 .page-handle a {
@@ -1495,7 +1504,6 @@ body {
 .contrast-box .table-box {
   position: relative;
   overflow: hidden;
-  margin-bottom: 0.24rem;
   padding: 0.16rem 0.32rem;
   font-size: 0.26rem;
 }
@@ -1994,18 +2002,19 @@ to {
 
 .edit-photo .photo-choose {
   overflow: hidden;
-  margin-top: 0.6rem;
   font-size: 0.28rem;
   text-align: center;
+  height: 2rem;
+  background-color: rgba(0, 0, 0, 0.5);
 }
 .edit-photo .photo-choose i {
   position: relative;
   display: inline-block;
-  width: 1.5rem;
-  height: 1.5rem;
+  width: 2.8rem;
+  height: 0.76rem;
+  margin-top: 0.63rem;
   background: url("../img/photo-choose.svg") no-repeat top center;
-  background-size: 1.5rem 1.5rem;
-  margin-bottom: 0.08rem;
+  background-size: 2.8rem 0.76rem;
 }
 .edit-photo .photo-choose i input {
   position: absolute;
@@ -2138,6 +2147,31 @@ to {
   height: 3.2rem;
 }
 
+span.hot-tip1 {
+  background-color: #FFF8F8;
+  color: #FF7171;
+}
+span.hot-tip2 {
+  background-color: #F2FCFF;
+  color: #2FB2A3;
+}
+span.hot-tip3 {
+  background-color: #FFF8F0;
+  color: #FF9124;
+}
+span.hot-tip4 {
+  background-color: #F2F7FF;
+  color: #4988FE;
+}
+span.hot-tip5 {
+  background-color: #FFF0FA;
+  color: #C95E8B;
+}
+span.hot-tip6 {
+  background-color: #FEFFF7;
+  color: #C98B5E;
+}
+
 .home-tool {
   display: flex;
   padding: 0.32rem 0.16rem;
@@ -2210,22 +2244,6 @@ to {
 }
 .home-product-list li:nth-of-type(2n) {
   float: right;
-}
-.home-product-list li:nth-of-type(1) span {
-  background-color: #FFF8F8;
-  color: #FF7171;
-}
-.home-product-list li:nth-of-type(2) span {
-  background-color: #F2FCFF;
-  color: #2FB2A3;
-}
-.home-product-list li:nth-of-type(3) span {
-  background-color: #FFF8F0;
-  color: #FF9124;
-}
-.home-product-list li:nth-of-type(4) span {
-  background-color: #F2F7FF;
-  color: #4988FE;
 }
 
 .information-list {
@@ -2385,8 +2403,6 @@ to {
   font-size: 0.24rem;
   font-weight: 300;
   padding: 0.08rem 0.16rem;
-  background-color: #FFF8F8;
-  color: #FF7171;
   border-radius: 0.32rem;
 }
 

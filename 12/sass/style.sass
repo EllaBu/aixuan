@@ -884,7 +884,7 @@ body
 .product-name
   width: 100%
   height: 1.92rem
-  padding: .32rem
+  padding: .32rem .32rem .16rem
   background-color: #fff
   .p-logo
     float: left
@@ -892,10 +892,17 @@ body
     text-align: center
     img
       width: 1.14rem
+      height: 1.14rem
   .p-info
+    position: relative
+    padding-left: 1.68rem
+    height: 1.14rem
     h2
       font-size: .32rem
+      line-height: .36rem
     p
+      position: absolute
+      bottom: 0
       font-size: .26rem
       color: #c4c4c4
       margin-top: .04rem
@@ -1079,7 +1086,7 @@ body
 .page-handle
   position: fixed
   right: .32rem
-  bottom: 1rem
+  bottom: .24rem
   z-index: 10000
   a
     display: block
@@ -1290,7 +1297,6 @@ body
   .table-box
     position: relative
     overflow: hidden
-    margin-bottom: .24rem
     padding: .16rem .32rem
     font-size: .26rem
     &.table-hide
@@ -1732,17 +1738,18 @@ body
 .edit-photo
   .photo-choose
     overflow: hidden
-    margin-top: .6rem
     font-size: .28rem
     text-align: center
+    height: 2rem
+    background-color: rgba(0, 0, 0, .5)
     i
       position: relative
       display: inline-block
-      width: 1.5rem
-      height: 1.5rem
+      width: 2.8rem
+      height: .76rem
+      margin-top: .63rem
       background: url("../img/photo-choose.svg") no-repeat top center
-      background-size: 1.5rem 1.5rem
-      margin-bottom: .08rem
+      background-size: 2.8rem .76rem
       input
         position: absolute
         top: 0
@@ -1851,6 +1858,25 @@ body
   img
     width: 100%
     height: 3.2rem
+span
+  &.hot-tip1
+    background-color: #FFF8F8
+    color: #FF7171
+  &.hot-tip2
+    background-color: #F2FCFF
+    color: #2FB2A3
+  &.hot-tip3
+    background-color: #FFF8F0
+    color: #FF9124
+  &.hot-tip4
+    background-color: #F2F7FF
+    color: #4988FE
+  &.hot-tip5
+    background-color: #FFF0FA
+    color: #C95E8B
+  &.hot-tip6
+    background-color: #FEFFF7
+    color: #C98B5E
 .home-tool
   display: flex
   padding: .32rem .16rem
@@ -1908,22 +1934,6 @@ body
       border-radius: .24rem
     &:nth-of-type(2n)
       float: right
-    &:nth-of-type(1)
-      span
-        background-color: #FFF8F8
-        color: #FF7171
-    &:nth-of-type(2)
-      span
-        background-color: #F2FCFF
-        color: #2FB2A3
-    &:nth-of-type(3)
-      span
-        background-color: #FFF8F0
-        color: #FF9124
-    &:nth-of-type(4)
-      span
-        background-color: #F2F7FF
-        color: #4988FE
 
 .information-list
   background-color: #fff
@@ -2055,8 +2065,6 @@ body
         font-size: .24rem
         font-weight: 300
         padding: .08rem .16rem
-        background-color: #FFF8F8
-        color: #FF7171
         border-radius: .32rem
 
 
