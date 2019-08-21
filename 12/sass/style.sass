@@ -143,7 +143,7 @@ body
     width: .96rem
     height: .96rem
     background: url("../img/icon-back.svg") no-repeat center
-    background-size: .24rem .4rem
+    background-size: .2rem .38rem
 
 .footer
   position: fixed
@@ -392,12 +392,23 @@ body
       border-bottom: 1px solid $color-border
       padding: .32rem 0
       line-height: .32rem
-      background: url("../img/icon-right.svg") no-repeat center right
       img
         vertical-align: middle
       span
         vertical-align: middle
         margin-left: .32rem
+      i
+        float: right
+        width: .32rem
+        height: .32rem
+        border-radius: 50%
+        background-color: #f0f0f0
+        vertical-align: middle
+        margin-top: .16rem
+      &.active
+        i
+          background: url("../img/icon-vip-choosed.svg") no-repeat center
+          background-size: .32rem
     button
       width: 100%
       margin-top: .64rem
@@ -998,15 +1009,14 @@ body
     height: .48rem
     margin-left: -.86rem
     background: url("../img/more-item.svg") no-repeat center bottom
-    background-size: 1.74rem .48rem
+    background-size: 1.76rem .48rem
     margin-top: .16rem
 
 .product-table-list
   .product-list
     span.more-item
-      background: url("../img/more-item2.svg") no-repeat center .14rem
+      background: url("../img/more-item2.svg") no-repeat center bottom
       background-size: 1.76rem .48rem
-      bottom: .08rem
     .table-box
       margin-top: .16rem
       border: none
@@ -1178,7 +1188,7 @@ body
 //对比详情
 .contrast-sign
   position: fixed
-  top: .32rem
+  top: .1rem
   right: 0
   width: 1.36rem
   height: 1.36rem
@@ -1547,6 +1557,8 @@ body
       padding: .04rem 0 0 .36rem
 
 .share-content
+  overflow: hidden
+  padding-bottom: 1.68rem
   h4
     margin: 1.12rem 0
     text-align: center
@@ -1718,33 +1730,35 @@ body
   height: 300px
 
 .edit-photo
-  .photo-handle
+  .photo-choose
     overflow: hidden
     margin-top: .6rem
     font-size: .28rem
-    >div
-      float: left
-      text-align: center
-      width: 50%
-      i
-        position: relative
-        display: inline-block
-        width: 1.5rem
-        height: 1.5rem
-        background: url("../img/photo-choose.svg") no-repeat top center
-        background-size: 1.5rem 1.5rem
-        margin-bottom: .08rem
-        input
-          position: absolute
-          top: 0
-          left: 0
-          width: 100%
-          height: 100%
-          opacity: 0
-      &:last-of-type
-        i
-          background: url("../img/photo-ensure.svg") no-repeat top center
-          background-size: 1.5rem 1.5rem
+    text-align: center
+    i
+      position: relative
+      display: inline-block
+      width: 1.5rem
+      height: 1.5rem
+      background: url("../img/photo-choose.svg") no-repeat top center
+      background-size: 1.5rem 1.5rem
+      margin-bottom: .08rem
+      input
+        position: absolute
+        top: 0
+        left: 0
+        width: 100%
+        height: 100%
+        opacity: 0
+  .photo-sure
+    position: fixed
+    bottom: 0
+    width: 100%
+    text-align: center
+    background-color: #f8f8f8
+    padding: .32rem 0
+    .btn
+      width: 4rem
 
 //产品勘误
 .corrigendum
@@ -1862,7 +1876,7 @@ body
       color: #FF7171
 
 .home-item
-  padding: .24rem
+  padding: 0 .24rem .24rem
   &.home-product-item
     padding-bottom: 0
   h2
@@ -1891,6 +1905,7 @@ body
       padding: .08rem .16rem
       font-size: .24rem
       font-weight: 300
+      border-radius: .24rem
     &:nth-of-type(2n)
       float: right
     &:nth-of-type(1)
@@ -1918,20 +1933,26 @@ body
   overflow: hidden
   .information-img
     float: left
-    width: 1.66rem
+    width: 1.76rem
+    height: 1.6rem
     img
       width: 1.76rem
       height: 1.6rem
   .information-info
+    position: relative
     padding-left: 2rem
+    height: 1.6rem
     h3
       font-size: .28rem
+      margin-top: .1rem
       overflow: hidden
       text-overflow: ellipsis
       display: -webkit-box
       -webkit-line-clamp: 2
       -webkit-box-orient: vertical
     p
+      position: absolute
+      bottom: .2rem
       font-size: .24rem
       color: #bababa
       margin-top: .48rem
@@ -1949,9 +1970,10 @@ body
   background-color: rgba(0, 0, 0, .5)
 .agreement-body
   position: absolute
-  top: 50%
-  left: 50%
-  transform: translate(-50%, -50%)
+  top: 1rem
+  bottom: 1rem
+  left: .32rem
+  right: .32rem
   background-color: #fff
   width: 90%
   border-radius: .16rem
@@ -1971,8 +1993,8 @@ body
     background: url("../img/icon-close.svg") no-repeat center
     background-size: .26rem
 .agreement-content
-  padding: .32rem .32rem 1.6rem
-  height: 11rem
+  padding: .32rem
+  height: calc(100% - 2.2rem)
   overflow-y: auto
   font-weight: 300
   font-size: .3rem
@@ -1981,11 +2003,61 @@ body
   left: 0
   bottom: 0
   width: 100%
+  height: 1.4rem
   background-color: #f8f8f8
   padding: .32rem
   border-radius: 0 0 .16rem .16rem
   .btn
     width: 100%
+
+
+//热门产品
+.hot-title
+  height: .96rem
+  background-color: #fff
+  overflow: hidden
+.hot-title-box
+  white-space: nowrap
+  overflow-x: auto
+  font-size: .28rem
+  a
+    display: inline-block
+    margin: 0 .24rem
+    line-height: .9rem
+    font-weight: 500
+    &.active
+      border-bottom: 2px solid $color-common
+.hot-products-list
+  padding: 0 .24rem
+  li
+    background-color: #fff
+    padding: .32rem .24rem
+    margin-top: .24rem
+    border-radius: .08rem
+    .product-img
+      float: left
+      width: 1rem
+      height: 1rem
+      img
+        width: 1rem
+        height: 1rem
+    .product-info
+      padding-left: 1.2rem
+      h4
+        font-size: .32rem
+        font-weight: 400
+        margin: .04rem 0 .12rem
+        white-space: nowrap
+        overflow: hidden
+        text-overflow: ellipsis
+      span
+        display: inline-block
+        font-size: .24rem
+        font-weight: 300
+        padding: .08rem .16rem
+        background-color: #FFF8F8
+        color: #FF7171
+        border-radius: .32rem
 
 
 //星星样式

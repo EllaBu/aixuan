@@ -64,7 +64,7 @@ h1, h2, h3, h4, h5, h6 {
     font-weight: 500;
 }
 
-input[type="text"], select, textarea {
+input[type="text"], input[type="number"], select, textarea {
     border: none;
     outline: none;
     resize: none;

@@ -161,7 +161,7 @@ body {
   width: 0.96rem;
   height: 0.96rem;
   background: url("../img/icon-back.svg") no-repeat center;
-  background-size: 0.24rem 0.4rem;
+  background-size: 0.2rem 0.38rem;
 }
 
 .footer {
@@ -445,7 +445,6 @@ body {
   border-bottom: 1px solid #e5e5e5;
   padding: 0.32rem 0;
   line-height: 0.32rem;
-  background: url("../img/icon-right.svg") no-repeat center right;
 }
 .vip .order-style li img {
   vertical-align: middle;
@@ -453,6 +452,19 @@ body {
 .vip .order-style li span {
   vertical-align: middle;
   margin-left: 0.32rem;
+}
+.vip .order-style li i {
+  float: right;
+  width: 0.32rem;
+  height: 0.32rem;
+  border-radius: 50%;
+  background-color: #f0f0f0;
+  vertical-align: middle;
+  margin-top: 0.16rem;
+}
+.vip .order-style li.active i {
+  background: url("../img/icon-vip-choosed.svg") no-repeat center;
+  background-size: 0.32rem;
 }
 .vip .order-style button {
   width: 100%;
@@ -1158,14 +1170,13 @@ body {
   height: 0.48rem;
   margin-left: -0.86rem;
   background: url("../img/more-item.svg") no-repeat center bottom;
-  background-size: 1.74rem 0.48rem;
+  background-size: 1.76rem 0.48rem;
   margin-top: 0.16rem;
 }
 
 .product-table-list .product-list span.more-item {
-  background: url("../img/more-item2.svg") no-repeat center 0.14rem;
+  background: url("../img/more-item2.svg") no-repeat center bottom;
   background-size: 1.76rem 0.48rem;
-  bottom: 0.08rem;
 }
 .product-table-list .product-list .table-box {
   margin-top: 0.16rem;
@@ -1360,7 +1371,7 @@ body {
 
 .contrast-sign {
   position: fixed;
-  top: 0.32rem;
+  top: 0.1rem;
   right: 0;
   width: 1.36rem;
   height: 1.36rem;
@@ -1781,6 +1792,10 @@ to {
   padding: 0.04rem 0 0 0.36rem;
 }
 
+.share-content {
+  overflow: hidden;
+  padding-bottom: 1.68rem;
+}
 .share-content h4 {
   margin: 1.12rem 0;
   text-align: center;
@@ -1977,17 +1992,13 @@ to {
   height: 300px;
 }
 
-.edit-photo .photo-handle {
+.edit-photo .photo-choose {
   overflow: hidden;
   margin-top: 0.6rem;
   font-size: 0.28rem;
-}
-.edit-photo .photo-handle > div {
-  float: left;
   text-align: center;
-  width: 50%;
 }
-.edit-photo .photo-handle > div i {
+.edit-photo .photo-choose i {
   position: relative;
   display: inline-block;
   width: 1.5rem;
@@ -1996,7 +2007,7 @@ to {
   background-size: 1.5rem 1.5rem;
   margin-bottom: 0.08rem;
 }
-.edit-photo .photo-handle > div i input {
+.edit-photo .photo-choose i input {
   position: absolute;
   top: 0;
   left: 0;
@@ -2004,9 +2015,16 @@ to {
   height: 100%;
   opacity: 0;
 }
-.edit-photo .photo-handle > div:last-of-type i {
-  background: url("../img/photo-ensure.svg") no-repeat top center;
-  background-size: 1.5rem 1.5rem;
+.edit-photo .photo-sure {
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  text-align: center;
+  background-color: #f8f8f8;
+  padding: 0.32rem 0;
+}
+.edit-photo .photo-sure .btn {
+  width: 4rem;
 }
 
 .corrigendum .fill-in {
@@ -2151,7 +2169,7 @@ to {
 }
 
 .home-item {
-  padding: 0.24rem;
+  padding: 0 0.24rem 0.24rem;
 }
 .home-item.home-product-item {
   padding-bottom: 0;
@@ -2188,6 +2206,7 @@ to {
   padding: 0.08rem 0.16rem;
   font-size: 0.24rem;
   font-weight: 300;
+  border-radius: 0.24rem;
 }
 .home-product-list li:nth-of-type(2n) {
   float: right;
@@ -2218,17 +2237,21 @@ to {
 }
 .information-list .information-img {
   float: left;
-  width: 1.66rem;
+  width: 1.76rem;
+  height: 1.6rem;
 }
 .information-list .information-img img {
   width: 1.76rem;
   height: 1.6rem;
 }
 .information-list .information-info {
+  position: relative;
   padding-left: 2rem;
+  height: 1.6rem;
 }
 .information-list .information-info h3 {
   font-size: 0.28rem;
+  margin-top: 0.1rem;
   overflow: hidden;
   text-overflow: ellipsis;
   display: -webkit-box;
@@ -2236,6 +2259,8 @@ to {
   -webkit-box-orient: vertical;
 }
 .information-list .information-info p {
+  position: absolute;
+  bottom: 0.2rem;
   font-size: 0.24rem;
   color: #bababa;
   margin-top: 0.48rem;
@@ -2255,9 +2280,10 @@ to {
 
 .agreement-body {
   position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
+  top: 1rem;
+  bottom: 1rem;
+  left: 0.32rem;
+  right: 0.32rem;
   background-color: #fff;
   width: 90%;
   border-radius: 0.16rem;
@@ -2283,8 +2309,8 @@ to {
 }
 
 .agreement-content {
-  padding: 0.32rem 0.32rem 1.6rem;
-  height: 11rem;
+  padding: 0.32rem;
+  height: calc(100% - 2.2rem);
   overflow-y: auto;
   font-weight: 300;
   font-size: 0.3rem;
@@ -2295,12 +2321,73 @@ to {
   left: 0;
   bottom: 0;
   width: 100%;
+  height: 1.4rem;
   background-color: #f8f8f8;
   padding: 0.32rem;
   border-radius: 0 0 0.16rem 0.16rem;
 }
 .agreement-footer .btn {
   width: 100%;
+}
+
+.hot-title {
+  height: 0.96rem;
+  background-color: #fff;
+  overflow: hidden;
+}
+
+.hot-title-box {
+  white-space: nowrap;
+  overflow-x: auto;
+  font-size: 0.28rem;
+}
+.hot-title-box a {
+  display: inline-block;
+  margin: 0 0.24rem;
+  line-height: 0.9rem;
+  font-weight: 500;
+}
+.hot-title-box a.active {
+  border-bottom: 2px solid #4988fe;
+}
+
+.hot-products-list {
+  padding: 0 0.24rem;
+}
+.hot-products-list li {
+  background-color: #fff;
+  padding: 0.32rem 0.24rem;
+  margin-top: 0.24rem;
+  border-radius: 0.08rem;
+}
+.hot-products-list li .product-img {
+  float: left;
+  width: 1rem;
+  height: 1rem;
+}
+.hot-products-list li .product-img img {
+  width: 1rem;
+  height: 1rem;
+}
+.hot-products-list li .product-info {
+  padding-left: 1.2rem;
+}
+.hot-products-list li .product-info h4 {
+  font-size: 0.32rem;
+  font-weight: 400;
+  margin: 0.04rem 0 0.12rem;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.hot-products-list li .product-info span {
+  display: inline-block;
+  font-size: 0.24rem;
+  font-weight: 300;
+  padding: 0.08rem 0.16rem;
+  background-color: #FFF8F8;
+  color: #FF7171;
+  border-radius: 0.32rem;
 }
 
 .rate-star {
