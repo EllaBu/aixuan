@@ -13,8 +13,8 @@
   <link rel="stylesheet" href="./css/mescroll.css">
 
 </head>
-<body class="plan-body">
-<div class="plan">
+<body class="plan-body plan">
+
 
   <div class="title">
     <a href="11-contrast1.html">我的方案</a>
@@ -73,7 +73,6 @@
     </div>
   </div>
 
-</div>
 <script src="./js/jquery-3.3.1.min.js"></script>
 <script src="./js/mescroll.js"></script>
 <script src="./js/toLeft.js"></script>
@@ -102,10 +101,11 @@
 
     function getListData() {
       $('.collect-list').append('<li>\n' +
-        '          <img src="./img/collect.png" alt="">\n' +
-        '          <span>哆啦A宝重大疾病险哆啦A宝重大疾病险</span>\n' +
-        '          <a href="javascript:;">对比</a>\n' +
-        '      </li>')
+        '      <img src="./img/collect.png" alt="">\n' +
+        '      <span>哆啦A宝重大疾病险</span>\n' +
+        '      <a href="javascript:;">对比</a>\n' +
+        '      <div class="item-delete">删除</div>\n' +
+        '    </li>')
       mescroll.endSuccess()
     }
 

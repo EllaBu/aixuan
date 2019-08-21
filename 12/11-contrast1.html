@@ -11,8 +11,7 @@
   <link rel="stylesheet" href="./css/reset.css">
   <link rel="stylesheet" href="./css/style.css">
 </head>
-<body class="plan-body">
-<div class="plan">
+<body class="plan-body plan">
   <div class="title">
     <a href="11-contrast1.html" class="active">我的方案</a>
     <a href="12-contrast2.html">我的收藏</a>
@@ -74,19 +73,10 @@
     </div>
   </div>
 
-</div>
 <script src="./js/jquery-3.3.1.min.js"></script>
 <script src="./js/toLeft.js"></script>
 <script>
   $(function() {
-    // $('.plan-item').longpress(function(){
-    //   console.log($(this))
-    //   //do something...
-    //   $(this).append('<div class="delete-layer">\n' +
-    //     '          <span class="delete-item">删除</span>\n' +
-    //     '        </div>')
-    //   console.log(111)
-    // });
 
     $('.plan-list li').touchWipe({itemDelete: '.item-delete'});
 
