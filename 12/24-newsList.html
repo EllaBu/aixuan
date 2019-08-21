@@ -10,6 +10,7 @@
   <title>资讯列表</title>
   <link rel="stylesheet" href="./css/reset.css">
   <link rel="stylesheet" href="./css/style.css">
+  <link rel="stylesheet" href="./css/mescroll.css">
 
 </head>
 <body class="gray-bg">
@@ -17,7 +18,7 @@
   <i class="header-back"></i>
   <h3>资讯列表</h3>
 </div>
-
+<div id="mescroll" class="mescroll">
 <div class="home-item">
   <div class="information-list">
     <div class="information-img">
@@ -68,12 +69,13 @@
     </div>
   </div>
 </div>
-
+</div>
 <!--<p class="page-tip">没有更多了</p>-->
 
 
 <script src="./js/jquery-3.3.1.min.js"></script>
 <script src="./js/swiper.min.js"></script>
+<script src="./js/mescroll.js"></script>
 <script>
   var swiper = new Swiper('.swiper-container', {
     loop: true,
@@ -85,6 +87,33 @@
       el: '.swiper-pagination',
     },
   });
+
+  var mescroll = new MeScroll("mescroll", {
+    down: {
+      isLock: true
+    },
+    up: {
+      auto: false,
+      isBounce: true,
+      callback: getListData //上拉回调,此处可简写; 相当于 callback: function (page) { getListData(page); }
+    }
+  });
+
+  function getListData() {
+    $('.home-item').append('<div class="information-list">\n' +
+      '    <div class="information-img">\n' +
+      '      <img src="./img/information.png" alt="">\n' +
+      '    </div>\n' +
+      '    <div class="information-info">\n' +
+      '      <h3>内地与香港保险比较研究——从保诚事件回头看香港保险的定位</h3>\n' +
+      '      <p>\n' +
+      '        <span>2019年8月2日</span>\n' +
+      '        <i>来源：爱选科技公众号</i>\n' +
+      '      </p>\n' +
+      '    </div>\n' +
+      '  </div>')
+    mescroll.endSuccess()
+  }
 </script>
 </body>
 </html>

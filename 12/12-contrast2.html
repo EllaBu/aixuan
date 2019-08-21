@@ -10,6 +10,8 @@
   <title>我的收藏</title>
   <link rel="stylesheet" href="./css/reset.css">
   <link rel="stylesheet" href="./css/style.css">
+  <link rel="stylesheet" href="./css/mescroll.css">
+
 </head>
 <body class="plan-body">
 <div class="plan">
@@ -26,15 +28,16 @@
     </div>
   </div>
   <!-- 无收藏列表显示 start-->
-  <div class="list-none">
+  <!--<div class="list-none">
     <img src="./img/collect-img.png" alt="">
     <a href="13-contrast3.html" class="btn btn-common add-btn">去收藏</a>
 
-  </div>
+  </div>-->
   <!-- 无收藏列表显示 end-->
 
 
   <!-- 有收藏列表显示 start-->
+  <div id="mescroll" class="mescroll">
   <ul class="collect-list">
     <li onclick="window.location.href='01-login.html'">
       <img src="./img/collect.png" alt="">
@@ -55,6 +58,7 @@
       <div class="item-delete">删除</div>
     </li>
   </ul>
+  </div>
   <!-- 有收藏列表显示 end-->
 
 
@@ -71,14 +75,40 @@
 
 </div>
 <script src="./js/jquery-3.3.1.min.js"></script>
+<script src="./js/mescroll.js"></script>
 <script src="./js/toLeft.js"></script>
+<script src="../common/vconsole.min.js"></script>
 <script>
   $(function () {
+
     $('.collect-list li').touchWipe({itemDelete: '.item-delete'});
     $(".item-delete").bind('click', function (e) {
       e.stopPropagation()
       $(this).parents('li').remove()
     })
+
+
+    //创建MeScroll对象,内部已默认开启下拉刷新,自动执行up.callback,重置列表数据;
+    var mescroll = new MeScroll("mescroll", {
+      down: {
+        isLock: true
+      },
+      up: {
+        auto: false,
+        isBounce: true,
+        callback: getListData //上拉回调,此处可简写; 相当于 callback: function (page) { getListData(page); }
+      }
+    });
+
+    function getListData() {
+      $('.collect-list').append('<li>\n' +
+        '          <img src="./img/collect.png" alt="">\n' +
+        '          <span>哆啦A宝重大疾病险哆啦A宝重大疾病险</span>\n' +
+        '          <a href="javascript:;">对比</a>\n' +
+        '      </li>')
+      mescroll.endSuccess()
+    }
+
   })
 </script>
 </body>
