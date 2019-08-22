@@ -16,7 +16,8 @@ body {
 .item input,
 .item select,
 .item .m-select,
-.item .item-choose {
+.item .item-choose,
+.item .item-span {
   float: right;
   width: 55%;
   height: 0.48rem;
@@ -662,6 +663,9 @@ body {
 .plan input::-webkit-input-placeholder {
   font-size: 0.3rem;
 }
+.plan .mescroll-upwarp {
+  margin-bottom: 1.44rem;
+}
 .plan .title {
   background-color: #f2f2f2;
   height: 1.1rem;
@@ -1018,7 +1022,7 @@ body {
 
 .product-name {
   width: 100%;
-  height: 1.92rem;
+  height: 1.68rem;
   padding: 0.32rem 0.32rem 0.16rem;
   background-color: #fff;
 }
@@ -1196,6 +1200,7 @@ body {
 .product-table-list .product-list .table-box td {
   border: none;
   text-align: left;
+  line-height: 0.42rem;
 }
 .product-table-list .product-list:nth-child(4n+1) .table-box {
   border-left: 1px solid #4988fe;
@@ -1516,6 +1521,7 @@ body {
   vertical-align: top;
   border: none;
   font-weight: 300;
+  line-height: 0.42rem;
 }
 .contrast-box .table-box td:first-of-type.light {
   border: 1px solid #ff9124;

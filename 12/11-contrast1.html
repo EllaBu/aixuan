@@ -10,55 +10,57 @@
   <title>我的方案</title>
   <link rel="stylesheet" href="./css/reset.css">
   <link rel="stylesheet" href="./css/style.css">
+  <link rel="stylesheet" href="./css/mescroll.css">
 </head>
 <body class="plan-body plan">
+
   <div class="title">
     <a href="11-contrast1.html" class="active">我的方案</a>
     <a href="12-contrast2.html">我的收藏</a>
   </div>
 
   <!--没有对比方案显示 start-->
-  <div class="list-none product-list-none">
+  <!--<div class="list-none product-list-none">
     <img src="./img/plan-img.png" alt="">
     <a href="javascript:;" class="btn btn-common add-btn">添加对比</a>
-  </div>
+  </div>-->
   <!--没有对比方案显示 start-->
 
-
+  <div id="mescroll" class="mescroll">
   <!--有对比方案显示 start-->
-  <div class="list-show">
-    <div class="list-header">
-      <img src="./img/plan-img.png" alt="">
-      <a href="javascript:;" class="btn btn-common">添加对比</a>
-    </div>
-    
-    <ul class="plan-list">
-      <li>
-        <h3>胡歌重疾100万方案</h3>
-        <p>哆啦A宝重大疾病险</p>
-        <p>哆啦A宝重大疾病险哆啦A宝重大疾病险</p>
+  <div class="list-header">
+    <img src="./img/plan-img.png" alt="">
+    <a href="javascript:;" class="btn btn-common">添加对比</a>
+  </div>
 
-        <div class="item-delete">删除</div>
-      </li>
-      <li>
-        <h3>胡歌重疾100万方案</h3>
-        <p>哆啦A宝重大疾病险</p>
-        <p>哆啦A宝重大疾病险哆啦A宝重大疾病险</p>
-        <div class="item-delete">删除</div>
-      </li>
-      <li>
-        <h3>胡歌重疾100万方案</h3>
-        <p>哆啦A宝重大疾病险</p>
-        <p>哆啦A宝重大疾病险哆啦A宝重大疾病险</p>
-        <div class="item-delete">删除</div>
-      </li>
-      <li>
-        <h3>胡歌重疾100万方案</h3>
-        <p>哆啦A宝重大疾病险</p>
-        <p>哆啦A宝重大疾病险哆啦A宝重大疾病险</p>
-        <div class="item-delete">删除</div>
-      </li>
-    </ul>
+
+  <ul class="plan-list">
+    <li>
+      <h3>胡歌重疾100万方案</h3>
+      <p>哆啦A宝重大疾病险</p>
+      <p>哆啦A宝重大疾病险哆啦A宝重大疾病险</p>
+
+      <div class="item-delete">删除</div>
+    </li>
+    <li>
+      <h3>胡歌重疾100万方案</h3>
+      <p>哆啦A宝重大疾病险</p>
+      <p>哆啦A宝重大疾病险哆啦A宝重大疾病险</p>
+      <div class="item-delete">删除</div>
+    </li>
+    <li>
+      <h3>胡歌重疾100万方案</h3>
+      <p>哆啦A宝重大疾病险</p>
+      <p>哆啦A宝重大疾病险哆啦A宝重大疾病险</p>
+      <div class="item-delete">删除</div>
+    </li>
+    <li>
+      <h3>胡歌重疾100万方案</h3>
+      <p>哆啦A宝重大疾病险</p>
+      <p>哆啦A宝重大疾病险哆啦A宝重大疾病险</p>
+      <div class="item-delete">删除</div>
+    </li>
+  </ul>
   </div>
   <!--有对比方案显示 end-->
 
@@ -75,6 +77,7 @@
 
 <script src="./js/jquery-3.3.1.min.js"></script>
 <script src="./js/toLeft.js"></script>
+<script src="./js/mescroll.js"></script>
 <script>
   $(function() {
 
@@ -86,12 +89,30 @@
       $(this).parents('li').remove()
     })
 
+    //创建MeScroll对象,内部已默认开启下拉刷新,自动执行up.callback,重置列表数据;
+    var mescroll = new MeScroll("mescroll", {
+      down: {
+        isLock: true
+      },
+      up: {
+        auto: false,
+        isBounce: true,
+        callback: getListData //上拉回调,此处可简写; 相当于 callback: function (page) { getListData(page); }
+      }
+    });
+
+    function getListData() {
+      $('.plan-list').append('<li>\n' +
+        '        <h3>胡歌重疾100万方案</h3>\n' +
+        '        <p>哆啦A宝重大疾病险</p>\n' +
+        '        <p>哆啦A宝重大疾病险哆啦A宝重大疾病险</p>\n' +
+        '        <div class="item-delete">删除</div>\n' +
+        '      </li>')
+      mescroll.endSuccess()
+    }
+
 
   })
-
-
-
-
 
 </script>
 </body>
