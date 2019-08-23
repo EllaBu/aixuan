@@ -316,16 +316,13 @@ body
       color: $color-common
 
 //获取VIP方式页面
+.body-fixed
+  position: fixed
+
 .vip-body
-  position: absolute
-  top: 0
-  bottom: 0
-  left: 0
-  right: 0
-  background: url("../img/vip-bg.jpg") no-repeat
-  background-size: cover
-  &.vip-header
-    top: .96rem
+  img
+    display: block
+    width: 100%
 .get-vip
   position: fixed
   left: 0
@@ -1903,7 +1900,8 @@ span
     font-weight: 500
     border-radius: .16rem
     img
-      width: 100%
+      width: 1.82rem
+      height: 1.6rem
     &:nth-of-type(1)
       background-color: #E2F5FF
       color: #4988FE

@@ -12,12 +12,12 @@
   <link rel="stylesheet" href="./css/style.css">
 </head>
 <body>
-  <div class="header">
+  <!--<div class="header">
     <i class="header-back"></i>
     <h4>VIP会员购买</h4>
-  </div>
-  <div class="vip-body vip-header">
-
+  </div>-->
+  <div class="vip-body">
+    <img src="./img/vip-bg.jpg" alt="">
     <div class="get-vip">
       <h4>怎样获得VIP</h4>
       <div class="vip-choose">
@@ -28,17 +28,54 @@
         <button class="btn btn-common">马上购买</button>
         <button class="btn btn-common">去申请VIP资格</button>
       </div>
-      <p><input type="checkbox">我已阅读并同意<a href="javascript:;">《开通协议》</a> | <a href="javascript:;">《权益规则详情》</a></p>
+      <p><input type="checkbox">我已阅读并同意<a href="javascript:;" class="show-agreement">《开通协议》</a> | <a href="javascript:;">《权益规则详情》</a></p>
+    </div>
+  </div>
+
+  <div class="agreement-pop" style="display: none">
+    <div class="agreement-body">
+      <div class="agreement-header">
+        <i></i>
+        <h4>用户协议</h4>
+      </div>
+      <div class="agreement-content">
+        <p>协议内容，协议内容，协议内容，协议内容，协议内容，协议内容，协议内容，协议内容，协议内容，</p>
+        <p>协议内容，协议内容，协议内容，协议内容，协议内容，协议内容，协议内容，协议内容，协议内容，</p>
+        <p>协议内容，协议内容，协议内容，协议内容，协议内容，协议内容，协议内容，协议内容，协议内容，</p>
+        <p>协议内容，协议内容，协议内容，协议内容，协议内容，协议内容，协议内容，协议内容，协议内容，</p>
+        <p>协议内容，协议内容，协议内容，协议内容，协议内容，协议内容，协议内容，协议内容，协议内容，</p>
+        <p>协议内容，协议内容，协议内容，协议内容，协议内容，协议内容，协议内容，协议内容，协议内容，</p>
+        <p>协议内容，协议内容，协议内容，协议内容，协议内容，协议内容，协议内容，协议内容，协议内容，</p>
+        <p>协议内容，协议内容，协议内容，协议内容，协议内容，协议内容，协议内容，协议内容，协议内容，</p>
+        <p>协议内容，协议内容，协议内容，协议内容，协议内容，协议内容，协议内容，协议内容，协议内容，</p>
+      </div>
+      <div class="agreement-footer">
+        <button class="btn btn-common">我已阅读</button>
+      </div>
     </div>
   </div>
   <script src="./js/jquery-3.3.1.min.js"></script>
   <script>
     $(function () {
+
       $('.vip-choose>div').bind('click', function () {
         var index = $(this).index()
         $(this).addClass('active').siblings().removeClass('active')
         $('.vip-btn .btn').hide()
         $('.vip-btn .btn').eq(index).show()
+      })
+
+      $('.show-agreement').bind('click', function () {
+        $('.agreement-pop').show()
+        var Top = $(window).scrollTop();
+        $('body').css("top", -Top + "px"); //给body一个负的top值；
+        $('body').addClass('body-fixed'); //给body增加一个类，position:fixed;
+      })
+
+      $('.agreement-header i, .agreement-footer .btn').bind('click', function () {
+        $(this).parents('.agreement-pop').hide()
+        $('body').removeClass('body-fixed'); //去掉给body的类
+        $('body').removeAttr("style");//去掉内联样式
       })
     })
   </script>

@@ -354,17 +354,13 @@ body {
   color: #4988fe;
 }
 
-.vip-body {
-  position: absolute;
-  top: 0;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  background: url("../img/vip-bg.jpg") no-repeat;
-  background-size: cover;
+.body-fixed {
+  position: fixed;
 }
-.vip-body.vip-header {
-  top: 0.96rem;
+
+.vip-body img {
+  display: block;
+  width: 100%;
 }
 
 .get-vip {
@@ -2201,7 +2197,8 @@ span.hot-tip6 {
   border-radius: 0.16rem;
 }
 .home-tool > div img {
-  width: 100%;
+  width: 1.82rem;
+  height: 1.6rem;
 }
 .home-tool > div:nth-of-type(1) {
   background-color: #E2F5FF;
