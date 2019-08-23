@@ -354,6 +354,19 @@ body {
   color: #4988fe;
 }
 
+.vip-body {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: url("../img/vip-bg.jpg") no-repeat;
+  background-size: cover;
+}
+.vip-body.vip-header {
+  top: 0.96rem;
+}
+
 .get-vip {
   position: fixed;
   left: 0;
@@ -361,7 +374,7 @@ body {
   width: 100%;
   padding: 0.32rem;
   margin-top: 0.56rem;
-  background-color: #e0e0e0;
+  background-color: rgba(255, 255, 255, 0.8);
 }
 .get-vip h4 {
   font-size: 0.36rem;
@@ -419,46 +432,47 @@ body {
   margin-top: -0.1rem;
 }
 
-.vip .order {
+.order {
   padding: 0.48rem 0.64rem;
   font-size: 0.28rem;
   text-align: center;
 }
-.vip .order .vip-card {
+.order .vip-card {
   height: 3.62rem;
   background: url("../img/vipcard.png") no-repeat center;
   background-size: 100%;
   padding-top: 0.96rem;
 }
-.vip .order .vip-card p {
+.order .vip-card p {
   color: #fff;
 }
-.vip .order .vip-card p b {
+.order .vip-card p b {
   font-size: 0.84rem;
   margin-right: 0.1rem;
 }
-.vip .order .vip-card p:first-of-type {
+.order .vip-card p:first-of-type {
   font-size: 0.4rem;
 }
-.vip .order-style {
+
+.order-style {
   padding: 0 0.64rem;
 }
-.vip .order-style ul {
+.order-style ul {
   margin-top: 0.16rem;
 }
-.vip .order-style li {
+.order-style li {
   border-bottom: 1px solid #e5e5e5;
   padding: 0.32rem 0;
   line-height: 0.32rem;
 }
-.vip .order-style li img {
+.order-style li img {
   vertical-align: middle;
 }
-.vip .order-style li span {
+.order-style li span {
   vertical-align: middle;
   margin-left: 0.32rem;
 }
-.vip .order-style li i {
+.order-style li i {
   float: right;
   width: 0.32rem;
   height: 0.32rem;
@@ -467,11 +481,11 @@ body {
   vertical-align: middle;
   margin-top: 0.16rem;
 }
-.vip .order-style li.active i {
+.order-style li.active i {
   background: url("../img/icon-vip-choosed.svg") no-repeat center;
   background-size: 0.32rem;
 }
-.vip .order-style button {
+.order-style button {
   width: 100%;
   margin-top: 0.64rem;
 }

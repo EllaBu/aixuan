@@ -316,7 +316,16 @@ body
       color: $color-common
 
 //获取VIP方式页面
-
+.vip-body
+  position: absolute
+  top: 0
+  bottom: 0
+  left: 0
+  right: 0
+  background: url("../img/vip-bg.jpg") no-repeat
+  background-size: cover
+  &.vip-header
+    top: .96rem
 .get-vip
   position: fixed
   left: 0
@@ -324,7 +333,7 @@ body
   width: 100%
   padding: .32rem
   margin-top: .56rem
-  background-color: #e0e0e0
+  background-color: rgba(255, 255, 255, .8)
   h4
     font-size: .36rem
     padding-bottom: .32rem
@@ -371,52 +380,52 @@ body
 
 
 //VIP支付页面
-.vip
-  .order
-    padding: .48rem .64rem
-    font-size: .28rem
-    text-align: center
-    .vip-card
-      //margin-top: .48rem
-      height: 3.62rem
-      background: url("../img/vipcard.png") no-repeat center
-      background-size: 100%
-      padding-top: .96rem
-      p
-        color: #fff
-        b
-          font-size: .84rem
-          margin-right: .1rem
-        &:first-of-type
-          font-size: .4rem
-  .order-style
-    padding: 0 .64rem
-    ul
+
+.order
+  padding: .48rem .64rem
+  font-size: .28rem
+  text-align: center
+  .vip-card
+    //margin-top: .48rem
+    height: 3.62rem
+    background: url("../img/vipcard.png") no-repeat center
+    background-size: 100%
+    padding-top: .96rem
+    p
+      color: #fff
+      b
+        font-size: .84rem
+        margin-right: .1rem
+      &:first-of-type
+        font-size: .4rem
+.order-style
+  padding: 0 .64rem
+  ul
+    margin-top: .16rem
+  li
+    border-bottom: 1px solid $color-border
+    padding: .32rem 0
+    line-height: .32rem
+    img
+      vertical-align: middle
+    span
+      vertical-align: middle
+      margin-left: .32rem
+    i
+      float: right
+      width: .32rem
+      height: .32rem
+      border-radius: 50%
+      background-color: #f0f0f0
+      vertical-align: middle
       margin-top: .16rem
-    li
-      border-bottom: 1px solid $color-border
-      padding: .32rem 0
-      line-height: .32rem
-      img
-        vertical-align: middle
-      span
-        vertical-align: middle
-        margin-left: .32rem
+    &.active
       i
-        float: right
-        width: .32rem
-        height: .32rem
-        border-radius: 50%
-        background-color: #f0f0f0
-        vertical-align: middle
-        margin-top: .16rem
-      &.active
-        i
-          background: url("../img/icon-vip-choosed.svg") no-repeat center
-          background-size: .32rem
-    button
-      width: 100%
-      margin-top: .64rem
+        background: url("../img/icon-vip-choosed.svg") no-repeat center
+        background-size: .32rem
+  button
+    width: 100%
+    margin-top: .64rem
 
 
 .my-info
