@@ -1,3 +1,7 @@
+@font-face {
+  font-family: GeezaPro;
+  src: url(GeezaPro.ttc);
+}
 body {
   background-color: #fff;
 }
@@ -1327,6 +1331,7 @@ body {
   padding: 0.24rem 0.16rem;
   border-right: 1px solid #e5e5e5;
   font-weight: 300;
+  font-family: GeezaPro;
 }
 .disease-list tr td:first-of-type {
   text-align: left;
