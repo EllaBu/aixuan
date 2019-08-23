@@ -2289,13 +2289,19 @@ span.hot-tip6 {
 }
 .information-list .information-info p {
   position: absolute;
+  width: calc(100% - 2rem);
   bottom: 0.2rem;
   font-size: 0.24rem;
   color: #bababa;
   margin-top: 0.48rem;
+  line-height: 0.24rem;
+}
+.information-list .information-info p span {
+  vertical-align: middle;
 }
 .information-list .information-info p i {
   float: right;
+  vertical-align: middle;
 }
 
 .agreement-pop {
