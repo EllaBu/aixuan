@@ -846,10 +846,10 @@ body {
 }
 .plan .hot-products {
   padding: 0 0.32rem 0.32rem;
+  overflow-y: auto;
 }
 .plan .hot-products li {
-  line-height: 1.1rem;
-  padding-left: 0.8rem;
+  padding: 0.32rem 0 0.32rem 0.8rem;
   border-bottom: 1px solid #e5e5e5;
   background: url("../img/icon-hot.svg") no-repeat 0.2rem 0.3rem;
   background-size: 0.38rem 0.44rem;

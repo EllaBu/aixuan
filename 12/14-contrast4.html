@@ -61,6 +61,16 @@
     </div>
 
     <ul class="hot-products">
+      <li>热门搜索热门搜索热门搜索热门搜索热门搜索热门搜索热门搜索热门搜索</li>
+      <li>热门搜索</li>
+      <li>热门搜索</li>
+      <li>热门搜索</li>
+      <li>热门搜索</li>
+      <li>热门搜索</li>
+      <li>热门搜索</li>
+      <li>热门搜索</li>
+      <li>热门搜索</li>
+      <li>热门搜索</li>
       <li>热门搜索</li>
       <li>热门搜索</li>
       <li>热门搜索</li>
@@ -89,6 +99,7 @@
   </div>
 </div>
 <script src="./js/jquery-3.3.1.min.js"></script>
+<script src="../common/vconsole.min.js"></script>
 <script>
   $(function () {
     $('.compare-switch i').bind('click', function () {
@@ -112,6 +123,11 @@
       console.log($(this).text())
       $(this).parents('ul').hide().siblings('input').val($(this).text())
     })
+
+    var fontSize = $('html').css('font-size')
+    var searchHeight = 1.28 * parseInt(fontSize)
+    var pageHeight = $(window).height()
+    $('.hot-products').height(pageHeight - searchHeight)
   })
 </script>
 </body>
